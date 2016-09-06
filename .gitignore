@@ -3,7 +3,7 @@
 <<<<<<< Updated upstream
 /app_api/controllers/password.js
 =======
-app_api/controllers/password.js
+/app_api/controllers/password.js
 >>>>>>> Stashed changes
 /models/db.js
 /node_modules/
