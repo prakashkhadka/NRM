@@ -1,0 +1,15 @@
+<navigation></navigation>
+<h1>My Posts</h1>
+<div class="row" ng-repeat ="room in roomsByUser">
+    <div class="col-xs-12 col-sm-6 jumbotron col-sm-offset-1">
+        <h3>{{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}</h3>
+        <span class="pull-left">Listed On: {{room.createdOn | date : format : timezone}}</span>
+        <span class="badge pull-right">{{room.rent}}</span>
+
+    </div>
+    <div class="col-sm-4">
+        <span><a href="/editRoom/{{room._id}}"><button  class="btn btn-sm btn-warning" ng-show="isLoggedIn">Edit</button></a></span>
+        <span><button class="btn btn-sm btn-danger" ng-click="remove(room._id)" ng-show="isLoggedIn">Delete</button></span>
+    </div>
+</div>
+<footer-generic></footer-generic>

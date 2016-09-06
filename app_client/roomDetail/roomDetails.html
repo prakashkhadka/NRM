@@ -1,0 +1,45 @@
+<style>
+    #photos{
+        border: 2px solid red;
+    }
+</style>
+
+<navigation></navigation>
+
+<h1>Room Details</h1>
+<!--
+<div class="jumbotron">
+    <div class="thumbnail">
+        Photos come here
+    </div>
+    <h3>{{ORD.unit}} / {{ORD.street_no}}, {{ORD.street}}, {{ORD.suburb}}, {{ORD.postcode}}</h3>
+    <h4>Rent: {{ORD.rent}} / {{ORD.frequency}}</h4>
+    <h4>Bond: {{ORD.bond}}</h4>
+    <h5>Preferred Gender : {{ORD.gender}}</h5>
+    <h5>No required: {{ORD.required_no}}</h5>
+    <h5>Available from: {{ORD.available_from}}</h5>
+    <h5>Contact: {{ORD.contact_no}}</h5>
+    <h5>{{ORD.message}}</h5>
+</div>
+-->
+
+
+<div class="container">
+    <div class="col-sm-8 jumbotron">
+        <div class="thumbnail">
+            <div id="photos" ng-repeat="img in ORD.images">
+                <img ng-src="https://s3-ap-southeast-2.amazonaws.com/nrm/{{img}}" alt="Room Image">
+            </div>
+        </div>
+        <h3>{{ORD.unit}} / {{ORD.street_no}}, {{ORD.street}}, {{ORD.suburb}}, {{ORD.postcode}}</h3>
+        <h4>Rent: {{ORD.rent}}  {{ORD.frequency}}</h4>
+        <h4>Bond: {{ORD.bond}}</h4>
+        <h5>Preferred Gender : {{ORD.gender}}</h5>
+        <h5>No required: {{ORD.required_no}}</h5>
+        <h5>Available from: {{ORD.available_from}}</h5>
+        <h5>Contact: {{ORD.contact_no}}</h5>
+        <h5>{{ORD.message}}</h5>
+    </div>
+</div>
+
+<footer-generic></footer-generic>

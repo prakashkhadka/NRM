@@ -1,0 +1,56 @@
+
+<navigation></navigation>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6-offset-3">
+            <h2 class="text-xs-center">Admin Login</h2>
+            <h4 class="text-xs-center">Please fill the following details to login<h4>
+                    
+            <div class="jumbotron">
+                <form class="form-horizontal" role="form">
+                    
+                    <!--
+                    <div class="form-group">
+                      <label class="control-label col-sm-2" for="email">Email:</label>
+                      <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" ng-model="user.email">
+                      </div>
+                    </div>
+                    -->
+                    
+                    <div class="form-group">
+                      <label class="control-label col-sm-2" for="adminName">Admin Name:</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="adminName" placeholder="Enter admin name" ng-model="user.adminName">
+                      </div>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label class="control-label col-sm-2" for="pwd">Password:</label>
+                      <div class="col-sm-10"> 
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" ng-model="user.password">
+                      </div>
+                    </div>
+                    <div class="form-group"> 
+                      <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                          <label><input type="checkbox"> Remember me</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group"> 
+                      <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default" ng-click="login(user)">Submit</button>
+                      </div>
+                    </div>
+                </form>
+                <span>If you are not registered, click here</span>
+                <span><a href="register"><button class="btn btn-default">Register</button></a></span>
+                <h2>{{formError}}</h2>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<footer-generic></footer-generic>

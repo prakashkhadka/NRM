@@ -1,0 +1,23 @@
+/*
+* @Author: Rajesh Basnet
+* @Date:   2016-09-05 21:01:43
+* @Last Modified by:   Rajesh Basnet
+* @Last Modified time: 2016-09-05 21:44:49
+* nrm application
+* Designed and developed by Sprouttech
+*/
+
+body{
+	
+	a{
+
+	color:red;
+	&:hover{
+
+	color:green;
+	text-decoration:underline;
+	}
+	}
+
+
+}

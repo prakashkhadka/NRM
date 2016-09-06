@@ -1,0 +1,83 @@
+<style>
+    .container{
+        margin-top: 30px;
+    }
+</style>
+
+<navigation></navigation>
+<search-room></search-room>
+
+<!--
+<div class="container">
+    <div class="row" ng-repeat="room in searchedRoom">
+        <div class="jumbotron">
+            {{room.unit}} / {{room.street_no}} ,  {{room.street}}, {{room.suburb}}
+        </div>
+    </div>
+</div>
+-->
+<div class="conatiner" ng-if="!hideHome">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+            <ul class="pagination pagination-lg">
+                <li><a href="#"><span class="glyphicon glyphicon-backward" ng-click="backward()"></span></a></li>
+                <li><a href="#" ng-click="getRooms(1)">1</a></li>
+                <li><a href="#" ng-click="getRooms(2)">2</a></li>
+                <li><a href="#" ng-click="getRooms(3)">3</a></li>
+                <li><a href="#" ng-click="getRooms(4)">4</a></li>
+                <li><a href="#" ng-click="getRooms(5)">5</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-forward" ng-click="forward()"></span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row" ng-repeat="room in searchedRoom">
+        <div class="col-sm-8 jumbotron" id="ab">
+            <div class="thumbnail">
+                {{room.images}}
+            </div>
+            <h2><a href="/roomDetail/{{room._id}}">{{room.suburb}}</a></h2>
+            {{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}, {{room.postcode}}
+            <span class="badge pull-right">{{room.rent}}</span>
+        </div>
+        
+    </div>
+</div>
+
+<div ng-if="endOfPage">
+    No more rooms
+</div>
+
+<div class="container" ng-if="!hideHome">
+    <h3>Recently added rooms</h3>
+    <div class="row" ng-repeat="room in rooms">
+        <div class="col-sm-8 jumbotron" id="ab">
+            <div class="thumbnail">
+                
+            </div>
+            <h2><a href="/roomDetail/{{room._id}}">{{room.suburb}}</a></h2>
+            {{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}, {{room.postcode}}
+            <span class="badge pull-right">{{room.rent}}</span>
+        </div>
+        
+    </div>
+</div>
+<div class="container" ng-if="!hideHome">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+            <ul class="pagination pagination-lg">
+                <li><a href="#"><span class="glyphicon glyphicon-backward" ng-click="backward()"></span></a></li>
+                <li><a href="#" ng-click="getRooms(1)">1</a></li>
+                <li><a href="#" ng-click="getRooms(2)">2</a></li>
+                <li><a href="#" ng-click="getRooms(3)">3</a></li>
+                <li><a href="#" ng-click="getRooms(4)">4</a></li>
+                <li><a href="#" ng-click="getRooms(5)">5</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-forward" ng-click="forward()"></span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer-generic></footer-generic>

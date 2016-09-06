@@ -1,0 +1,5 @@
+/.env
+/app_api/controllers/amazonUrl.js
+/app_api/conttrollers/password.js
+/models/db.js
+/node_modules/

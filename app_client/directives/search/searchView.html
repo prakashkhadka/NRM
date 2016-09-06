@@ -1,0 +1,44 @@
+<style>
+    @media(max-width: 767px){
+        #searchContainer{
+            margin-top: -20px;
+        }
+    }
+    #searchContainer{
+        margin-top: 100px;
+        height: 100px;
+        border: 2px solid blue;
+        position: fixed;
+        z-index: 1000;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+        
+    }
+    .search-query{
+        margin-top: 25px;
+        min-height: 50px;
+    }
+    #searchIcon{
+        margin-top: 25px;
+        min-height: 50px;
+        font-family: 'Asul', sans-serif;
+        font-weight: bold;
+    }
+    
+</style>
+
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2" id="searchContainer">
+        <div class="col-xs-10 col-sm-8 col-sm-offset-1">
+            <input type="text" class="search-query form-control" 
+                placeholder="search by suburb, postcode or state" 
+                ng-autocomplete ng-model="adrs.searchValue"/>
+        </div>   
+        <button id="searchIcon" ng-click="addressSearch(adrs)" class=" col-xs-2 col-sm-2 btn btn-primary btn-lg" type="button">
+            Search
+        </button>
+            
+        
+    </div>
+</div>
+

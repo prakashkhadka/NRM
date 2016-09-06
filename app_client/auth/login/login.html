@@ -1,0 +1,64 @@
+<style>
+    .loginError{
+        color: red;
+        font-size: 8pt;
+    }
+    .emailError{
+        color: red;
+        font-size: 8pt;
+    }
+</style>
+<navigation></navigation>
+<h2 class="text-xs-center">User Login</h2>
+<h4 class="text-xs-center">Please fill the following details to login<h4>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-1">       
+            <div class="jumbotron">
+                <form name="loginForm" class="form-horizontal" role="form" novalidate>
+                    <div class="form-group">
+                        <label class="control-label col-xs-12 col-sm-3" for="email">Email:</label>
+                        <div class="col-sm-9">
+                            <input name="userEmail" type="email" class="form-control" id="email" placeholder="Enter email" ng-model="user.email">
+                            <div class="error" ng-show="loginForm.userEmail.$invalid && loginForm.userEmail.$dirty">
+                                <span ng-show="loginForm.userEmail.$error">
+                                    <span class="emailError">Incorrect email format</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="pwd">Password:</label>
+                        <div class="col-sm-9"> 
+                            <input type="password" class="form-control" id="pwd" placeholder="Enter password" ng-model="user.password">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="col-sm-9 col-sm-offset-3"> 
+                            <span class="loginError">{{loginError}}</span>
+                        </div>
+                    </div>
+                    
+                   
+                    
+                    <div class="form-group"> 
+                        <div class="col-sm-9 col-sm-offset-3">
+                            <button type="submit" class="btn btn-info" ng-click="login(user)">Submit</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12 col-sm-9 col-sm-offset-3">
+                            <span><a href="forgetPassword"><button class="btn btn-default">ForgetPassword</button></a></span>
+                            <span><a href="register"><button class="btn btn-default">Register</button></a></span>
+                        </div>
+                    </div>
+                </form>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+<footer-generic></footer-generic>

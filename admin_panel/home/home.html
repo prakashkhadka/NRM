@@ -1,0 +1,26 @@
+<navigation></navigation>
+
+
+
+
+
+<div class="container">
+    <div class="row" ng-repeat="room in rooms | filter:searchText">
+        <div class="col-sm-8 jumbotron" id="ab">
+            <div class="thumbnail">
+
+            </div>
+            <h2><a href="/admin/roomDetail/{{room._id}}">{{room.suburb}}</a></h2>
+            {{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}, {{room.postcode}}
+            <span class="badge pull-right">{{room.rent}}</span>
+        </div>
+        
+        <div class="col-sm-4">
+            <span><a href="/admin/editRoom/{{room._id}}"><button  class="btn btn-sm btn-warning" ng-show="isLoggedIn">Edit</button></a></span>
+            <span><button class="btn btn-sm btn-danger" ng-click="remove(room._id)" ng-show="isLoggedIn">Delete</button></span>
+        </div>
+        
+    </div>
+</div>
+
+<footer-generic></footer-generic>

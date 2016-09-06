@@ -1,0 +1,19 @@
+<navigation></navigation>
+<h3>You have posted the following room details details</h3>
+<h3>{{reviewData.unit}} / {{reviewData.street_no}}, {{reviewData.street_name}}, {{reviewData.suburb}}</h3>
+
+<div class="row">
+    <div class="col-sm-8 jumbotron">
+        <h2>You have posted the following room details details</h2>
+        <h3>{{reviewData.unit}} / {{reviewData.street_no}}, {{reviewData.street_name}}, {{reviewData.suburb}}</h3>
+        <h4>Rent: {{reviewData.rent}}/ week</h4>
+        <h4>Bond: {{reviewData.bond}}</h4>
+        <h4>Preferred Gender: {{reviewData.gender}}</h4>
+        <h4>Available From: {{reviewData.available_from}}</h4>
+        <h4>Contact No: {{reviewData.contact_no}}</h4>
+        <h4>Message: {{reviewData.message}}</h4>
+    </div>
+    
+    <button ng-click="close()" class='btn btn-warning'>Close</button>
+</div>
+<footer-generic></footer-generic>

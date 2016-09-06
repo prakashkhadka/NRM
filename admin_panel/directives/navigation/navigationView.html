@@ -1,0 +1,55 @@
+
+<!--
+<nav>
+    <div class="row" id="navRow">
+        <a href='/admin/home'> 
+
+            <img src="images/LOGO.png" id="logo" alt="Nepali Room-mates Logo">
+
+            <span id="logoWord">Nepali Room-mate</span>
+        </a>
+        <span class="pull-right" id="loginSignupButton">
+
+            <a href="/admin/register" ng-show="isLoggedIn"><button class="btn btn-warning">Register</button></a>
+
+            <a href="/admin/login" ng-hide="isLoggedIn" ><button class="btn btn-info">Log In</button></a>
+            
+            <button ng-show="isLoggedIn"  ng-click="logout()" class="btn btn-danger">LogOut</button>
+            <span ng-show="isLoggedIn">Welcome {{currentUser.name}}</span>
+        </span>
+
+    </div>
+</nav>
+-->
+<nav class="navbar navbar-default hidden-sm-up">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#targetData" aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a href="/admin/home"><img id="nrmLogo" src="images/nrmLogo.png"></a>
+        <div id="appTitle"><a href="/admin/home">Nepali Roommate</a></div>
+    </div>
+    <div ng-if="isLoggedIn" id="currentUserM">Welcome <span id="userNameM">{{currentUser.name}}</span></div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="targetData">
+      <ul class="nav navbar-nav navbar-right">
+        <li ng-hide="isLoggedIn"><a href="/admin/register">Sign Up</a></li>
+        <li ng-hide="isLoggedIn"><a href="/admin/login">Login</a></li>
+        <li ng-if="isLoggedIn" ng-click="logout()"><a href="/#">Log Out</a></li>
+        <!--
+        <li ng-if="isLoggedIn" class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">More<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/changePassword">Change Password</a></li>
+            <li ng-click="logout()"><a href="/#">Log Out</a></li>
+          </ul>
+        </li>
+        -->
+      </ul>
+    </div><!-- /.navbar-collapse -->
+    <div ng-if="isLoggedIn" id="currentUser">Welcome <span id="userName">{{currentUser.name}}</span></div>
+</nav>

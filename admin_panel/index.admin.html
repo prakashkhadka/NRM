@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="adminApp">
+    <head>
+        <base href="/"/>
+        <title>Nepali room-mate</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+       <link href="https://fonts.googleapis.com/css?family=Asul:700" rel="stylesheet">
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+        <link rel="stylesheet" href="stylesheets/index.style.css">
+        <link rel="stylesheet" href="stylesheets/footer.style.css">
+        
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+        <script src="js/angular.min.js"></script>
+        <script src="js/angular-route.min.js"></script>
+        
+        <script src="admin/admin.app.js"></script>
+        <script src="admin/directives/navigation/navigation.js"></script>
+        <script src="admin/directives/navigation/navigationCtrl.js"></script>
+        <script src="admin/directives/footer/footer.js"></script>
+        <script src="admin/home/homeCtrl.js"></script>
+        
+        <script src="admin/services/roomData.service.js"></script>
+        <script src="admin/services/authentication.service.js"></script>
+        <script src="admin/roomDetail/roomDetailCtrl.js"></script>
+       
+        <script src="admin/editRoom/editRoom.js"></script>
+        <script src="admin/auth/login/loginCtrl.js"></script>
+        <script src="admin/auth/register/registerCtrl.js"></script>
+       
+        
+        
+    </head>
+    <body>
+        
+        <h1>Admin Panel</h1>
+        <div ng-view></div>
+        
+    </body>
+</html>
