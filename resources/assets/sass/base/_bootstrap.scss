@@ -2,7 +2,7 @@
 * @Author: Rajesh Basnet
 * @Date:   2016-09-08 10:51:45
 * @Last Modified by:   Rajesh Basnet
-* @Last Modified time: 2016-09-08 10:52:23
+* @Last Modified time: 2016-09-08 11:01:24
 */
 
 /*!
@@ -13,49 +13,49 @@
  */
 
 // Core variables and mixins
-@import "custom";
-@import "variables";
-@import "mixins";
+@import "../vendors/bootstrap/custom";
+@import "../vendors/bootstrap/variables";
+@import "../vendors/bootstrap/mixins";
 
 // Reset and dependencies
-@import "normalize";
-@import "print";
+@import "../vendors/bootstrap/normalize";
+@import "../vendors/bootstrap/print";
 
 // Core CSS
-@import "reboot";
-@import "type";
-@import "images";
-@import "code";
-@import "grid";
-@import "tables";
-@import "forms";
-@import "buttons";
+@import "../vendors/bootstrap/reboot";
+@import "../vendors/bootstrap/type";
+@import "../vendors/bootstrap/images";
+@import "../vendors/bootstrap/code";
+@import "../vendors/bootstrap/grid";
+@import "../vendors/bootstrap/tables";
+@import "../vendors/bootstrap/forms";
+@import "../vendors/bootstrap/buttons";
 
 // Components
 @import "animation";
-@import "dropdown";
-@import "button-group";
-@import "input-group";
+@import "../vendors/bootstrap/dropdown";
+@import "../vendors/bootstrap/button-group";
+@import "../vendors/bootstrap/input-group";
 @import "custom-forms";
-@import "nav";
-@import "navbar";
-@import "card";
-@import "breadcrumb";
-@import "pagination";
-@import "tags";
-@import "jumbotron";
-@import "alert";
-@import "progress";
-@import "media";
-@import "list-group";
-@import "responsive-embed";
-@import "close";
+@import "../vendors/bootstrap/nav";
+@import "../vendors/bootstrap/navbar";
+@import "../vendors/bootstrap/card";
+@import "../vendors/bootstrap/breadcrumb";
+@import "../vendors/bootstrap/pagination";
+@import "../vendors/bootstrap/tags";
+@import "../vendors/bootstrap/jumbotron";
+@import "../vendors/bootstrap/alert";
+@import "../vendors/bootstrap/progress";
+@import "../vendors/bootstrap/media";
+@import "../vendors/bootstrap/list-group";
+@import "../vendors/bootstrap/responsive-embed";
+@import "../vendors/bootstrap/close";
 
 // Components w/ JavaScript
-@import "modal";
-@import "tooltip";
-@import "popover";
-@import "carousel";
+@import "../vendors/bootstrap/modal";
+@import "../vendors/bootstrap/tooltip";
+@import "../vendors/bootstrap/popover";
+@import "../vendors/bootstrap/carousel";
 
 // Utility classes
-@import "utilities";
+@import "../vendors/bootstrap/utilities";
