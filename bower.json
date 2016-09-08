@@ -1,0 +1,17 @@
+{
+  "name": "nepali-room-mate",
+  "description": "Nepali realestate website",
+  "main": "app.js",
+  "authors": [
+    "Prakash Khadka & Rajesh Basnet"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/prakashkhadka/nrm",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
