@@ -9,8 +9,8 @@ var gulp            =   require('gulp');
     sass            =   require('gulp-sass'),
     rename          =   require('gulp-rename'),
     plumber         =   require('gulp-plumber'),
-    browserSync     =   require('browser-sync').create();
-    reload          =   browserSync.reload,
+    browserSync     =   require('browser-sync').create(),
+    reload          =   browserSync.reload;
 
 gulp.task('serve',['browser-sync'], function(){
     //console.log("Server is woking");

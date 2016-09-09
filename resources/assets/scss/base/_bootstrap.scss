@@ -1,8 +1,8 @@
 /*
 * @Author: Rajesh Basnet
 * @Date:   2016-09-08 10:51:45
-* @Last Modified by:   Rajesh Basnet
-* @Last Modified time: 2016-09-08 11:01:24
+* @Last Modified by:   Ryan Basnet
+* @Last Modified time: 2016-09-09 13:42:28
 */
 
 /*!
@@ -13,7 +13,6 @@
  */
 
 // Core variables and mixins
-@import "../vendors/bootstrap/custom";
 @import "../vendors/bootstrap/variables";
 @import "../vendors/bootstrap/mixins";
 
@@ -31,31 +30,6 @@
 @import "../vendors/bootstrap/forms";
 @import "../vendors/bootstrap/buttons";
 
-// Components
-@import "animation";
-@import "../vendors/bootstrap/dropdown";
-@import "../vendors/bootstrap/button-group";
-@import "../vendors/bootstrap/input-group";
-@import "custom-forms";
-@import "../vendors/bootstrap/nav";
-@import "../vendors/bootstrap/navbar";
-@import "../vendors/bootstrap/card";
-@import "../vendors/bootstrap/breadcrumb";
-@import "../vendors/bootstrap/pagination";
-@import "../vendors/bootstrap/tags";
-@import "../vendors/bootstrap/jumbotron";
-@import "../vendors/bootstrap/alert";
-@import "../vendors/bootstrap/progress";
-@import "../vendors/bootstrap/media";
-@import "../vendors/bootstrap/list-group";
-@import "../vendors/bootstrap/responsive-embed";
-@import "../vendors/bootstrap/close";
-
-// Components w/ JavaScript
-@import "../vendors/bootstrap/modal";
-@import "../vendors/bootstrap/tooltip";
-@import "../vendors/bootstrap/popover";
-@import "../vendors/bootstrap/carousel";
 
 // Utility classes
 @import "../vendors/bootstrap/utilities";
