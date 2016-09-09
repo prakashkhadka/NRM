@@ -4,12 +4,13 @@
  * and open the template in the editor.
  */
 
-var gulp = require('gulp');
-var nodemon = require('gulp-nodemon');
-var browserSync = require('browser-sync').create();
-var reload = browserSync.reload,
-    sass        = require('gulp-sass'),
-    rename      = require('gulp-rename');
+var gulp            =   require('gulp');
+    nodemon         =   require('gulp-nodemon'),
+    sass            =   require('gulp-sass'),
+    rename          =   require('gulp-rename'),
+    plumber         =   require('gulp-plumber'),
+    browserSync     =   require('browser-sync').create();
+    reload          =   browserSync.reload,
 
 gulp.task('serve',['browser-sync'], function(){
     //console.log("Server is woking");
@@ -79,5 +80,31 @@ gulp.task('sass:watch',function(){
 
 });
 
+
+/**
+ * move bootstrap scss package
+ * 
+ */
+
+gulp.task('moveSass',function(){
+
+    gulp.src('bower_components/bootstrap/scss/**/*')
+    .pipe(plumber({
+
+        errorHandler:function(error){
+
+            console.log(error.toString);
+            this.emit('end');
+        }
+    }))
+    .pipe(gulp.dest('resources/assets/scss/vendors/bootstrap'));
+
+    console.log('Successfully moved bootstrap sass port files.');
+})
+
+
+/**
+ * gulp default task
+ */
 gulp.task('default', ['serve']);
 
