@@ -6,3 +6,9 @@
 	
 	@return map-get($tsf-colors,$key);
 }
+
+
+//function to return type-scale
+@function type-scale($level) {
+  @return map-get($type-scale, $level);
+}
