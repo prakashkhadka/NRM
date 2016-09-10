@@ -1,4 +1,15 @@
+/** body */
 
-/**
- * Base
- */
+body{
+	
+	background-color:getColor('mercury');
+
+	@include make-container();
+	min-height:100vh;
+	border:1px red solid;
+}
+
+section{
+	
+	@include make-row();
+}
