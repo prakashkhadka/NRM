@@ -2,8 +2,25 @@
 
 
 .btn-primary{
-	
-	@extend %button;
-	background-color:getColor('bluewood');
-	font-size:12px;
+
+@extend %button;
+background-color:getColor('bluewood');
+font-size:12px;
+}
+
+.sign-up{
+
+@extend %button;
+@include button-variant(getColor('burnt-sienna'), getColor('white'),getColor('burnt-sienna'));
+
+
+&:hover{
+
+@include button-variant(getColor('white'), getColor('burnt-sienna'),getColor('burnt-sienna'));
+}
+&:focus{
+@include button-variant(getColor('white'), getColor('burnt-sienna-dark'),getColor('burnt-sienna-dark'));
+outline:0px transparent ;
+
+}
 }
