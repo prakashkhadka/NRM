@@ -1,0 +1,94 @@
+
+.tsf-top-navbar{
+	
+	@extend .navbar;
+	@extend .navbar-full;
+	@extend .navbar-fixed-top;
+	@include setBackgroundColor(getColor('white'));
+	height:75px;
+
+	.logo{
+
+		height:54px;
+		width:90px;
+	}
+
+	.nav{
+
+		float:right;
+		@extend .nav;
+		@extend .navbar-nav;
+		line-height:60px;
+
+		li{
+
+		@extend .nav-link;
+		color:getColor('bluewood');
+		font-weight:600;
+		font-size:18px;
+		font-family:$font-moteserrat;
+
+		&:hover{
+
+		color:getColor('burnt-sienna-dark');
+		}
+
+		
+		}
+	}
+
+	.top-toggle-menu{
+
+		@extend .navbar-toggler;
+		float:right; 
+		margin-top:20px;
+		@include media-breakpoint-up(sm) {
+  		
+  		display:none;
+
+	}
+
+	.bar{
+		
+		position:relative;
+		display:block;
+
+		&:before,&:after,&{
+			width:30px;
+			height:4px;
+			background-color:getColor('bluewood');
+		}
+
+		&:before,&:after{
+		content: "";
+  		position: absolute;
+  		left: 0;
+ 		top: -9px;
+		}
+		&:after{
+
+		top: 9px;
+		}
+	}
+
+
+&:hover{
+	
+	.bar,.bar:after,.bar:before{
+
+	background-color:getColor('burnt-sienna-dark');
+	}
+
+}
+
+
+}
+
+&:focus{
+	
+	outline: none;
+}
+
+
+
+}

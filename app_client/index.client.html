@@ -8,7 +8,7 @@
         <link href="https://fonts.googleapis.com/css?family=Asul:700" rel="stylesheet">
         
         <!-- Latest compiled and minified CSS -->
-       <!--  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+      
         
         <link rel="stylesheet" href="stylesheets/index.style.css">
         <link rel="stylesheet" href="stylesheets/footer.style.css">
@@ -19,7 +19,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
         <!-- Latest compiled JavaScript -->
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
         <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDl9xthDLlPj70gJbHzTQMxaIRlpoCkWh0&libraries=places"></script>
         <style>
            
@@ -61,11 +61,26 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-full navbar-light">
-  <a class="navbar-brand" href="#">Fixed top</a>
+        <nav class="tsf-top-navbar">
+  <a class="navbar-brand" href="/"><img class="logo" src="images/test.png"></a>
+
+   <button class="top-toggle-menu" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="bar"></span>
+  </button>
+ <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar">
+    <ul class="nav">
+    <li>Home</li>
+    <li>Rent Room</li>
+    <li>Log in</li>
+    <li><a class="sign-up" href="">Sign up</a></li>
+    </ul>
+    </div>
 </nav>
+
+
         <section id="partial-view">
-        <h1>Hello</h1>
+       
+
         <div class="col-md-6 offset-md-3">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -75,7 +90,7 @@
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
         </div>
-        <div ng-view></div>
+       <!--  <div ng-view></div> -->
         </section>
        
     </body>

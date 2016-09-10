@@ -1,0 +1,11 @@
+@mixin setBackgroundColor($background){
+	
+	background-color:$background;
+
+}
+
+@mixin setBorder($border){
+	
+	border:$border solid 1px;
+
+}

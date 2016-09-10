@@ -10,7 +10,8 @@ var gulp            =   require('gulp');
     rename          =   require('gulp-rename'),
     plumber         =   require('gulp-plumber'),
     browserSync     =   require('browser-sync').create(),
-    reload          =   browserSync.reload;
+    reload          =   browserSync.reload,
+    maps      =   require('gulp-sourceMaps');
 
 gulp.task('serve',['browser-sync'], function(){
     //console.log("Server is woking");
