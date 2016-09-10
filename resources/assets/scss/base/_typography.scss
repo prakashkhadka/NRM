@@ -1,1 +1,21 @@
 
+/** typo **/ 
+h2{
+	
+	color:white;
+}
+
+
+h1{
+	
+	font-family:$font-moteserrat;
+	font-weight:700;
+	color:getColor('bluewood');
+}
+
+p{
+	
+	font-family:$font-news-cycle;
+	color:getColor('pale-sky');
+	line-height:40px;
+}

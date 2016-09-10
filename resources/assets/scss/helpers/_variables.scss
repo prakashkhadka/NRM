@@ -16,6 +16,19 @@ $tsf-colors : (
 );
 
 
+//font-stacks
+
+//web fonts
+@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+$font-moteserrat: 'Montserrat', sans-serif;
+
+$font-news-cycle:'News Cycle', sans-serif;
+
+
+
+
 
 $type-scale: (
   'small': 0.75rem,  // small text
