@@ -55,7 +55,7 @@ gulp.task('nodemon', function(done){
 
 gulp.task('compileSass',function(){
 
-    gulp.src('./resources/assets/sass/main.scss')
+    gulp.src('./resources/assets/scss/main.scss')
 
             .pipe(sass().on('Error',sass.logError))
             .pipe(rename('app.css'))
@@ -73,8 +73,8 @@ gulp.task('compileSass',function(){
 
 gulp.task('sass:watch',function(){
 
-    gulp.watch('./resources/assets/sass/**',['compileSass']);
-
+    gulp.watch('./resources/assets/scss/**',['compileSass'])
+    
     //for test only
     console.log('sass file changed');
 
@@ -92,7 +92,7 @@ gulp.task('moveSass',function(){
     .pipe(plumber({
 
         errorHandler:function(error){
-
+            console.log('Error occured while compiling sass ');
             console.log(error.toString);
             this.emit('end');
         }

@@ -1,21 +1,25 @@
 /*
 * @Author: Rajesh Basnet
 * @Date:   2016-09-05 21:01:43
-* @Last Modified by:   Ryan Basnet
-* @Last Modified time: 2016-09-09 13:40:24
+* @Last Modified by:   Rajesh Basnet
+* @Last Modified time: 2016-09-10 00:46:42
 * nrm application
 * Designed and developed by Sprouttech
 */
 
 
+//helpers
+
+@import "helpers/manifest";
 
 //Base 
 
 @import "base/manifest";
 
+
 //component
 
-import "components/manifest";
+@import "components/manifest";
 
 
 //layout
@@ -23,11 +27,4 @@ import "components/manifest";
 @import "layout/manifest";
 
 
-//pages
 
-@import "pages/manifest";
-
-
-//vendors
-
-//yet to import
