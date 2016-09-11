@@ -13,7 +13,7 @@ font-size:12px;
 @extend %button;
 @include button-variant(getColor('burnt-sienna'), getColor('white'),getColor('burnt-sienna'));
 
-
+font-family:$font-moteserrat;
 &:hover{
 
 @include button-variant(getColor('white'), getColor('burnt-sienna'),getColor('burnt-sienna'));
@@ -30,4 +30,12 @@ outline:0px transparent ;
 @include button-variant(getColor('burnt-sienna'), getColor('bluewood-dark'),getColor('burnt-sienna'));
 	}
 
+}
+
+.send-message{
+
+@extend %button;
+@include button-variant(getColor('white'), getColor('emrald'),getColor('emrald'));
+border-radius:0px;
+font-family:$font-moteserrat;
 }

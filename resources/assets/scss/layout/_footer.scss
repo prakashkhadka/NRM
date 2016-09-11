@@ -144,7 +144,7 @@ padding:0px;
 	// border:1px yellow solid;
 	@include make-col(12);
 
-
+	width:100%;
 	
 
 	h5{
@@ -153,6 +153,10 @@ padding:0px;
 		font-weight:600;
 			font-size:18px;
 			font-family:$font-moteserrat;
+	}
+	p{
+
+		color:getColor('pale-sky');
 	}
 	
 	ul{
@@ -183,7 +187,7 @@ padding:0px;
 
 
 	@include media-breakpoint-up(md){
-		
+
 		@include make-col(4);
 
 	}
