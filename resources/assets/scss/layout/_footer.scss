@@ -10,8 +10,8 @@ footer{
 
 		@include make-row();
 		padding:20px;
-		height:300px;
-
+		height:auto;
+		
 	}
 
 	.footer-social-media-list{
@@ -24,6 +24,7 @@ footer{
 		ul{
 
 padding:0px;
+
 
 
 			li{
@@ -135,3 +136,56 @@ padding:0px;
 
 }
 
+.footer-column{
+
+	@include make-col-ready();
+	padding:20px;
+	
+	// border:1px yellow solid;
+	@include make-col(12);
+
+
+	
+
+	h5{
+
+		color:getColor('white');
+		font-weight:600;
+			font-size:18px;
+			font-family:$font-moteserrat;
+	}
+	
+	ul{
+
+		padding:0px;
+		width:auto;
+		display:inline-block;
+		margin-top:20px;
+		text-align:left;
+		li{
+			color:getColor('pale-sky');
+			list-style-type: none;
+			// border-bottom:1px dashed getColor('pale-sky');
+			text-align:left;
+			padding-bottom:8px;
+			margin-bottom:15px;
+			&:before{
+
+				content:"";
+				
+				margin-right:10px;
+			}
+		}
+	}
+
+
+
+
+
+	@include media-breakpoint-up(md){
+		
+		@include make-col(4);
+
+	}
+
+}
