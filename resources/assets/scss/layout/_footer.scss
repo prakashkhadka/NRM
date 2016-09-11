@@ -1,0 +1,75 @@
+footer{
+	
+
+	@include make-container();
+	@include setBackgroundColor(getColor('bluewood-dark'));
+	color:white;
+	margin:0px;
+
+	.footer-main{
+
+		@include make-row();
+		border:1px red solid;
+
+	}
+
+	.footer-social-media-list{
+
+		@include make-row();
+		border: 1px green solid;
+	}
+
+	.footer-list{
+
+		@include make-row();
+		border:1px blue solid;
+	}
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-main{
+
+@include make-row();
+border:1px yellow solid;
+}
+
+.lower-footer{
+
+
+
+.tnc,.dev{
+ @include make-col-ready();
+ @include make-col(12);
+border:1px green solid;
+ @include media-breakpoint-up(md){
+  	 
+  	 @include make-col(6);
+  	 
+  }
+
+}
+}

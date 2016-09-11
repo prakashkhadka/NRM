@@ -4,12 +4,25 @@ body{
 	
 	background-color:getColor('mercury');
 	min-height:100vh;
-	border:1px red solid;
 	padding:0px;
+
 }
+
+
 
 section{
 	
-	@include make-row();
+	
+
+
+&#partial-view{
+
+	min-height:700px;
 }
+
+
+
+}
+
+
 

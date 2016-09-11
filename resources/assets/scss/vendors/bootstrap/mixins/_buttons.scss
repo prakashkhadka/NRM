@@ -7,7 +7,7 @@
   $active-background: darken($background, 10%);
   $active-border: darken($border, 12%);
 
-  color: $color;
+  color: $color !important;
   background-color: $background;
   border-color: $border;
   @include box-shadow($btn-box-shadow);
