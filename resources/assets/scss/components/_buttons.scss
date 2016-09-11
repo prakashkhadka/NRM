@@ -23,4 +23,11 @@ font-size:12px;
 outline:0px transparent ;
 
 }
+
+
+
+		@include media-breakpoint-down(sm){
+@include button-variant(getColor('burnt-sienna'), getColor('bluewood-dark'),getColor('burnt-sienna'));
+	}
+
 }
