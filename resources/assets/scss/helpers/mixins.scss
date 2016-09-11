@@ -9,3 +9,41 @@
 	border:$border solid 1px;
 
 }
+
+
+@mixin socialIcon($social-icons,$font){
+
+
+	@each  $icon, $icon-map in $social-icons{
+
+
+		
+
+		.social-icon-#{$icon}{
+
+			font-family:$font;
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			color:#FFFFFF;
+			
+
+			&:hover{
+				color:map-get($icon-map,'color');;
+			}
+		}
+
+		.social-icon-#{$icon}:before{
+
+			content:map-get($icon-map,'unicode');
+
+		}
+
+
+
+	}
+}

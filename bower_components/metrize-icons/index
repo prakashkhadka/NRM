@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if (IE 9)]><html class="no-js ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-US" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
+<head>
+
+<!-- Meta Tags -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Metrize Icons &bull; 300 Icons for Designers & Developers</title>   
+<meta name="description" content="Metrize Icons is a Free Collection of 300 Metro-Style Icons for Designers and Developers." />
+<meta name="keywords" content="Metrize Icons, metro, icons, vector icons, font, font-face, free icons, free updates" />
+         
+<!-- Mobile Specifics -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="HandheldFriendly" content="true"/>
+<meta name="MobileOptimized" content="320"/>   
+
+<!-- Mobile Internet Explorer ClearType Technology -->
+<meta http-equiv="cleartype" content="on">
+
+<!-- Bootstrap -->
+<link href="http://www.alessioatzeni.com/wp-content/themes/az/_include/metrize/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+<link href="http://www.alessioatzeni.com/wp-content/themes/az/_include/metrize/css/font.css" rel="stylesheet" media="screen">
+
+<!-- Main Style -->
+<link href="http://www.alessioatzeni.com/wp-content/themes/az/_include/metrize/custom/metrize-icons/css/m.css" rel="stylesheet" media="screen">
+
+<!-- Responsive -->
+<link href="http://www.alessioatzeni.com/wp-content/themes/az/_include/metrize/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+
+<!-- Google Font -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic' rel='stylesheet' type='text/css'>
+
+<!-- Fav Icon -->
+<link rel="shortcut icon" href="http://www.alessioatzeni.com/wp-content/themes/az/_include/metrize/custom/metrize-icons/img/favicon.png">
+
+<!-- Scripts -->
+<script src="http://www.alessioatzeni.com/wp-content/themes/az/js/modernizr.js"></script>
+
+<style type="text/css">
+#banner {
+left: 0;
+border-right: 10px solid rgba(0,0,0,0.2) !important;
+border-left: none !important;
+}
+</style>
+
+</head>
+
+<body class="page page-id-1009 page-template page-template-template-metrize page-template-template-metrize-php ie ie7 windows wpb-js-composer js-comp-ver-3.6.2 vc_responsive">
+
+<header>
+	<div class="container">
+    	<div class="row">
+        	<div class="span12">
+        		<span class="logo-icon">Metrize Icons</span>
+                <span class="version-bundle">1.0</span>
+                <h2>Metrize Icons</h2>
+                <a href="http://www.alessioatzeni.com/wp-content/themes/az/_include/metrize/custom/metrize-icons/download/Metrize_Icons.zip" class="button">Download</a>
+                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KASXQQL7NNFS6" class="button">Donate</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="content">
+	<div class="container">
+    	<div class="entry-content">
+        	<div class="row">
+            	<div class="span12">
+                	<h2>Free Collection of 300 Metro-Style Icons for Designers and Developers.</h2>
+                    <p>Metrize Icons is a free icon set, it works perfectly for your apps or web projects. You may use these icons for both commercial and personal projects and customize them any way you like.</p>
+                    <p>All Icons, WebFont and Updates are <strong>Free</strong>.</p>
+                    <img class="box-image" src="http://www.alessioatzeni.com/wp-content/themes/az/_include/metrize/custom/metrize-icons/img/Metrize_Icons.png" alt="Metrize Icons" />
+                    <p class="margin-10">The download includes:</p>
+                    <ul>
+                        <li>PSD (Single Shape Layer)</li>
+                        <li>SVG (Single Icon 512 x 512)</li>
+                        <li>EPS</li>
+                        <li>AI</li>
+                        <li>PDF</li>
+                        <li>Web Font</li>
+                    </ul>
+                    <p>The bundle also include Metrize Font Icons, inside you will find a simple guide how to use the webfont with @font-face, the necessary scripts for compatibility with IE7 and the complete character map.</p>
+                    <p>Big thanks to <a href="http://icomoon.io/" title="IcoMoon App" target="_blank">Icomoon App</a> for creating/editing the webfont.</p>
+                    <p>Enjoy Metrize Icons. I hope you like them and can be useful in your future projects.</p>
+                    
+                    <h3>Next Release</h3>
+                    <p>In the next release I would like to add support for PNG and CSH.</p>
+                    
+                    <h3>License</h3>
+                    <p>You are free to use Metrize Icons (the "Icon Set") or any part thereof (the "Icons") in any personal, open-source or commercial work without obligation of payment (monetary or otherwise) or attribution.</p>
+                    <p>Do not sell, sub-license, rent, transfer, host, redistribute the Icon Set. (either in existing or modified form).</p>
+                    <p>The rights to each "Social Icons" are either trademarked or copyrighted by the respective company.</p>
+                    <p>Attribution is optional but it is always appreciated.</p>
+                    <p>Intellectual property rights are not transferred with the download of the icons.</p>
+                    <p>ALL ICONS LICENSED ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED. ALESSIO ATZENI IS NOT LIABLE FOR ANY DAMAGES ARISING OUT OF ANY DEFECTS IN THIS MATERIAL.</p> 
+					<p>YOU AGREE TO HOLD THE ALESSIO ATZENI HARMLESS FOR ANY RESULT THAT MAY OCCUR DURING THE COURSE OF USING, OR INABILITY TO USE THESE LICENSED ICONS.</p>
+					<p>IN NO EVENT SHALL WE BE LIABLE FOR ANY DAMAGES INCLUDING, BUT NOT LIMITED TO, DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES OR OTHER LOSSES ARISING OUT OF THE USE OF OR INABILITY TO USE THIS PRODUCTS.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+	<div class="container">
+    	<div class="row">
+        	<div class="span12">
+                <nav id="social">
+                    <ul>
+                        <li><a href="https://twitter.com/Bluxart" title="Follow Me on Twitter" class="twitter" target="_blank"><span class="font-social-twitter"></span></a></li>
+                        <li><a href="http://dribbble.com/Bluxart" title="Follow Me on Dribbble" class="dribbble" target="_blank"><span class="font-social-dribbble"></span></a></li>
+                        <li><a href="http://forrst.com/people/Bluxart" title="Follow Me on Forrst" class="forrst" target="_blank"><span class="font-social-forrst"></span></a></li>
+                        <li><a href="http://www.behance.net/alessioatzeni" title="Follow Me on Behance" class="behance" target="_blank"><span class="font-social-behance"></span></a></li>
+                        <li><a href="https://www.facebook.com/atzenialessio" title="Follow Me on Facebook" class="facebook" target="_blank"><span class="font-social-facebook"></span></a></li>
+                        <li><a href="https://plus.google.com/105500420878314068694" title="Follow Me on Google Plus" class="google-plus" target="_blank"><span class="font-social-addthis"></span></a></li>
+                        <li><a href="http://www.linkedin.com/in/alessioatzeni" title="Follow Me on LinkedIn" class="linkedin" target="_blank"><span class="font-social-linkedin"></span></a></li>
+                        <li><a href="http://themeforest.net/user/Bluxart" title="Follow Me on ThemeForest" class="envato" target="_blank"><span class="font-social-envato"></span></a></li>
+                        <li><a href="http://zerply.com/Bluxart/public" title="Follow Me on Zerply" class="zerply" target="_blank"><span class="font-social-zerply"></span></a></li>
+                    </ul>
+                </nav>
+                <div id="credits">
+                	<p>Copyright &copy; 2016  &bull; Metrize Icons &bull; by <a href="http://www.alessioatzeni.com">Alessio Atzeni</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+<script src="http://themes.alessioatzeni.com/banner.js"></script>
+</html>
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+
+ Served from: www.alessioatzeni.com @ 2016-09-11 07:55:03 by W3 Total Cache -->

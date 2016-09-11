@@ -1,4 +1,18 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /** typo **/ 
 h2{
 	
@@ -10,12 +24,34 @@ h1{
 	
 	font-family:$font-moteserrat;
 	font-weight:700;
-	color:getColor('bluewood');
+	
 }
 
 p{
 	
 	font-family:$font-news-cycle;
-	color:getColor('pale-sky');
 	
+	
+}
+
+.test{
+
+	font-family: 'Metrize-Icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	
+}
+
+.test::before {
+	content: "\e000";
+}
+
+i{
+font-size:18px;
+
 }
