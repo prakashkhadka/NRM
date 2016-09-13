@@ -20,6 +20,7 @@ var ctrlPassword = require('../controllers/password');
 var ctrlChangePassword = require('../controllers/changePassword.js');
 var ctrlRoomSearch = require('../controllers/roomSearch.js');
 var ctrlAmazonUrl = require('../controllers/amazonUrl.js');
+var ctrlContactUs = require('../controllers/contactUs.js');
 
 router.post('/roomSearch', ctrlRoomSearch.roomSearch);
 
@@ -45,5 +46,7 @@ router.get('/rooms/:roomid', ctrlRoom.roomReadOne);
 router.put('/rooms/:roomid', auth, ctrlRoom.updateOneRoom);
 router.delete('/rooms/:roomid', auth, ctrlRoom.deleteOneRoom);
 router.post('/rooms', auth, ctrlRoom.createOneRoom);
+
+router.post('/contactUs', ctrlContactUs.contactUs);
 
 module.exports = router;
