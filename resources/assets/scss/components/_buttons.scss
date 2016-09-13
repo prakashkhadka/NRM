@@ -1,41 +1,40 @@
 
-
-
-.btn-primary{
-
-@extend %button;
-background-color:getColor('bluewood');
-font-size:12px;
-}
-
 .sign-up{
+	
+	@extend %button;
+	@include button-variant(getColor('burnt-sienna'), getColor('white'),getColor('burnt-sienna'));
+	font-family:$font-moteserrat;
 
-@extend %button;
-@include button-variant(getColor('burnt-sienna'), getColor('white'),getColor('burnt-sienna'));
+	&:hover{
 
-font-family:$font-moteserrat;
-&:hover{
+		@include button-variant(getColor('white'), getColor('burnt-sienna'),getColor('burnt-sienna'));
+		
+		}
+	
+	&:focus{
+		
+		@include button-variant(getColor('white'), getColor('burnt-sienna-dark'),getColor('burnt-sienna-dark'));
+		outline:0px transparent ;
 
-@include button-variant(getColor('white'), getColor('burnt-sienna'),getColor('burnt-sienna'));
-}
-&:focus{
-@include button-variant(getColor('white'), getColor('burnt-sienna-dark'),getColor('burnt-sienna-dark'));
-outline:0px transparent ;
-
-}
-
+	}
 
 
-		@include media-breakpoint-down(sm){
-@include button-variant(getColor('burnt-sienna'), getColor('bluewood-dark'),getColor('burnt-sienna'));
+
+	@include media-breakpoint-down(sm){
+		
+		@include button-variant(getColor('burnt-sienna'), getColor('bluewood-dark'),getColor('burnt-sienna'));
+	
 	}
 
 }
 
 .send-message{
 
-@extend %button;
-@include button-variant(getColor('white'), getColor('emrald'),getColor('emrald'));
-border-radius:0px;
-font-family:$font-moteserrat;
+	@include button-variant(getColor('white'), getColor('emrald'),getColor('emrald'));
+	border-radius:0px;
+	font-family:$font-moteserrat;
 }
+
+
+
+
