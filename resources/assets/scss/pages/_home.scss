@@ -1,6 +1,6 @@
 .hero{
 
-	height:60vh;
+	height:45vh;
 	background-image:url('../images/hero.jpg');
 	background-size:     cover;                      
   background-repeat:   no-repeat;
@@ -35,13 +35,15 @@
   
   @include make-col-ready();
   @include make-col(12);
-  margin-top:50px;
-  width: 100%;
   text-align:center;
-  height:200px;
   border:1px gray solid;
   background: rgba(51, 51, 51, 0.4);
-  padding:20px;
+
+  margin-top:20px;
+  min-height:150px;
+  padding-top:50px;
+
+
   
 
   //only tablet
@@ -56,15 +58,8 @@
  @include media-breakpoint-up(lg){    
       @include make-col(6);
       @include make-col-offset(3);}
+
 }
 
-#search-form{
-  
-  margin-top:30px;
-}
 
-.test-box{
-  
-  text-align:center
-}
 
