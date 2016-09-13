@@ -3159,28 +3159,18 @@ footer {
       width: 100%;
       padding: 20px;
       width: 100%; }
-      @media (min-width: 768px) {
-        footer .footer-main .footer-column {
-          float: left;
-          width: 50%; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  footer .footer-main .footer-column:last-of-type {
-    float: left;
-    width: 100%;
-    border: 1px green solid; } }
-
-@media (min-width: 768px) and (max-width: 991px) {
-  footer .footer-main {
+  footer .footer-main .footer-column {
     float: left;
     width: 50%; }
-    footer .footer-main:last-child {
+    footer .footer-main .footer-column:last-child {
       float: left;
       width: 100%; } }
-  @media (min-width: 768px) and (max-width: 991px) and (min-width: 992px) {
-    footer .footer-main {
-      float: left;
-      width: 33.33333%; } }
+      @media (min-width: 992px) {
+        footer .footer-main .footer-column {
+          float: left;
+          width: 33.33333%; } }
 
 .footer-column h5 {
   color: #FFFFFF;
