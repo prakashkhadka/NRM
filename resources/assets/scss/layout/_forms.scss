@@ -1,0 +1,19 @@
+#footer-contact-form{
+	width:100%;
+	
+	input{
+
+		
+
+		&:focus{
+			
+			border-bottom:2px getColor('burnt-sienna-dark') solid;
+		}
+	}
+
+	.form-control{
+		
+
+		border-radius:0px;
+	}
+}

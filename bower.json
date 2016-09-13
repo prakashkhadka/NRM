@@ -15,6 +15,8 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "v4.0.0-alpha.4"
+    "bootstrap": "v4.0.0-alpha.4",
+    "monosocialiconsfont": "http://drinchev.github.io/monosocialiconsfont/",
+    "metrize-icons": "http://www.alessioatzeni.com/metrize-icons/"
   }
 }

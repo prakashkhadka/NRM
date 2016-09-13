@@ -9,6 +9,6 @@
 
 
 //function to return type-scale
-@function type-scale($level) {
+@function typeScale($level) {
   @return map-get($type-scale, $level);
 }

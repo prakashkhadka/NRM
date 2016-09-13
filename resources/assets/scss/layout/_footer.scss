@@ -9,67 +9,187 @@ footer{
 	.footer-main{
 
 		@include make-row();
-		border:1px red solid;
-
+		padding:20px;
+		height:auto;
+		
 	}
 
 	.footer-social-media-list{
 
 		@include make-row();
-		border: 1px green solid;
+		text-align:center;
+		height:auto;
+		padding:0px 10px;
+		
+		ul{
+
+padding:0px;
+
+
+
+			li{
+
+				list-style-type:none;
+				display:inline-block;
+				padding:10px 15px;
+				
+				a{
+					
+					text-decoration:none;
+					@include socialIcon($social-icons,$font-metrize);
+					&:hover{
+						text-decoration:none;
+
+					}
+				}
+			}
+		}
+
 	}
 
-	.footer-list{
+	.footer-bottom{
 
 		@include make-row();
-		border:1px blue solid;
+		@include setBackgroundColor(getColor('bluewood'));
+		border-top:1px gray solid;
+		padding:0px;
+
+		.tnc,.dev{
+ 			
+ 			@include make-col-ready();
+			@include make-col(12);
+			text-align:center;
+ 			
+ 			@include media-breakpoint-up(md){	 
+  	 		@include make-col(6);
+  	 			font-weght:typeScale('small');
+  	 			font-family:$font-news-cycle;
+  	 			font-color:getColor('white');
+  	 			line-height:100%;
+  	 			padding:5px;
+  	 			
+  	 
+  			}
+
+
+}
+@include media-breakpoint-up(md){
+.tnc{
+
+	text-align:left;
+	// border:2px white solid;
+	}
+
+	.dev{
+
+		// border:2px pink solid;
+		text-align:right;
+	}
+
+
+}
+
+
+	.footer-list{
+	
+	text-align:center;
+	padding-left:0px;
+	li{
+
+		list-style-type: none;
+		display:inline-block;
+		padding:0px 5px;
+
+
+		&:after{
+
+			content:"|";
+			margin-left:10px;
+		}
+
+		&:last-child:after{
+
+			content:"";
+		}
+		a{
+
+			color:$text-color-footer;
+			text-decoration:none;
+
+			&:hover{
+
+				color:$text-color-footer-link-hover;
+			}
+		}
+	}
+@include media-breakpoint-up(md){
+
+	text-align:left;
+	}
+
+} //end of .footer-list
+
+
+}
+
+
+
+}
+
+.footer-column{
+
+	@include make-col-ready();
+	padding:20px;
+	
+	// border:1px yellow solid;
+	@include make-col(12);
+
+	width:100%;
+	
+
+	h5{
+
+		color:getColor('white');
+		font-weight:600;
+			font-size:18px;
+			font-family:$font-moteserrat;
+	}
+	p{
+
+		color:getColor('pale-sky');
+	}
+	
+	ul{
+
+		padding:0px;
+		width:auto;
+		display:inline-block;
+		margin-top:20px;
+		text-align:left;
+		li{
+			color:getColor('pale-sky');
+			list-style-type: none;
+			// border-bottom:1px dashed getColor('pale-sky');
+			text-align:left;
+			padding-bottom:8px;
+			margin-bottom:15px;
+			&:before{
+
+				content:"";
+				
+				margin-right:10px;
+			}
+		}
 	}
 
 
 
 
 
+	@include media-breakpoint-up(md){
 
-}
+		@include make-col(4);
 
+	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.footer-main{
-
-@include make-row();
-border:1px yellow solid;
-}
-
-.lower-footer{
-
-
-
-.tnc,.dev{
- @include make-col-ready();
- @include make-col(12);
-border:1px green solid;
- @include media-breakpoint-up(md){
-  	 
-  	 @include make-col(6);
-  	 
-  }
-
-}
 }
