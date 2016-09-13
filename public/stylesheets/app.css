@@ -2968,11 +2968,7 @@ footer {
         text-decoration: none;
         color: #6B757E; }
         .footer-column ul li a:hover {
-          color: #EB7260; }
-  @media (min-width: 768px) {
-    .footer-column {
-      float: left;
-      width: 33.33333%; } }
+          color: #B83F2D; }
 
 /* footer social media list */
 .footer-social-media-list {
@@ -3102,7 +3098,7 @@ footer {
       color: #FFFFFF;
       text-decoration: none; }
       .footer-list li a:hover {
-        color: #EB7260; }
+        color: #B83F2D; }
   @media (min-width: 768px) {
     .footer-list {
       text-align: left; } }
