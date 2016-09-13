@@ -3252,6 +3252,22 @@ footer {
       content: "";
       display: table;
       clear: both; }
+  footer .footer-social-media-list {
+    margin-left: -15px;
+    margin-right: -15px;
+    border: 1px green solid; }
+    footer .footer-social-media-list::after {
+      content: "";
+      display: table;
+      clear: both; }
+  footer .footer-list {
+    margin-left: -15px;
+    margin-right: -15px;
+    border: 1px blue solid; }
+    footer .footer-list::after {
+      content: "";
+      display: table;
+      clear: both; }
 
 .footer-main {
   margin-left: -15px;

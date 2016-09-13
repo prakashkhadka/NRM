@@ -11,13 +11,14 @@ var gulp            =   require('gulp');
     plumber         =   require('gulp-plumber'),
     browserSync     =   require('browser-sync').create(),
     reload          =   browserSync.reload,
-    maps      =   require('gulp-sourceMaps');
+    maps            =   require('gulp-sourceMaps');
 
 gulp.task('serve',['browser-sync'], function(){
-    //console.log("Server is woking");
+    console.log("Server is woking");
     gulp.watch('public/**/*.js').on('change', reload);
     gulp.watch('public/**/*.css').on('change', reload);
     gulp.watch('public/**/*.html').on('change', reload);
+    gulp.watch('public/stylesheets/app.css').on('change', reload);
 });
 
 gulp.task('browser-sync',['nodemon'], function(){
@@ -28,12 +29,25 @@ gulp.task('browser-sync',['nodemon'], function(){
     });
 });
 
+gulp.task('compileSass',function(){
+    console.log("compileSass Working");
+    gulp.src('resources/assets/scss/main.scss')
+        .pipe(sass().on('Error',sass.logError))
+        .pipe(rename('app.css'))
+        .pipe(gulp.dest('public/stylesheets'));
+        console.log('compiles sass file');
+});
+gulp.task('sassWatch',function(){
+    console.log("sassWatch working");
+    gulp.watch('resources/assets/**/*.scss',['compileSass']);
+});
+
 gulp.task('nodemon', function(done){
     console.log("Server restarted");
     var running = false;
     return nodemon({
         script : 'app.js',
-        watch: ['app.js', 'public/**/*.js']
+        watch: ['app.js', 'app_client/**/**.*']
     }).on('start', function(){
         if(!running){
             done();
@@ -45,53 +59,12 @@ gulp.task('nodemon', function(done){
         }, 500);
     });
 });
-
-
-/**rajesh gulp task **/
-
-
-/**
- * Compile sass file to css
- */
-
-gulp.task('compileSass',function(){
-
-    gulp.src('./resources/assets/scss/main.scss')
-
-            .pipe(sass().on('Error',sass.logError))
-            .pipe(rename('app.css'))
-            .pipe(gulp.dest('./public/stylesheets'));
-
-            //for test only
-            console.log('compiles sass file');
-
-});
-
-
-/**
- * watch sass files
- */
-
-gulp.task('sass:watch',function(){
-
-    gulp.watch('./resources/assets/scss/**',['compileSass'])
-    
-    //for test only
-    console.log('sass file changed');
-
-});
-
-
-/**
- * move bootstrap scss package
- * 
- */
+gulp.task('default', ['serve', 'sassWatch']);
 
 gulp.task('moveSass',function(){
-
+    console.log("I am moveSass");
     gulp.src('bower_components/bootstrap/scss/**/*')
     .pipe(plumber({
-
         errorHandler:function(error){
             console.log('Error occured while compiling sass ');
             console.log(error.toString);
@@ -99,13 +72,6 @@ gulp.task('moveSass',function(){
         }
     }))
     .pipe(gulp.dest('resources/assets/scss/vendors/bootstrap'));
-
     console.log('Successfully moved bootstrap sass port files.');
-})
-
-
-/**
- * gulp default task
- */
-gulp.task('default', ['serve']);
+});
 
