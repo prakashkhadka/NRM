@@ -53,6 +53,7 @@ $tsf-colors : (
 $font-moteserrat: 'Montserrat', sans-serif;
 $font-news-cycle:'News Cycle', sans-serif;
 $font-metrize : 'Metrize-Icons';
+$font-oleo: 'Arizonia', Helvetica, sans-serif;
 
 <<<<<<< HEAD
 =======
@@ -62,6 +63,7 @@ $font-metrize : 'Metrize-Icons';
 //font scale variables
 >>>>>>> origin/footer
 $type-scale: (
+	
   'small': 0.75rem,  // small text
   'body-text': 1rem,      // body text
   'large-text': 1.333rem,  // large text
@@ -71,8 +73,11 @@ $type-scale: (
 
 
 //contextul font variables
+
+$text-color-body:#38424B;
+$text-color-heading:#021125;
 $text-color-footer:#FFFFFF;
-$text-color-footer-link-hover:#EB7260 ;
+$text-color-footer-link-hover:#B83F2D;
 
 
 
@@ -91,3 +96,5 @@ $social-icons :(
 
 //layout 
 $nrm-top-navbar-height:75px;
+
+///
