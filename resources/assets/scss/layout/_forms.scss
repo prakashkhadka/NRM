@@ -1,19 +1,38 @@
 #footer-contact-form{
-	width:100%;
+	
+	padding:0px 20px;
 	
 	input{
 
 		
-
-		&:focus{
-			
-			border-bottom:2px getColor('burnt-sienna-dark') solid;
-		}
 	}
-
-	.form-control{
+	textarea{
 		
 
-		border-radius:0px;
+		height:150px;
+
 	}
-}
+	
+	.form-group{
+
+		@include make-row();
+		
+			.form-control{
+
+				@include make-col(12);
+				
+				//ipad only
+				@include media-breakpoint-only(md){
+
+					@include make-col(10);
+				}
+
+				//desktop and aboce
+				@include media-breakpoint-up(lg){
+
+					@include make-col(10);
+					
+				}
+			} //end of form-control
+		} // end of form-group
+	}
