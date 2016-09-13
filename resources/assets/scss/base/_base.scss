@@ -12,12 +12,13 @@ body{
 
 section{
 	
-	
+	@include make-container();
+	padding:0px;
 
 
 &#partial-view{
+	
 	margin-top:76px;
-	// border:1px red solid;
 	min-height:700px;
 }
 
@@ -25,57 +26,4 @@ section{
 
 }
 
-
-
-///
-.jumbotron{
-
-	height:60vh;
-	background-image:url('../images/hero.jpg');
-	background-size:     cover;                      /* <------ */
-    background-repeat:   no-repeat;
-    background-position: center center; 
-}
-
-h1{
-
-	text-align:center;
-	font-family:$font-moteserrat;
-	font-weight:400;
-	font-size:60px;
-	shadow:2px 2px 2px gray;
-	text-shadow:4px 4px 4px black;
-	
-}
-
-.search-box{
-  margin-top:50px;
-  widows: 100%;
-  text-align:center;
-  height:200px;
-  border:1px gray solid;
-  background: rgba(51, 51, 51, 0.4);
-  padding:20px;
-@include make-col(10);
- @include make-col-offset(1);
-  @include media-breakpoint-up(sm){
-
-		
-  @include make-col(6);
-   @include make-col-offset(3);}
-}
-
-#search-form{
-  
-  margin-top:30px;
-}
-
-#search-form input{
-  
-  height:50px;
-}
-.test-box{
-  
-  text-align:center
-}
 

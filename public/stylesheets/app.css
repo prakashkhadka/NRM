@@ -1,12 +1,4 @@
 @charset "UTF-8";
-/*
-* @Author: Rajesh Basnet
-* @Date:   2016-09-05 21:01:43
-* @Last Modified by:   Rajesh Basnet
-* @Last Modified time: 2016-09-10 00:46:42
-* nrm application
-* Designed and developed by Sprouttech
-*/
 @import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 @font-face {
@@ -2628,51 +2620,19 @@ body {
   min-height: 100vh;
   padding: 0px; }
 
-section#partial-view {
-  margin-top: 76px;
-  min-height: 700px; }
-
-.jumbotron {
-  height: 60vh;
-  background-image: url("../images/hero.jpg");
-  background-size: cover;
-  /* <------ */
-  background-repeat: no-repeat;
-  background-position: center center; }
-
-h1 {
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 60px;
-  shadow: 2px 2px 2px gray;
-  text-shadow: 4px 4px 4px black; }
-
-.search-box {
-  margin-top: 50px;
-  widows: 100%;
-  text-align: center;
-  height: 200px;
-  border: 1px gray solid;
-  background: rgba(51, 51, 51, 0.4);
-  padding: 20px;
-  float: left;
-  width: 83.33333%;
-  margin-left: 8.33333%; }
-  @media (min-width: 544px) {
-    .search-box {
-      float: left;
-      width: 50%;
-      margin-left: 25%; } }
-
-#search-form {
-  margin-top: 30px; }
-
-#search-form input {
-  height: 50px; }
-
-.test-box {
-  text-align: center; }
+section {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding: 0px; }
+  section::after {
+    content: "";
+    display: table;
+    clear: both; }
+  section#partial-view {
+    margin-top: 76px;
+    min-height: 700px; }
 
 /**
  * Components - buttons
@@ -3146,3 +3106,55 @@ footer {
         #footer-contact-form .form-group .form-control {
           float: left;
           width: 83.33333%; } }
+
+.hero {
+  height: 60vh;
+  background-image: url("../images/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 20px 10px; }
+  .hero h1 {
+    display: none; }
+  @media (min-width: 768px) {
+    .hero {
+      padding: 50px 10px; }
+      .hero h1 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        text-shadow: 4px 4px 4px black;
+        color: #FFFFFF;
+        text-align: center;
+        display: block; } }
+
+.search-box {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: left;
+  width: 100%;
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+  height: 200px;
+  border: 1px gray solid;
+  background: rgba(51, 51, 51, 0.4);
+  padding: 20px; }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .search-box {
+    float: left;
+    width: 83.33333%;
+    margin-left: 8.33333%; } }
+  @media (min-width: 992px) {
+    .search-box {
+      float: left;
+      width: 50%;
+      margin-left: 25%; } }
+
+#search-form {
+  margin-top: 30px; }
+
+.test-box {
+  text-align: center; }
