@@ -11,18 +11,32 @@ footer{
 		@include make-row();
 		padding:20px;
 		height:auto;
-		
-		
+
 		.footer-column{
-			
+
+
 			@include make-col-ready();
 			@include make-col(12);
 			padding:20px;
 			width:100%;
+	
+			@include media-breakpoint-up(md){
 
+			@include make-col(6);
 
-			
+		
 
+			}
+		}
+
+		& .footer-column:last-of-type{
+			@include media-breakpoint-only(md){
+				@include make-col(12);
+				border:1px green solid;
+			}
+		}
+
+	
 			@include media-breakpoint-only(md){
 				
 				@include make-col(6);
@@ -33,7 +47,6 @@ footer{
 					@include make-col(12);
 
 
-				}
 	
 			}
 
@@ -105,11 +118,13 @@ footer{
 		}
 	}
 
+
 	@include media-breakpoint-up(lg){
 
 		@include make-col(4);
 
 	}
+
 
 }
 

@@ -1,11 +1,14 @@
-#footer-contact-form{
-	
-	padding:0px 20px;
-	
-	input{
 
-		
-	}
+.form-control{
+
+	border-radius:0px;
+}
+
+//footercontact form
+#footer-contact-form{
+
+	padding:0px 20px;
+
 	textarea{
 		
 
@@ -47,7 +50,8 @@
 			@include make-row();
 		}
 		input{
-				@include make-col-ready();
+			
+			@include make-col-ready();
 			@include make-col(9);
 			@include media-breakpoint-up(md){
 
@@ -68,3 +72,4 @@
 		}
 		
 	}
+
