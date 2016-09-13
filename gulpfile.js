@@ -59,7 +59,7 @@ gulp.task('nodemon', function(done){
         }, 500);
     });
 });
-gulp.task('default', ['serve', 'sassWatch']);
+gulp.task('default', ['serve', 'sassWatch', 'compileSass']);
 
 gulp.task('moveSass',function(){
     console.log("I am moveSass");

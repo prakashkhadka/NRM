@@ -3,7 +3,7 @@
 
 $tsf-colors : (
 
-<<<<<<< HEAD
+
 	'bluewood'		:   #354458,
 	'bluewood-dark' 	:   #021125,
 	'burnt-sienna' 		:   #EB7260,
@@ -11,18 +11,9 @@ $tsf-colors : (
 	'pale-sky'              :   #6B757E,
 	'pale-sky-dark'		:   #38424B,
 	'mercury' 		:   #E9E9E9,
-	'white'			:   #FFFFFF
-=======
-	'bluewood'			: 	#354458,
-	'bluewood-dark' 	: 	#021125,
-	'burnt-sienna' 		: 	#EB7260,
-	'burnt-sienna-dark' : 	#B83F2D,
-	'pale-sky'			:	#6B757E,
-	'pale-sky-dark'		: 	#38424B,
-	'mercury' 			: 	#E9E9E9,
-	'white'				:	#FFFFFF,
-	'emrald'			:	#29aba4
->>>>>>> origin/footer
+	'white'			:   #FFFFFF,
+	'emrald'		:   #29aba4
+
 
 
 );
@@ -55,13 +46,9 @@ $font-news-cycle:'News Cycle', sans-serif;
 $font-metrize : 'Metrize-Icons';
 $font-oleo: 'Arizonia', Helvetica, sans-serif;
 
-<<<<<<< HEAD
-=======
-
-
 
 //font scale variables
->>>>>>> origin/footer
+
 $type-scale: (
 	
   'small': 0.75rem,  // small text

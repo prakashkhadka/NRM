@@ -2933,165 +2933,8 @@ footer {
       content: "";
       display: table;
       clear: both; }
-<<<<<<< HEAD
-  footer .footer-social-media-list {
-    margin-left: -15px;
-    margin-right: -15px;
-<<<<<<< HEAD
-    border: 1px green solid; }
-=======
-    text-align: center;
-    height: auto;
-    padding: 0px 10px; }
->>>>>>> origin/footer
-    footer .footer-social-media-list::after {
-      content: "";
-      display: table;
-      clear: both; }
-<<<<<<< HEAD
-  footer .footer-list {
-    margin-left: -15px;
-    margin-right: -15px;
-    border: 1px blue solid; }
-    footer .footer-list::after {
-      content: "";
-      display: table;
-      clear: both; }
-
-.footer-main {
-  margin-left: -15px;
-  margin-right: -15px;
-  border: 1px yellow solid; }
-  .footer-main::after {
-    content: "";
-    display: table;
-    clear: both; }
-
-.lower-footer .tnc, .lower-footer .dev {
-=======
-    footer .footer-social-media-list ul {
-      padding: 0px; }
-      footer .footer-social-media-list ul li {
-        list-style-type: none;
-        display: inline-block;
-        padding: 10px 15px; }
-        footer .footer-social-media-list ul li a {
-          text-decoration: none; }
-          footer .footer-social-media-list ul li a .social-icon-youtube {
-            font-family: "Metrize-Icons";
-            speak: none;
-            font-style: normal;
-            font-weight: normal;
-            font-variant: normal;
-            text-transform: none;
-            line-height: 1;
-            -webkit-font-smoothing: antialiased;
-            color: #FFFFFF; }
-            footer .footer-social-media-list ul li a .social-icon-youtube:hover {
-              color: #bb0000; }
-          footer .footer-social-media-list ul li a .social-icon-youtube:before {
-            content: ""; }
-          footer .footer-social-media-list ul li a .social-icon-facebook {
-            font-family: "Metrize-Icons";
-            speak: none;
-            font-style: normal;
-            font-weight: normal;
-            font-variant: normal;
-            text-transform: none;
-            line-height: 1;
-            -webkit-font-smoothing: antialiased;
-            color: #FFFFFF; }
-            footer .footer-social-media-list ul li a .social-icon-facebook:hover {
-              color: #3b5998; }
-          footer .footer-social-media-list ul li a .social-icon-facebook:before {
-            content: ""; }
-          footer .footer-social-media-list ul li a .social-icon-twitter {
-            font-family: "Metrize-Icons";
-            speak: none;
-            font-style: normal;
-            font-weight: normal;
-            font-variant: normal;
-            text-transform: none;
-            line-height: 1;
-            -webkit-font-smoothing: antialiased;
-            color: #FFFFFF; }
-            footer .footer-social-media-list ul li a .social-icon-twitter:hover {
-              color: #55acee; }
-          footer .footer-social-media-list ul li a .social-icon-twitter:before {
-            content: ""; }
-          footer .footer-social-media-list ul li a .social-icon-google {
-            font-family: "Metrize-Icons";
-            speak: none;
-            font-style: normal;
-            font-weight: normal;
-            font-variant: normal;
-            text-transform: none;
-            line-height: 1;
-            -webkit-font-smoothing: antialiased;
-            color: #FFFFFF; }
-            footer .footer-social-media-list ul li a .social-icon-google:hover {
-              color: #dd4b39; }
-          footer .footer-social-media-list ul li a .social-icon-google:before {
-            content: ""; }
-          footer .footer-social-media-list ul li a:hover {
-            text-decoration: none; }
-  footer .footer-bottom {
-    margin-left: -15px;
-    margin-right: -15px;
-    background-color: #354458;
-    border-top: 1px gray solid;
-    padding: 0px; }
-    footer .footer-bottom::after {
-      content: "";
-      display: table;
-      clear: both; }
-    footer .footer-bottom .tnc, footer .footer-bottom .dev {
-      position: relative;
-      min-height: 1px;
-      padding-right: 15px;
-      padding-left: 15px;
-      float: left;
-      width: 100%;
-      text-align: center; }
-      @media (min-width: 768px) {
-        footer .footer-bottom .tnc, footer .footer-bottom .dev {
-          float: left;
-          width: 50%;
-          font-weght: 0.75rem;
-          font-family: "News Cycle", sans-serif;
-          font-color: #FFFFFF;
-          line-height: 100%;
-          padding: 5px; } }
-    @media (min-width: 768px) {
-      footer .footer-bottom .tnc {
-        text-align: left; }
-      footer .footer-bottom .dev {
-        text-align: right; } }
-    footer .footer-bottom .footer-list {
-      text-align: center;
-      padding-left: 0px; }
-      footer .footer-bottom .footer-list li {
-        list-style-type: none;
-        display: inline-block;
-        padding: 0px 5px; }
-        footer .footer-bottom .footer-list li:after {
-          content: "|";
-          margin-left: 10px; }
-        footer .footer-bottom .footer-list li:last-child:after {
-          content: ""; }
-        footer .footer-bottom .footer-list li a {
-          color: #FFFFFF;
-          text-decoration: none; }
-          footer .footer-bottom .footer-list li a:hover {
-            color: #EB7260; }
-      @media (min-width: 768px) {
-        footer .footer-bottom .footer-list {
-          text-align: left; } }
-=======
->>>>>>> origin/footer
 
 .footer-column {
->>>>>>> origin/footer
   position: relative;
   min-height: 1px;
   padding-right: 15px;
@@ -3125,7 +2968,7 @@ footer {
         text-decoration: none;
         color: #6B757E; }
         .footer-column ul li a:hover {
-          color: #EB7260; }
+          color: #B83F2D; }
   @media (min-width: 768px) {
     .footer-column {
       float: left;
@@ -3259,7 +3102,7 @@ footer {
       color: #FFFFFF;
       text-decoration: none; }
       .footer-list li a:hover {
-        color: #EB7260; }
+        color: #B83F2D; }
   @media (min-width: 768px) {
     .footer-list {
       text-align: left; } }
