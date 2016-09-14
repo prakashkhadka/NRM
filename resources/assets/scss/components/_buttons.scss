@@ -1,5 +1,5 @@
 
-.sign-up{
+.btn-sign-up{
 	
 	@extend %button;
 	@include button-variant(getColor('burnt-sienna'), getColor('white'),getColor('burnt-sienna'));
@@ -28,13 +28,20 @@
 
 }
 
-.send-message{
-
+.btn-send-message{
+	
+	@extend %button;
 	@include button-variant(getColor('white'), getColor('emrald'),getColor('emrald'));
-	border-radius:0px;
 	font-family:$font-moteserrat;
+	height:50px;
 }
 
 
-
+.btn-search{
+	
+	@extend %button;
+	@include button-variant(getColor('white'), getColor('burnt-sienna'),getColor('burnt-sienna'));
+	font-family:$font-moteserrat;
+	height:50px;
+}
 
