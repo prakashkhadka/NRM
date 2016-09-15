@@ -1,16 +1,27 @@
-    <nav class="nrm-top-navbar">
-     <a class="navbar-brand" href="/"><img class="logo" src="images/test.png"></a>
+<nav class="nrm-top-navbar">
+    <a class="navbar-brand" href="/"><img class="logo" src="images/test.png"></a>
 
-   <button class="top-toggler" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="bar"></span>
-  </button>
- <div class="collapsable-menu" id="exCollapsingNavbar">
-    <ul class="nav">
-    <li><a href="/">Home</a></li>
-    <li><a href="/createRoom">Rent Room</a></li>
-    <li><a href="/login">Log in</a></li>
-    <li><a class="btn-sign-up" href="/register">Sign up</a></li>
-    </ul>
+    <button class="top-toggler" 
+            type="button" 
+            data-toggle="collapse" 
+            data-target="#exCollapsingNavbar" 
+            aria-controls="exCollapsingNavbar" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+        <span class="bar"></span>
+    </button>
+    
+    <div class="collapsable-menu" id="exCollapsingNavbar">
+        <ul class="nav">
+            <li><a href="/">Home</a></li>
+            <li ng-if="isLoggedIn"><a href="/createRoom">Rent Room</a></li>
+            <li ng-hide="isLoggedIn"><a href="/login">Log in</a></li>
+            <li ng-hide="isLoggedIn"><a class="btn-sign-up" href="/register">Sign up</a></li>
+            <li ng-if="isLoggedIn"><a href="/myPost">My Ads</a></li>
+            <li ng-if="isLoggedIn"><a href="/changePassword">Change Password</a></li>
+            <li ng-if="isLoggedIn" ng-click="logout()"><a class="btn-sign-up" href="/#">Log Out</a></li>
+        </ul>
+    <div ng-if="isLoggedIn" id="currentUser">Welcome <span id="userName">{{currentUser.name}}</span></div>
     </div>
 </nav>
 <!-- <nav class="navbar navbar-default hidden-sm-up navbar-fixed-top bg-info">

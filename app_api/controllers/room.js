@@ -18,7 +18,7 @@ module.exports.roomList = function(req, res){
     Rm.find() // find everything on the room collections
         .sort('-createdOn')
         .limit(6)
-        .select('suburb postcode street street_no unit rent') // selects only here mentioned items on room collection
+        .select('suburb postcode street street_no unit rent images') // selects only here mentioned items on room collection
         .exec(function(err, results){   // executes the function inside braces
             var rooms = [];             // creates rooms array
             for(var i=0; i<results.length; i++){

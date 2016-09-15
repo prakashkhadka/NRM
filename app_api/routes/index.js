@@ -48,5 +48,9 @@ router.delete('/rooms/:roomid', auth, ctrlRoom.deleteOneRoom);
 router.post('/rooms', auth, ctrlRoom.createOneRoom);
 
 router.post('/contactUs', ctrlContactUs.contactUs);
-
+/*
+router.post('/contactUs', function(req, res){
+    console.log("contactUs api called : " + req.body);
+});
+*/
 module.exports = router;

@@ -11,7 +11,8 @@
   function footerGeneric () {
     return {
       restrict: 'EA',
-      templateUrl: 'directives/footer/footerView.html'
+      templateUrl: 'directives/footer/footerView.html',
+      controller: 'footerCtrl'
     };
   }
 

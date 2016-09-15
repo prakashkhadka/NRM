@@ -1,28 +1,32 @@
 
 <navigation></navigation>
-<!-- <search-room></search-room> -->
+
+
+<search-room></search-room>
 
 <section>
-<div class="hero">
-
-  <h1>Find a great room easily</h1>
-
-  
+    <h3>Recently added rooms</h3>
     
-      
-      <div class="search-box">
-        <form name="searchForm" id="search-form" ng-submit="search.processAddress(search.searchQuery)"novalidate>
-               <div class="form-group" ng-class="{'has-danger':!searchForm.$pristine && searchForm.$invalid,'has-success':searchForm.$valid}">
-                 <input type="text" class="form-control" ng-class="{'form-control-danger':!searchForm.$pristine && searchForm.$invalid,'form-control-success':searchForm.$valid}" ng-model="search.searchQuery" placeholder="Enter postcode or suburb" required>
-               <button class="btn-search form-control" >Search</button>
-               
-             </div>
-          
-        </form><!--End of searchForm-->   
-      </div> <!--End of searc-box
-   
-   </div><!-- End of row -->
-      </section>
+    <div class="card-group">
+        <div class="card" ng-repeat="room in rooms">
+            <div ng-if="!room.images == 0">
+                <img class="card-img-top img-thumbnail" src="https://s3-ap-southeast-2.amazonaws.com/nrm/{{room.images[0]}}" alt="">
+            </div>
+            <div ng-if="room.images == 0">
+                <img class="card-img-top img-thumbnail" src="images/nrmLogo.png" alt="Room Image">
+            </div>
+            <span id="roomRent" class="btn btn-primary">{{room.rent}} / w</span>
+            <div class="card-block">
+                <h3>{{room.suburb}}</h3>
+                {{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}, {{room.postcode}}
+            </div>
+            <a class="btn btn-primary" href="/roomDetail/{{room._id}}">View details</a>
+        </div>
+    </div>
+</section>
+
+<footer-generic></footer-generic>
+
 
 <!-- </div>
 <div class="conatiner" ng-if="!hideHome">

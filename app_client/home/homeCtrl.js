@@ -13,7 +13,11 @@ function homeCtrl($scope, $http){
           method: 'GET',
           url: '/api/rooms'
         }).then(function successCallback(response) {
+            
             $scope.rooms = response.data;
+            console.log("images received is: ");
+            console.log($scope.rooms.images);
+            
             $scope.currentPage = 1;
             //console.log("data returned from database :");
             //console.log(response.data);

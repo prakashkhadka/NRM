@@ -1,5 +1,65 @@
-
 <footer>
-    <span id="footerText"> Copyright @ sproutTech 2016</span>
-    <img src="images/nrmLogo.png" id="logoButtom" alt="Nepali Room-mates BottomLogo">
+    <div class="footer-main">
+        <div class="footer-column">
+            <h5>Explore Australia</h5>
+            <ul>
+                <li><a href="" target="_blank">New South Wales</li>
+                <li><a href="" target="_blank">Australian Capital Territorry</li>
+                <li><a href="" target="_blank">Northern territorry</li>
+                <li><a href="" target="_blank">Western Australia</li>
+                <li><a href="" target="_blank">South Australia</li>
+                <li><a href="" target="_blank">Victoria</li>
+                <li><a href="" target="_blank">Queensland</li>
+                <li><a href="" target="_blank">Tasmania</li> 
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h5>Useful Resources</h5>
+            <ul>
+                <li><a href="http://www.border.gov.au/"  target="_blank">Department of Immigration & Border Protection</li>
+                <li><a href="http://www.ato.gov.au" target="_blank">Australian tax Office</li>
+                <li><a href="" target="_blank">CRISCO</li>
+                <li><a href="" target="_blank">Overseas Student Ombudsman</li>
+                <li><a href="" target="_blank">Australian Qualification Framework</li>
+                <li><a href="" target="_blank">Nepalese Embassy</li>
+            </ul>
+        </div>
+        <div class="footer-column"> <h5>Contact Us</h5>
+            <p>Questions?We've got answers and love to hear from you. Try us.</p>
+            <form id="footer-contact-form">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Enter name" ng-model="contactUs.name">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" name="email" placeholder="Enter email" ng-model="contactUs.email">
+                </div>
+                <div class="form-group">
+                    <textarea type="text" class="form-control"  name="message" ng-model="contactUs.message"></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn-send-message form-control" ng-click="sendMessage(contactUs)">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer-social-media-list">
+        <ul>
+            <li><a href=""><i class="social-icon-facebook"></i></a></li>
+            <li><a href=""><i class="social-icon-google"></i></a></li>
+            <li><a href=""><i class="social-icon-youtube"></i></a></li>
+            <li><a href=""><i class="social-icon-twitter"></i></a></li>
+        </ul> 
+    </div>
+    <div class="footer-bottom">
+        <div class="tnc">
+            <ul class="footer-list">
+                <li><a href="">Terms & condition</a></li>
+                <li><a href="">Privacy policy</a></li>
+                <li><a href="">&copy 2016 NRM</a></li>
+                <li><a href="">Feedback</a></li>
+            </ul></div>
+        <div class="dev">
+            <p>Design by SproutTech</p>
+        </div>
+    </div>
 </footer>

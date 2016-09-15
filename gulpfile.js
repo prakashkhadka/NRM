@@ -47,7 +47,7 @@ gulp.task('nodemon', function(done){
     var running = false;
     return nodemon({
         script : 'app.js',
-        watch: ['app.js', 'app_client/**/**.*']
+        watch: ['app.js', 'app_api/**/*.js']
     }).on('start', function(){
         if(!running){
             done();

@@ -14,8 +14,10 @@ var sendJSONresponse = function(res, status, content) {
 
 
 module.exports.contactUs = function(req, res){
+    console.log("ContactUs is OK : ");
+    console.log(req.body);
     contactModel.create({                                 // creates a new room on room collection
-        name : req.body.name,
+        guestName : req.body.name,
         email : req.body.email,
         message: req.body.message
     }, 
@@ -28,7 +30,7 @@ module.exports.contactUs = function(req, res){
         else{
             //console.log(room);
             //console.log("Data sent to database is : " + room);
-            sendJSONresponse(res, 201, contactMsg);
+            sendJSONresponse(res, 201, "Success");
         }
     }
     );

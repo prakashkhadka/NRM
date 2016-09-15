@@ -1,3 +1,24 @@
+<section>
+    <div class="hero">
+        <h1>Find a great room easily</h1>
+        <div class="search-box">
+          <form name="searchForm" id="search-form" ng-submit="search.processAddress(search.searchQuery)"novalidate>
+                <div class="form-group" ng-class="{'has-danger':!searchForm.$pristine && searchForm.$invalid,'has-success':searchForm.$valid}">
+                    <input type="text" class="form-control" 
+                           ng-class="{'form-control-danger':!searchForm.$pristine && searchForm.$invalid,'form-control-success':searchForm.$valid}" 
+                           ng-model="search.searchQuery" 
+                           placeholder="Enter postcode or suburb"
+                           ng-autocomplete 
+                           ng-model="adrs.searchValue"
+                           required>
+                    <button class="btn-search form-control" ng-click="addressSearch(adrs)">Search</button>
+               </div>
+          </form><!--End of searchForm-->   
+        </div> <!--End of searc-box -->
+    </div>
+      <!-- End of row -->
+</section>
+<!--
 <style>
     @media(max-width: 767px){
         #searchContainer{
@@ -43,3 +64,4 @@
     </div>
 </div>
 
+-->
