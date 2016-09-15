@@ -3419,6 +3419,25 @@ footer {
         text-align: center;
         display: block; } }
 
+.hero-search {
+  margin-top: 60px;
+  height: 20vh;
+  background-image: url("../images/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 20px 10px; }
+  @media (min-width: 768px) {
+    .hero-search {
+      padding: 50px 10px; }
+      .hero-search h1 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        text-shadow: 4px 4px 4px black;
+        color: #FFFFFF;
+        text-align: center;
+        display: block; } }
+
 .search-box {
   position: relative;
   min-height: 1px;
@@ -3444,6 +3463,34 @@ footer {
       width: 50%;
       margin-left: 25%; } }
 
-#roomRent {
+.search-box-small {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: left;
+  width: 100%;
+  text-align: center;
+  border: 1px gray solid;
+  background: rgba(51, 51, 51, 0.4);
+  margin-top: 10px;
+  min-height: 80px;
+  padding-top: 10px; }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .search-box-small {
+    float: left;
+    width: 83.33333%;
+    margin-left: 8.33333%; } }
+  @media (min-width: 992px) {
+    .search-box-small {
+      float: left;
+      width: 50%;
+      margin-left: 25%; } }
+
+.roomRent {
   margin-top: -75px;
   margin-left: 5px; }
+
+#viewDetails-btn {
+  margin-left: 50px; }

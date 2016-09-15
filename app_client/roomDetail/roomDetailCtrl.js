@@ -8,6 +8,7 @@ angular
         .controller("roomDetailCtrl", roomDetailCtrl);
 
 function roomDetailCtrl($routeParams, $scope, $location, roomData){
+    $scope.hideHome = true;
     $scope.currentPath = $location.path();
     $scope.roomid = $routeParams.roomid;
     roomData.roomDetail($scope.roomid)

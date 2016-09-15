@@ -38,6 +38,8 @@ angular.module( "roomApp")
                 alias: 'NT'
             }];
             var searchThing = adrs.searchValue;
+            console.log("search thing is : ");
+            console.log(searchThing);
             var queryString = searchThing.trim();
                 //console.log("Query String is : " + queryString);
             
@@ -95,15 +97,17 @@ angular.module( "roomApp")
                 state : state,
                 suburb : suburb
             };
+            console.log("Search data : ");
+            console.log(searchData);
             $http({
                 method:'POST',
                 url: '/api/roomSearch',
                 data: searchData
             }).success(function(data){
-                
                 $scope.searchedRoom = data;
-                $scope.hideHome = $scope.searchedRoom;
-                //console.log(data);
+                $scope.hideHome = true;
+                $scope.hideRoomDetailsSection = $scope.oneRoomDetails;
+                console.log(data);
                 
             }).error(function(data){
                 //console.log("Error" + data);

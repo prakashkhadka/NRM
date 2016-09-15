@@ -15,8 +15,8 @@ function homeCtrl($scope, $http){
         }).then(function successCallback(response) {
             
             $scope.rooms = response.data;
-            console.log("images received is: ");
-            console.log($scope.rooms.images);
+            //console.log("images received is: ");
+            //console.log($scope.rooms.images);
             
             $scope.currentPage = 1;
             //console.log("data returned from database :");
