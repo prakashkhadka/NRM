@@ -68,3 +68,21 @@
 		}
 		
 	}
+        
+        .test-search-box{
+            
+            
+            @include make-row();
+            height:auto;
+            @include setBackgroundColor(getColor('mercury'));
+            position:fixed;
+            top:120px;
+            z-index:999;
+            width:100%;
+            
+        }
+        .test{
+            background-color: red;
+            height:800px;
+            width:100%;
+        }

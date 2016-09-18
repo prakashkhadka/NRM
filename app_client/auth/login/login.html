@@ -8,8 +8,22 @@
         font-size: 8pt;
     }
 </style>
-<navigation></navigation>
+<navigation></navigation></br></br></br></br></br></br></br>
 <h2 class="text-xs-center">User Login</h2>
+<div class="test-search-box">
+<form name="searchForm" id="search-form" novalidate>
+                <div class="form-group" ng-class="{'has-danger':!searchForm.$pristine && searchForm.$invalid,'has-success':searchForm.$valid}">
+                    <input type="text" class="form-control" 
+                           ng-class="{'form-control-danger':!searchForm.$pristine && searchForm.$invalid,'form-control-success':searchForm.$valid}" 
+                           placeholder="Enter postcode or suburb"
+                           ng-autocomplete 
+                           ng-model="adrs.searchValue"
+                           required>
+                    <button class="btn-search form-control" ng-click="addressSearch(adrs)">Search</button>
+               </div>
+          </form>
+</div><div class="test"></div>
+    <!--End of searchForm-->   
 <h4 class="text-xs-center">Please fill the following details to login<h4>
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-sm-offset-1">       

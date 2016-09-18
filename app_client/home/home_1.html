@@ -19,16 +19,55 @@
                 </div>
                 <a href="/roomDetail/{{room._id}}" class="btn btn-primary roomRent">{{room.rent}} / w</a>
                 <div class="card-block">
-                    <h5>{{room.suburb}}, {{room.postcode}} </h5>
+                    <h5><a href="/roomDetail/{{room._id}}">{{room.suburb}}, {{room.postcode}} </a></h5>
                     
                     <!--
                     {{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}
                     -->
                 </div>
-                <a id="viewDetails-btn" class="btn btn-primary" href="/roomDetail/{{room._id}}">View details</a>
             </div>
         </div>
     </div>
+    <div ng-if="!showMore">
+        <a href="" class="btn btn-primary" ng-click="getRooms(1)">View More</a>
+    </div>
+    
+    <div ng-repeat="cnt in count">
+        cnt
+    </div>
+    
+    <div ng-repeat="cnt in count">
+        Repeat is : {{count.length}}
+        <div ng-if="showMore && !hideHome" class="container">
+            <h3>More Rooms</h3>
+            <div class="card-group">
+                <div class="card" ng-repeat="room in moreRooms">
+                    <div ng-if="room.images.length > 0">
+                        <a href="/roomDetail/{{room._id}}">
+                            <img class="card-img-top img-thumbnail" src="https://s3-ap-southeast-2.amazonaws.com/nrm/{{room.images[0]}}" alt="">
+                        </a>
+                    </div>
+                    <div ng-if="room.images.length < 1">
+                        <img class="card-img-top img-thumbnail" src="images/nrmLogo.png" alt="Room Image">
+                    </div>
+                    <a href="/roomDetail/{{room._id}}" class="btn btn-primary roomRent">{{room.rent}} / w</a>
+                    <div class="card-block">
+                        <h5><a href="/roomDetail/{{room._id}}">{{room.suburb}}, {{room.postcode}} </a></h5>
+
+                        <!--
+                        {{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div>
+            <a href="" class="btn btn-primary" ng-click="forward()">View More Again</a>
+        </div>
+    
+    
     
     <div class="card-group">
         <div class="card" ng-repeat="room in searchedRoom">
@@ -135,3 +174,5 @@
 
 
  -->
+ 
+ 

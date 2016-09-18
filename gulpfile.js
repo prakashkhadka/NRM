@@ -15,9 +15,9 @@ var gulp            =   require('gulp');
 
 gulp.task('serve',['browser-sync'], function(){
     console.log("Server is woking");
-    gulp.watch('public/**/*.js').on('change', reload);
+    gulp.watch('app_client/**/*.js').on('change', reload);
     gulp.watch('public/**/*.css').on('change', reload);
-    gulp.watch('public/**/*.html').on('change', reload);
+    gulp.watch('app_client/**/*.html').on('change', reload);
     gulp.watch('public/stylesheets/app.css').on('change', reload);
 });
 

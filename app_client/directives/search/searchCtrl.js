@@ -10,6 +10,7 @@ angular.module( "roomApp")
     function searchCtrl($scope, $http, $location){
         
         $scope.addressSearch =  function(adrs){
+            //$location.path('/roomSearchPage');
             //$location.path('/searchResult');
             //console.log("Search value is : " + adrs.searchValue);
             var stateList = [{
@@ -38,8 +39,8 @@ angular.module( "roomApp")
                 alias: 'NT'
             }];
             var searchThing = adrs.searchValue;
-            console.log("search thing is : ");
-            console.log(searchThing);
+            //console.log("search thing is : ");
+            //console.log(searchThing);
             var queryString = searchThing.trim();
                 //console.log("Query String is : " + queryString);
             
@@ -104,10 +105,13 @@ angular.module( "roomApp")
                 url: '/api/roomSearch',
                 data: searchData
             }).success(function(data){
-                $scope.searchedRoom = data;
-                $scope.hideHome = true;
-                $scope.hideRoomDetailsSection = $scope.oneRoomDetails;
-                console.log(data);
+                $scope.searchedRoom = data.searchData;
+                
+                //$scope.hideHome = true;
+                //$scope.hideRoomDetailsSection = $scope.oneRoomDetails;
+                console.log("Search data received from server : ");
+                //console.log(data.searchData);
+                console.log($scope.searchedRoom);
                 
             }).error(function(data){
                 //console.log("Error" + data);

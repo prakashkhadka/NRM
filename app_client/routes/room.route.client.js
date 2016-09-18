@@ -35,6 +35,14 @@ function config($routeProvider, $locationProvider){
                 templateUrl: "editRoom/editRoom.html",
                 controller: "editRoomCtrl"   
     }) 
+            .when("/roomPagination",{
+                templateUrl: "roomPagination/roomPagination.html",
+                controller: "roomPaginationCtrl"   
+    })
+            .when("/roomSearchPage",{
+                templateUrl: "roomSearch/roomSearch.html",
+                controller: "searchCtrl"   
+    }) 
             .otherwise({redirectTo: "/"});
     
 };

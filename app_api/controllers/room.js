@@ -17,7 +17,7 @@ module.exports.roomList = function(req, res){
     //console.log("Params received by roomList function is : " + req.params);
     Rm.find() // find everything on the room collections
         .sort('-createdOn')
-        .limit(6)
+        .limit(5)
         .select('suburb postcode street street_no unit rent images') // selects only here mentioned items on room collection
         .exec(function(err, results){   // executes the function inside braces
             var rooms = [];             // creates rooms array
@@ -33,8 +33,8 @@ module.exports.roomListPage = function(req, res){
     //console.log("Params received by roomList function is : " + req.params.value);
     Rm.find() // find everything on the room collections
         .sort('createdOn')
-        .limit(6)
-        .skip(6 * skipValue)
+        .limit(5)
+        .skip(5 * skipValue)
         .select('suburb postcode street street_no unit rent images') // selects only here mentioned items on room collection
         .exec(function(err, results){   // executes the function inside braces
             var rooms = [];             // creates rooms array
