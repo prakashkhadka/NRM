@@ -10,7 +10,7 @@ angular.module( "roomApp")
     function searchCtrl($scope, $http, $location){
         
         $scope.addressSearch =  function(adrs){
-            //$location.path('/roomSearchPage');
+            
             //$location.path('/searchResult');
             //console.log("Search value is : " + adrs.searchValue);
             var stateList = [{
@@ -105,9 +105,9 @@ angular.module( "roomApp")
                 url: '/api/roomSearch',
                 data: searchData
             }).success(function(data){
-                $scope.searchedRoom = data.searchData;
+                $scope.searchedRoom = data;
+                $scope.hideHome = true;
                 
-                //$scope.hideHome = true;
                 //$scope.hideRoomDetailsSection = $scope.oneRoomDetails;
                 console.log("Search data received from server : ");
                 //console.log(data.searchData);

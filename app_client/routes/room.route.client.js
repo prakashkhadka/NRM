@@ -39,10 +39,11 @@ function config($routeProvider, $locationProvider){
                 templateUrl: "roomPagination/roomPagination.html",
                 controller: "roomPaginationCtrl"   
     })
-            .when("/roomSearchPage",{
-                templateUrl: "roomSearch/roomSearch.html",
+            .when("/searchResult",{
+                templateUrl: "searchResult/searchResult.html",
                 controller: "searchCtrl"   
-    }) 
+    })
+            
             .otherwise({redirectTo: "/"});
     
 };

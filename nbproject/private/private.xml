@@ -3,9 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/Prakash/Desktop/nrm/.gitignore</file>
-            <file>file:/Users/Prakash/Desktop/nrm/gulpfile.js</file>
-            <file>file:/Users/Prakash/Desktop/nrm/app_client/index.client.html</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/home/homeCtrl.js</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/directives/search/searchView.html</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/home/home.html</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/directives/search/searchCtrl.js</file>
         </group>
     </open-files>
 </project-private>

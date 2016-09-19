@@ -19,6 +19,7 @@ gulp.task('serve',['browser-sync'], function(){
     gulp.watch('public/**/*.css').on('change', reload);
     gulp.watch('app_client/**/*.html').on('change', reload);
     gulp.watch('public/stylesheets/app.css').on('change', reload);
+    //gulp.watch('resources/assets/scss/main.scss').on('change', reload);
 });
 
 gulp.task('browser-sync',['nodemon'], function(){

@@ -26,6 +26,7 @@ function homeCtrl($scope, $http){
                 // called asynchronously if an error occurs or server returns response with an error status.
           }); 
     $scope.getRooms = function(value){
+        $scope.showButton = true;
         //console.log("Value is : " + value);
         $scope.count = [];
         $scope.count.push(value);
@@ -35,7 +36,7 @@ function homeCtrl($scope, $http){
             url: '/api/roomsByPage/' + value
         }).then(function successCallback(response) {
             $scope.moreRooms = response.data;
-            $scope.showMore = true;
+            
             
             //console.log(response.data);
             // this callback will be called asynchronously when the response is available

@@ -164,9 +164,9 @@ footer{
  			
  		@include media-breakpoint-up(md){	 
   	 		@include make-col(6);
-  	 		font-weght:typeScale('small');
+  	 		font-weight:typeScale('small');
   	 		font-family:$font-news-cycle;
-  	 		font-color:getColor('white');
+  	 		color:getColor('white');
   	 		line-height:100%;
   	 		padding:5px;
   	 			

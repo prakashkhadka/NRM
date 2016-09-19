@@ -1,16 +1,22 @@
 
 <navigation></navigation>
 
-<div class="hero">
+<div ng-show="hideHome" class="hero-search">
+    <div class="search-box-small">
+        <search-room></search-room>
+    </div> <!--End of search-box -->
+</div>
+
+<div ng-hide="hideHome" class="hero">
     <div class="search-box">
         <search-room></search-room>
     </div> <!--End of searc-box -->
 </div>
 
 
-<section>
-    <div class="container" ng-if="!hideHome">
-        <h3>Recently added rooms</h3>
+<section ng-if="!hideHome">
+    <div>
+        <h3 id="recentlyAddedRoomTitle">Recently added rooms</h3>
         <div class="card-group">
             <div class="card" ng-repeat="room in rooms">
                 <div ng-if="room.images.length > 0">
@@ -19,11 +25,18 @@
                     </a>
                 </div>
                 <div ng-if="room.images.length < 1">
-                    <img class="card-img-top img-thumbnail" src="images/nrmLogo.png" alt="Room Image">
+                    <a href="/roomDetail/{{room._id}}">
+                        <img class="card-img-top img-thumbnail" src="images/nrmLogo.png" alt="Room Image">
+                    </a>
                 </div>
-                <a href="/roomDetail/{{room._id}}" class="btn btn-primary roomRent">{{room.rent}} / w</a>
+                
+                
+                <span class="btn btn-success btn-sm roomRent">{{room.rent}} /W</span>
+               
                 <div class="card-block">
-                    <h5><a href="/roomDetail/{{room._id}}">{{room.suburb}}, {{room.postcode}} </a></h5>
+                    <span class="roomDetailTitle">
+                        <a href="/roomDetail/{{room._id}}">{{room.suburb}}, {{room.state}}{{room.postcode}} </a>
+                    </span>
                     
                     <!--
                     {{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}
@@ -31,13 +44,13 @@
                 </div>
             </div>
         </div>
-        <div ng-if="!showMore">
-            <a href="" class="btn btn-primary" ng-click="getRooms(1)">View More</a>
+        <div ng-if="!showButton">
+            <a href="" class="btn btn-primary btn-md btn-block" ng-click="getRooms(1)">View More</a>
         </div>
     </div>
     
     
-    <div ng-if="showMore && !hideHome" class="container" >
+    <div>
         <div class="card-group" ng-repeat="cnt in count">
             <div class="card" ng-repeat="room in moreRooms">
                 <div ng-if="room.images.length > 0">
@@ -46,11 +59,15 @@
                     </a>
                 </div>
                 <div ng-if="room.images.length < 1">
-                    <img class="card-img-top img-thumbnail" src="images/nrmLogo.png" alt="Room Image">
+                    <a href="/roomDetail/{{room._id}}">
+                        <img class="card-img-top img-thumbnail" src="images/nrmLogo.png" alt="Room Image">
+                    </a>
                 </div>
-                <a href="/roomDetail/{{room._id}}" class="btn btn-primary roomRent">{{room.rent}} / w</a>
+                <span class="btn btn-success btn-sm roomRent">{{room.rent}} /W</span>
                 <div class="card-block">
-                    <h5><a href="/roomDetail/{{room._id}}">{{room.suburb}}, {{room.postcode}} </a></h5>
+                    <span class="roomDetailTitle">
+                        <a href="/roomDetail/{{room._id}}">{{room.suburb}}, {{room.state}}{{room.postcode}} </a>
+                    </span>
 
                     <!--
                     {{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}
@@ -59,31 +76,26 @@
             </div>
         </div>
     </div>
-    <div ng-if="showMore">
-        <a href="/roomPagination" class="btn btn-primary" ng-click="getRooms(2)">View all</a>
+    <div ng-if="showButton">
+        <a href="/roomPagination" class="btn btn-primary btn-md btn-block" ng-click="getRooms(2)">View all</a>
     </div>
-  
     
-    
-    
-    
-    <!--
-    <div class="row" ng-repeat="room in searchedRoom">
-        <div class="col-sm-8 jumbotron" id="ab">
-            <div class="thumbnail">
+    <div ng-if="endOfPage">
+        No more rooms
+    </div>
+</section>
+
+ <section>
+    <div ng-repeat="room in searchedRoom">
+        <div >
+            <div>
                 {{room.images}}
             </div>
             <h2><a href="/roomDetail/{{room._id}}">{{room.suburb}}</a></h2>
-            {{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}, {{room.postcode}}
-            <span class="badge pull-right">{{room.rent}}</span>
+            {{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}, {{room.postcode}}, {{room.rent}}
         </div>
 
     </div>
-    -->
-
-<div ng-if="endOfPage">
-    No more rooms
-</div>
 </section>
 
 <footer-generic></footer-generic>

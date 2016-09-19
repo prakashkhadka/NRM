@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 var Rm = mongoose.model('Room');
 
 module.exports.roomSearch = function(req, res){
-    //console.log("Room Search request is : " + req.body.suburb);
+    console.log("Room Search request is : " );
     var postcode = req.body.postCode;
     //console.log("Postcode : " + postcode);
     var suburb = req.body.suburb;
@@ -41,29 +41,25 @@ module.exports.roomSearch = function(req, res){
             };
             //console.log("Search result on the server : " + rooms);
             
-            //res.json(rooms);
-            res.redirect("/roomSearchPage");
-            //res.send({redirectTo: "/roomSearchPage"});
-            //return;
+            res.json(rooms);
+            return;
         });
     }
     else if(suburb){
+        console.log("Suburb found");
         Rm.find({suburb: searchValue})
         .select('suburb postcode street street_no unit rent images')
         .exec(function(err, results){   // executes the function inside braces
-            if(err){
-                return;
-            }
             var rooms = [];
             for(var i=0; i < results.length; i++){
                 rooms.push(results[i]);
             };
+            
             //console.log("Search result on the server : " + rooms);
-            //res.json(rooms);
-            //res.redirect("/roomSearchPage");
-            res.redirect('/roomSearchPage');
-            //return;
+            res.json(rooms);
+            return;
         });
+        
     }
     else if(state){
         Rm.find({state: searchValue})
@@ -78,10 +74,8 @@ module.exports.roomSearch = function(req, res){
             };
             //console.log("Search result on the server : " + rooms);
             
-            //res.json(rooms);
-            res.redirect("/roomSearchPage");
-            //res.send({redirectTo: "/roomSearchPage"});
-            //return;
+            res.json(rooms);
+            return;
         });
     }
 };  
