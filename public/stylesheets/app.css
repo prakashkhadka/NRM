@@ -246,11 +246,12 @@ textarea {
     page-break-after: avoid; }
   .navbar, .nrm-top-navbar {
     display: none; }
-  .btn > .caret, .btn-sign-up > .caret, .btn-send-message > .caret, .btn-search > .caret,
+  .btn > .caret, .btn-sign-up > .caret, .btn-send-message > .caret, .btn-search > .caret, .btn-login > .caret,
   .dropup > .btn > .caret,
   .dropup > .btn-sign-up > .caret,
   .dropup > .btn-send-message > .caret,
-  .dropup > .btn-search > .caret {
+  .dropup > .btn-search > .caret,
+  .dropup > .btn-login > .caret {
     border-top-color: #000 !important; }
   .tag {
     border: 1px solid #000; }
@@ -1003,7 +1004,7 @@ select.form-control-lg:not([size]):not([multiple]) {
   .form-inline .has-feedback .form-control-feedback {
     top: 0; } }
 
-.btn, .btn-sign-up, .btn-send-message, .btn-search {
+.btn, .btn-sign-up, .btn-send-message, .btn-search, .btn-login {
   display: inline-block;
   font-weight: normal;
   line-height: 1.25;
@@ -1016,25 +1017,26 @@ select.form-control-lg:not([size]):not([multiple]) {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   border-radius: 0.25rem; }
-  .btn:focus, .btn-sign-up:focus, .btn-send-message:focus, .btn-search:focus, .btn.focus, .focus.btn-sign-up, .focus.btn-send-message, .focus.btn-search, .btn:active:focus, .btn-sign-up:active:focus, .btn-send-message:active:focus, .btn-search:active:focus, .btn:active.focus, .btn-sign-up:active.focus, .btn-send-message:active.focus, .btn-search:active.focus, .btn.active:focus, .active.btn-sign-up:focus, .active.btn-send-message:focus, .active.btn-search:focus, .btn.active.focus, .active.focus.btn-sign-up, .active.focus.btn-send-message, .active.focus.btn-search {
+  .btn:focus, .btn-sign-up:focus, .btn-send-message:focus, .btn-search:focus, .btn-login:focus, .btn.focus, .focus.btn-sign-up, .focus.btn-send-message, .focus.btn-search, .focus.btn-login, .btn:active:focus, .btn-sign-up:active:focus, .btn-send-message:active:focus, .btn-search:active:focus, .btn-login:active:focus, .btn:active.focus, .btn-sign-up:active.focus, .btn-send-message:active.focus, .btn-search:active.focus, .btn-login:active.focus, .btn.active:focus, .active.btn-sign-up:focus, .active.btn-send-message:focus, .active.btn-search:focus, .active.btn-login:focus, .btn.active.focus, .active.focus.btn-sign-up, .active.focus.btn-send-message, .active.focus.btn-search, .active.focus.btn-login {
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
-  .btn:focus, .btn-sign-up:focus, .btn-send-message:focus, .btn-search:focus, .btn:hover, .btn-sign-up:hover, .btn-send-message:hover, .btn-search:hover {
+  .btn:focus, .btn-sign-up:focus, .btn-send-message:focus, .btn-search:focus, .btn-login:focus, .btn:hover, .btn-sign-up:hover, .btn-send-message:hover, .btn-search:hover, .btn-login:hover {
     text-decoration: none; }
-  .btn.focus, .focus.btn-sign-up, .focus.btn-send-message, .focus.btn-search {
+  .btn.focus, .focus.btn-sign-up, .focus.btn-send-message, .focus.btn-search, .focus.btn-login {
     text-decoration: none; }
-  .btn:active, .btn-sign-up:active, .btn-send-message:active, .btn-search:active, .btn.active, .active.btn-sign-up, .active.btn-send-message, .active.btn-search {
+  .btn:active, .btn-sign-up:active, .btn-send-message:active, .btn-search:active, .btn-login:active, .btn.active, .active.btn-sign-up, .active.btn-send-message, .active.btn-search, .active.btn-login {
     background-image: none;
     outline: 0; }
-  .btn.disabled, .disabled.btn-sign-up, .disabled.btn-send-message, .disabled.btn-search, .btn:disabled, .btn-sign-up:disabled, .btn-send-message:disabled, .btn-search:disabled {
+  .btn.disabled, .disabled.btn-sign-up, .disabled.btn-send-message, .disabled.btn-search, .disabled.btn-login, .btn:disabled, .btn-sign-up:disabled, .btn-send-message:disabled, .btn-search:disabled, .btn-login:disabled {
     cursor: not-allowed;
     opacity: .65; }
 
-a.btn.disabled, a.disabled.btn-sign-up, a.disabled.btn-send-message, a.disabled.btn-search,
+a.btn.disabled, a.disabled.btn-sign-up, a.disabled.btn-send-message, a.disabled.btn-search, a.disabled.btn-login,
 fieldset[disabled] a.btn,
 fieldset[disabled] a.btn-sign-up,
 fieldset[disabled] a.btn-send-message,
-fieldset[disabled] a.btn-search {
+fieldset[disabled] a.btn-search,
+fieldset[disabled] a.btn-login {
   pointer-events: none; }
 
 .btn-primary {
@@ -3052,6 +3054,40 @@ section {
     background-color: #EB7260;
     border-color: #EB7260; }
 
+.btn-login {
+  color: #FFFFFF !important;
+  background-color: #B83F2D;
+  border-color: #B83F2D;
+  font-family: "Montserrat", sans-serif;
+  height: 50px; }
+  .btn-login:hover {
+    color: #FFFFFF;
+    background-color: #8f3123;
+    border-color: #872e21; }
+  .btn-login:focus, .btn-login.focus {
+    color: #FFFFFF;
+    background-color: #8f3123;
+    border-color: #872e21; }
+  .btn-login:active, .btn-login.active,
+  .open > .btn-login.dropdown-toggle {
+    color: #FFFFFF;
+    background-color: #8f3123;
+    border-color: #872e21;
+    background-image: none; }
+    .btn-login:active:hover, .btn-login:active:focus, .btn-login:active.focus, .btn-login.active:hover, .btn-login.active:focus, .btn-login.active.focus,
+    .open > .btn-login.dropdown-toggle:hover,
+    .open > .btn-login.dropdown-toggle:focus,
+    .open > .btn-login.dropdown-toggle.focus {
+      color: #FFFFFF;
+      background-color: #72271c;
+      border-color: #521c14; }
+  .btn-login.disabled:focus, .btn-login.disabled.focus, .btn-login:disabled:focus, .btn-login:disabled.focus {
+    background-color: #B83F2D;
+    border-color: #B83F2D; }
+  .btn-login.disabled:hover, .btn-login:disabled:hover {
+    background-color: #B83F2D;
+    border-color: #B83F2D; }
+
 i {
   font-size: 40px; }
 
@@ -3339,6 +3375,9 @@ footer {
     display: table;
     clear: both; }
 
+input:focus {
+  border: 1px solid #021125; }
+
 #footer-contact-form {
   padding: 0px 20px; }
   #footer-contact-form textarea {
@@ -3393,7 +3432,7 @@ footer {
   margin-left: 8.33333%;
   height: 50px; }
 
-#login-form .btn-send-message {
+#login-form .btn-login {
   position: relative;
   min-height: 1px;
   padding-right: 15px;
@@ -3549,7 +3588,7 @@ footer {
 .room .rent {
   position: absolute;
   height: 40px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   top: 160px;
   right: 0;
   line-height: 40px;
@@ -3598,6 +3637,36 @@ footer {
     .login-container {
       width: 40%;
       margin: 0% 30%; } }
+  @media (min-width: 1200px) {
+    .login-container {
+      width: 30%;
+      margin: 0% 35%; } }
+
+.password-reset {
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: 50px;
+  text-align: center; }
+  .password-reset::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .password-reset ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none; }
+    .password-reset ul li {
+      display: inline-block; }
+      .password-reset ul li a {
+        text-decoration: none;
+        color: #021125;
+        font-weight: 700; }
+        .password-reset ul li a:hover {
+          color: #B83F2D; }
+    .password-reset ul li:not(:last-child):after {
+      content: "|";
+      position: relative;
+      margin: 0px 10px; }
 
 .roomRent {
   margin-top: -75px;
