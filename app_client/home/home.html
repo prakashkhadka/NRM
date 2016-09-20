@@ -15,7 +15,7 @@
             ng-src="{{room.images.length > 0 &&  'https://s3-ap-southeast-2.amazonaws.com/nrm/'+room.images[0] || 'images/room1.jpg'}}" alt="Card image cap">
 
             <a href="/roomDetail/{{room._id}}" class="address">{{room.suburb}}, {{room.postcode}}</a>
-            <span class="rent">$400.00</span>
+            <span class="rent">${{room.rent}}</span>
             <div class="label"><span>New</span></div> <!-- Angled New Label -->
 
         </div>
