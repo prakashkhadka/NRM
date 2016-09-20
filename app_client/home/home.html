@@ -79,11 +79,11 @@
     <div ng-if="showButton">
         <a href="/roomPagination" class="btn btn-primary btn-md btn-block" ng-click="getRooms(2)">View all</a>
     </div>
-    
-    <div ng-if="endOfPage">
-        No more rooms
-    </div>
 </section>
+
+<div ng-if="endOfPage">
+    No more rooms
+</div>
 
  <section>
     <div ng-repeat="room in searchedRoom">

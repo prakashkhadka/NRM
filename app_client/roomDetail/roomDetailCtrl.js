@@ -8,7 +8,7 @@ angular
         .controller("roomDetailCtrl", roomDetailCtrl);
 
 function roomDetailCtrl($routeParams, $scope, $location, roomData){
-    
+    $scope.students = ['Prakash', 'Sandhya', "Prasan", "Ganesh", "Laxmi"];
     $scope.currentPath = $location.path();
     $scope.roomid = $routeParams.roomid;
     roomData.roomDetail($scope.roomid)
@@ -19,6 +19,8 @@ function roomDetailCtrl($routeParams, $scope, $location, roomData){
             console.log("images length is : ");
             console.log($scope.ORD.images);
             console.log($scope.ORD.images.length);
+            console.log("First image is : ");
+            console.log($scope.ORD.images[0]);
         })
         .error(function(e){
             //console.log(e);
