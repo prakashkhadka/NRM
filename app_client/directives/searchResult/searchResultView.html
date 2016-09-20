@@ -1,0 +1,58 @@
+<!--
+<div>
+    <div id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default" ng-repeat="room in searchedRoom">
+            abc
+            <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                     {{room.suburb}}{{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}, {{room.postcode}}, {{room.rent}}
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+        </div>
+    </div>
+</div>
+-->
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 offset-sm-3">
+                <div ng-repeat="room in searchedRoom">
+                    <div>
+                        <a data-toggle="collapse" data-target="#collapse{{$index}}" aria-expanded="false" aria-controls="collapseExample">
+                            {{room.suburb}}{{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}, {{room.postcode}}, {{room.rent}}
+                        </a>
+                    </div>
+                     </br>
+                    <div class="collapse" id="collapse{{$index}}" >
+                        <div class="card card-block">
+                            <div id="roomImages" class="carousel slide" data-ride="carousel" ng-if="room.images.length > 0">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#roomImages" data-slide-to="{{$index}}" ng-repeat="img in room.images"></li>
+                                </ol>
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="carousel-item" ng-class="{active:!$index}" ng-repeat="img in room.images">
+                                        <img id="roomDetailImages" class="img-responsive" src="https://s3-ap-southeast-2.amazonaws.com/nrm/{{img}}" alt="image slide">
+                                    </div>
+                                </div>
+                                <a class="left carousel-control" data-target="#roomImages" role="button" data-slide="prev">
+                                    <span class="icon-prev" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" data-target="#roomImages" role="button" data-slide="next">
+                                    <span class="icon-next" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div> 
+                            {{room.suburb}}{{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}, {{room.postcode}}, {{room.rent}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

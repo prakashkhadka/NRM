@@ -4418,8 +4418,8 @@ footer {
 
 @media (min-width: 768px) {
   #roomDetailImages {
-    height: 500px;
-    width: auto; } }
+    height: auto;
+    width: 500px; } }
 
 #roomImages {
   border-bottom: 10px solid green; }
