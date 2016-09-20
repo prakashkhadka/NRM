@@ -1,10 +1,7 @@
-/** typo **/ 
-h2{
-	
-	color:white;
-}
 
 
+
+// callout heading 
 h1{
 	
 	font-family:$font-moteserrat;
@@ -12,31 +9,21 @@ h1{
 	
 }
 
+
+//section heading
+h3{
+	
+	font-family:$font-moteserrat;
+	font-weight:600;
+	
+	text-align:center;
+	text-transform:uppercase;
+
+}
+
+
+//body text
 p{
-	
 	font-family:$font-news-cycle;
-	
-	
-}
-
-.test{
-
-	font-family: 'Metrize-Icons';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	
-}
-
-.test::before {
-	content: "\e000";
-}
-
-i{
-font-size:18px;
-
+		
 }

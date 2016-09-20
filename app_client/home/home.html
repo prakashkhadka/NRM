@@ -1,10 +1,27 @@
-
+<!-- Navigation -->
 <navigation></navigation>
 
-
+<!-- Search Box Hero -->
 <search-room></search-room>
 
+<!-- Recent Rooms -->
 <section>
+<h3>Recently Added Rooms</h3>
+    <div class="recent-rooms">
+        <div class="room" ng-repeat="room in rooms"><img class="card-img-top" 
+        ng-src="{{room.images.length > 0 &&  'https://s3-ap-southeast-2.amazonaws.com/nrm/'+room.images[0] || 'images/room1.jpg'}}" alt="Card image cap">
+ 
+    <a href="/roomDetail/{{room._id}}" class="address">{{room.suburb}}, {{room.postcode}}</a>
+ <span class="rent">$400.00</span>
+  
+        </div>
+
+      
+   
+    </div>
+</section>
+<!-- End of Recent Rooms -->
+<!-- <section>
     <div class="container" ng-if="!hideHome">
         <h3>Recently added rooms</h3>
         <div class="card-group">
@@ -24,7 +41,7 @@
                     <!--
                     {{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}
                     -->
-                </div>
+               <!--  </div>
                 <a id="viewDetails-btn" class="btn btn-primary" href="/roomDetail/{{room._id}}">View details</a>
             </div>
         </div>
@@ -45,7 +62,7 @@
             {{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}, {{room.postcode}}
             <span class="badge pull-right">{{room.rent}}</span>
         </div>
-    </div>
+    </div> -->
     <!--
     <div class="row" ng-repeat="room in searchedRoom">
         <div class="col-sm-8 jumbotron" id="ab">
@@ -60,10 +77,10 @@
     </div>
     -->
 
-<div ng-if="endOfPage">
+<!-- <div ng-if="endOfPage">
     No more rooms
-</div>
-</section>
+</div> -->
+<!-- </section> --> 
 
 <footer-generic></footer-generic>
 
@@ -134,4 +151,3 @@
 </div>
 
 
- -->
