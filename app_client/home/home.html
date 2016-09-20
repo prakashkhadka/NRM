@@ -1,153 +1,38 @@
 <!-- Navigation -->
 <navigation></navigation>
 
-<!-- Search Box Hero -->
+<!-- Search Box Section -->
 <search-room></search-room>
 
-<!-- Recent Rooms -->
+<!-- Recent Rooms Section-->
 <section>
-<h3>Recently Added Rooms</h3>
+    <h3>Recently Added Rooms</h3> <!-- Heading -->
+    <!-- Recent Room Container -->
     <div class="recent-rooms">
-        <div class="room" ng-repeat="room in rooms"><img class="card-img-top" 
-        ng-src="{{room.images.length > 0 &&  'https://s3-ap-southeast-2.amazonaws.com/nrm/'+room.images[0] || 'images/room1.jpg'}}" alt="Card image cap">
- 
-    <a href="/roomDetail/{{room._id}}" class="address">{{room.suburb}}, {{room.postcode}}</a>
- <span class="rent">$400.00</span>
-  
-        </div>
+        <!-- Recent Room Card -->
+        <div class="room" ng-repeat="room in rooms"> 
+            <img class="card-img-top" 
+            ng-src="{{room.images.length > 0 &&  'https://s3-ap-southeast-2.amazonaws.com/nrm/'+room.images[0] || 'images/room1.jpg'}}" alt="Card image cap">
 
-      
-   
+            <a href="/roomDetail/{{room._id}}" class="address">{{room.suburb}}, {{room.postcode}}</a>
+            <span class="rent">$400.00</span>
+            <div class="label"><span>New</span></div> <!-- Angled New Label -->
+
+        </div>
+        <!-- End of Recent Room Card -->
     </div>
+    <!-- Recent Room Container -->
 </section>
-<!-- End of Recent Rooms -->
-<!-- <section>
-    <div class="container" ng-if="!hideHome">
-        <h3>Recently added rooms</h3>
-        <div class="card-group">
-            <div class="card" ng-repeat="room in rooms">
-                <div ng-if="room.images.length > 0">
-                    <a href="/roomDetail/{{room._id}}">
-                        <img class="card-img-top img-thumbnail" src="https://s3-ap-southeast-2.amazonaws.com/nrm/{{room.images[0]}}" alt="">
-                    </a>
-                </div>
-                <div ng-if="room.images.length < 1">
-                    <img class="card-img-top img-thumbnail" src="images/nrmLogo.png" alt="Room Image">
-                </div>
-                <a href="/roomDetail/{{room._id}}" class="btn btn-primary roomRent">{{room.rent}} / w</a>
-                <div class="card-block">
-                    <h5>{{room.suburb}}, {{room.postcode}} </h5>
-                    
-                    <!--
-                    {{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}
-                    -->
-               <!--  </div>
-                <a id="viewDetails-btn" class="btn btn-primary" href="/roomDetail/{{room._id}}">View details</a>
-            </div>
-        </div>
-    </div>
-    
-    <div class="card-group">
-        <div class="card" ng-repeat="room in searchedRoom">
-            <div ng-if="room.images.length > 0">
-                <a href="/roomDetail/{{room._id}}">
-                    <img class="card-img-top img-thumbnail" src="https://s3-ap-southeast-2.amazonaws.com/nrm/{{room.images[0]}}" alt="">
-                </a>
-            </div>
-            <div ng-if="room.images.length < 1">
-                <img class="card-img-top img-thumbnail" src="images/nrmLogo.png" alt="Room Image">
-            </div>
-            <a href="/roomDetail/{{room._id}}" class="btn btn-primary roomRent">{{room.rent}} / w</a>
-            <h2><a href="/roomDetail/{{room._id}}">{{room.suburb}}</a></h2>
-            {{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}, {{room.postcode}}
-            <span class="badge pull-right">{{room.rent}}</span>
-        </div>
-    </div> -->
-    <!--
-    <div class="row" ng-repeat="room in searchedRoom">
-        <div class="col-sm-8 jumbotron" id="ab">
-            <div class="thumbnail">
-                {{room.images}}
-            </div>
-            <h2><a href="/roomDetail/{{room._id}}">{{room.suburb}}</a></h2>
-            {{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}, {{room.postcode}}
-            <span class="badge pull-right">{{room.rent}}</span>
-        </div>
+<!-- End of Recent Rooms Section-->
 
-    </div>
-    -->
+<!-- Services Section -->
+<section>
+<h3>Why Nepali RoomMates</h3>
+</section>
+<!-- End Services Section -->
 
-<!-- <div ng-if="endOfPage">
-    No more rooms
-</div> -->
-<!-- </section> --> 
-
+<!-- Footer -->
 <footer-generic></footer-generic>
 
-
-<!-- </div>
-<div class="conatiner" ng-if="!hideHome">
-    <div class="row">
-        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-            <ul class="pagination pagination-lg">
-                <li><a href="#"><span class="glyphicon glyphicon-backward" ng-click="backward()"></span></a></li>
-                <li><a href="#" ng-click="getRooms(1)">1</a></li>
-                <li><a href="#" ng-click="getRooms(2)">2</a></li>
-                <li><a href="#" ng-click="getRooms(3)">3</a></li>
-                <li><a href="#" ng-click="getRooms(4)">4</a></li>
-                <li><a href="#" ng-click="getRooms(5)">5</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-forward" ng-click="forward()"></span></a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row" ng-repeat="room in searchedRoom">
-        <div class="col-sm-8 jumbotron" id="ab">
-            <div class="thumbnail">
-                {{room.images}}
-            </div>
-            <h2><a href="/roomDetail/{{room._id}}">{{room.suburb}}</a></h2>
-            {{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}, {{room.postcode}}
-            <span class="badge pull-right">{{room.rent}}</span>
-        </div>
-        
-    </div>
-</div>
-
-<div ng-if="endOfPage">
-    No more rooms
-</div>
-
-<div class="container" ng-if="!hideHome">
-    <h3>Recently added rooms</h3>
-    <div class="row" ng-repeat="room in rooms">
-        <div class="col-sm-8 jumbotron" id="ab">
-            <div class="thumbnail">
-                
-            </div>
-            <h2><a href="/roomDetail/{{room._id}}">{{room.suburb}}</a></h2>
-            {{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}, {{room.postcode}}
-            <span class="badge pull-right">{{room.rent}}</span>
-        </div>
-        
-    </div>
-</div>
-<div class="container" ng-if="!hideHome">
-    <div class="row">
-        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-            <ul class="pagination pagination-lg">
-                <li><a href="#"><span class="glyphicon glyphicon-backward" ng-click="backward()"></span></a></li>
-                <li><a href="#" ng-click="getRooms(1)">1</a></li>
-                <li><a href="#" ng-click="getRooms(2)">2</a></li>
-                <li><a href="#" ng-click="getRooms(3)">3</a></li>
-                <li><a href="#" ng-click="getRooms(4)">4</a></li>
-                <li><a href="#" ng-click="getRooms(5)">5</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-forward" ng-click="forward()"></span></a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
+<!--End of Footer  -->
 

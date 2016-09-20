@@ -4,6 +4,11 @@
 	border-radius:0px;
 }
 
+.form-group{
+
+			@include make-row();
+		}
+
 //footercontact form
 #footer-contact-form{
 
@@ -16,10 +21,6 @@
 
 	}
 	
-	.form-group{
-
-		@include make-row();
-		
 			.form-control{
 
 				@include make-col(12);
@@ -37,7 +38,6 @@
 					
 				}
 			} //end of form-control
-		} // end of form-group
 	}//end footer form
 
 
@@ -45,10 +45,7 @@
 
 	#search-form{
 
-		.form-group{
-
-			@include make-row();
-		}
+		
 		input{
 			
 			@include make-col-ready();
@@ -73,3 +70,27 @@
 		
 	}
 
+#login-form{
+
+
+
+input{
+@include make-col-ready();
+			@include make-col(10);
+			@include make-col-offset(1);
+			height:50px;
+
+}
+
+
+	.btn-send-message{
+@include make-col-ready();
+			@include make-col(10);
+			@include make-col-offset(1);
+			height:50px;		
+		
+
+
+}
+
+}
