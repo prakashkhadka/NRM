@@ -1,5 +1,6 @@
+<!-- Navigation -->
 
-<navigation></navigation>
+
 
 <div ng-show="hideHome" class="hero-search">
     <div class="search-box-small">
@@ -13,41 +14,9 @@
     </div> <!--End of searc-box -->
 </div>
 
-
+<!--
 <section ng-if="!hideHome">
-    <div>
-        <h3 id="recentlyAddedRoomTitle">Recently added rooms</h3>
-        <div class="card-group">
-            <div class="card" ng-repeat="room in rooms">
-                <div ng-if="room.images.length > 0">
-                    <a href="/roomDetail/{{room._id}}">
-                        <img class="card-img-top img-thumbnail" src="https://s3-ap-southeast-2.amazonaws.com/nrm/{{room.images[0]}}" alt="">
-                    </a>
-                </div>
-                <div ng-if="room.images.length < 1">
-                    <a href="/roomDetail/{{room._id}}">
-                        <img class="card-img-top img-thumbnail" src="images/nrmLogo.png" alt="Room Image">
-                    </a>
-                </div>
-                
-                
-                <span class="btn btn-success btn-sm roomRent">{{room.rent}} /W</span>
-               
-                <div class="card-block">
-                    <span class="roomDetailTitle">
-                        <a href="/roomDetail/{{room._id}}">{{room.suburb}}, {{room.state}}{{room.postcode}} </a>
-                    </span>
-                    
-                    <!--
-                    {{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}
-                    -->
-                </div>
-            </div>
-        </div>
-        <div ng-if="!showButton">
-            <a href="" class="btn btn-primary btn-md btn-block" ng-click="getRooms(1)">View More</a>
-        </div>
-    </div>
+    
     
     
     <div>
@@ -71,7 +40,7 @@
 
                     <!--
                     {{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}
-                    -->
+                   
                 </div>
             </div>
         </div>
@@ -95,13 +64,44 @@
             <h2><a href="/roomDetail/{{room._id}}">{{room.suburb}}</a></h2>
             {{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}, {{room.postcode}}, {{room.rent}}
         </div>
+ -->
 
+
+<!-- Recent Rooms Section-->
+<section ng-if="!hideHome">
+    <h3>Recently Added Rooms</h3> <!-- Heading -->
+    <!-- Recent Room Container -->
+    <div class="recent-rooms">
+        <!-- Recent Room Card -->
+        <div class="room" ng-repeat="room in rooms"> 
+            <img class="card-img-top" 
+            ng-src="{{room.images.length > 0 &&  'https://s3-ap-southeast-2.amazonaws.com/nrm/'+room.images[0] || 'images/room1.jpg'}}" alt="Card image cap">
+
+            <a href="/roomDetail/{{room._id}}" class="address">{{room.suburb}}, {{room.state}} {{room.postcode}}</a>
+            <span class="rent">${{room.rent}}</span>
+            <div class="label"><span>New</span></div> <!-- Angled New Label -->
+        </div>
+        <!-- End of Recent Room Card -->
     </div>
+    <!-- Recent Room Container -->
+    <a href="/roomPagination" class="btn btn-primary btn-md btn-block">View all</a>
 </section>
--->
 
+
+
+<!-- End of Recent Rooms Section-->
 <search-result></search-result>
-<footer-generic></footer-generic>
+<!-- Services Section -->
+<section>
+<h3>Why Nepali RoomMates</h3>
+</section>
+<!-- End Services Section -->
+
+<!-- Footer -->
+
+
+
+<!--End of Footer  -->
 
 
 <!-- </div>
@@ -173,3 +173,4 @@
  -->
  
  
+

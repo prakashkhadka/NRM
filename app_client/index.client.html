@@ -9,8 +9,7 @@
 
     <!-- Latest compiled and minified CSS -->
 
-
-
+   
     <!-- Test sass-css -->
     <link rel="stylesheet" href="stylesheets/app.css">
 
@@ -23,7 +22,6 @@
     
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDl9xthDLlPj70gJbHzTQMxaIRlpoCkWh0&libraries=places"></script>
     <style>
-
     </style>
 
     <script src="js/angular.min.js"></script>
@@ -46,6 +44,7 @@
     
     <script src="roomPagination/roomPaginationCtrl.js" type="text/javascript"></script>
     
+    <script src="roomSearch/roomSearchCtrl.js" type="text/javascript"></script>
     
     <script src="home/homeCtrl.js"></script>
     <script src="auth/forgetPassword/forgetPassword/forgetPasswordCtrl.js"></script>
@@ -67,6 +66,13 @@
 
 </head>
 <body>
-       <section ng-view></section> 
+    <navigation></navigation>
+    
+    
+    <section ng-view></section> 
+    
+    <search-result></search-result>
+    
+    <footer-generic></footer-generic>
 </body>
 </html>

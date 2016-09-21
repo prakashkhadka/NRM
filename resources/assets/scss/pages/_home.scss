@@ -1,11 +1,13 @@
 .hero{
-    margin-top: 60px;
+
+  @include make-row();
     height:60vh;
     background-image:url('../images/hero.jpg');
     background-size:     cover;                      
     background-repeat:   no-repeat;
     background-position: center center; 
-    padding:20px 10px;
+    padding:0px 10px;
+    margin:0;
 
   h1{
     display:none;
@@ -15,7 +17,6 @@
     padding:50px 10px;
     h1{
        font-family:$font-moteserrat;
-       font-weight:400;
        text-shadow:4px 4px 4px black;
        color:getColor('white');
        text-align:center;
@@ -25,7 +26,7 @@
 } //end of hero
 // Hero image when search is performed -- by Prakash
 .hero-search{
-    margin-top: 60px;
+    
     height:20vh;
     background-image:url('../images/hero.jpg');
     background-size:     cover;                      
@@ -53,7 +54,7 @@
     text-align:center;
     border:1px gray solid;
     background: rgba(51, 51, 51, 0.4);
-    margin-top:20px;
+    margin-top:80px;
     min-height:150px;
     padding-top:50px;
   
@@ -97,3 +98,121 @@
 
 
 
+// recent rooms
+
+.recent-rooms{
+
+  @include make-row();
+  margin:0px;
+
+  padding:1% 5%;
+
+
+  .room{
+    
+    @extend .card;
+    // border:1px green solid;
+    float:left;
+    width:80%;
+    margin:10% 10%;
+    border-radius:0px;
+    box-shadow:5px 5px 15px  rgba(0,0,0,0.7);
+    position:relative;
+border:1px grey solid;
+  
+    @include media-breakpoint-up(md){
+
+      width:40%;
+      margin:3% 5%;
+    }
+
+    @include media-breakpoint-up(lg){
+
+      
+      width:23.33%;
+       margin:8% 2.5%;
+    }
+
+    @include media-breakpoint-up(xl){
+
+      
+      width:20%;
+      margin:2.5% 2.5%;
+    }
+
+  } //end of recent room
+  
+
+
+
+} //end of recent-rooms
+
+.room{
+
+  .card-img-top{
+
+    width:100%;
+    height:200px;
+    border-radius:0px;
+    @include media-breakpoint-up(lg){
+
+      height:150px;
+
+    }
+  }
+
+  .address{
+    
+    
+    display:block;
+    padding:20px 0px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:$text-color-body;
+    font-size:20px;
+    font-weight:600;
+    
+  }
+
+  .rent{
+
+    position:absolute;
+    height:40px;
+    background-color: rgba(0,0,0,.5);
+    top:160px;
+    right:0;
+    line-height:40px;
+    width:70px;
+    text-align:center;
+    color:#FFF;
+
+    @include media-breakpoint-up(lg){
+
+      top:110px;
+    }
+  }
+
+  .label{
+  width:0;
+  height:0;
+  border-top:35px getColor('burnt-sienna-dark') solid;
+  border-left:35px getColor('burnt-sienna-dark') solid;
+  border-right:35px transparent solid;
+  border-bottom:35px transparent solid;
+  color:#FFF;
+  position:absolute;
+  top:0;
+  left:0;
+span{
+  position:relative;
+  display:block;
+  top:-12px;
+  left:-25px;
+  transform:rotate(-45deg);
+
+}
+}
+
+
+}

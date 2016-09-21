@@ -36,6 +36,9 @@ function roomPaginationCtrl($scope, $http){
         }).then(function successCallback(response) {
             $scope.rooms = response.data;
             $scope.showMore = true;
+            if($scope.rooms.length === 0){
+                $scope.endOfPage = true;
+            }
             console.log(response.data);
             // this callback will be called asynchronously when the response is available
           }, function errorCallback(response) {

@@ -3,10 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/Users/Prakash/Desktop/nrm/app_client/home/homeCtrl.js</file>
             <file>file:/Users/Prakash/Desktop/nrm/app_client/directives/search/searchView.html</file>
             <file>file:/Users/Prakash/Desktop/nrm/app_client/home/home.html</file>
             <file>file:/Users/Prakash/Desktop/nrm/app_client/directives/search/searchCtrl.js</file>
+=======
+            <file>file:/Users/Prakash/Desktop/nrm/app.js</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/home/home.html</file>
+            <file>file:/Users/Prakash/Desktop/nrm/resources/assets/scss/main.scss</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/directives/search/searchCtrl.js</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/roomDetail/roomDetails.html</file>
+            <file>file:/Users/Prakash/Desktop/nrm/resources/assets/scss/components/_card.scss</file>
+            <file>file:/Users/Prakash/Desktop/nrm/resources/assets/scss/pages/_home.scss</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/auth/login/login.html</file>
+>>>>>>> develop4
         </group>
     </open-files>
 </project-private>

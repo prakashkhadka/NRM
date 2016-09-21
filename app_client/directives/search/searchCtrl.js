@@ -11,7 +11,7 @@ angular.module( "roomApp")
         
         $scope.addressSearch =  function(adrs){
             
-            //$location.path('/searchResult');
+            //$location.path('/roomSearch');
             //console.log("Search value is : " + adrs.searchValue);
             var stateList = [{
                 fullName: 'Western Australia',

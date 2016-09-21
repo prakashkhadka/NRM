@@ -1,4 +1,4 @@
-<navigation></navigation>
+
 
 <div class="hero-search">
     <div class="search-box-small">
@@ -9,8 +9,8 @@
 <section ng-hide="hideHome">
     <h3>Available rooms</h3>
     
-    <nav aria-label="Page navigation">
-        <ul class="pagination">
+    <nav aria-label="Page navigation" class="pagination-bar">
+        <ul class="pagination pagination-lg">
             <li class="page-item" ng-click="backward()">
                 <a class="page-link" href="#" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
@@ -31,6 +31,23 @@
         </ul>
     </nav>
     
+    <section>
+        
+        <!-- Recent Room Container -->
+        <div class="recent-rooms">
+            <!-- Recent Room Card -->
+            <div class="room" ng-repeat="room in rooms"> 
+                <img class="card-img-top" 
+                ng-src="{{room.images.length > 0 &&  'https://s3-ap-southeast-2.amazonaws.com/nrm/'+room.images[0] || 'images/room1.jpg'}}" alt="Card image cap">
+
+                <a href="/roomDetail/{{room._id}}" class="address">{{room.suburb}}, {{room.state}} {{room.postcode}}</a>
+                <span class="rent">${{room.rent}}</span>
+            </div>
+            <!-- End of Recent Room Card -->
+        </div>
+        <!-- Recent Room Container -->
+    </section>
+    <!--
     <div>
         <div class="row" ng-repeat="room in rooms">
             <div>
@@ -43,13 +60,13 @@
 
         </div>
     </div>
-
+    -->
     <div ng-if="endOfPage">
         No more rooms
     </div>
     
-    <nav aria-label="Page navigation">
-        <ul class="pagination">
+    <nav aria-label="Page navigation" class="pagination-bar">
+        <ul class="pagination pagination-lg">
             <li class="page-item" ng-click="backward()">
                 <a class="page-link" href="#" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
@@ -87,4 +104,3 @@
     </div>
 </section>
 -->
-<footer-generic></footer-generic>
