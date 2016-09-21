@@ -1,72 +1,41 @@
-
-
-
-
 <section>
-<div class="container-fluid" id="roomDetails">
-    <div class="row">
-        <div class="col-xs-12 col-sm-6 offset-sm-3">
-    <div ng-hide="hideHome">
-        <div>
-            <div id="roomImages" class="carousel slide" data-ride="carousel" ng-if="ORD.images.length > 0">
-                <ol class="carousel-indicators">
-                  <li data-target="#roomImages" data-slide-to="{{$index}}" ng-repeat="img in ORD.images"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item" ng-class="{active:!$index}" ng-repeat="img in ORD.images">
-                        <img id="roomDetailImages" class="img-responsive" src="https://s3-ap-southeast-2.amazonaws.com/nrm/{{img}}" alt="image slide">
-                    </div>
-                </div>
-                <a class="left carousel-control" data-target="#roomImages" role="button" data-slide="prev">
-                  <span class="icon-prev" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" data-target="#roomImages" role="button" data-slide="next">
-                  <span class="icon-next" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-            </div>
-            <!--
+    <div class="container-fluid" id="roomDetails">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 offset-sm-3">
+        <div ng-hide="hideHome">
             <div>
-                <div id="photos" ng-repeat="img in ORD.images">
-                    <img ng-src="https://s3-ap-southeast-2.amazonaws.com/nrm/{{img}}" alt="Room Image">
+                <div id="roomImages" class="carousel slide" data-ride="carousel" ng-if="ORD.images.length > 0">
+                    <ol class="carousel-indicators">
+                      <li data-target="#roomImages" data-slide-to="{{$index}}" ng-repeat="img in ORD.images"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item" ng-class="{active:!$index}" ng-repeat="img in ORD.images">
+                            <img id="roomDetailImages" class="img-responsive" src="https://s3-ap-southeast-2.amazonaws.com/nrm/{{img}}" alt="image slide">
+                        </div>
+                    </div>
+                    <a class="left carousel-control" data-target="#roomImages" role="button" data-slide="prev">
+                      <span class="icon-prev" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" data-target="#roomImages" role="button" data-slide="next">
+                      <span class="icon-next" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+                <div id="roomInfo">
+                    <span id="fullAddress">{{ORD.unit}} / {{ORD.street_no}}, {{ORD.street}}, {{ORD.suburb}}, {{ORD.postcode}}</span>
+                    <h4>Rent: $ {{ORD.rent}}  {{ORD.frequency}} / Week</h4>
+                    <h4>Bond: $ {{ORD.bond}}</h4>
+                    <h5>Preferred Gender : {{ORD.gender}}</h5>
+                    <h5>No required: {{ORD.required_no}}</h5>
+                    <h5>Available from: {{ORD.available_from}}</h5>
+                    <h5>Contact: {{ORD.contact_no}}</h5>
+                    <h5>{{ORD.message}}</h5>
                 </div>
             </div>
-            -->
-            <div id="roomInfo">
-                <span id="fullAddress">{{ORD.unit}} / {{ORD.street_no}}, {{ORD.street}}, {{ORD.suburb}}, {{ORD.postcode}}</span>
-                <h4>Rent: $ {{ORD.rent}}  {{ORD.frequency}} / Week</h4>
-                <h4>Bond: $ {{ORD.bond}}</h4>
-                <h5>Preferred Gender : {{ORD.gender}}</h5>
-                <h5>No required: {{ORD.required_no}}</h5>
-                <h5>Available from: {{ORD.available_from}}</h5>
-                <h5>Contact: {{ORD.contact_no}}</h5>
-                <h5>{{ORD.message}}</h5>
-            </div>
+        </div>
+        </div>
         </div>
     </div>
-    </div>
-    </div>
-</div>
 </section>
-
-
-<!--
-    <div>
-        <div ng-repeat="room in searchedRoom">
-            <div ng-if="room.images.length > 0">
-                <a href="/roomDetail/{{room._id}}">
-                    <img src="https://s3-ap-southeast-2.amazonaws.com/nrm/{{room.images[0]}}" alt="">
-                </a>
-            </div>
-            <div ng-if="room.images.length < 1">
-                <img src="images/nrmLogo.png" alt="Room Image">
-            </div>
-            <a href="/roomDetail/{{room._id}}" class="btn btn-primary roomRent">{{room.rent}} / w</a>
-            <h2><a href="/roomDetail/{{room._id}}">{{room.suburb}}</a></h2>
-            {{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}, {{room.postcode}}
-            <span>{{room.rent}}</span>
-        </div>
-    </div>
--->
-    

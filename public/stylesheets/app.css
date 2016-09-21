@@ -4339,7 +4339,7 @@ footer {
         display: block; } }
 
 .hero-search {
-  height: 20vh;
+  height: 25vh;
   background-image: url("../images/hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -4391,7 +4391,7 @@ footer {
   text-align: center;
   border: 1px gray solid;
   background: rgba(51, 51, 51, 0.4);
-  margin-top: 10px;
+  margin-top: 55px;
   min-height: 80px;
   padding-top: 10px; }
 

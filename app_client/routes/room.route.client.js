@@ -43,6 +43,10 @@ function config($routeProvider, $locationProvider){
                 templateUrl: "searchResult/searchResult.html",
                 controller: "searchCtrl"   
     })
+            .when("/searchRoom",{
+                templateUrl: "searchRoom/searchRoom.html",
+                controller: "searchCtrl"   
+    })
             
             .otherwise({redirectTo: "/"});
     

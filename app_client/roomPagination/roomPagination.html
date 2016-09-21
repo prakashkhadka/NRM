@@ -1,5 +1,3 @@
-
-
 <div class="hero-search">
     <div class="search-box-small">
         <search-room></search-room>
@@ -47,20 +45,7 @@
         </div>
         <!-- Recent Room Container -->
     </section>
-    <!--
-    <div>
-        <div class="row" ng-repeat="room in rooms">
-            <div>
-                <div>
-                    {{room.images[0]}}
-                </div>
-                <h2><a href="/roomDetail/{{room._id}}">{{room.suburb}}</a></h2>
-                {{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}, {{room.postcode}}, {{room.rent}}
-            </div>
-
-        </div>
-    </div>
-    -->
+    
     <div ng-if="endOfPage">
         No more rooms
     </div>
@@ -89,18 +74,3 @@
 </section>
 
 <search-result></search-result>
-
-<!--
-<section>
-    <div ng-repeat="room in searchedRoom">
-        <div >
-            <div>
-                {{room.images}}
-            </div>
-            <h2><a href="/roomDetail/{{room._id}}">{{room.suburb}}</a></h2>
-            {{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}, {{room.postcode}}, {{room.rent}}
-        </div>
-
-    </div>
-</section>
--->
