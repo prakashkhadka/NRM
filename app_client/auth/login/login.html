@@ -19,27 +19,44 @@
 
 
 
-
 <section id="login">
-<h3 class="text-xs-center">User Login</h3>
-<p>Please fill the following details to login</p>
+    <h3 class="text-xs-center">User Login</h3>
+    <p>Please fill the following details to login</p>
     <div class="login-container">
-
-    <form id="login-form">
-        <div class="form-group">
-        
-                    <input type="text" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter name" ng-model="contactUs.name">
+        <form name='loginForm' id="login-form" role='form' novalidate>
+            <div class="form-group">
+                <input name="userEmail" type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Enter Email" ng-model="user.email">
+                <div class="error" ng-show="loginForm.userEmail.$invalid && loginForm.userEmail.$dirty">
+                    <span ng-show="loginForm.userEmail.$error">
+                        <span class="emailError">Incorrect email format</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <input type="password" class="form-control" name="email" placeholder="Enter Password" ng-model="user.password">
+            </div>
+            
+            <div class="col-sm-9 col-sm-offset-3"> 
+                <span class="loginError">{{loginError}}</span>
+            </div>
+            
+            <div class="form-group">
+                <button class="btn-send-message form-control" ng-click="login(user)">Log in</button>
+            </div>
+            <div>
+                <div class="form-group">
+                    <button class="btn-send-message form-control" ng-click="login(user)">Forget Password</button>
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" name="email" placeholder="Enter email" ng-model="contactUs.email">
+                    <button class="btn-sign-up form-control" ng-click="login(user)">Sign Up</button>
                 </div>
-                <div class="form-group">
-                    <button class="btn-send-message form-control" ng-click="sendMessage(contactUs)">Send Message</button>
-                </div>
-
-    </form>
-    <!--     <div class="col-xs-12 col-sm-6 col-sm-offset-1">       
-
+            </div>
+        </form>
+    </div>
+</section>
+    
+<!--
             <div class="jumbotron">
                 <form name="loginForm" class="form-horizontal" role="form" novalidate>
                     <div class="form-group">
@@ -84,7 +101,6 @@
                 
             </div>
             
-    
-    </div> -->
-</div>
-</section>
+-->
+   
+

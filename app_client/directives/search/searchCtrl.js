@@ -6,12 +6,8 @@
 
 angular.module( "roomApp")
     .controller("searchCtrl", searchCtrl);
-    
-    function searchCtrl($scope, $http, $location){
-        
+    function searchCtrl($scope, $http, $location, $rootScope){
         $scope.addressSearch =  function(adrs){
-            
-            //$location.path('/searchRoom');
             //console.log("Search value is : " + adrs.searchValue);
             var stateList = [{
                 fullName: 'Western Australia',
@@ -105,8 +101,10 @@ angular.module( "roomApp")
                 url: '/api/roomSearch',
                 data: searchData
             }).success(function(data){
-                $scope.searchedRoom = data;
-                $scope.hideHome = true;
+                $location.path('/searchResult');
+               
+                //$scope.searchedRoom = data;
+                $rootScope.searchedRoom = data;
                 
                 //$scope.hideRoomDetailsSection = $scope.oneRoomDetails;
                 console.log("Search data received from server : ");

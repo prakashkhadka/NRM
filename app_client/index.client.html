@@ -40,7 +40,7 @@
     <script src="directives/search/searchCtrl.js"></script>
     <script src="directives/footer/footer.js"></script>
     <script src="directives/footer/footerCtrl.js"></script>
-    <script src="directives/searchResult/searchResult.js" type="text/javascript"></script>
+    
     
     <script src="roomPagination/roomPaginationCtrl.js" type="text/javascript"></script>
     
@@ -68,10 +68,20 @@
 <body>
     <navigation></navigation>
     
+  
+    <!--
+        <div class="hero-search">
+            <div class="search-box-small">
+                <search-room></search-room>
+            </div> 
+        </div>
+    -->
     
-    <section ng-view></section> 
     
-    <search-result></search-result>
+    
+    <section ng-view></section>
+    
+    
     
     <footer-generic></footer-generic>
 </body>

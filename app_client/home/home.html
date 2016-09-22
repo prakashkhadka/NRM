@@ -1,17 +1,23 @@
+<!--
 <div ng-show="hideHome" class="hero-search">
     <div class="search-box-small">
         <search-room></search-room>
-    </div> <!--End of search-box -->
+    </div> 
 </div>
+-->
+<navigation></navigation>
 
-<div ng-hide="hideHome" class="hero">
+<div class="hero">
     <div class="search-box">
         <search-room></search-room>
-    </div> <!--End of searc-box -->
+    </div> 
 </div>
 
+
+
+
 <!-- Recent Rooms Section-->
-<section ng-if="!hideHome">
+<section>
     <h3>Recently Added Rooms</h3> <!-- Heading -->
     <!-- Recent Room Container -->
     <div class="recent-rooms">
@@ -31,7 +37,7 @@
 </section>
 
 <!-- End of Recent Rooms Section-->
-<search-result></search-result>
+
 <!-- Services Section -->
 <section>
 <h3>Why Nepali RoomMates</h3>

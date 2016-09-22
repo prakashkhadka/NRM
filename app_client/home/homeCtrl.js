@@ -14,6 +14,7 @@ function homeCtrl($scope, $http){
           url: '/api/rooms'
         }).then(function successCallback(response) {
             $scope.rooms = response.data;
+            
             //console.log("images received is: ");
             //console.log($scope.rooms.images);
             
@@ -23,6 +24,7 @@ function homeCtrl($scope, $http){
             // this callback will be called asynchronously when the response is available
           }, function errorCallback(response) {
                 $scope.error = response.data;
+                
                 // called asynchronously if an error occurs or server returns response with an error status.
           }); 
     $scope.getRooms = function(value){

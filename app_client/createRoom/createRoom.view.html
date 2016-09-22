@@ -62,6 +62,9 @@
         background: orange;
         width: 0;
     }
+    #removeImage{
+        height: 15px;
+    }
 </style>
 
 
@@ -232,7 +235,7 @@
                         <div>
                             {{file.name}} {{file.$errorParam}}
                             Size{{file.size / 1000 | number:2}} KB
-                            <span class='glyphicon glyphicon-remove' ng-click="deleteFile($index)"></span>
+                            <span> <img id='removeImage' src='images/remove.png' ng-click="deleteFile($index)"></span>
                         </div>
                     </li>
                 </ul>

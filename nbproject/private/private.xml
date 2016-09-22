@@ -3,21 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/auth/login/loginCtrl.js</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/home/home.html</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/directives/navigation/navigationView.html</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/searchRoom/searchRoom.html</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/index.client.html</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/directives/searchResult/searchResultView.html</file>
             <file>file:/Users/Prakash/Desktop/nrm/app_client/home/homeCtrl.js</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/directives/searchResult/searchResult.js</file>
             <file>file:/Users/Prakash/Desktop/nrm/app_client/directives/search/searchView.html</file>
-            <file>file:/Users/Prakash/Desktop/nrm/app_client/home/home.html</file>
-            <file>file:/Users/Prakash/Desktop/nrm/app_client/directives/search/searchCtrl.js</file>
-=======
-            <file>file:/Users/Prakash/Desktop/nrm/app.js</file>
-            <file>file:/Users/Prakash/Desktop/nrm/app_client/home/home.html</file>
-            <file>file:/Users/Prakash/Desktop/nrm/resources/assets/scss/main.scss</file>
             <file>file:/Users/Prakash/Desktop/nrm/app_client/directives/search/searchCtrl.js</file>
             <file>file:/Users/Prakash/Desktop/nrm/app_client/roomDetail/roomDetails.html</file>
-            <file>file:/Users/Prakash/Desktop/nrm/resources/assets/scss/components/_card.scss</file>
-            <file>file:/Users/Prakash/Desktop/nrm/resources/assets/scss/pages/_home.scss</file>
-            <file>file:/Users/Prakash/Desktop/nrm/app_client/auth/login/login.html</file>
->>>>>>> develop4
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/roomPagination/roomPagination.html</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/roomPagination/roomPaginationCtrl.js</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/directives/navigation/navigationCtrl.js</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/directives/search/search.js</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/routes/room.route.client.js</file>
         </group>
     </open-files>
 </project-private>
