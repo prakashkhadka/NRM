@@ -14,9 +14,10 @@ function footerCtrl($scope, $http){
             url: '/api/contactUs',
             data: msg
         }).then(function(response){
-            console.log("Success : " + response);
+            $scope.messageSubmitted = true;
+            console.log("Success : " + response.data);
         }, function(response){
-            console.log("Error : " + response);
+            //console.log("Error : " + response);
         });
     };
 }

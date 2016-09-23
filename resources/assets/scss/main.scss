@@ -27,11 +27,20 @@
 .pagination-bar{
     text-align: center;
 }
-.error{
+.errorSource{
     color: red;
+}
+.error{
+    @extend .errorSource;
     margin-left: 60px;
 }
 .loginError{
-    @extend .error;
+    @extend .errorSource;
     margin-left: 15px;
+}
+.contactUsError{
+    @extend .errorSource;
+    font-size: 12pt;
+    margin-top: -15px;
+    margin-left: -10px;
 }

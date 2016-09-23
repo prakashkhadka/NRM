@@ -24,23 +24,7 @@
                 <li><a href="" target="_blank">Nepalese Embassy</li>
             </ul>
         </div>
-        <div class="footer-column"> <h5>Contact Us</h5>
-            <p>Questions?We've got answers and love to hear from you. Try us.</p>
-            <form id="footer-contact-form">
-                <div class="form-group">
-                    <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Enter name" ng-model="contactUs.name">
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" name="email" placeholder="Enter email" ng-model="contactUs.email">
-                </div>
-                <div class="form-group">
-                    <textarea type="text" class="form-control"  name="message" ng-model="contactUs.message"></textarea>
-                </div>
-                <div class="form-group">
-                    <button class="btn-send-message form-control" ng-click="sendMessage(contactUs)">Send Message</button>
-                </div>
-            </form>
-        </div>
+        <div ng-include src="'directives/footer/contactForm.html'"></div>
     </div>
     <div class="footer-social-media-list">
         <ul>

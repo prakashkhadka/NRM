@@ -1,83 +1,14 @@
-<style>
-    .suggestions-list {
-        z-index: 1000;
-	position: absolute;
-	list-style-type: none;
-	padding: 0;
-	overflow: auto;
-}
-.suggestions-list li {
-        margin-left: 0px;
-	color: #000000;
-	padding: 10px 10px;
-	line-height:17px;
-	cursor: pointer;
-	background: #f9f9f9;
-	border-bottom: 1px solid #eeeeee;
-	width:250px;
-}
-.suggestions-list li:hover {
-	background: #eed5f2;
-}
-.suggestions-list li:active,
-.suggestions-list li.active {
-	color: #FFFFFF;
-	background: #0099FF;
-	width:250px;
-}
-.suggestions-list:focus{
-	outline:none;
-}
-.inputError{
-        color:red;
-    }
-    form .ng-invalid.ng-dirty{ 
-        background-color: lightpink; 
-    }
-    form .ng-valid.ng-dirty { 
-        background-color: lightgreen; 
-    }
-    div.error {
-        color: red; 
-    }
-    
-    .usedEmail{
-        background-color: lightpink !important;
-    }
-    .matchError{
-        background-color: lightpink !important;
-    }
-    form .progress {
-        line-height: 15px;
-    }
 
-    .progress {
-        display: inline-block;
-        width: 200px;
-        border: 3px groove #CCC;
-    }
+<navigation></navigation>
 
-    .progress div {
-        font-size: smaller;
-        background: orange;
-        width: 0;
-    }
-    #removeImage{
-        height: 15px;
-    }
-</style>
-
-
-<h1>createRoom</h1>
-
-<h1>Please fillup the following details in the box</h1>
-<br>
-<div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-1 jumbotron">
+<section id="createRoom">
+    <h3 class="text-xs-center">Rent your room</h3>
+    <p>Please fill the following details to post your room ad</p>
+    <div class="createRoom-container">
         <form name='nrForm' class="form-horizontal" enctype="multipart/form-data" novalidate>
             <div class="form-group">
-                <label for="unit" class="col-sm-2 control-label">Unit</label>
-                <div class="col-sm-10">
+                <label for="unit" class="col-sm-3 control-label">Unit</label>
+                <div class="col-sm-9">
                   <input name='unit' type="number" class="form-control" id="unit" placeholder="Unit" ng-maxlength='2' ng-model="room.unit">
                 <div class="error" ng-show="nrForm.unit.$invalid && nrForm.unit.$dirty">
                     <span ng-show="nrForm.unit.$error.maxlength">
@@ -88,8 +19,8 @@
             </div>
            
             <div class="form-group">
-                <label for="streetNo" class="col-sm-2 control-label">Street No</label>
-                <div class="col-sm-10">
+                <label for="streetNo" class="col-sm-3 control-label">Street No</label>
+                <div class="col-sm-9">
                     <input name='streetNo' type="number" class="form-control" id="streetNo" placeholder="Street No" ng-maxlength='3' ng-model="room.street_no">
                 <div class="error" ng-show="nrForm.streetNo.$invalid && nrForm.streetNo.$dirty">
                     <span ng-show="nrForm.streetNo.$error.maxlength">
@@ -100,22 +31,15 @@
             </div>
             
             <div class="form-group">
-              <label for="streetName" class="col-sm-2 control-label">Street Name</label>
-              <div class="col-sm-10">
+              <label for="streetName" class="col-sm-3 control-label">Street Name</label>
+              <div class="col-sm-9">
                 <input type="text" class="form-control" id="streetName" placeholder="Street Name" ng-model="room.street_name">
               </div>
             </div>
-            <!--
+            
             <div class="form-group">
-              <label for="streetName" class="col-sm-2 control-label">Street Name</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="streetName" placeholder="Street Name" ng-autocomplete options="options" details="details" ng-model="room.street_name">
-              </div>
-            </div>
-            -->
-            <div class="form-group">
-              <label for="suburb" class="col-sm-2 control-label">Suburb</label>
-              <div class="col-sm-10">
+              <label for="suburb" class="col-sm-3 control-label">Suburb<span id="required">*</span></label>
+              <div class="col-sm-9">
                 <input type="text" class="form-control" id="suurb" placeholder="Suburb" ng-model="room.suburb" ng-change="getValue()">
                 <ul class="suggestions-list">
                     <li ng-repeat="su in returnedSub | filter: room.suburb:strict | limitTo:7" ng-class="{active : selectedIndex === $index}" 
@@ -125,22 +49,22 @@
             </div>
             
             <div class="form-group">
-              <label for="postcode" class="col-sm-2 control-label">Post Code</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="postcode" placeholder="Postcode" ng-model="room.postcode">
+              <label for="postcode" class="col-sm-3 control-label">Post Code<span id="required">*</span></label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="postcode" placeholder="Postcode" ng-model="room.postcode" required>
               </div>
             </div>
             
             <div class="form-group">
-              <label for="state" class="col-sm-2 control-label">State</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="state" placeholder="State" ng-model="room.state">
+              <label for="state" class="col-sm-3 control-label">State<span id="required">*</span></label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="state" placeholder="State" ng-model="room.state" required>
               </div>
             </div>
             
             <div class="form-group">
-                <label for="rent" class="col-sm-2 control-label">Weekly Rent $</label>
-                <div class="col-sm-10">
+                <label for="rent" class="col-sm-3 control-label">Weekly Rent $<span id="required">*</span></label>
+                <div class="col-sm-9">
                     <input name='rent' type="number" class="form-control" id="rent" placeholder="Weekly Rent" ng-model="room.rent" ng-maxlength='4' required>
                     <div class="error" ng-show="nrForm.rent.$invalid && nrForm.rent.$dirty">
                         <span ng-show="nrForm.rent.$error.maxlength">
@@ -154,16 +78,16 @@
             </div>
             
             <div class="form-group">
-              <label for="bond" class="col-sm-2 control-label">Bond</label>
-              <div class="col-sm-10">
+              <label for="bond" class="col-sm-3 control-label">Bond</label>
+              <div class="col-sm-9">
                 <input type="number" class="form-control" id="rent" placeholder="Bond" ng-model="room.bond">
               </div>
             </div>
             
             
             <div class="form-group">
-                <label for="gender" class="col-sm-2 control-label">Preferred Gender</label>
-                <div class="col-sm-10">
+                <label for="gender" class="col-sm-3 control-label">Preferred Gender</label>
+                <div class="col-sm-9">
                     <label class="radio-inline">
                         <input type="radio" id="inlineRadioOptions" value="couple" ng-model="room.gender"> Couple
                     </label>
@@ -180,8 +104,8 @@
             </div>
             
             <div class="form-group">
-                <label for="available" class="col-sm-2 control-label">Available From</label>
-                <div class="col-sm-10">
+                <label for="available" class="col-sm-3 control-label">Available From<span id="required">*</span></label>
+                <div class="col-sm-9">
                     <input name='availableFrom' type="date" class="form-control" id="available" placeholder="Available From" ng-model="room.available_from" required>
                 <div class="error" ng-show="nrForm.availableFrom.$invalid && nrForm.availableFrom.$dirty">
                     <span ng-show="nrForm.availableFrom.$error.required">
@@ -190,10 +114,11 @@
                 </div>
                 </div>
             </div>
+        
             
             <div class="form-group">
-                <label for="contact" class="col-sm-2 control-label">Contact No</label>
-                <div class="col-sm-10">
+                <label for="contact" class="col-sm-3 control-label">Contact No<span id="required">*</span></label>
+                <div class="col-sm-9">
                     <input name='contactNo' type="number" class="form-control" id="contact" placeholder="Contact No" ng-model="room.contact_no" ng-minlength='10' ng-maxlength='10' required>
                 <div class="error" ng-show="nrForm.contactNo.$invalid && nrForm.contactNo.$dirty">
                     <span ng-show="nrForm.contactNo.$error.required">
@@ -210,9 +135,17 @@
             </div>
             
             <div class="form-group">
-                <label for="message" class="col-sm-2 control-label">Message</label>
-                <div class="col-sm-10">
-                    <input name='message' type="text" class="form-control" id="message" placeholder="Your Message" ng-model="room.message" ng-maxlength='300'>
+                <label for="message" class="col-sm-3 control-label">Message</label>
+                <div class="col-sm-9">
+                    <textarea name='message'
+                              rows="5"
+                              type="text" 
+                              class="form-control" 
+                              id="message" 
+                              placeholder="Your Message" 
+                              ng-model="room.message" 
+                              ng-maxlength='300'>
+                    </textarea>
                 <div class="error" ng-show="nrForm.message.$invalid && nrForm.message.$dirty">
                     <span ng-show="nrForm.message.$error.maxlength">
                         Your message is more than 300 character long. Please make it short.
@@ -227,34 +160,35 @@
                     Compressing
                     <span><img src="images/wait.gif"></span>
                 </div>
-                file length: {{files.length}}
-                <ul ng-repeat="file in files track by $index">
-                    
-                    <li>
-                        <img style="width:80px;" ngf-thumbnail="file"/>
-                        <div>
-                            {{file.name}} {{file.$errorParam}}
-                            Size{{file.size / 1000 | number:2}} KB
-                            <span> <img id='removeImage' src='images/remove.png' ng-click="deleteFile($index)"></span>
-                        </div>
-                    </li>
-                </ul>
+                <div class="col-sm-9 offset-sm-3">
+                    <ul ng-repeat="file in files track by $index">
+                        <li>
+                            <img style="width:80px;" ngf-thumbnail="file"/>
+                            <div>
+                                {{file.name}} {{file.$errorParam}}
+                                Size{{file.size / 1000 | number:2}} KB
+                                <span> <img id='removeImage' src='images/remove.png' ng-click="deleteFile($index)"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
                 <div>
                     <span class="progress" ng-show="progressPercentage >= 0">
                         <div style="width:{{progressPercentage}}%" ng-bind="progressPercentage + '%'">
                         </div>
                     </span>
                 </div>
-                <div ng-hide="progressPercentage || files.length>=4">
-                    Please select files: <input
+                <div ng-hide="progressPercentage || files.length>=4" class="form-group">
+                    <label for="imagesInput" class="col-sm-3 control-label">Select images: </label>
+                <div class="col-sm-9">
+                    <button class="btn btn- btn-info"
                         name="file"
-                        class="button btn-info" 
                         ngf-select=""
                         ng-change="getAmazonUrl()"
                         ng-model="files"
                         ngf-max-files="4"
                         ngf-max-size="'12MB'"
-                        ngf-pattern="'.jpg'"
+                        ngf-pattern="'.jpg,.jpeg'"
                         ngf-keep="true | 'distinct'"
                         ngf-fix-orientation="true"
                         ngf-capture="'camera'"
@@ -263,25 +197,30 @@
                         ngf-before-model-change="beforeChange($files)"
                         ngf-change ="afterChange($files)"
                         ngf-multiple="true">
-                    Select
+                        Click here
+                    </button>
+                </div> 
+                </div>
+                <div ng-if="files.length > 0">
+                    You have selected {{files.length}} Images.
                 </div>
             </div>
             
             <div ng-show="nrForm.file.$invalid">
-                Something is wrong </br>
+                Something went wrong: please choose images again. </br>
                 <span ng-show="nrForm.file.$error.maxSize">
-                    File size too large
+                    Image size too large. Maximum size : 12MB
                 </span>
                 <span ng-show="nrForm.file.$error.maxFiles">
-                    Only 4 files are allowed to upload. First two files are selected here.
+                    Maximum images allowed to upload : 4
                 </span>
                 <span ng-show="nrForm.file.$error.pattern">
-                    only jpg images are allowed;
+                    only .jpg or .jpeg images are allowed;
                 </span>
             </div>
             
             <div class="form-group">
-              <div class="col-sm-offset-2 col-sm-10">
+              <div class="offset-sm-3 col-sm-9">
                   <button ng-disabled='nrForm.$invalid' type="submit" ng-click="register(room); uploadImage()" class="btn btn-info">Register!</button>
                   <button ng-click="goHome()" class="btn btn-default btn-danger">Cancel</button>
               </div>
@@ -289,4 +228,4 @@
             
         </form>
     </div>
-</div>
+</section>

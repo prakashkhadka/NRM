@@ -29,12 +29,18 @@
 }
 
 .btn-send-message{
-	
 	@extend %button;
 	@include button-variant(getColor('white'), getColor('emrald'),getColor('emrald'));
 	font-family:$font-moteserrat;
 	height:50px;
+        
 }
+.btn-send-message[disabled]{
+        @extend .btn-send-message;
+        opacity: .7;
+        
+}
+
 
 
 .btn-search{
