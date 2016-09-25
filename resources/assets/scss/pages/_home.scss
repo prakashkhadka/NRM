@@ -100,24 +100,19 @@
 // recent rooms
 
 .recent-rooms{
-
   @include make-row();
   margin:0px;
-
-  padding:1% 5%;
-
-
+  padding:1% 2%;
   .room{
-    
     @extend .card;
     // border:1px green solid;
     float:left;
-    width:80%;
-    margin:10% 10%;
-    border-radius:0px;
-    box-shadow:5px 5px 15px  rgba(0,0,0,0.7);
+    width:96%;
+    margin:2% 2%;
+    border-radius:0px 0px 10px 10px;
+    box-shadow:5px 5px 10px  rgba(0,0,0,0.5);
     position:relative;
-border:1px grey solid;
+    border:1px solid grey;
   
     @include media-breakpoint-up(md){
 

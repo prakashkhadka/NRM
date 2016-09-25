@@ -1,7 +1,6 @@
 
 #createRoom{
-    margin-top:90px;
-    margin-bottom:50px;
+    margin-top:40px;
     p{
         text-align:center;
     }
@@ -29,7 +28,12 @@
         margin:0% 2%;
     }
 	}
-
+        
+@include media-breakpoint-down(sm){
+    #createRoom{
+        margin-top: -10px;
+    }
+    }
         //Create room validation Error
 #createRoom{
     #required{
@@ -95,6 +99,25 @@
     label{
         font-weight: bold;
     }
+    #uploadImages{
+        li{
+            list-style: none;
+            margin-left: -40px;
+        }
+    }
+    #imagesIndex{
+        border: 1px solid green;
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: #cff9f8;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    #uploadImageThumbnail{
+        width: 80px;
+    }
+  
         }
         
     // End create room validation Error

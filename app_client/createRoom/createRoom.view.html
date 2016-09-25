@@ -161,25 +161,27 @@
                     <span><img src="images/wait.gif"></span>
                 </div>
                 <div class="col-sm-9 offset-sm-3">
-                    <ul ng-repeat="file in files track by $index">
+                    <ul id="uploadImages" ng-repeat="file in files track by $index">
                         <li>
-                            <img style="width:80px;" ngf-thumbnail="file"/>
-                            <div>
+                            <span id="imagesIndex">{{$index+1}}.</span>
+                            <img id="uploadImageThumbnail" ngf-thumbnail="file"/>
+                            <!--<span> <img id='removeImage' src='images/remove.png' ng-click="deleteFile($index)"></span>-->
+                            <button class="btn btn-sm btn-warning"> <ng-click="deleteFile($index)">Remove</button>
+                            <div class="offset-xs-2 offset-sm-1 offset-md-1">
                                 {{file.name}} {{file.$errorParam}}
-                                Size{{file.size / 1000 | number:2}} KB
-                                <span> <img id='removeImage' src='images/remove.png' ng-click="deleteFile($index)"></span>
-                            </div>
+                                <!--Size: {{file.size / 1000 | number:2}} KB-->
+                            </div>  
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <span class="progress" ng-show="progressPercentage >= 0">
-                        <div style="width:{{progressPercentage}}%" ng-bind="progressPercentage + '%'">
-                        </div>
-                    </span>
+                <div class="offset-sm-3" ng-if="files.length > 1 ">
+                    You have selected {{files.length}} Images.
                 </div>
-                <div ng-hide="progressPercentage || files.length>=4" class="form-group">
-                    <label for="imagesInput" class="col-sm-3 control-label">Select images: </label>
+                <div class="offset-sm-3" ng-if="files.length ===1">
+                    You have selected {{files.length}} Image.
+                </div>
+                <div ng-hide="files.length>=4" class="form-group">
+                    <label for="imagesInput" class="col-sm-3 control-label">Upload images: </label>
                 <div class="col-sm-9">
                     <button class="btn btn- btn-info"
                         name="file"
@@ -197,13 +199,11 @@
                         ngf-before-model-change="beforeChange($files)"
                         ngf-change ="afterChange($files)"
                         ngf-multiple="true">
-                        Click here
+                        Click here to select
                     </button>
                 </div> 
                 </div>
-                <div ng-if="files.length > 0">
-                    You have selected {{files.length}} Images.
-                </div>
+                
             </div>
             
             <div ng-show="nrForm.file.$invalid">
@@ -221,7 +221,7 @@
             
             <div class="form-group">
               <div class="offset-sm-3 col-sm-9">
-                  <button ng-disabled='nrForm.$invalid' type="submit" ng-click="register(room); uploadImage()" class="btn btn-info">Register!</button>
+                  <button ng-disabled='nrForm.$invalid' type="submit" ng-click="register(room); uploadImage()" class="btn btn-info">Submit</button>
                   <button ng-click="goHome()" class="btn btn-default btn-danger">Cancel</button>
               </div>
             </div>

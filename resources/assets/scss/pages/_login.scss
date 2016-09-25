@@ -1,31 +1,33 @@
 #login{
-
-	margin-top:90px;
-	margin-bottom:50px;
-
-
-	p{
-
-		text-align:center;
-	}
-
-
+    margin-top:40px;
+    p{
+        text-align:center;
+    }
 }
 
 .login-container{
-		background-color:#FFF;
-		width:80%;
-		margin:0% 10%;
-		padding:40px;
-		box-shadow:0px 10px 40px rgba(0,0,0,0.8);
+    background-color:#FFF;
+    width:80%;
+    margin:0% 10%;
+    padding:40px;
+    box-shadow:0px 10px 40px rgba(0,0,0,0.8);
 
-		@include media-breakpoint-up(md){
-                    width:60%;
-                    margin:0% 20%;
-		}
+    @include media-breakpoint-up(md){
+        width:60%;
+        margin:0% 20%;
+    }
 
-		@include media-breakpoint-up(lg){
-                    width:40%;
-                    margin:0% 30%;
-		}
-	}
+    @include media-breakpoint-up(lg){
+        width:40%;
+        margin:0% 30%;
+    }
+     @include media-breakpoint-down(sm){
+        width:96%;
+        margin:0% 2%;
+    }
+}
+@include media-breakpoint-down(sm){
+    #login{
+        margin-top: -10px;
+    }
+    }
