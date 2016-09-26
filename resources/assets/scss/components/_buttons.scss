@@ -65,6 +65,13 @@
 	padding:0px;
 }
 
+.btn-login{
+@extend %button;
+	@include button-variant(getColor('white'), getColor('burnt-sienna-dark'),getColor('burnt-sienna-dark'));
+	font-family:$font-moteserrat;
+	height:50px;
+}
+
 .btn-rent-call{
 
 @extend %button;
