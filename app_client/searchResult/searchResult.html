@@ -1,76 +1,99 @@
 <navigation></navigation>
 
-<div class="hero-search">
-    <div class="search-box-small">
-        <search-room></search-room>
-    </div> 
-</div>
 
-<section>
+
+<section id="search-result">
+<div class="search-container">
+<div class="search-box-small">
+   
+        <search-room></search-room>
+</div>
+</div>
     <h3>Search Result</h3>
-    
-    <nav aria-label="Page navigation" class="pagination-bar">
-        <ul class="pagination pagination-lg">
-            <li class="page-item" ng-click="backward()">
-                <a class="page-link" href="#" aria-label="Previous">
+    <div ng-if="searchedRoom.length < 1">
+        <p>Sorry we couldn't find anything matching your search criteria. Please try again with different search criteria.</p>
+    </div>
+    <div ng-if="searchedRoom.length > 0">
+    <p>we have found {{searchedRoom.length}} search results.</p>
+<div class="pagination-container">
+        <ul class="pagination">
+            <li class="pagination-item" ng-click="backward()">
+                <a class="pagination-link" href="#" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
                     <span class="sr-only">Previous</span>
                 </a>
             </li>
-            <li class="page-item" ng-click="getRooms(1)"><a class="page-link" href="#">1</a></li>
-            <li class="page-item" ng-click="getRooms(2)"><a class="page-link" href="#">2</a></li>
-            <li class="page-item" ng-click="getRooms(3)"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next" ng-click="forward()">
+            <li class="pagination-item" ng-click="getRooms(1)"><a class="pagination-link" href="#">1</a></li>
+            <li class="pagination-item" ng-click="getRooms(2)"><a class="pagination-link" href="#">2</a></li>
+            <li class="pagination-item" ng-click="getRooms(3)"><a class="pagination-link" href="#">3</a></li>
+            <li class="pagination-item">
+                <a class="pagination-link" href="#" aria-label="Next" ng-click="forward()">
                     <span aria-hidden="true">&raquo;</span>
                     <span class="sr-only">Next</span>
                 </a>
             </li>
         </ul>
-    </nav>
-    
-    <div ng-if="searchedRoom.length < 1">
-        <h4>Sorry we couldn't find anything matching your search criteria. Please try again with different search criteria.</h4>
-    </div>
-        
-    <!-- Recent Room Container -->
-    <div class="recent-rooms">
-        <!-- Recent Room Card -->
-        <div class="room" ng-repeat="room in searchedRoom"> 
-            <img class="card-img-top" 
-            ng-src="{{room.images.length > 0 &&  'https://s3-ap-southeast-2.amazonaws.com/nrm/'+room.images[0] || 'images/room1.jpg'}}" alt="Card image cap">
+</div>
 
-            <a href="/roomDetail/{{room._id}}" class="address">{{room.suburb}}, {{room.state}} {{room.postcode}}</a>
-            <span class="rent">${{room.rent}}</span>
+    
+   <div class="search-result">
+        <!-- Recent Room Card -->
+        <div class="result-room" ng-repeat="room in searchedRoom"> 
+
+        <div class="left-col">
+        <address>
+        13 {{room.street}} <br>
+        {{room.suburb}}<br>
+        {{room.state}} {{room.postcode}}
+        </address>
+        <a href="/roomDetail/{{room._id}}" class="btn-view-details"> View Details</a>
+        <div class="stickybar">
+        <ul class="room-overview">
+        <li class="it"><i class="fa fa-user"></i><span>{{room.gender}}</span></li>
+            <li class="it"><i class="fa fa-bed"></i><span>2</span></li>
+            <li class="it"><i class="fa fa-car"></i><span>Street</span></li>
+        </ul>
+        </div>
+        </div>
+        <div class="right-col"><img class="room-image" 
+            ng-src="{{room.images.length > 0 &&  'https://s3-ap-southeast-2.amazonaws.com/nrm/'+room.images[0] || 'images/room1.jpg'}}" alt="Card image cap">
+            <span class="rent">$ {{room.rent}}</span>
+            </div>
+            
+
+            
         </div>
         <!-- End of Recent Room Card -->
     </div>
     <!-- Recent Room Container -->
+    <div class="pagination-container">
+        <ul class="pagination">
+            <li class="pagination-item" ng-click="backward()">
+                <a class="pagination-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </li>
+            <li class="pagination-item" ng-click="getRooms(1)"><a class="pagination-link" href="#">1</a></li>
+            <li class="pagination-item" ng-click="getRooms(2)"><a class="pagination-link" href="#">2</a></li>
+            <li class="pagination-item" ng-click="getRooms(3)"><a class="pagination-link" href="#">3</a></li>
+            <li class="pagination-item">
+                <a class="pagination-link" href="#" aria-label="Next" ng-click="forward()">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </li>
+        </ul>
+</div>
+    </div>
+    
     
     
     <div ng-if="endOfPage">
         No more rooms
     </div>
     
-    <nav aria-label="Page navigation" class="pagination-bar">
-        <ul class="pagination pagination-lg">
-            <li class="page-item" ng-click="backward()">
-                <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                    <span class="sr-only">Previous</span>
-                </a>
-            </li>
-            <li class="page-item" ng-click="getRooms(1)"><a class="page-link" href="#">1</a></li>
-            <li class="page-item" ng-click="getRooms(2)"><a class="page-link" href="#">2</a></li>
-            <li class="page-item" ng-click="getRooms(3)"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next" ng-click="forward()">
-                    <span aria-hidden="true">&raquo;</span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </li>
-        </ul>
-    </nav>  
+    
 </section>
 
 

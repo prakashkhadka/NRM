@@ -1,7 +1,7 @@
 .hero{
 
   @include make-row();
-    height:60vh;
+    height:45vh;
     background-image:url('../images/hero.jpg');
     background-size:     cover;                      
     background-repeat:   no-repeat;
@@ -26,7 +26,7 @@
 } //end of hero
 // Hero image when search is performed -- by Prakash
 .hero-search{
-    height:20vh;
+    height:10vh;
     background-image:url('../images/hero.jpg');
     background-size:     cover;                      
     background-repeat:   no-repeat;
@@ -53,9 +53,9 @@
     text-align:center;
     border:1px gray solid;
     background: rgba(51, 51, 51, 0.4);
-    margin-top:80px;
-    min-height:150px;
-    padding-top:50px;
+
+    min-height:120px;
+    padding-top:30px;
   
   //only tablet
   @include media-breakpoint-only(md){		
@@ -64,22 +64,35 @@
 
     }
 
+
+
 //desktop and up
  @include media-breakpoint-up(lg){    
       @include make-col(6);
       @include make-col-offset(3);}
 
 }
+
+
+.action-call{
+
+  @include make-row();
+  border:1px red solid;
+  position:relative;
+}
 // for small search box which appears when search is done -- by Prakash
+// 
+ .search-container{
+    
+    @include make-row();
+  }
 .search-box-small{
     @include make-col-ready();
     @include make-col(12);
     text-align:center;
-    border:1px gray solid;
-    background: rgba(51, 51, 51, 0.4);
-    margin-top:10px;
-    min-height:80px;
-    padding-top:10px;
+    background:getColor('mercury');
+    
+
   
   //only tablet
   @include media-breakpoint-only(md){		
@@ -108,8 +121,8 @@
     // border:1px green solid;
     float:left;
     width:96%;
-    margin:2% 2%;
-    border-radius:0px 0px 10px 10px;
+    margin:1% 2%;
+   
     box-shadow:5px 5px 10px  rgba(0,0,0,0.5);
     position:relative;
     border:1px solid grey;
@@ -209,4 +222,90 @@ span{
 }
 
 
+}
+
+.features{
+
+  @include make-row();
+ 
+  padding:50px;
+
+
+
+
+}
+.feature-container{
+
+  
+  
+  height:200px;
+  width:200px;
+  position:relative;
+  margin:auto;
+  perspective:1200px;
+  transform-style: preserve-3d;
+
+}
+  .feature{
+
+    @extend .card;
+    width:250px;
+    height:250px;
+    position:absolute;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    color:#FFF;
+    box-shadow:0px 20px 50px  rgba(0,0,0,0.4);
+  
+    padding:20px;
+    text-align:center;
+    h5{
+
+      padding-top: 10px;
+      padding-bottom:20px;
+      position:relative;
+    }
+    h5:after{
+
+      content:"";
+      position:absolute;
+      border-bottom:1px solid #FFF;
+      display:inline-block;
+      
+      margin:auto;
+      margin-top:32px;
+      width:60%;
+      left:20%;
+      ;
+
+    }
+  }
+
+  .feature:nth-child(1){
+    background-color: getColor('bluewood');
+    transform:translateX(-280px) translateZ(-220px);
+    ttransform-origin:0% 0%;
+    
+  }
+  .feature:nth-child(2){
+    background-color: getColor('burnt-sienna');
+
+     transform-origin:0% 0%;
+
+  }
+   .feature:nth-child(3){
+    background-color:getColor('bluewood');
+    transform:translateX(290px) translateZ(-220px);
+     transform-origin:0% 0%;
+
+  }
+
+#why{
+
+  @include media-breakpoint-down(sm){
+
+    display:none;
+  }
 }
