@@ -159,13 +159,13 @@ img{
 .carousel-indicator{
 
 margin:0px 0px;
-padding:50px 0px;
+padding:20px 0px;
 
 list-style-typ:none;
 display:flex;
 flex-direction:row;
 align-items:center;
-justify-content:center;
+justify-content:space-between;
 
 li{
 
@@ -180,7 +180,7 @@ margin:0px 10px;
         border:3px #FFF solid;
     }
 @include media-breakpoint-up(md){
-
+padding:50px 0px;
 flex-direction:column;
 align-items:center;
 justify-content:space-between;

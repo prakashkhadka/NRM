@@ -5192,12 +5192,12 @@ footer {
 
 .carousel-indicator {
   margin: 0px 0px;
-  padding: 50px 0px;
+  padding: 20px 0px;
   list-style-typ: none;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center; }
+  justify-content: space-between; }
   .carousel-indicator li {
     list-style-type: none;
     margin: 0px 10px; }
@@ -5207,6 +5207,7 @@ footer {
     border: 3px #FFF solid; }
   @media (min-width: 768px) {
     .carousel-indicator {
+      padding: 50px 0px;
       flex-direction: column;
       align-items: center;
       justify-content: space-between; }
