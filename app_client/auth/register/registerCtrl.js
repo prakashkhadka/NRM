@@ -33,8 +33,9 @@ function registerCtrl($location, $scope, authentication, $http){
     };
     
     $scope.checkTwoPwd = function(){
-        console.log("First Password is: " + $scope.newUser.password);
-        console.log("Second Password is: " + $scope.newUser.password1);
+        console.log("checkTwoPwd function envoked");
+        //console.log("First Password is: " + $scope.newUser.password);
+        //console.log("Second Password is: " + $scope.newUser.password1);
         if($scope.newUser.password !== $scope.newUser.password1){
             $scope.pwdMatchError = "Password does not match";
         }

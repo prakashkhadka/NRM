@@ -1,0 +1,47 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26/09/2016, 3:28:53 PM
+    Author     : Prakash
+*/
+
+/**Core variables and mixins **/
+@import "../../scss/vendors/bootstrap/_custom.scss";
+@import "../../scss/vendors/bootstrap/_variables.scss";
+@import "../../scss/vendors/bootstrap/_mixins.scss";
+
+
+/** Reset and dependencies **/
+
+@import "../../scss/vendors/bootstrap/normalize";
+@import "../../scss/vendors/bootstrap/print";
+
+/** Core CSS **/
+
+@import "../../scss/vendors/bootstrap/reboot";
+@import "../../scss/vendors/bootstrap/type";
+@import "../../scss/vendors/bootstrap/images";
+@import "../../scss/vendors/bootstrap/code";
+//@import "../../scss/vendors/bootstrap/grid";
+@import "../../scss/vendors/bootstrap/tables";
+@import "../../scss/vendors/bootstrap/forms";
+@import "../../scss/vendors/bootstrap/buttons";
+@import "../../scss/vendors/bootstrap/navbar";
+@import "../../scss/vendors/bootstrap/nav";
+@import "../../scss/vendors/bootstrap/animation";
+@import "../../scss/vendors/bootstrap/forms";
+@import "../../scss/vendors/bootstrap/card";
+@import "../../scss/vendors/bootstrap/pagination";
+@import "../../scss/vendors/bootstrap/carousel";
+@import "../../scss/vendors/bootstrap/modal";
+
+
+
+/** Utility classes **/
+
+@import "../../scss/vendors/bootstrap/utilities";
+
+/***Extra not sure necessary or not ****/

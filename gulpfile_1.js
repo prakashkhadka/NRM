@@ -14,16 +14,16 @@ var gulp            =   require('gulp');
     maps            =   require('gulp-sourceMaps');
 
 gulp.task('serve',['browser-sync'], function(){
-    //console.log("Server is woking");
-    //gulp.watch('app_client/**/*.js').on('change', reload);
-    //gulp.watch('public/**/*.css').on('change', reload);
-    //gulp.watch('app_client/**/*.html').on('change', reload);
-    //gulp.watch('public/stylesheets/app.css').on('change', reload);
+    console.log("Server is woking");
+    gulp.watch('app_client/**/*.js').on('change', reload);
+    gulp.watch('public/**/*.css').on('change', reload);
+    gulp.watch('app_client/**/*.html').on('change', reload);
+    gulp.watch('public/stylesheets/app.css').on('change', reload);
     //gulp.watch('admin_panel/**/*.html').on('change', reload);
     //gulp.watch('admin_panel/**/*.js').on('change', reload);
     //gulp.watch('admin_panel/**/*.css').on('change', reload);
     gulp.watch('admin_panel/admin_stylesheets/adminApp.css').on('change', reload);
-    
+    //gulp.watch('resources/assets/scss/main.scss').on('change', reload);
 });
 
 gulp.task('browser-sync',['nodemon'], function(){
@@ -34,21 +34,27 @@ gulp.task('browser-sync',['nodemon'], function(){
     });
 });
 
-
+gulp.task('compileSass',function(){
+    console.log("compileSass Working");
+    gulp.src('resources/assets/scss/main.scss')
+        .pipe(sass().on('Error',sass.logError))
+        .pipe(rename('app.css'))
+        .pipe(gulp.dest('public/stylesheets'));
+        console.log('compiles sass file');
+});
 
 gulp.task('compileSassForAdmin',function(){
     console.log("compileSassForAdmin Working");
-    gulp.src('resources/assets/admin/adminMain.scss')
+    gulp.src('resources/assets/scss/adminMain.scss')
         .pipe(sass().on('Error',sass.logError))
         .pipe(rename('adminApp.css'))
         .pipe(gulp.dest('admin_panel/admin_stylesheets'));
-        console.log('compiles sass file for admin complted');
+        console.log('compiles sass file');
 });
 
 gulp.task('sassWatch',function(){
     console.log("sassWatch working");
-    gulp.watch('resources/assets/**/*.scss',['compileSassForAdmin']);
-    //gulp.watch('resources/assets/admin/adminMain.scss',['compileSassForAdmin']);
+    gulp.watch('resources/assets/**/*.scss',['compileSass', 'compileSassForAdmin']);
 });
 
 gulp.task('nodemon', function(done){
@@ -68,7 +74,7 @@ gulp.task('nodemon', function(done){
         }, 500);
     });
 });
-gulp.task('default', ['serve', 'sassWatch', 'compileSassForAdmin']);
+gulp.task('default', ['serve', 'sassWatch', 'compileSass', 'compileSassForAdmin']);
 
 gulp.task('moveSass',function(){
     console.log("I am moveSass");

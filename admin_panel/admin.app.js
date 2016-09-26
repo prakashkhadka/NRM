@@ -4,7 +4,7 @@ function config($routeProvider, $locationProvider){
     $locationProvider.html5Mode(true);
     $routeProvider
             .when("/admin", {
-                templateUrl: "/admin/home/home.html",
+                templateUrl: "/admin/auth/login/login.html",
                 controller: "homeCtrl"
     })
     

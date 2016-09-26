@@ -42,6 +42,17 @@
 }
 
 
+.btn-user-registration{
+	@extend %button;
+	@include button-variant(getColor('white'), getColor('emrald'),getColor('emrald'));
+	font-family:$font-moteserrat;
+	height:40px;
+        
+}
+.btn-user-registration[disabled]{
+        @extend .btn-user-registration;
+        opacity: .7;   
+}
 
 .btn-search{
 	
