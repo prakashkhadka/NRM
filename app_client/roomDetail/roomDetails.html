@@ -1,12 +1,56 @@
 <navigation></navigation>
 
-<div class="hero-search">
-    <div class="search-box-small">
-        <search-room></search-room>
-    </div> 
+<section>
+
+<div class="carousel-wrapper">
+<div id="room-carousel" class="carousel" data-ride="carousel">
+
+<div class="carousel-item" ng-class="{active:!$index}" ng-repeat="img in ORD.images">
+<img src="https://s3-ap-southeast-2.amazonaws.com/nrm/{{img}}" class="img-fluid">
 </div>
 
-<section>
+</div>
+
+<div class="carousel-indicator-wrapper">
+
+<ul class="carousel-indicator">
+<li data-target="#room-carousel" data-slide-to="{{$index}}" ng-repeat="img in ORD.images"><img src="https://s3-ap-southeast-2.amazonaws.com/nrm/{{img}}" class="carousel-thumbnail"></li>
+   
+  </ul>
+
+<a class="carousel-control-top" href="#room-carousel" role="button" data-slide="prev">
+    <span class="fa fa-chevron-circle-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-bottom" href="#room-carousel" role="button" data-slide="next">
+    <span class="fa fa-chevron-circle-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+
     
     <div id="detailsPage">
         <div id="roomImages" class="carousel slide" data-ride="carousel" ng-if="ORD.images.length > 0">
@@ -50,6 +94,6 @@
     </div>
                         
                     
-                
+                 -->
        
 </section>
