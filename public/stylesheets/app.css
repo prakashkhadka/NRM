@@ -4822,6 +4822,12 @@ footer {
   #why {
     display: none; } }
 
+#login {
+  margin-top: 90px;
+  margin-bottom: 50px; }
+  #login p {
+    text-align: center; }
+
 .login-container {
   background-color: #FFF;
   width: 80%;
