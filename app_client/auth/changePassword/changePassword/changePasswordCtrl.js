@@ -9,7 +9,8 @@ angular
         .module("roomApp")
         .controller("changePasswordCtrl", changePasswordCtrl);
 
-function changePasswordCtrl($scope, $location, $http, authentication){
+function changePasswordCtrl($scope, $location, $http, authentication, $anchorScroll){
+    $anchorScroll();
     $scope.changePassword = function(pwd){
         var isLoggedIn = authentication.isLoggedIn();
         //console.log("Change password new password is : " + pwd.confirmPassword);

@@ -8,7 +8,8 @@ angular
         .module("roomApp")
         .controller("fgtFeedbackCtrl", fgtFeedbackCtrl);
 
-function fgtFeedbackCtrl($scope, $location){
+function fgtFeedbackCtrl($scope, $location, $anchorScroll){
+    $anchorScroll();
     $scope.feedBackClose = function(){
         $location.path("/");
     };

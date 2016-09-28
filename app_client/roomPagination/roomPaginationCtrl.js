@@ -8,7 +8,8 @@
 angular.module("roomApp")
         .controller("roomPaginationCtrl", roomPaginationCtrl);
 
-function roomPaginationCtrl($scope, $http){
+function roomPaginationCtrl($scope, $http, $anchorScroll){
+    $anchorScroll();
     $http({
           method: 'GET',
           //url: '/api/rooms'

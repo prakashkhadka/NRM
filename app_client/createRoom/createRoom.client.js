@@ -7,7 +7,8 @@ angular
         .module("roomApp")
         .controller("createRoomCtrl", createRoomCtrl);
 
-function createRoomCtrl($location, $scope, $http, $rootScope, authentication){
+function createRoomCtrl($location, $scope, $http, $rootScope, authentication, $anchorScroll){
+    $anchorScroll();
     $scope.beforeChange = function(){
         $scope.compressing = true;
     };

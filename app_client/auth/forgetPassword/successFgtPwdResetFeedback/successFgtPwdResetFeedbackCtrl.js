@@ -8,7 +8,8 @@ angular
         .module("roomApp")
         .controller("successFgtPwdResetFeedbackCtrl", successFgtPwdResetFeedbackCtrl);
 
-function successFgtPwdResetFeedbackCtrl($scope, $location){
+function successFgtPwdResetFeedbackCtrl($scope, $location, $anchorScroll){
+    $anchorScroll();
     $scope.close = function(){
         $location.path('/');
     };

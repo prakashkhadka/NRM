@@ -1,33 +1,79 @@
+
 #login{
-    margin-top:40px;
-    p{
-        text-align:center;
-    }
+
+	margin-top:40px;
+	margin-bottom:50px;
+
+
+	p{
+
+		text-align:center;
+	}
+
+
 }
 
 .login-container{
-    background-color:#FFF;
-    width:80%;
-    margin:0% 10%;
-    padding:40px;
-    box-shadow:0px 10px 40px rgba(0,0,0,0.8);
+		
 
-    @include media-breakpoint-up(md){
-        width:60%;
-        margin:0% 20%;
-    }
+		background-color:#FFF;
 
-    @include media-breakpoint-up(lg){
-        width:40%;
-        margin:0% 30%;
-    }
-     @include media-breakpoint-down(sm){
-        width:96%;
-        margin:0% 2%;
-    }
-}
-@include media-breakpoint-down(sm){
-    #login{
-        margin-top: -10px;
-    }
-    }
+		width:80%;
+		margin:0% 10%;
+		padding:40px;
+		box-shadow:0px 10px 40px rgba(0,0,0,0.8);
+
+		@include media-breakpoint-up(md){
+
+
+			width:60%;
+		margin:0% 20%;
+
+		}
+
+		@include media-breakpoint-up(lg){
+
+				width:40%;
+		margin:0% 30%;
+		}
+		@include media-breakpoint-up(xl){
+
+				width:30%;
+		margin:0% 35%;
+		}
+	}
+
+	.password-reset{
+		
+		@include make-row();
+		margin-top:50px;	
+		text-align:center;
+		ul{
+			padding:0;
+			margin:0;
+			list-style-type:none;
+			li{
+				
+				display:inline-block;
+
+				a{
+					text-decoration:none;
+					color:$text-color-heading;
+					font-weight:700;
+
+					&:hover{
+						
+						color:getColor('burnt-sienna-dark');
+
+					}
+				}
+			}
+
+			li:not(:last-child):after{
+
+				content:"|";
+				position:relative;
+				margin:0px 10px;
+			}
+		}
+	}

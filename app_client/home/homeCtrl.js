@@ -8,7 +8,8 @@ angular
         .module("roomApp")
         .controller("homeCtrl", homeCtrl);
 
-function homeCtrl($scope, $http){
+function homeCtrl($scope, $http, $anchorScroll){
+    $anchorScroll();
     $http({
           method: 'GET',
           url: '/api/rooms'

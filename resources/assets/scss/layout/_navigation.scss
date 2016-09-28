@@ -1,5 +1,5 @@
-//top navbar bar
 .nrm-top-navbar{
+	
 	@extend .navbar;
 	@extend .navbar-full;
 	@extend .navbar-fixed-top;
@@ -128,7 +128,7 @@
 
 		//breakpoint for small devices
 		@include media-breakpoint-down(sm){
-			width:100%;
+			//width:100%;
 			margin-top:65px;
 			text-align:center;
 

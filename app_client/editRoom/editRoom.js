@@ -7,7 +7,8 @@ angular
         .module("roomApp")
         .controller("editRoomCtrl", editRoomCtrl);
 
-function editRoomCtrl($location, $scope, $http, $routeParams, authentication){
+function editRoomCtrl($location, $scope, $http, $routeParams, authentication, $anchorScroll){
+    $anchorScroll();
         var roomid = $routeParams.roomid;
         //console.log("Room id to be edited is : " +roomid);
         $http({

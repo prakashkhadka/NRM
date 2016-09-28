@@ -3056,6 +3056,7 @@ and open the template in the editor.
 */
 #adminLoginForm {
   border: 2px solid green;
+  background-color: lightgreen;
   /*
     @include make-row();
     @include make-col-ready();

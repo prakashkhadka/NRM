@@ -13,7 +13,8 @@ angular
     service to send data to the server for authentication
  */
 
-function loginCtrl($scope, $location, authentication){
+function loginCtrl($scope, $location, authentication, $anchorScroll){
+    $anchorScroll();
     $scope.login = function(user){
         //console.log("supplied email is : " + user.email);
         //console.log("Supplied password is : " + user.password);

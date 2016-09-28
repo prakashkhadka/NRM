@@ -9,7 +9,8 @@ angular
         .module("roomApp")
         .controller("changePasswordFeedbackCtrl", changePasswordFeedbackCtrl);
 
-function changePasswordFeedbackCtrl($scope, $location){
+function changePasswordFeedbackCtrl($scope, $location, $anchorScroll){
+    $anchorScroll();
     $scope.close = function(){
         $location.path("/");
     };

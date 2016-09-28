@@ -1,0 +1,138 @@
+#search-result{
+    p{
+        text-align:center;
+        .searchedRoomNumber{
+            font-weight: bold;
+            font-size: 15pt;
+            color: green;
+        }
+    }
+}
+/*
+.pagination-container{
+    @include make-row();
+    text-align:center;
+	
+}
+.pagination{
+    display:block;
+    padding:0;
+    margin:auto;
+    width:auto;
+    .pagination-item{
+
+            display:inline-block;
+            margin:0px 5px;
+    }
+    .pagination-link{
+            display:block;
+            background-color: #fff;
+            width:40px;
+            text-align:center;
+            height:40px;
+            line-height:40px;
+            border:1px solid grey;
+            font-family:$font-news-cycle;
+            color:$text-color-body;
+            text-decoration:none;
+            &:hover{
+                background-color: getColor('bluewood-dark');
+                color:#FFF;
+            }
+    }
+}
+*/
+.search-result{
+    .roomStreetAddress{
+        font-weight: normal;
+        font-size: 12pt;
+    }
+	@include make-row();
+	.result-room{
+		@include make-col-ready();
+		margin:20px 0px;
+		background-color: #fff;
+		height:250px;
+		padding:0;
+		@include make-col(12);
+
+		@include media-breakpoint-up(md){
+
+
+		}	
+
+		@include media-breakpoint-up(lg){
+			
+			@include make-col(6);
+			@include make-col-offset(3);
+			
+                    }
+		} //end of room
+} //end of search result
+
+.left-col{
+	@include make-col-ready();
+	@include make-col(6);
+	position:relative;
+	padding:0px;
+	height:100%;
+        // border:1px yellow solid;
+        // 
+				 
+ address{
+
+ 	margin:20px;
+ 	font-size:18px;
+ 	font-weight:bold;
+    }
+
+}
+			
+.right-col{
+        @include make-col-ready();
+        @include make-col(6);
+        // border:1px red solid;
+        padding:0px;
+        height:100%;
+        position:relative;
+        .room-image{
+
+                width:100%;
+                height:100%;
+        }
+
+        .rent{position:absolute;
+                width:100%;
+                display:block;
+                bottom:0;
+                background-color: rgba(31,130,125,0.9);
+                text-align:right;
+                height:50px;
+                line-height:50px;
+                color:#FFF;
+                padding:0px 20px;
+                font-weight:bold;
+        }
+
+}
+.room-overview{
+        margin:auto;
+        padding:0px;
+        height:50px;
+        bottom:0;
+        width:100%;
+        list-style-type:none;
+        background-color: rgba(0,0,0,0.9);
+        position:absolute;
+        .it{
+            display:inline-block;
+            color:#FFF;
+            margin:0px 20px;
+                span{
+                    margin-left:8px;
+                    font-size:14px;
+                }
+
+            line-height:50px;                                   
+        }
+}

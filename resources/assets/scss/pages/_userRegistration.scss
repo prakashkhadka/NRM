@@ -14,12 +14,33 @@ and open the template in the editor.
     p{
         text-align:center;
     }
+    
     #userRegistrationFormContainer{
         @include make-col-ready();
         @extend .createRoom-container;
         label{
             font-weight: bold;
         }
+        @include media-breakpoint-up(sm){
+        padding-left: 50px; 
+    }
+    .fa{
+        font-size: 15pt;  
+    }
+    .fa.fa-remove{
+            color: red;
+    }
+    .fa.fa-check{
+        color: green
+    }
+    .error{
+        margin-left: 5px;
+    }
+    #alreadyRegisteredUser{
+        @include media-breakpoint-up(sm){
+            @include make-col-offset(3);
+        }
+    }
     }
 }
 

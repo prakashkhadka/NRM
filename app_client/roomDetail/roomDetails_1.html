@@ -7,52 +7,49 @@
 </div>
 
 <section>
-    <div id="roomDetails">
-        <div class="row">
-            <div class="col-xs-12 col-sm-10 offset-sm-1">
-                <div class="row">
-                    <div>
-                        <div id="roomImages" class="carousel slide" data-ride="carousel" ng-if="ORD.images.length > 0">
-                            <ol class="carousel-indicators">
-                              <li data-target="#roomImages" data-slide-to="{{$index}}" ng-repeat="img in ORD.images"></li>
-                            </ol>
-                            <div class="carousel-inner" role="listbox">
-                                <div class="carousel-item" ng-class="{active:!$index}" ng-repeat="img in ORD.images">
-                                    <img id="roomDetailImages" class="img-fluid" src="https://s3-ap-southeast-2.amazonaws.com/nrm/{{img}}" alt="image slide">
-                                </div>
-                            </div>
-                            <a class="left carousel-control" data-target="#roomImages" role="button" data-slide="prev">
-                              <span class="icon-prev" aria-hidden="true"></span>
-                              <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="right carousel-control" data-target="#roomImages" role="button" data-slide="next">
-                              <span class="icon-next" aria-hidden="true"></span>
-                              <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-                        
-                        <div id="roomInfo">
-                            <div id="rentInDetail">${{ORD.rent}} /Week</div>
-                            
-                            <div id="fullAddressInDetail">{{ORD.unit}} / {{ORD.street_no}}, {{ORD.street}}, {{ORD.suburb}}, {{ORD.state}} {{ORD.postcode}}</div>
-                            
-                            <div ng-if="ORD.bond"><b>Bond :</b> ${{ORD.bond}}</div>
-                            
-                            <div ng-if="ORD.gender"><b>Preferred Gender :</b> {{ORD.gender}}</div>
-                            
-                            <div ng-if="ORD.required_no"><b>No required :</b>{{ORD.required_no}}</div> 
-                            
-                            <div><b>Available from :</b> {{ORD.available_from | date :  "dd MMMM yyyy"}} </div>
-                           
-                            <div><b>Contact:</b> {{ORD.contact_no}}</div>
-                           
-                            <div>{{ORD.message}}</div>
-                        </div>
-                    </div>
-                        
-                    
+    
+    <div id="detailsPage">
+        <div id="roomImages" class="carousel slide" data-ride="carousel" ng-if="ORD.images.length > 0">
+            <ol class="carousel-indicators">
+              <li data-target="#roomImages" data-slide-to="{{$index}}" ng-repeat="img in ORD.images"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item" ng-class="{active:!$index}" ng-repeat="img in ORD.images">
+                    <img id="roomDetailImages" class="img-fluid" src="https://s3-ap-southeast-2.amazonaws.com/nrm/{{img}}" alt="image slide">
                 </div>
+            </div>
+            <a class="left carousel-control" data-target="#roomImages" role="button" data-slide="prev">
+              <span class="icon-prev" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" data-target="#roomImages" role="button" data-slide="next">
+              <span class="icon-next" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
         </div>
+
+        <div id="roomDetails">
+            <div id="roomContent">
+                <div id="rentInDetail">${{ORD.rent}} /Week</div>
+
+                <div id="fullAddressInDetail">{{ORD.unit}} / {{ORD.street_no}}, {{ORD.street}}, {{ORD.suburb}}, {{ORD.state}} {{ORD.postcode}}</div>
+
+                <div ng-if="ORD.bond"><b>Bond :</b> ${{ORD.bond}}</div>
+
+                <div ng-if="ORD.gender"><b>Preferred Gender :</b> {{ORD.gender}}</div>
+
+                <div ng-if="ORD.required_no"><b>No required :</b>{{ORD.required_no}}</div> 
+
+                <div><b>Available from :</b> {{ORD.available_from | date :  "dd MMMM yyyy"}} </div>
+
+                <div><b>Contact:</b> {{ORD.contact_no}}</div>
+
+                <div>{{ORD.message}}</div>
+            </div>
         </div>
     </div>
+                        
+                    
+                
+       
 </section>

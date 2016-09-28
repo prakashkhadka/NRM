@@ -1,0 +1,106 @@
+//top navbar bar
+.nrm-top-navbar{
+    @extend .navbar;
+    @extend .navbar-full;
+    @extend .navbar-fixed-top;
+    @include setBackgroundColor(getColor('white'));
+    min-height:$nrm-top-navbar-height;
+    //transition:height 0.15s ease-in-out;
+
+    //breakpoint for small devices
+    @include media-breakpoint-down(sm){
+        background-color:getColor('bluewood-dark');
+    }
+    // top logo
+    .logo{
+        height:54px;
+        width:90px;
+        //make logo white in collapsed menu
+        @include media-breakpoint-down(sm){
+            -webkit-filter: brightness(0) invert(1);
+            filter: brightness(0) invert(1);
+        }
+    } // end of logo
+
+    //nav list
+    .nav{
+        @extend .nav;
+        @extend .navbar-nav;
+        float:right;
+        line-height:60px;
+        li{
+            @extend .nav-item;
+        }
+
+        //nav link
+        a{
+            @extend .nav-link;
+            font-weight:600;
+            font-size:18px;
+            font-family:$font-moteserrat;
+            color:getColor('bluewood');
+            &:hover{
+                color:getColor('burnt-sienna-dark');
+            }
+            @include media-breakpoint-down(sm){
+                color:getColor('white');
+            }
+        }
+    } //end of .nav
+
+    //toggle menu
+    .top-toggler{
+        @extend .navbar-toggler;
+        float:right; 
+        margin-top:20px;
+        //rules for media above sm
+        @include media-breakpoint-up(md) {
+            display:none;
+        }
+        //navbar toggle menu bar
+        .bar{
+            position:relative;
+            display:block;
+
+            &:before,&:after,&{
+                width:30px;
+                height:4px;
+                background-color:getColor('bluewood');
+                @include media-breakpoint-down(sm){
+                    background-color:getColor('white');
+                }
+            }
+            &:before,&:after{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: -9px;
+            }
+            &:after{
+                top: 9px;
+            }
+        } //end of  .bar
+
+        //top-toggle-menu hover
+        &:hover{
+            .bar,.bar:after,.bar:before{
+                background-color:getColor('burnt-sienna-dark');
+            }
+        }
+    } //end of .top-toggler
+
+    .collapsable-menu{
+        @extend .collapse;
+        @extend .navbar-toggleable-sm;
+        //breakpoint for small devices
+        @include media-breakpoint-down(sm){
+            width:100%;
+            margin-top:65px;
+            text-align:center;
+            //center nav when collapsed
+            .nav{
+                float:none;
+            }	
+        }
+    } // end of .collapsable-menu
+} //end of .nrm-top-navbar

@@ -6,11 +6,12 @@
     </div> 
 </div>
 
+
 <section>
-    <h3>Available rooms</h3>
+    <h3>Search Result</h3>
     
-    <nav aria-label="Page navigation" class="pagination-bar text-xs-center">
-        <ul class="pagination">
+    <nav aria-label="Page navigation" class="pagination-bar">
+        <ul class="pagination pagination-lg">
             <li class="page-item" ng-click="backward()">
                 <a class="page-link" href="#" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
@@ -20,8 +21,6 @@
             <li class="page-item" ng-click="getRooms(1)"><a class="page-link" href="#">1</a></li>
             <li class="page-item" ng-click="getRooms(2)"><a class="page-link" href="#">2</a></li>
             <li class="page-item" ng-click="getRooms(3)"><a class="page-link" href="#">3</a></li>
-            <li class="page-item hidden-sm-down" ng-click="getRooms(4)"><a class="page-link" href="#">4</a></li>
-            <li class="page-item hidden-sm-down" ng-click="getRooms(5)"><a class="page-link" href="#">5</a></li>
             <li class="page-item">
                 <a class="page-link" href="#" aria-label="Next" ng-click="forward()">
                     <span aria-hidden="true">&raquo;</span>
@@ -31,29 +30,31 @@
         </ul>
     </nav>
     
-    <section>
+    <div ng-if="searchedRoom.length < 1">
+        <h4>Sorry we couldn't find anything matching your search criteria. Please try again with different search criteria.</h4>
+    </div>
         
-        <!-- Recent Room Container -->
-        <div class="recent-rooms">
-            <!-- Recent Room Card -->
-            <div class="room" ng-repeat="room in rooms"> 
-                <img class="card-img-top" 
-                ng-src="{{room.images.length > 0 &&  'https://s3-ap-southeast-2.amazonaws.com/nrm/'+room.images[0] || 'images/room1.jpg'}}" alt="Card image cap">
+    <!-- Recent Room Container -->
+    <div class="recent-rooms">
+        <!-- Recent Room Card -->
+        <div class="room" ng-repeat="room in searchedRoom"> 
+            <img class="card-img-top" 
+            ng-src="{{room.images.length > 0 &&  'https://s3-ap-southeast-2.amazonaws.com/nrm/'+room.images[0] || 'images/room1.jpg'}}" alt="Card image cap">
 
-                <a href="/roomDetail/{{room._id}}" class="address">{{room.suburb}}, {{room.state}} {{room.postcode}}</a>
-                <span class="rent">${{room.rent}}</span>
-            </div>
-            <!-- End of Recent Room Card -->
+            <a href="/roomDetail/{{room._id}}" class="address">{{room.suburb}}, {{room.state}} {{room.postcode}}</a>
+            <span class="rent">${{room.rent}}</span>
         </div>
-        <!-- Recent Room Container -->
-    </section>
+        <!-- End of Recent Room Card -->
+    </div>
+    <!-- Recent Room Container -->
+    
     
     <div ng-if="endOfPage">
-        <h3>No more rooms</h3>
+        No more rooms
     </div>
     
-    <nav aria-label="Page navigation" class="pagination-bar text-xs-center">
-        <ul class="pagination">
+    <nav aria-label="Page navigation" class="pagination-bar">
+        <ul class="pagination pagination-lg">
             <li class="page-item" ng-click="backward()">
                 <a class="page-link" href="#" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
@@ -63,8 +64,6 @@
             <li class="page-item" ng-click="getRooms(1)"><a class="page-link" href="#">1</a></li>
             <li class="page-item" ng-click="getRooms(2)"><a class="page-link" href="#">2</a></li>
             <li class="page-item" ng-click="getRooms(3)"><a class="page-link" href="#">3</a></li>
-            <li class="page-item hidden-sm-down" ng-click="getRooms(4)"><a class="page-link" href="#">4</a></li>
-            <li class="page-item hidden-sm-down" ng-click="getRooms(5)"><a class="page-link" href="#">5</a></li>
             <li class="page-item">
                 <a class="page-link" href="#" aria-label="Next" ng-click="forward()">
                     <span aria-hidden="true">&raquo;</span>
@@ -74,4 +73,5 @@
         </ul>
     </nav>  
 </section>
+
 

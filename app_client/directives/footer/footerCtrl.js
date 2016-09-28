@@ -15,9 +15,9 @@ function footerCtrl($scope, $http){
             data: msg
         }).then(function(response){
             $scope.messageSubmitted = true;
-            console.log("Success : " + response.data);
+            //console.log("Success : " + response.data);
         }, function(response){
-            //console.log("Error : " + response);
+            //console.log("Error : " + response.data);
         });
     };
 }

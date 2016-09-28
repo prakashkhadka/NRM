@@ -7,7 +7,8 @@ angular
         .module("roomApp")
         .controller("myPostCtrl", myPostCtrl);
 
-function myPostCtrl($scope, $http, $location, authentication){
+function myPostCtrl($scope, $http, $location, authentication, $anchorScroll){
+    $anchorScroll();
     //console.log("myPostCtrl is working");
     //To find current loggedin user uses authentication service in services/authentication.service.js file. It uses currentUser method
     

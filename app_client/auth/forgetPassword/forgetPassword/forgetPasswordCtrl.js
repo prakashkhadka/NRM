@@ -7,7 +7,8 @@ angular
         .module("roomApp")
         .controller("forgetPasswordCtrl", forgetPasswordCtrl);
 
-function forgetPasswordCtrl($scope, $http, $location){
+function forgetPasswordCtrl($scope, $http, $location, $anchorScroll){
+    $anchorScroll();
     // Following function takes user input for forget password and send to server using POST method
     $scope.forgetPassword =function(forget){
         //console.log("forgotton password is : " + forget.email);

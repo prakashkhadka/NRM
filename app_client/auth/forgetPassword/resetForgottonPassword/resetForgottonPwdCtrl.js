@@ -14,7 +14,8 @@ angular
     On the serverside mongoose method is used to find the token saved on the mongodb. If it finds the token
     on database, it goes further to change and save password.
  */
-function resetForgottonPwdCtrl($scope, $http, $location, $routeParams, authentication){
+function resetForgottonPwdCtrl($scope, $http, $location, $routeParams, authentication, $anchorScroll){
+    $anchorScroll();
     $scope.receivedToken = $routeParams.receivedToken;
     //console.log("RT : " + $scope.receivedToken);
     //console.log("User is : " + user);

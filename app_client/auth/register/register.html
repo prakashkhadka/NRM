@@ -1,6 +1,8 @@
 <style>
+    
     .inputError{
         color:red;
+        
     }
     form .ng-invalid.ng-dirty{ 
         background-color: lightpink; 
@@ -18,7 +20,6 @@
     .matchError{
         background-color: lightpink !important;
     }
-        
    
 </style>
 
@@ -48,14 +49,14 @@
                     </div>
                     
                 </div>
-                <!--
+                
                 <div class="col-sm-1" ng-show="URForm.newUserFN.$invalid && URForm.newUserFN.$dirty">
-                    <span class="glyphicon glyphicon-remove"></span>
+                    <span class="fa fa-remove"></span>
                 </div>
                 <div class="col-sm-1" ng-show="URForm.newUserFN.$valid && URForm.newUserFN.$dirty">
-                    <span class="glyphicon glyphicon-ok"></span>
+                    <span class="fa fa-check"></span>
                 </div>
-                -->
+                
             </div>
 
 
@@ -63,7 +64,7 @@
                 <label class="control-label col-sm-3" for="lastName">Lastname:</label>
                 <div class="col-sm-7">
                     <input name="newUserLN" type="text" class="form-control" id="lastName" placeholder="Enter lastname" ng-model="newUser.lastName" ng-minlength="2" ng="maxlength=15" required="true">
-                    <!--
+                    
                     <div class="error" ng-show="URForm.newUserLN.$invalid && URForm.newUserLN.$dirty">
                         <span ng-show="URForm.newUserLN.$error.minlength">
                             Last name must be at least 2 character long.
@@ -75,27 +76,35 @@
                             Please enter a value
                         </span>
                     </div>
-                    -->  
+                    
                 </div>
                 <div class="col-sm-1" ng-show="URForm.newUserLN.$invalid && URForm.newUserLN.$dirty">
-                    <span class="glyphicon glyphicon-remove"></span>
+                    <span class="fa fa-remove"></span>
                 </div>
                 <div class="col-sm-1" ng-show="URForm.newUserLN.$valid && URForm.newUserLN.$dirty">
-                    <span class="glyphicon glyphicon-ok"></span>
+                    <span class="fa fa-check"></span>
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="control-label col-sm-3" for="email">Email:</label>
                 <div class="col-sm-7">
-                  <input ng-class="{usedEmail : emailError}" name="newUserEmail" type="email" class="form-control" id="email" placeholder="Enter email"  ng-model="newUser.email" ng-blur='validateEmail(newUser)' ng-focus='hideError()'>
+                  <input ng-class="{usedEmail : emailError}" 
+                         name="newUserEmail" 
+                         type="email" 
+                         class="form-control" 
+                         id="email" 
+                         placeholder="Enter email"  
+                         ng-model="newUser.email" 
+                         ng-blur='validateEmail(newUser)' 
+                         ng-focus='hideError()'>
                   <span class='inputError invalid'>{{emailError}}</span>
                 </div>
                 <div class="col-sm-1" ng-show="URForm.newUserEmail.$invalid && URForm.newUserEmail.$dirty || emailError">
-                    <span class="glyphicon glyphicon-remove"></span>
+                    <span class="fa fa-remove"></span>
                 </div>
                 <div class="col-sm-1" ng-show="URForm.newUserEmail.$valid && URForm.newUserEmail.$dirty && !emailError">
-                    <span class="glyphicon glyphicon-ok"></span>
+                    <span class="fa fa-check"></span>
                 </div>
             </div>
 
@@ -112,10 +121,10 @@
                          required>
                 </div>
                 <div class="col-sm-1" ng-show="URForm.newUserPwd.$invalid && URForm.newUserPwd.$dirty">
-                    <span class="glyphicon glyphicon-remove"></span>
+                    <span class="fa fa-remove"></span>
                 </div>
                 <div class="col-sm-1" ng-show="URForm.newUserPwd.$valid && URForm.newUserPwd.$dirty">
-                    <span class="glyphicon glyphicon-ok"></span>
+                    <span class="fa fa-check"></span>
                 </div>
             </div>
 
@@ -137,17 +146,61 @@
                   <span class="inputError invalid">{{pwdMatchError}}</span>
                 </div>
                 <div class="col-sm-1" ng-show="URForm.newUserPwd1.$invalid && URForm.newUserPwd1.$dirty || pwdMatchError">
-                    <span class="glyphicon glyphicon-remove"></span>
+                    <span class="fa fa-remove"></span>
                 </div>
                 <div class="col-sm-1" ng-show="URForm.newUserPwd1.$valid && URForm.newUserPwd1.$dirty && !pwdMatchError">
-                    <span class="glyphicon glyphicon-ok"></span>
+                    <span class="fa fa-check"></span>
                 </div>
             </div>
 
             <div class="form-group"> 
-              <div class="offset-sm-3 col-sm-8">
-                  <a href="/tNC">Terms and conditions</a> | <a href="/privacyPolicy">Our privacy policy</a>
-              </div>
+                <div class="offset-sm-3 col-sm-8">
+                    <a href="#" data-toggle="modal" 
+                       data-target="#termsNconditionModal">Terms and conditions</a> 
+                    | 
+                    <a href="#" data-toggle="modal" 
+                       data-target="#privacyPolicyModal">Privacy policy</a>
+
+                </div>
+            <!-- Privacy Policy Modal -->
+            <div class="modal fade" id="privacyPolicyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                          <h4 class="modal-title" id="myModalLabel">Privacy Policy</h4>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="termsNconditionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                          <h4 class="modal-title" id="myModalLabel">Terms and Conditions</h4>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             </div>
 
 
@@ -169,11 +222,13 @@
         <!--
         <div ng-include src="'auth/register/userRegistrationForm.html'"></div>
         -->
-        <span>If you are already registered </span>
-        <span><a href="/login"><button class="btn btn-default">Login</button></a></span>
-        <h4>
+        <div id="alreadyRegisteredUser">
+            <span>If you are already registered </span>
+            <span><a href="/login"><button class="btn btn-secondary">Login</button></a></span>
+        </div>
+        <p class="error">
             {{errorMessage}}
-        </h4>
+        </p>
     </div>
 </section>
 

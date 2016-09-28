@@ -9,7 +9,8 @@ angular
         .controller("registerCtrl", registerCtrl);
 
 
-function registerCtrl($location, $scope, authentication, $http){
+function registerCtrl($location, $scope, authentication, $http, $anchorScroll){
+    $anchorScroll();
 /*
     Following function checks whether supplied email address is exists in the database or not
  */
