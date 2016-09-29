@@ -3840,20 +3840,9 @@ body {
   min-height: 100vh;
   padding: 0px; }
 
-section {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding: 30px 0px;
-  margin: 0px; }
-  section::after {
-    content: "";
-    display: table;
-    clear: both; }
-  section h3 {
-    color: #021125;
-    font-weight: 700; }
+h3 {
+  color: #021125;
+  font-weight: 700; }
 
 /**
  * Components - buttons
@@ -4349,6 +4338,7 @@ and open the template in the editor.
       background-color: #B83F2D; }
   @media (max-width: 767px) {
     .nrm-top-navbar .collapsable-menu {
+      width: 100%;
       margin-top: 65px;
       text-align: center; }
       .nrm-top-navbar .collapsable-menu .nav {
@@ -4661,27 +4651,22 @@ footer {
 .hero {
   margin-left: -15px;
   margin-right: -15px;
-  height: 50vh;
   background-image: url("../images/hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  padding: 0px 10px;
-  margin: 0; }
+  margin: 0;
+  height: 30vh; }
   .hero::after {
     content: "";
     display: table;
     clear: both; }
   @media (min-width: 768px) {
     .hero {
-      padding: 50px 10px; }
-      .hero h1 {
-        margin-top: 20px;
-        font-family: "Montserrat", sans-serif;
-        text-shadow: 4px 4px 4px black;
-        color: #FFFFFF;
-        text-align: center;
-        display: block; } }
+      height: 40vh; } }
+  @media (min-width: 992px) {
+    .hero {
+      height: 50vh; } }
 
 .hero-search {
   height: 20vh;
