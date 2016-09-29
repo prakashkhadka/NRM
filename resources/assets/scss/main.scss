@@ -21,6 +21,12 @@
 //pages
 @import "pages/manifest";
 
+html,body
+{
+   
+    overflow-x: hidden; 
+}
+
 #fullAddress{
     font-size: 20pt;  
 }

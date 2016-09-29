@@ -11,45 +11,51 @@
 
 
 <!-- Recent Rooms Section-->
-<div>
-    <h3>Recently Added Rooms</h3> <!-- Heading -->
-    <!-- Recent Room Container -->
-    <div class="recent-rooms">
-        <!-- Recent Room Card -->
-        <div class="room" ng-repeat="room in rooms"> 
-            <img class="card-img-top" 
-            ng-src="{{room.images.length > 0 &&  'https://s3-ap-southeast-2.amazonaws.com/nrm/'+room.images[0] || 'images/room1.jpg'}}" alt="Card image cap">
+<section id="recentlyAddedRoomsSection">
+    
+        <h3>Reacently Added Rooms</h3>
+        <!-- Recent Room Container -->
+        <div class="recent-rooms">
+            <!-- Recent Room Card -->
+            <div class="room" ng-repeat="room in rooms"> 
+                <img class="card-img-top" 
+                ng-src="{{room.images.length > 0 &&  'https://s3-ap-southeast-2.amazonaws.com/nrm/'+room.images[0] || 'images/room1.jpg'}}" alt="Card image cap">
 
-            <a href="/roomDetail/{{room._id}}" class="address">{{room.suburb}}, {{room.state}} {{room.postcode}}</a>
-            <span class="rent">${{room.rent}}</span>
-            <div class="label"><span>New</span></div> <!-- Angled New Label -->
+                <a href="/roomDetail/{{room._id}}" class="address">{{room.suburb}}, {{room.state}} {{room.postcode}}</a>
+                <span class="rent">${{room.rent}}</span>
+                <div class="label"><span>New</span></div> <!-- Angled New Label -->
+            </div>
+            <!-- End of Recent Room Card -->
         </div>
-        <!-- End of Recent Room Card -->
-    </div>
-    <!-- Recent Room Container -->
+        <!-- Recent Room Container -->
+        
+   
+</section>
+
+<div id="viewAllButton">
     <a href="/roomPagination" class="btn-view-all">View all</a>
 </div>
-
 <!-- End of Recent Rooms Section-->
 
 <!-- Services Section -->
-<section id="why">
+<div id="why">
     <h3>Why Nepali RoomMate</h3>
     <div class="features">
-    <div class="feature-container">
-    <div class="feature"><i class="fa fa-search fa-2x"></i>
-    <h5>Easy Search</h5>
-    <p>Search room in your desired location with your preferences.</p></div>
-    <div class="feature"><i class="fa fa-comments fa-3x"></i>
-    <h5>Quick Connect</h5>
-
-    <p>Get in touch with room owner or room mate easily via email or phone.</p></div>
-    <div class="feature"><i class="fa fa-mobile fa-2x"></i>
-    <h5>Free To Use</h5>
-    <p>Our goal is provide you an easy way to find  a next home.</p></div>
+        <div class="feature-container">
+            <div class="feature"><i class="fa fa-search fa-2x"></i>
+            <h5>Easy Search</h5>
+            <p>Search room in your desired location with your preferences.</p></div>
+            <div class="feature"><i class="fa fa-comments fa-3x"></i>
+                <h5>Quick Connect</h5>
+                <p>Get in touch with room owner or room mate easily via email or phone.</p>
+            </div>
+            <div class="feature"><i class="fa fa-mobile fa-2x"></i>
+                <h5>Free To Use</h5>
+                <p>Our goal is provide you an easy way to find  a next home.</p>
+            </div>
+        </div>
     </div>
-    </div>
-</section>
+</div>
 <!-- End Services Section -->
 <!-- Footer -->
 <!--End of Footer  -->
