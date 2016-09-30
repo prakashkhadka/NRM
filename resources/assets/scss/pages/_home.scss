@@ -1,4 +1,14 @@
 #recentlyAddedRoomsSection{
+
+  h3{
+
+    color:$text-color-heading;
+    display:block;
+    font-family: $font-moteserrat;
+    font-weight:700;
+    text-align:center;
+    text-transform:uppercase;
+}
     @include media-breakpoint-only(xs){
         margin-top: 20px;
         h3{

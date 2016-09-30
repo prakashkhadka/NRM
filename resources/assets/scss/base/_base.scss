@@ -1,16 +1,24 @@
 /** body */
 
 body{
+    
     background-color:getColor('mercury');
     min-height:100vh;
     padding:0px;
 
 }
 
-    h3{
-        color:$text-color-heading;
-        font-weight:700;
-    }
-    section{
-        min-height: 50vh;
-    }
+/** page section as container **/
+section{
+    
+    min-height: 50vh;
+    
+}
+
+/** Partial view container  **/
+
+.main{
+
+    margin-top:$nrm-top-navbar-height;
+    padding:20px 0px;
+}

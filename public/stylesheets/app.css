@@ -11,26 +11,29 @@
 /**
  * Base - variables, typography, bootstrap, base styles 
  */
+/* Call out heading*/
 h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700; }
 
+/* Page heading*/
 h3 {
+  color: #021125;
+  display: block;
   font-family: "Montserrat", sans-serif;
-  display: block; }
-
-h3 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
   text-transform: uppercase; }
 
+/*Sub heading / Footer heading */
 h5 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600; }
 
+/* body text */
 p {
-  font-family: "News Cycle", sans-serif; }
+  font-family: "News Cycle", sans-serif;
+  font-size: 16px; }
 
 /**Core variables and mixins **/
 /** Reset and dependencies **/
@@ -3840,12 +3843,14 @@ body {
   min-height: 100vh;
   padding: 0px; }
 
-h3 {
-  color: #021125;
-  font-weight: 700; }
-
+/** page section as container **/
 section {
   min-height: 50vh; }
+
+/** Partial view container  **/
+.main {
+  margin-top: 62px;
+  padding: 20px 0px; }
 
 /**
  * Components - buttons
@@ -4415,7 +4420,7 @@ and open the template in the editor.
  */
 .nrm-top-navbar {
   background-color: #FFFFFF;
-  min-height: 60px;
+  min-height: 62px;
   transition: height 0.15s ease-in-out; }
   @media (max-width: 767px) {
     .nrm-top-navbar {
@@ -4807,6 +4812,14 @@ footer {
   margin-left: 8.33333%;
   height: 50px; }
 
+#recentlyAddedRoomsSection h3 {
+  color: #021125;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase; }
+
 @media (max-width: 543px) {
   #recentlyAddedRoomsSection {
     margin-top: 20px; }
@@ -5148,9 +5161,6 @@ footer {
     .carousel-wrapper {
       height: 45vh; } }
 
-.carousel-indicator-wrapper {
-  position: relative; }
-
 #room-carousel {
   position: relative;
   min-height: 1px;
@@ -5201,18 +5211,50 @@ footer {
       float: left;
       width: 8.33333%; } }
 
+/** carousel-indicator */
+.carousel-indicator {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-typ: none;
+  margin: 0px 0px;
+  padding: 20px 0px; }
+  .carousel-indicator li {
+    list-style-type: none;
+    margin: 0px 20px; }
+  .carousel-indicator .carousel-thumbnail {
+    border: 3px #FFF solid;
+    height: 50px;
+    width: 80px; }
+  @media (min-width: 768px) {
+    .carousel-indicator {
+      padding: 50px 0px;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between; }
+      .carousel-indicator li {
+        list-style-type: none;
+        margin: 10px 0px; }
+      .carousel-indicator .carousel-thumbnail {
+        border: 3px #FFF solid;
+        height: 50px;
+        width: 80px; } }
+
 .carousel-control-top, .carousel-control-bottom {
-  position: absolute;
-  margin: 0;
-  text-align: center;
-  height: 100%;
   color: #FFF;
+  display: none;
   font-size: 32px;
+  height: 100%;
   line-height: 100px;
+  margin: 0;
   padding: 0;
-  display: none; }
+  position: absolute;
+  text-align: center; }
   .carousel-control-top:hover, .carousel-control-bottom:hover {
     color: #B83F2D; }
+  .carousel-control-top span, .carousel-control-bottom span {
+    color: #FFF; }
   @media (min-width: 768px) {
     .carousel-control-top, .carousel-control-bottom {
       display: block;
@@ -5236,34 +5278,34 @@ footer {
       right: 0;
       bottom: 10px; } }
 
-.carousel-indicator {
-  margin: 0px 0px;
-  padding: 20px 0px;
-  list-style-typ: none;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between; }
-  .carousel-indicator li {
-    list-style-type: none;
-    margin: 0px 10px; }
-  .carousel-indicator .carousel-thumbnail {
-    width: 50px;
-    height: 50px;
-    border: 3px #FFF solid; }
+/** room-details-wrapper **/
+.room-details-wrapper {
+  margin-left: -15px;
+  margin-right: -15px;
+  padding: 20px; }
+  .room-details-wrapper::after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.room-details {
+  @inlucde make-col-ready();
+  float: left;
+  width: 100%; }
   @media (min-width: 768px) {
-    .carousel-indicator {
-      padding: 50px 0px;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between; }
-      .carousel-indicator li {
-        list-style-type: none;
-        margin: 10px 0px; }
-      .carousel-indicator .carousel-thumbnail {
-        width: 80px;
-        height: 50px;
-        border: 3px #FFF solid; } }
+    .room-details {
+      float: left;
+      width: 83.33333%;
+      margin-left: 8.33333%; } }
+  @media (min-width: 992px) {
+    .room-details {
+      float: left;
+      width: 50%;
+      margin-left: 25%; } }
+  .room-details h5 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 18px; }
 
 /*
 To change this license header, choose License Headers in Project Properties.
