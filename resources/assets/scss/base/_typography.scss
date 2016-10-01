@@ -10,10 +10,10 @@ h1{
 /* Page heading*/
 h3{
 
-    color:$text-color-heading;
+    color:$text-color-heading !important;
     display:block;
     font-family: $font-moteserrat;
-    font-weight:700;
+    font-weight:700 !important;;
     text-align:center;
     text-transform:uppercase;
 }
@@ -33,3 +33,4 @@ p{
     font-size:16px;
 		
 }
+ 

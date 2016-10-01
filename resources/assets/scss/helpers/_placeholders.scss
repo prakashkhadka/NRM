@@ -3,6 +3,8 @@
 
 %button{
 	
-	@extend .btn
+	@extend .btn;
+	border-radius:0px;
+	font-family:$font-moteserrat;
 }
 

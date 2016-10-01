@@ -1,44 +1,20 @@
 <navigation></navigation>
-
-<div class="hero-search">
-    <div class="search-box-small">
-        <search-room></search-room>
-    </div> 
-</div>
 <section id="search-result">
+    
+    <!-- search section -->
+    <div class="search-box-wrapper">
+        <div class="search-box-small">
+            <search-room></search-room>
+        </div>
+    </div>
+    <!-- End os search section -->
+
+
     <h3 ng-if="searchedRoom.length > 0">Search Result</h3>
-    <div ng-if="searchedRoom.length < 1">
-        <p>Sorry we couldn't find anything matching your search criteria. Please try again with different search criteria.</p>
-    </div>
-    <div ng-if="searchedRoom.length > 1">
-        <p>we have found <span class="searchedRoomNumber">{{searchedRoom.length}}</span> results.</p>
-    </div>
-    <div ng-if="searchedRoom.length === 1">
-        <p>we have found <span class="searchedRoomNumber">{{searchedRoom.length}}</span> result.</p>
-    </div>
-    <!--
-    <div ng-if="searchedRoom.length > 0" class="pagination-container">
-            <ul class="pagination">
-                <li class="pagination-item" ng-click="backward()">
-                    <a class="pagination-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                </li>
-                <li class="pagination-item" ng-click="getRooms(1)"><a class="pagination-link" href="#">1</a></li>
-                <li class="pagination-item" ng-click="getRooms(2)"><a class="pagination-link" href="#">2</a></li>
-                <li class="pagination-item" ng-click="getRooms(3)"><a class="pagination-link" href="#">3</a></li>
-                <li class="pagination-item">
-                    <a class="pagination-link" href="#" aria-label="Next" ng-click="forward()">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </li>
-            </ul>
-    </div>
-    -->
-    
-    
+    <p ng-if="searchedRoom.length < 1">Sorry we couldn't find anything matching your search criteria. Please try again with different search criteria.</p>
+    <p ng-if="searchedRoom.length >= 1">we have found <span class="searchedRoomNumber">{{searchedRoom.length}}</span> result<span  ng-if="searchedRoom.length > 1">s</span>.</p>
+
+    <!-- pagination -->
     <nav ng-if="searchedRoom.length > 0" aria-label="Page navigation" class="pagination-bar text-xs-center">
         <ul class="pagination">
             <li class="page-item" ng-click="backward()">
@@ -60,33 +36,39 @@
             </li>
         </ul>
     </nav>  
-
+    <!-- End of pagination -->
+    
+    <!-- search-result -->
     <div class="search-result">
-         <!-- Recent Room Card -->
-         <div class="result-room" ng-repeat="room in searchedRoom"> 
+         <!-- result-room -->
+        <div class="result-room" ng-repeat="room in searchedRoom"> 
              <div class="left-col">
                  <address>
-                     <span class="roomStreetAddress">{{room.unit}} {{room.street_no}}{{room.street}} </span> <br>
+                     <span class="room-street-address">{{room.unit}} {{room.street_no}}{{room.street}} </span> <br>
                      {{room.suburb}}<br>
                      {{room.state}} {{room.postcode}}
                  </address>
                  <a href="/roomDetail/{{room._id}}" class="btn-view-details"> View Details</a>
                  <div class="stickybar">
                      <ul class="room-overview">
-                         <li class="it"><i class="fa fa-user"></i><span>{{room.gender}}</span></li>
-                         <li class="it"><i class="fa fa-bed"></i><span>2</span></li>
-                         <li class="it"><i class="fa fa-car"></i><span>Street</span></li>
+                         <li>Gender<span>{{room.gender}}</span></li>   
                      </ul>
                  </div>
              </div>
-             <div class="right-col"><img class="room-image" 
+             <!-- End of left-col -->
+
+             <div class="right-col">
+                <img class="room-image" 
                  ng-src="{{room.images.length > 0 &&  'https://s3-ap-southeast-2.amazonaws.com/nrm/'+room.images[0] || 'images/room1.jpg'}}" alt="Card image cap">
                  <span class="rent">$ {{room.rent}}</span>
              </div> 
-         </div>
-         <!-- End of Recent Room Card -->
-     </div>
-        <!-- Recent Room Container -->
+        </div>
+         <!-- End of result-room -->
+    </div>
+    <!--End of search-result -->
+
+
+    <!-- Bottom pagination -->
     <nav ng-if="searchedRoom.length > 0" aria-label="Page navigation" class="pagination-bar text-xs-center">
         <ul class="pagination">
             <li class="page-item" ng-click="backward()">
@@ -107,31 +89,11 @@
                 </a>
             </li>
          </ul>
-    </nav>  
-    <!--
-    <div ng-if="searchedRoom.length > 0" class="pagination-container">
-        <ul class="pagination">
-            <li class="pagination-item" ng-click="backward()">
-                <a class="pagination-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                    <span class="sr-only">Previous</span>
-                </a>
-            </li>
-            <li class="pagination-item" ng-click="getRooms(1)"><a class="pagination-link" href="#">1</a></li>
-            <li class="pagination-item" ng-click="getRooms(2)"><a class="pagination-link" href="#">2</a></li>
-            <li class="pagination-item" ng-click="getRooms(3)"><a class="pagination-link" href="#">3</a></li>
-            <li class="pagination-item">
-                <a class="pagination-link" href="#" aria-label="Next" ng-click="forward()">
-                    <span aria-hidden="true">&raquo;</span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    -->
+    </nav> 
 
+    <!-- End of bottom pagination -->
     <div ng-if="endOfPage">
         No more rooms
     </div>
 </section>
-
+<!-- End of section -->

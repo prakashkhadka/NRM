@@ -1,36 +1,44 @@
 <navigation></navigation>
 <section id="login">
-<h3 class="text-xs-center">User Login</h3>
-<p>Please fill the following details to login</p>
+    <h3 class="text-xs-center">User Login</h3>
+    <p>Please fill the following details to login</p>
+    
+
+    <!-- login-container -->
     <div class="login-container">
-
-    <form name='loginForm' id="login-form" role='form' novalidate>
-        <div class="form-group">
-            <input name="userEmail" type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Enter Email" ng-model="user.email">
-            <div class="error" ng-show="loginForm.userEmail.$invalid && loginForm.userEmail.$dirty">
-                <span ng-show="loginForm.userEmail.$error">
-                    <span class="emailError">Incorrect email format</span>
-                </span>
+        <form name='loginForm' id="login-form" role='form' novalidate>
+            
+            <div class="form-group">
+                <input name="userEmail" type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Enter Email" ng-model="user.email">
+                <div class="error" ng-show="loginForm.userEmail.$invalid && loginForm.userEmail.$dirty">
+                    <span ng-show="loginForm.userEmail.$error" class="emailError">Incorrect email format</span>
+                    
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <input type="password" class="form-control" name="email" placeholder="Enter Password" ng-model="user.password">
-        </div>
+        
+            <div class="form-group">
+                <input type="password" class="form-control" name="email" placeholder="Enter Password" ng-model="user.password">
+            </div>
 
-        <div class="col-sm-9 col-sm-offset-3"> 
-            <span class="loginError">{{loginError}}</span>
-        </div>
-        <div class="form-group">
-            <button class="btn-login form-control" ng-click="login(user)">Log in</button>
-        </div>
+            <div class="col-sm-9 col-sm-offset-3"> 
+                <span class="loginError">{{loginError}}</span>
+            </div>
+        
+            <div class="form-group">
+                <button class="btn-login form-control" ng-click="login(user)">Log in</button>
+            </div>
 
     </form>
-        </div>
- <!-- Password Reset Section -->
+    </div>
+    <!-- End of login-cointainer -->
+ 
+    <!-- Password Reset Section -->
     <div class="password-reset">
-    <ul>
-        <li><a href="forgetPassword">Forgot Password</a></li>
-        <li><a href="/register">Register</a></li>
-    </ul>
+        <ul>
+            <li><a href="forgetPassword">Forgot Password</a></li>
+            <li><a href="/register">Register</a></li>
+        </ul>
     </div>
 </section>
+
+<!-- End of login section -->

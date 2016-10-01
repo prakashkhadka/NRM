@@ -12,6 +12,7 @@ body{
 section{
     
     min-height: 50vh;
+    padding:20px 0px;
     
 }
 
@@ -21,4 +22,32 @@ section{
 
     margin-top:$nrm-top-navbar-height;
     padding:20px 0px;
+}
+
+
+.page-wrapper{
+
+	@include make-row();
+}
+
+
+.page-container{
+
+	@include make-col(12);
+	background-color: #fff;
+	padding:20px 25px;
+	text-align:center;
+	height:auto;
+
+	@include media-breakpoint-up(md){
+			
+		@include make-col(8);
+		@include make-col-offset(3);
+
+	}
+	@include media-breakpoint-up(lg){
+
+		@include make-col(6);
+		@include make-col-offset(3);
+	}
 }
