@@ -1,5 +1,6 @@
 <navigation></navigation>
 
+
 <!-- Room details section -->
 <section>  
     <!-- carousel-wrapper -->
@@ -56,36 +57,77 @@
                 
                 <!-- collapsible div -->
                 <div id="email-owner" class="collapse">
-                    <form role="form" id="email-owner-form">
-                    
-                        <div class="form-group">
-                            <label>Name</label>
-                         <input type="text" name="name" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label>Phone</label>
-                            <input type="text" name="phone" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label>Email</label>
-                            <input type="text" name="email" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label>Message</label>
-                            <textarea type="text" name="email" class="form-control"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="btn-group">
-                                <button class="btn-send-email">Send Email</button>
-                                <button class="btn-cancel" data-toggle="collapse" data-target="#email-owner">Cancel</button>
+                    <div class="email-form-wrapper">
+                        <form role="form" id="email-owner-form">
+                        
+                            <!-- Name -->
+                            <div class="form-group">
+                                <label class="label-control">Name</label>
+                                <div class="input-wrapper">
+                                    <input type="text" name="name" class="form-control">
+                                    <div class="error-block">
+                                    </div>
+                                    <!-- End of error-block -->
+                                </div>
+                                <!-- End of input-wrapper  -->
                             </div>
-                        </div>
+                            <!-- End of form-group -->
+                            
 
-                    </form>
+                            <!-- Phone -->
+                            <div class="form-group">
+                                <label class="label-control">Phone</label>
+                                <div class="input-wrapper">
+                                    <input type="text" name="phone" class="form-control">
+                                    <div class="error-block">
+                                    </div>
+                                    <!-- End of error-block -->
+                                </div>
+                                <!-- End of input-wrapper  -->
+                            </div>
+                            <!-- End of form-group -->
+                            
+
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label class="label-control">Email</label>
+                                <div class="input-wrapper">
+                                    <input type="text" name="email" class="form-control">
+                                    <div class="error-block">
+                                    </div>
+                                    <!-- End of error-block -->
+                                </div>
+                                <!-- End of input-wrapper  -->
+                            </div>
+                            <!-- End of form-group -->
+                            
+
+                            <!-- Message -->
+                            <div class="form-group">
+                                <label class="label-control">Message</label>
+                                <div class="input-wrapper">
+                                       <textarea type="text" name="email" class="form-control"></textarea>
+                                       <div class="error-block">
+                                       </div>
+                                       <!-- End of error-block -->
+                                </div>
+                                <!-- End of input-wrapper  -->
+                            </div>
+                           <!--  End of form-group   -->
+
+                            <!-- Send button -->
+                            <div class="form-group">
+                                <div class="input-wrapper-right">
+                                    <button class="btn-send-email">Send Email</button>
+                                    <button class="btn-cancel" data-toggle="collapse" data-target="#email-owner">Cancel</button>
+                                </div>
+                                <!-- End of input-wrapper-right -->
+                            </div>
+                            <!-- End of form-group -->
+                        
+                        </form>
+                    </div>
+                    <!-- End of email-form-wrapper -->
                 </div>
                 <!-- End of collapsible div -->
             </div>
@@ -93,5 +135,5 @@
         </div>
         <!-- End of room-details-wrapper -->
 </section>
-<!-- End of rom detail section -->   
+<!-- End of Room details section -->   
 

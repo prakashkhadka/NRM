@@ -77,6 +77,8 @@
 @extend %button;
 	@include button-variant(getColor('white'), getColor('burnt-sienna-dark'),getColor('burnt-sienna-dark'));
 	height:40px;
+	width:100%;
+	@include setBorderRadius(15);
 }
 
 .btn-rent-call{
@@ -123,7 +125,6 @@
 
 
 @extend %button;
-margin-top:10px;
 
 
 }
@@ -144,7 +145,7 @@ margin-top:10px;
 
 @extend %button;
 	@include button-variant(getColor('white'), getColor('emrald'),getColor('emrald'));
-	border-radius:0px;
+	
 	margin:10px 10px;
 
 	@include media-breakpoint-up(md){
@@ -156,4 +157,25 @@ margin-top:10px;
 
 	
 
+}
+.btn-upload-image{
+
+	@extend %button;
+	height:50px;
+	float:left;
+
+
+}
+.remove-image{
+	
+	@extend %button;
+	@include button-variant(getColor('white'), getColor('burnt-sienna-dark'),getColor('white'));
+    position:absolute;
+    height:20px;
+    width:20px;
+    border-radius:50%;
+    line-height:20px;
+    text-align:center;
+    padding:0;
+    
 }

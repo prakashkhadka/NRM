@@ -4,12 +4,13 @@
 
 			@include make-row();
 			margin:10px 0px;		
-
 }
 
 
+/** check-box */
 .form-check{
 	
+	text-align:left;
 	input{
 
 		height:auto;
@@ -17,6 +18,7 @@
 }
 
 
+/** input **/
 input{
 
 	height:40px;
@@ -24,9 +26,84 @@ input{
 }
 
 
+/** label-control **/
 .label-control{
 
+	@include make-col-ready();
+
+
+	@include make-col(12);
+	text-align:left;
 	font-weight:bold;
+
+	@include media-breakpoint-up(md){
+
+		@include make-col(3);
+		line-height:40px;
+	}
+}
+
+
+.input-wrapper{
+
+	@include make-col(12);
+
+	@include media-breakpoint-up(md){
+
+		@include make-col(9);		
+	}
+} //end of input-wrapper
+
+
+.input-wrapper-medium{
+
+	@include make-col(12);
+
+	@include media-breakpoint-up(md){
+
+		@include make-col(6);		
+	}
+}
+
+
+.input-wrapper-small{
+
+	@include make-col(12);
+
+	@include media-breakpoint-up(md){
+
+		@include make-col(3);		
+	}
+}
+.input-wrapper-right{
+
+	@include make-col(12);
+	text-align:left;
+	line-height:40px;
+
+	@include media-breakpoint-up(md){
+
+		@include make-col(9);
+		@include make-col-offset(3);
+	}
+}
+
+
+.image-upload-info{
+
+	border:1px grey dashed;
+	padding:20px;
+	margin-bottom:20px;
+}
+
+
+/** form error */
+.error-block{
+
+	p{
+
+		color:getColor('danger');
+	}
 }
 
 
@@ -113,94 +190,6 @@ input{
         }
 
 
-/** user login form */
-
-#login-form{
-
-	input{
-		
-		@include make-col-ready();
-		@include make-col(10);
-		@include make-col-offset(1);
-		
-
-	}
-
-
-	.btn-login{
-		
-		@include make-col-ready();
-		@include make-col(10);
-		@include make-col-offset(1);
-				
-		
-
-
-}
-
-}
-
-#email-owner-form{
-
-	.form-group{
-
-		margin:10px 10px;
-
-	}
-
-
-	.btn-group{
-		
-
-		@include make-col(12);
-	@include media-breakpoint-up(md){
-
-
-
-	@include make-col(3);
-	@include make-col-offset(2);
-
-	}
-
-}
-	label{
-
-		@include make-col(12);
-		font-weight:700;
-
-	}
-
-	input,textarea{
-
-		@include make-col(12);
-		
-	}
-
-	
-
-	@include media-breakpoint-up(md){
-
-		label{
-
-			@include make-col(2);
-			
-			
-		
-		}
-
-		input,textarea{
-		@include make-col(7);
-		
-
-		}
-
-		textarea{
-			height:80px;
-		}
-	}
-}
-
-
 
 #password-reset-form{
 text-align:center;
@@ -221,57 +210,3 @@ width:100%;
 
 	
 }
-
-/* user registration form*/
-   #user-registration-form{
-
-		.label-control{
-
-			@include make-col-ready();
-
-
-			@include make-col(12);
-			text-align:left;
-			
-
-		}
-		.input-wrapper{
-
-			@include make-col(12);
-			
-		}
-
-
-		.input-wrapper-right{
-
-			@include make-col(12);
-			text-align:left;
-			line-height:40px;
-		}
-
-		p{
-
-			text-align:left;
-		}
-		@include media-breakpoint-up(md){
-
-			.label-control{
-
-				@include make-col(3);
-				line-height:40px;
-			}
-
-			.input-wrapper{
-
-				@include make-col(7);
-			}
-			
-			.input-wrapper-right{
-				
-				@include make-col(9);
-				@include make-col-offset(3);
-
-			}
-
-		}
-   }

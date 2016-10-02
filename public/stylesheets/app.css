@@ -8,8 +8,8 @@
   font-weight: normal;
   font-style: normal; }
 
-.btn-sign-up, .btn-send-message, .btn-send-message[disabled], .btn-user-registration, .btn-user-registration[disabled], .btn-search, .btn-view-all, .btn-login, .btn-rent-call, .btn-view-details, .btn-send-email, .btn-cancel, .btn-general {
-  border-radius: 0px;
+.btn-sign-up, .btn-send-message, .btn-send-message[disabled], .btn-user-registration, .btn-user-registration[disabled], .btn-search, .btn-view-all, .btn-login, .btn-rent-call, .btn-view-details, .btn-send-email, .btn-cancel, .btn-general, .btn-upload-image, .remove-image {
+  border-radius: 0;
   font-family: "Montserrat", sans-serif; }
 
 /**
@@ -261,7 +261,7 @@ textarea {
     page-break-after: avoid; }
   .navbar, .nrm-top-navbar {
     display: none; }
-  .btn > .caret, .btn-sign-up > .caret, .btn-send-message > .caret, .btn-user-registration > .caret, .btn-search > .caret, .btn-view-all > .caret, .btn-login > .caret, .btn-rent-call > .caret, .btn-view-details > .caret, .btn-send-email > .caret, .btn-cancel > .caret, .btn-general > .caret,
+  .btn > .caret, .btn-sign-up > .caret, .btn-send-message > .caret, .btn-user-registration > .caret, .btn-search > .caret, .btn-view-all > .caret, .btn-login > .caret, .btn-rent-call > .caret, .btn-view-details > .caret, .btn-send-email > .caret, .btn-cancel > .caret, .btn-general > .caret, .btn-upload-image > .caret, .remove-image > .caret,
   .dropup > .btn > .caret,
   .dropup > .btn-sign-up > .caret,
   .dropup > .btn-send-message > .caret,
@@ -273,7 +273,9 @@ textarea {
   .dropup > .btn-view-details > .caret,
   .dropup > .btn-send-email > .caret,
   .dropup > .btn-cancel > .caret,
-  .dropup > .btn-general > .caret {
+  .dropup > .btn-general > .caret,
+  .dropup > .btn-upload-image > .caret,
+  .dropup > .remove-image > .caret {
     border-top-color: #000 !important; }
   .tag {
     border: 1px solid #000; }
@@ -1688,7 +1690,7 @@ select.form-control-lg:not([size]):not([multiple]) {
   .form-inline .has-feedback .form-control-feedback {
     top: 0; } }
 
-.btn, .btn-sign-up, .btn-send-message, .btn-send-message[disabled], .btn-user-registration, .btn-user-registration[disabled], .btn-search, .btn-view-all, .btn-login, .btn-rent-call, .btn-view-details, .btn-send-email, .btn-cancel, .btn-general {
+.btn, .btn-sign-up, .btn-send-message, .btn-send-message[disabled], .btn-user-registration, .btn-user-registration[disabled], .btn-search, .btn-view-all, .btn-login, .btn-rent-call, .btn-view-details, .btn-send-email, .btn-cancel, .btn-general, .btn-upload-image, .remove-image {
   display: inline-block;
   font-weight: normal;
   line-height: 1.25;
@@ -1701,21 +1703,21 @@ select.form-control-lg:not([size]):not([multiple]) {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   border-radius: 0.25rem; }
-  .btn:focus, .btn-sign-up:focus, .btn-send-message:focus, .btn-user-registration:focus, .btn-search:focus, .btn-view-all:focus, .btn-login:focus, .btn-rent-call:focus, .btn-view-details:focus, .btn-send-email:focus, .btn-cancel:focus, .btn-general:focus, .btn.focus, .focus.btn-sign-up, .focus.btn-send-message, .focus.btn-user-registration, .focus.btn-search, .focus.btn-view-all, .focus.btn-login, .focus.btn-rent-call, .focus.btn-view-details, .focus.btn-send-email, .focus.btn-cancel, .focus.btn-general, .btn:active:focus, .btn-sign-up:active:focus, .btn-send-message:active:focus, .btn-user-registration:active:focus, .btn-search:active:focus, .btn-view-all:active:focus, .btn-login:active:focus, .btn-rent-call:active:focus, .btn-view-details:active:focus, .btn-send-email:active:focus, .btn-cancel:active:focus, .btn-general:active:focus, .btn:active.focus, .btn-sign-up:active.focus, .btn-send-message:active.focus, .btn-user-registration:active.focus, .btn-search:active.focus, .btn-view-all:active.focus, .btn-login:active.focus, .btn-rent-call:active.focus, .btn-view-details:active.focus, .btn-send-email:active.focus, .btn-cancel:active.focus, .btn-general:active.focus, .btn.active:focus, .active.btn-sign-up:focus, .active.btn-send-message:focus, .active.btn-user-registration:focus, .active.btn-search:focus, .active.btn-view-all:focus, .active.btn-login:focus, .active.btn-rent-call:focus, .active.btn-view-details:focus, .active.btn-send-email:focus, .active.btn-cancel:focus, .active.btn-general:focus, .btn.active.focus, .active.focus.btn-sign-up, .active.focus.btn-send-message, .active.focus.btn-user-registration, .active.focus.btn-search, .active.focus.btn-view-all, .active.focus.btn-login, .active.focus.btn-rent-call, .active.focus.btn-view-details, .active.focus.btn-send-email, .active.focus.btn-cancel, .active.focus.btn-general {
+  .btn:focus, .btn-sign-up:focus, .btn-send-message:focus, .btn-user-registration:focus, .btn-search:focus, .btn-view-all:focus, .btn-login:focus, .btn-rent-call:focus, .btn-view-details:focus, .btn-send-email:focus, .btn-cancel:focus, .btn-general:focus, .btn-upload-image:focus, .remove-image:focus, .btn.focus, .focus.btn-sign-up, .focus.btn-send-message, .focus.btn-user-registration, .focus.btn-search, .focus.btn-view-all, .focus.btn-login, .focus.btn-rent-call, .focus.btn-view-details, .focus.btn-send-email, .focus.btn-cancel, .focus.btn-general, .focus.btn-upload-image, .focus.remove-image, .btn:active:focus, .btn-sign-up:active:focus, .btn-send-message:active:focus, .btn-user-registration:active:focus, .btn-search:active:focus, .btn-view-all:active:focus, .btn-login:active:focus, .btn-rent-call:active:focus, .btn-view-details:active:focus, .btn-send-email:active:focus, .btn-cancel:active:focus, .btn-general:active:focus, .btn-upload-image:active:focus, .remove-image:active:focus, .btn:active.focus, .btn-sign-up:active.focus, .btn-send-message:active.focus, .btn-user-registration:active.focus, .btn-search:active.focus, .btn-view-all:active.focus, .btn-login:active.focus, .btn-rent-call:active.focus, .btn-view-details:active.focus, .btn-send-email:active.focus, .btn-cancel:active.focus, .btn-general:active.focus, .btn-upload-image:active.focus, .remove-image:active.focus, .btn.active:focus, .active.btn-sign-up:focus, .active.btn-send-message:focus, .active.btn-user-registration:focus, .active.btn-search:focus, .active.btn-view-all:focus, .active.btn-login:focus, .active.btn-rent-call:focus, .active.btn-view-details:focus, .active.btn-send-email:focus, .active.btn-cancel:focus, .active.btn-general:focus, .active.btn-upload-image:focus, .active.remove-image:focus, .btn.active.focus, .active.focus.btn-sign-up, .active.focus.btn-send-message, .active.focus.btn-user-registration, .active.focus.btn-search, .active.focus.btn-view-all, .active.focus.btn-login, .active.focus.btn-rent-call, .active.focus.btn-view-details, .active.focus.btn-send-email, .active.focus.btn-cancel, .active.focus.btn-general, .active.focus.btn-upload-image, .active.focus.remove-image {
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
-  .btn:focus, .btn-sign-up:focus, .btn-send-message:focus, .btn-user-registration:focus, .btn-search:focus, .btn-view-all:focus, .btn-login:focus, .btn-rent-call:focus, .btn-view-details:focus, .btn-send-email:focus, .btn-cancel:focus, .btn-general:focus, .btn:hover, .btn-sign-up:hover, .btn-send-message:hover, .btn-user-registration:hover, .btn-search:hover, .btn-view-all:hover, .btn-login:hover, .btn-rent-call:hover, .btn-view-details:hover, .btn-send-email:hover, .btn-cancel:hover, .btn-general:hover {
+  .btn:focus, .btn-sign-up:focus, .btn-send-message:focus, .btn-user-registration:focus, .btn-search:focus, .btn-view-all:focus, .btn-login:focus, .btn-rent-call:focus, .btn-view-details:focus, .btn-send-email:focus, .btn-cancel:focus, .btn-general:focus, .btn-upload-image:focus, .remove-image:focus, .btn:hover, .btn-sign-up:hover, .btn-send-message:hover, .btn-user-registration:hover, .btn-search:hover, .btn-view-all:hover, .btn-login:hover, .btn-rent-call:hover, .btn-view-details:hover, .btn-send-email:hover, .btn-cancel:hover, .btn-general:hover, .btn-upload-image:hover, .remove-image:hover {
     text-decoration: none; }
-  .btn.focus, .focus.btn-sign-up, .focus.btn-send-message, .focus.btn-user-registration, .focus.btn-search, .focus.btn-view-all, .focus.btn-login, .focus.btn-rent-call, .focus.btn-view-details, .focus.btn-send-email, .focus.btn-cancel, .focus.btn-general {
+  .btn.focus, .focus.btn-sign-up, .focus.btn-send-message, .focus.btn-user-registration, .focus.btn-search, .focus.btn-view-all, .focus.btn-login, .focus.btn-rent-call, .focus.btn-view-details, .focus.btn-send-email, .focus.btn-cancel, .focus.btn-general, .focus.btn-upload-image, .focus.remove-image {
     text-decoration: none; }
-  .btn:active, .btn-sign-up:active, .btn-send-message:active, .btn-user-registration:active, .btn-search:active, .btn-view-all:active, .btn-login:active, .btn-rent-call:active, .btn-view-details:active, .btn-send-email:active, .btn-cancel:active, .btn-general:active, .btn.active, .active.btn-sign-up, .active.btn-send-message, .active.btn-user-registration, .active.btn-search, .active.btn-view-all, .active.btn-login, .active.btn-rent-call, .active.btn-view-details, .active.btn-send-email, .active.btn-cancel, .active.btn-general {
+  .btn:active, .btn-sign-up:active, .btn-send-message:active, .btn-user-registration:active, .btn-search:active, .btn-view-all:active, .btn-login:active, .btn-rent-call:active, .btn-view-details:active, .btn-send-email:active, .btn-cancel:active, .btn-general:active, .btn-upload-image:active, .remove-image:active, .btn.active, .active.btn-sign-up, .active.btn-send-message, .active.btn-user-registration, .active.btn-search, .active.btn-view-all, .active.btn-login, .active.btn-rent-call, .active.btn-view-details, .active.btn-send-email, .active.btn-cancel, .active.btn-general, .active.btn-upload-image, .active.remove-image {
     background-image: none;
     outline: 0; }
-  .btn.disabled, .disabled.btn-sign-up, .disabled.btn-send-message, .disabled.btn-user-registration, .disabled.btn-search, .disabled.btn-view-all, .disabled.btn-login, .disabled.btn-rent-call, .disabled.btn-view-details, .disabled.btn-send-email, .disabled.btn-cancel, .disabled.btn-general, .btn:disabled, .btn-sign-up:disabled, .btn-send-message:disabled, .btn-user-registration:disabled, .btn-search:disabled, .btn-view-all:disabled, .btn-login:disabled, .btn-rent-call:disabled, .btn-view-details:disabled, .btn-send-email:disabled, .btn-cancel:disabled, .btn-general:disabled {
+  .btn.disabled, .disabled.btn-sign-up, .disabled.btn-send-message, .disabled.btn-user-registration, .disabled.btn-search, .disabled.btn-view-all, .disabled.btn-login, .disabled.btn-rent-call, .disabled.btn-view-details, .disabled.btn-send-email, .disabled.btn-cancel, .disabled.btn-general, .disabled.btn-upload-image, .disabled.remove-image, .btn:disabled, .btn-sign-up:disabled, .btn-send-message:disabled, .btn-user-registration:disabled, .btn-search:disabled, .btn-view-all:disabled, .btn-login:disabled, .btn-rent-call:disabled, .btn-view-details:disabled, .btn-send-email:disabled, .btn-cancel:disabled, .btn-general:disabled, .btn-upload-image:disabled, .remove-image:disabled {
     cursor: not-allowed;
     opacity: .65; }
 
-a.btn.disabled, a.disabled.btn-sign-up, a.disabled.btn-send-message, a.disabled.btn-user-registration, a.disabled.btn-search, a.disabled.btn-view-all, a.disabled.btn-login, a.disabled.btn-rent-call, a.disabled.btn-view-details, a.disabled.btn-send-email, a.disabled.btn-cancel, a.disabled.btn-general,
+a.btn.disabled, a.disabled.btn-sign-up, a.disabled.btn-send-message, a.disabled.btn-user-registration, a.disabled.btn-search, a.disabled.btn-view-all, a.disabled.btn-login, a.disabled.btn-rent-call, a.disabled.btn-view-details, a.disabled.btn-send-email, a.disabled.btn-cancel, a.disabled.btn-general, a.disabled.btn-upload-image, a.disabled.remove-image,
 fieldset[disabled] a.btn,
 fieldset[disabled] a.btn-sign-up,
 fieldset[disabled] a.btn-send-message,
@@ -1727,7 +1729,9 @@ fieldset[disabled] a.btn-rent-call,
 fieldset[disabled] a.btn-view-details,
 fieldset[disabled] a.btn-send-email,
 fieldset[disabled] a.btn-cancel,
-fieldset[disabled] a.btn-general {
+fieldset[disabled] a.btn-general,
+fieldset[disabled] a.btn-upload-image,
+fieldset[disabled] a.remove-image {
   pointer-events: none; }
 
 .btn-primary {
@@ -3236,7 +3240,7 @@ select.form-control-lg:not([size]):not([multiple]) {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
-  .carousel-caption .btn, .carousel-caption .btn-sign-up, .carousel-caption .btn-send-message, .carousel-caption .btn-user-registration, .carousel-caption .btn-search, .carousel-caption .btn-view-all, .carousel-caption .btn-login, .carousel-caption .btn-rent-call, .carousel-caption .btn-view-details, .carousel-caption .btn-send-email, .carousel-caption .btn-cancel, .carousel-caption .btn-general {
+  .carousel-caption .btn, .carousel-caption .btn-sign-up, .carousel-caption .btn-send-message, .carousel-caption .btn-user-registration, .carousel-caption .btn-search, .carousel-caption .btn-view-all, .carousel-caption .btn-login, .carousel-caption .btn-rent-call, .carousel-caption .btn-view-details, .carousel-caption .btn-send-email, .carousel-caption .btn-cancel, .carousel-caption .btn-general, .carousel-caption .btn-upload-image, .carousel-caption .remove-image {
     text-shadow: none; }
 
 @media (min-width: 544px) {
@@ -3882,7 +3886,7 @@ section {
     .page-container {
       float: left;
       width: 66.66667%;
-      margin-left: 25%; } }
+      margin-left: 16.66667%; } }
   @media (min-width: 992px) {
     .page-container {
       float: left;
@@ -4169,7 +4173,9 @@ section {
   color: #FFFFFF !important;
   background-color: #B83F2D;
   border-color: #B83F2D;
-  height: 40px; }
+  height: 40px;
+  width: 100%;
+  border-radius: 15px; }
   .btn-login:hover {
     color: #FFFFFF;
     background-color: #8f3123;
@@ -4313,9 +4319,6 @@ section {
 .btn-email-owner {
   display: block; }
 
-.btn-send-email, .btn-cancel {
-  margin-top: 10px; }
-
 .btn-send-email {
   float: left;
   color: #FFFFFF !important;
@@ -4386,7 +4389,6 @@ section {
   color: #FFFFFF !important;
   background-color: #29aba4;
   border-color: #29aba4;
-  border-radius: 0px;
   margin: 10px 10px; }
   .btn-general:hover {
     color: #FFFFFF;
@@ -4419,6 +4421,49 @@ section {
     .btn-general {
       width: auto;
       margin: 0px 10px; } }
+
+.btn-upload-image {
+  height: 50px;
+  float: left; }
+
+.remove-image {
+  color: #FFFFFF !important;
+  background-color: #B83F2D;
+  border-color: #FFFFFF;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  padding: 0; }
+  .remove-image:hover {
+    color: #FFFFFF;
+    background-color: #8f3123;
+    border-color: #e0e0e0; }
+  .remove-image:focus, .remove-image.focus {
+    color: #FFFFFF;
+    background-color: #8f3123;
+    border-color: #e0e0e0; }
+  .remove-image:active, .remove-image.active,
+  .open > .remove-image.dropdown-toggle {
+    color: #FFFFFF;
+    background-color: #8f3123;
+    border-color: #e0e0e0;
+    background-image: none; }
+    .remove-image:active:hover, .remove-image:active:focus, .remove-image:active.focus, .remove-image.active:hover, .remove-image.active:focus, .remove-image.active.focus,
+    .open > .remove-image.dropdown-toggle:hover,
+    .open > .remove-image.dropdown-toggle:focus,
+    .open > .remove-image.dropdown-toggle.focus {
+      color: #FFFFFF;
+      background-color: #72271c;
+      border-color: #bfbfbf; }
+  .remove-image.disabled:focus, .remove-image.disabled.focus, .remove-image:disabled:focus, .remove-image:disabled.focus {
+    background-color: #B83F2D;
+    border-color: #FFFFFF; }
+  .remove-image.disabled:hover, .remove-image:disabled:hover {
+    background-color: #B83F2D;
+    border-color: #FFFFFF; }
 
 i {
   font-size: 40px; }
@@ -4871,14 +4916,75 @@ footer {
     display: table;
     clear: both; }
 
-.form-check input {
-  height: auto; }
+/** check-box */
+.form-check {
+  text-align: left; }
+  .form-check input {
+    height: auto; }
 
+/** input **/
 input {
   height: 40px; }
 
+/** label-control **/
 .label-control {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: left;
+  width: 100%;
+  text-align: left;
   font-weight: bold; }
+  @media (min-width: 768px) {
+    .label-control {
+      float: left;
+      width: 25%;
+      line-height: 40px; } }
+
+.input-wrapper {
+  float: left;
+  width: 100%; }
+  @media (min-width: 768px) {
+    .input-wrapper {
+      float: left;
+      width: 75%; } }
+
+.input-wrapper-medium {
+  float: left;
+  width: 100%; }
+  @media (min-width: 768px) {
+    .input-wrapper-medium {
+      float: left;
+      width: 50%; } }
+
+.input-wrapper-small {
+  float: left;
+  width: 100%; }
+  @media (min-width: 768px) {
+    .input-wrapper-small {
+      float: left;
+      width: 25%; } }
+
+.input-wrapper-right {
+  float: left;
+  width: 100%;
+  text-align: left;
+  line-height: 40px; }
+  @media (min-width: 768px) {
+    .input-wrapper-right {
+      float: left;
+      width: 75%;
+      margin-left: 25%; } }
+
+.image-upload-info {
+  border: 1px grey dashed;
+  padding: 20px;
+  margin-bottom: 20px; }
+
+/** form error */
+.error-block p {
+  color: #EC2001; }
 
 #footer-contact-form {
   padding: 0px 20px; }
@@ -4943,56 +5049,6 @@ input {
   height: 800px;
   width: 100%; }
 
-/** user login form */
-#login-form input {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  float: left;
-  width: 83.33333%;
-  margin-left: 8.33333%; }
-
-#login-form .btn-login {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  float: left;
-  width: 83.33333%;
-  margin-left: 8.33333%; }
-
-#email-owner-form .form-group {
-  margin: 10px 10px; }
-
-#email-owner-form .btn-group {
-  float: left;
-  width: 100%; }
-  @media (min-width: 768px) {
-    #email-owner-form .btn-group {
-      float: left;
-      width: 25%;
-      margin-left: 16.66667%; } }
-
-#email-owner-form label {
-  float: left;
-  width: 100%;
-  font-weight: 700; }
-
-#email-owner-form input, #email-owner-form textarea {
-  float: left;
-  width: 100%; }
-
-@media (min-width: 768px) {
-  #email-owner-form label {
-    float: left;
-    width: 16.66667%; }
-  #email-owner-form input, #email-owner-form textarea {
-    float: left;
-    width: 58.33333%; }
-  #email-owner-form textarea {
-    height: 80px; } }
-
 #password-reset-form {
   text-align: center;
   width: 100%; }
@@ -5005,42 +5061,6 @@ input {
         float: left;
         width: 50%;
         margin-left: 8.33333%; } }
-
-/* user registration form*/
-#user-registration-form .label-control {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  float: left;
-  width: 100%;
-  text-align: left; }
-
-#user-registration-form .input-wrapper {
-  float: left;
-  width: 100%; }
-
-#user-registration-form .input-wrapper-right {
-  float: left;
-  width: 100%;
-  text-align: left;
-  line-height: 40px; }
-
-#user-registration-form p {
-  text-align: left; }
-
-@media (min-width: 768px) {
-  #user-registration-form .label-control {
-    float: left;
-    width: 25%;
-    line-height: 40px; }
-  #user-registration-form .input-wrapper {
-    float: left;
-    width: 58.33333%; }
-  #user-registration-form .input-wrapper-right {
-    float: left;
-    width: 75%;
-    margin-left: 25%; } }
 
 .pagination-bar .pagination .page-item .page-link {
   color: black;
@@ -5211,9 +5231,6 @@ input {
     #why {
       display: none; } }
 
-p {
-  text-align: center; }
-
 .login-container {
   background-color: #FFF;
   width: 80%;
@@ -5222,12 +5239,12 @@ p {
   box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.8); }
   @media (min-width: 768px) {
     .login-container {
-      width: 60%;
-      margin: 0% 20%; } }
+      width: 70%;
+      margin: 0% 15%; } }
   @media (min-width: 992px) {
     .login-container {
-      width: 40%;
-      margin: 0% 30%; } }
+      width: 60%;
+      margin: 0% 20%; } }
   @media (min-width: 1200px) {
     .login-container {
       width: 30%;
@@ -5259,33 +5276,35 @@ p {
       position: relative;
       margin: 0px 10px; }
 
-#createRoom {
-  margin-top: 40px; }
-  #createRoom p {
-    text-align: center; }
+.uploaded-image-thumbnail {
+  height: 100px;
+  width: 100px;
+  border: 2px solid grey;
+  position: realtive; }
 
-.createRoom-container, #userRegister #userRegistrationFormContainer {
-  background-color: #FFF;
-  width: 80%;
-  margin: 0% 10%;
-  padding: 40px;
-  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.8); }
-  @media (min-width: 768px) {
-    .createRoom-container, #userRegister #userRegistrationFormContainer {
-      width: 96%;
-      margin: 0% 2%; } }
-  @media (min-width: 992px) {
-    .createRoom-container, #userRegister #userRegistrationFormContainer {
-      width: 60%;
-      margin: 0% 20%; } }
-  @media (max-width: 767px) {
-    .createRoom-container, #userRegister #userRegistrationFormContainer {
-      width: 96%;
-      margin: 0% 2%; } }
+.uploaded-images {
+  margin: 0;
+  padding: 0; }
+  .uploaded-images li {
+    list-style-type: none; }
 
-@media (max-width: 767px) {
-  #createRoom {
-    margin-top: -10px; } }
+.fa-spinner {
+  -webkit-animation: spin 1s linear infinite;
+  -moz-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite; }
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg); } }
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 
 #createRoom #required {
   color: red;
@@ -5344,9 +5363,6 @@ p {
 
 #createRoom #removeImage {
   height: 15px; }
-
-#createRoom label {
-  font-weight: bold; }
 
 #createRoom #uploadImages li {
   list-style: none;
@@ -5528,52 +5544,19 @@ p {
 
 #email-owner {
   margin-left: -15px;
-  margin-right: -15px; }
+  margin-right: -15px;
+  margin-top: 15px; }
   #email-owner::after {
     content: "";
     display: table;
     clear: both; }
-
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 25/09/2016, 9:04:54 PM
-    Author     : Prakash
-*/
-#userRegister {
-  margin-left: -15px;
-  margin-right: -15px;
-  margin-top: 40px; }
-  #userRegister::after {
-    content: "";
-    display: table;
-    clear: both; }
-  #userRegister p {
-    text-align: center; }
-  #userRegister #userRegistrationFormContainer {
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px; }
-    #userRegister #userRegistrationFormContainer label {
-      font-weight: bold; }
-    @media (min-width: 544px) {
-      #userRegister #userRegistrationFormContainer {
-        padding-left: 50px; } }
-    #userRegister #userRegistrationFormContainer .fa {
-      font-size: 15pt; }
-    #userRegister #userRegistrationFormContainer .fa.fa-remove {
-      color: red; }
-    #userRegister #userRegistrationFormContainer .fa.fa-check {
-      color: green; }
-    #userRegister #userRegistrationFormContainer .error {
-      margin-left: 5px; }
-    @media (min-width: 544px) {
-      #userRegister #userRegistrationFormContainer #alreadyRegisteredUser {
-        margin-left: 25%; } }
+  #email-owner .email-form-wrapper {
+    float: left;
+    width: 100%; }
+    @media (min-width: 768px) {
+      #email-owner .email-form-wrapper {
+        float: left;
+        width: 66.66667%; } }
 
 #search-result p {
   text-align: center; }
@@ -5691,6 +5674,98 @@ and open the template in the editor.
     .room-overview li span {
       margin-left: 8px;
       font-size: 14px; }
+
+.menu-container {
+  margin-left: -15px;
+  margin-right: -15px;
+  padding: 0px 10px; }
+  .menu-container::after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.menu-card {
+  width: 50%;
+  float: left;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2%; }
+  @media (min-width: 768px) {
+    .menu-card {
+      padding: 2% 5%; } }
+  .menu-card a {
+    text-decoration: none;
+    color: #FFF; }
+    .menu-card a:hover .menu i {
+      transform: rotate(30deg); }
+
+.menu {
+  background-color: #354458;
+  box-shadow: 1;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s ease-in; }
+  .menu i {
+    font-size: 24px;
+    transition: transform .3s ease; }
+  .menu h5 {
+    font-size: 16px;
+    margin: 15px 0px; }
+  @media (min-width: 768px) {
+    .menu {
+      height: 180px;
+      width: 180px; }
+      .menu i {
+        font-size: 44px; } }
+  .menu:hover {
+    transform: scale(1.1); }
+
+.fa-file {
+  color: yellow; }
+
+.fa-gears {
+  color: tomato; }
+
+.fa-money {
+  color: #B83F2D; }
+
+.fa-support {
+  color: #29aba4; }
+
+.my-ad-card {
+  margin-left: -15px;
+  margin-right: -15px;
+  padding: 15px;
+  background-color: #E9E9E9;
+  height: 150px;
+  margin: 1% 0; }
+  .my-ad-card::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .my-ad-card .left-col {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    width: 75%;
+    text-align: left; }
+  .my-ad-card .right-col {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    width: 25%; }
 
 html, body {
   overflow-x: hidden; }

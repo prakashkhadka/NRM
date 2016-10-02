@@ -1,39 +1,42 @@
+.uploaded-image-thumbnail{
 
-#createRoom{
-    margin-top:40px;
-    p{
-        text-align:center;
+    height:100px;
+    width:100px;
+    border:2px solid grey;
+    position:realtive;
+}
+
+
+.uploaded-images{
+
+    margin:0;
+    padding:0;
+
+    li{
+
+        list-style-type:none;
     }
 }
 
-.createRoom-container{
-    background-color:#FFF;
-    width:80%;
-    margin:0% 10%;
-    padding:40px;
-    box-shadow:0px 10px 40px rgba(0,0,0,0.8);
 
-    @include media-breakpoint-up(md){
-        width:96%;
-        margin:0% 2%;
-    }
-
-    @include media-breakpoint-up(lg){
-        width:60%;
-        margin:0% 20%;
-    }
+.fa-spinner{
     
-     @include media-breakpoint-down(sm){
-        width:96%;
-        margin:0% 2%;
-    }
-	}
-        
-@include media-breakpoint-down(sm){
-    #createRoom{
-        margin-top: -10px;
-    }
-    }
+    -webkit-animation:spin 1s linear infinite;
+    -moz-animation:spin 1s linear infinite;
+    animation:spin 1s linear infinite;
+
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+
+
+
+
+
         //Create room validation Error
 #createRoom{
     #required{
@@ -96,9 +99,7 @@
     #removeImage{
         height: 15px;
     }
-    label{
-        font-weight: bold;
-    }
+    
     #uploadImages{
         li{
             list-style: none;

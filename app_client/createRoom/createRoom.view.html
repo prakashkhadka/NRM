@@ -2,25 +2,37 @@
 <navigation></navigation>
 
 <section id="createRoom">
-    <h3 class="text-xs-center">Rent your room</h3>
-    <p>Please fill the following details to post your room ad</p>
-    <div class="createRoom-container">
+    
+    <h3 >Rent your room</h3>
+    <p class="text-xs-center">Please fill the following details to post your room ad</p>
+
+
+    <div class="page-wrapper">
+        <div class="page-container">
+
         <form name='nrForm' class="form-horizontal" enctype="multipart/form-data" novalidate>
+            
+            <!-- Unit Number-->
             <div class="form-group">
-                <label for="unit" class="col-sm-3 control-label">Unit</label>
-                <div class="col-sm-9">
+                <label for="unit" class="label-control">Unit</label>
+                <div class="input-wrapper-small">
                   <input name='unit' type="number" class="form-control" id="unit" placeholder="Unit" ng-maxlength='2' ng-model="room.unit">
-                <div class="error" ng-show="nrForm.unit.$invalid && nrForm.unit.$dirty">
-                    <span ng-show="nrForm.unit.$error.maxlength">
+                    <div class="error-block" ng-show="nrForm.unit.$invalid && nrForm.unit.$dirty">
+                        <p ng-show="nrForm.unit.$error.maxlength">
                         Unit number must be below 99
-                    </span>
+                        </p>
+                    </div>
+                    <!-- End of error-block -->
                 </div>
-                </div>
+                <!-- End of input-wrapper -->
             </div>
+            <!-- End of form-group -->
+
            
+           <!-- Street Number -->
             <div class="form-group">
-                <label for="streetNo" class="col-sm-3 control-label">Street No</label>
-                <div class="col-sm-9">
+                <label for="streetNo" class="label-control">Street No</label>
+                <div class="input-wrapper-small">
                     <input name='streetNo' type="number" class="form-control" id="streetNo" placeholder="Street No" ng-maxlength='3' ng-model="room.street_no">
                 <div class="error" ng-show="nrForm.streetNo.$invalid && nrForm.streetNo.$dirty">
                     <span ng-show="nrForm.streetNo.$error.maxlength">
@@ -31,15 +43,15 @@
             </div>
             
             <div class="form-group">
-              <label for="streetName" class="col-sm-3 control-label">Street Name</label>
-              <div class="col-sm-9">
+              <label for="streetName" class="label-control">Street Name</label>
+              <div class="input-wrapper-medium">
                 <input type="text" class="form-control" id="streetName" placeholder="Street Name" ng-model="room.street_name">
               </div>
             </div>
             
             <div class="form-group">
-              <label for="suburb" class="col-sm-3 control-label">Suburb<span id="required">*</span></label>
-              <div class="col-sm-9">
+              <label for="suburb" class="label-control">Suburb<span id="required">*</span></label>
+              <div class="input-wrapper-medium">
                 <input type="text" class="form-control" id="suurb" placeholder="Suburb" ng-model="room.suburb" ng-change="getValue()">
                 <ul class="suggestions-list">
                     <li ng-repeat="su in returnedSub | filter: room.suburb:strict | limitTo:7" ng-class="{active : selectedIndex === $index}" 
@@ -49,22 +61,22 @@
             </div>
             
             <div class="form-group">
-              <label for="postcode" class="col-sm-3 control-label">Post Code<span id="required">*</span></label>
-              <div class="col-sm-9">
+              <label for="postcode" class="label-control">Post Code<span id="required">*</span></label>
+              <div class="input-wrapper-small">
                 <input type="text" class="form-control" id="postcode" placeholder="Postcode" ng-model="room.postcode" required>
               </div>
             </div>
             
             <div class="form-group">
-              <label for="state" class="col-sm-3 control-label">State<span id="required">*</span></label>
-              <div class="col-sm-9">
+              <label for="state" class="label-control">State<span id="required">*</span></label>
+              <div class="input-wrapper-medium">
                 <input type="text" class="form-control" id="state" placeholder="State" ng-model="room.state" required>
               </div>
             </div>
             
             <div class="form-group">
-                <label for="rent" class="col-sm-3 control-label">Weekly Rent $<span id="required">*</span></label>
-                <div class="col-sm-9">
+                <label for="rent" class="label-control">Weekly Rent $<span id="required">*</span></label>
+                    <div class="input-wrapper-small">
                     <input name='rent' type="number" class="form-control" id="rent" placeholder="Weekly Rent" ng-model="room.rent" ng-maxlength='4' required>
                     <div class="error" ng-show="nrForm.rent.$invalid && nrForm.rent.$dirty">
                         <span ng-show="nrForm.rent.$error.maxlength">
@@ -78,34 +90,36 @@
             </div>
             
             <div class="form-group">
-              <label for="bond" class="col-sm-3 control-label">Bond</label>
-              <div class="col-sm-9">
+              <label for="bond" class="label-control">Bond</label>
+                <div class="input-wrapper-small">
                 <input type="number" class="form-control" id="rent" placeholder="Bond" ng-model="room.bond">
               </div>
             </div>
             
             
             <div class="form-group">
-                <label for="gender" class="col-sm-3 control-label">Preferred Gender</label>
-                <div class="col-sm-9">
-                    <label class="radio-inline">
-                        <input type="radio" id="inlineRadioOptions" value="couple" ng-model="room.gender"> Couple
+                <label for="gender" class="label-control">Preferred Gender</label>
+                <div class="input-wrapper">
+                <div class="form-check">
+                <label class="form-check-label">
+                      <input class="form-check-input" type="radio" value="couple" ng-model="room.gender">Couple
                     </label>
-                    <label class="radio-inline">
-                        <input type="radio" id="inlineRadioOptions" value="female" ng-model="room.gender"> Female
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" value="female" ng-model="room.gender">Female
                     </label>
-                    <label class="radio-inline">
-                        <input type="radio" id="inlineRadioOptions" value="male" ng-model="room.gender"> Male
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" value="male" ng-model="room.gender">Male
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" value="no preferred gender" ng-model="room.gender">Any
                     </label>
-                    <label class="radio-inline">
-                        <input type="radio" id="inlineRadioOptions" value="no preferred gender" ng-model="room.gender"> No preferred gender
-                    </label>
+
+                    </div>
                 </div>
             </div>
             
             <div class="form-group">
-                <label for="available" class="col-sm-3 control-label">Available From<span id="required">*</span></label>
-                <div class="col-sm-9">
+                <label for="available" class="label-control">Available From<span id="required">*</span></label>
+                <div class="input-wrapper-small">
                     <input name='availableFrom' type="date" class="form-control" id="available" placeholder="Available From" ng-model="room.available_from" required>
                 <div class="error" ng-show="nrForm.availableFrom.$invalid && nrForm.availableFrom.$dirty">
                     <span ng-show="nrForm.availableFrom.$error.required">
@@ -117,8 +131,8 @@
         
             
             <div class="form-group">
-                <label for="contact" class="col-sm-3 control-label">Contact No<span id="required">*</span></label>
-                <div class="col-sm-9">
+                <label for="contact" class="label-control">Contact No<span id="required">*</span></label>
+                <div class="input-wrapper-medium">
                     <input name='contactNo' type="number" class="form-control" id="contact" placeholder="Contact No" ng-model="room.contact_no" ng-minlength='10' ng-maxlength='10' required>
                 <div class="error" ng-show="nrForm.contactNo.$invalid && nrForm.contactNo.$dirty">
                     <span ng-show="nrForm.contactNo.$error.required">
@@ -135,8 +149,8 @@
             </div>
             
             <div class="form-group">
-                <label for="message" class="col-sm-3 control-label">Message</label>
-                <div class="col-sm-9">
+                <label for="message" class="label-control">Message</label>
+                <div class="input-wrapper">
                     <textarea name='message'
                               rows="5"
                               type="text" 
@@ -156,34 +170,32 @@
             
             <!--for Images -->
             <div>
-                <div ng-show="compressing">
-                    Compressing
-                    <span><img src="images/wait.gif"></span>
-                </div>
-                <div class="col-sm-9 offset-sm-3">
-                    <ul id="uploadImages" ng-repeat="file in files track by $index">
+                <!-- Image info -->
+                <div class="input-wrapper-right image-upload-info" ng-show="files.length >0" >
+                    <ul class="uploaded-images" ng-repeat="file in files track by $index">
                         <li>
-                            <span id="imagesIndex">{{$index+1}}.</span>
-                            <img id="uploadImageThumbnail" ngf-thumbnail="file"/>
-                            <!--<span> <img id='removeImage' src='images/remove.png' ng-click="deleteFile($index)"></span>-->
-                            <button class="btn btn-sm btn-warning"> <ng-click="deleteFile($index)">Remove</button>
-                            <div class="offset-xs-2 offset-sm-1 offset-md-1">
+                            
+                            <img class="uploaded-image-thumbnail" ngf-thumbnail="file"/>
+                            <button class="remove-image" ng-click="deleteFile($index)">&times;</button>
+                            
+                            <p>
                                 {{file.name}} {{file.$errorParam}}
                                 <!--Size: {{file.size / 1000 | number:2}} KB-->
-                            </div>  
+                            </p>  
                         </li>
                     </ul>
+
+                    <p ng-if="files.length >=1"> You have selected {{files.length}} Image<span ng-if="files.length >1">s</span>.</p>
                 </div>
-                <div class="offset-sm-3" ng-if="files.length > 1 ">
-                    You have selected {{files.length}} Images.
+                <!-- End of image-upload-info -->
                 </div>
-                <div class="offset-sm-3" ng-if="files.length ===1">
-                    You have selected {{files.length}} Image.
-                </div>
+
+
+
                 <div ng-hide="files.length>=4" class="form-group">
-                    <label for="imagesInput" class="col-sm-3 control-label">Upload images: </label>
-                <div class="col-sm-9">
-                    <button class="btn btn- btn-info"
+                    <label for="imagesInput" class="label-control">Room image: </label>
+                <div class="input-wrapper">
+                    <button class="btn-upload-image"
                         name="file"
                         ngf-select=""
                         ng-change="getAmazonUrl()"
@@ -198,13 +210,18 @@
                         ngf-resize-if="$width > 800 || $height > 800"
                         ngf-before-model-change="beforeChange($files)"
                         ngf-change ="afterChange($files)"
-                        ngf-multiple="true">
-                        Click here to select
+                        ngf-multiple="true"
+                        ng-disabled="compressing">
+
+                        <span ng-hide="compressing" class="fa fa-cloud-upload"></span>
+                        <span ng-show="compressing" class="fa fa-spinner" > </span>
+                        <span ng-hide="compressing">Upload image</span>
+                        <span ng-show="compressing">Uploading</span>
                     </button>
                 </div> 
                 </div>
                 
-            </div>
+            
             
             <div ng-show="nrForm.file.$invalid">
                 Something went wrong: please choose images again. </br>
@@ -220,12 +237,13 @@
             </div>
             
             <div class="form-group">
-              <div class="offset-sm-3 col-sm-9">
-                  <button ng-disabled='nrForm.$invalid' type="submit" ng-click="register(room); uploadImage()" class="btn btn-info">Submit</button>
-                  <button ng-click="goHome()" class="btn btn-default btn-danger">Cancel</button>
+              <div class="input-wrapper-right">
+                  <button ng-disabled='nrForm.$invalid' type="submit" ng-click="register(room); uploadImage()" class="btn-general">Submit</button>
+                  <button ng-click="goHome()" class="btn-cancel">Cancel</button>
               </div>
             </div>
             
         </form>
+        </div>
     </div>
 </section>

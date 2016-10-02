@@ -1,0 +1,26 @@
+.my-ad-card{
+
+	@include make-row();
+	padding:15px;
+	background-color:getColor('mercury');
+	height:150px;
+	margin:1% 0;
+
+
+	.left-col{
+		
+		@include make-col-ready();
+		@include make-col(9);
+		text-align:left;
+		// background-color: green;
+
+	}
+
+	.right-col{
+		
+		@include make-col-ready();
+		@include make-col(3);
+		// background-color: tomato;
+
+	}
+}

@@ -42,7 +42,7 @@ section{
 	@include media-breakpoint-up(md){
 			
 		@include make-col(8);
-		@include make-col-offset(3);
+		@include make-col-offset(2);
 
 	}
 	@include media-breakpoint-up(lg){

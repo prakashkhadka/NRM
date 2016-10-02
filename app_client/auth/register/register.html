@@ -2,18 +2,19 @@
 <navigation></navigation>
 
 <section id="user-registration">
+   
     <h3>User Registration</h3>
     <p>Please fill up the following details to register</p>
     
 
     <div class="page-wrapper">
-        <div class="page-container">{{URForm.newUserFN.$dirty}}
+        <div class="page-container">
         
             <form id="user-registration-form" name="URForm" role="form"  novalidate>
             
 
+            <!-- First name -->
             <div class="form-group" ng-class="{'has-danger':URForm.newUserFN.$invalid && URForm.newUserFN.$dirty,'has-success':URForm.newUserFN.$valid}">
-                
                 <label  class="label-control" for="firstName">Firstname:</label>
                 <div class="input-wrapper">
                     <input name="newUserFN" 
@@ -26,8 +27,7 @@
                             ng-maxlength="15" 
                             required ng-class="{'form-control-danger':URForm.newUserFN.$invalid && URForm.newUserFN.$dirty,'form-control-success':URForm.newUserFN.$valid} ">
                     
-                    <div   class="error" 
-                            ng-show="URForm.newUserFN.$invalid && URForm.newUserFN.$dirty">
+                    <div class="error-block" ng-show="URForm.newUserFN.$invalid && URForm.newUserFN.$dirty">
                         <p ng-show="URForm.newUserFN.$error.minlength">
                             Please enter atleast 2 character.
                         </p>
@@ -38,35 +38,47 @@
                             Please enter a value
                         </p>
                     </div>
-                    <!-- End of error -->
-                    
+                    <!-- End of error-block -->  
                 </div>
-                <!-- End of input-group -->
-                
-            </div>
-
-
-            <div class="form-group" ng-class="{'has-danger':URForm.newUserLN.$invalid && URForm.newUserLN.$dirty,'has-success':URForm.newUserLN.$valid}">
-                <label class="label-control" for="lastName">Lastname:</label>
-                <div class="input-wrapper">
-                    <input name="newUserLN" type="text" class="form-control" id="lastName" placeholder="Enter lastname" ng-model="newUser.lastName" ng-minlength="2" ng-maxlength="15" required="true" ng-class="{'form-control-danger':URForm.newUserLN.$invalid && URForm.newUserLN.$dirty,'form-control-success':URForm.newUserLN.$valid} ">
-                    
-                    <div class="error" ng-show="URForm.newUserLN.$invalid && URForm.newUserLN.$dirty">
-                        <span ng-show="URForm.newUserLN.$error.minlength">
-                            Last name must be at least 2 character long.
-                        </span>
-                        <span ng-show="URForm.newUserLN.$error.maxlength">
-                            Lastname must not be more than 15 character long.
-                        </span>
-                        <span ng-show="URForm.newUserLN.$error.required">
-                            Please enter a value
-                        </span>
-                    </div>
-                    
-                </div>
+                <!-- End of input-wrapper --> 
             </div>
             <!-- End of form-group -->
 
+            
+            <!-- Lasst name -->
+            <div class="form-group" ng-class="{'has-danger':URForm.newUserLN.$invalid && URForm.newUserLN.$dirty,'has-success':URForm.newUserLN.$valid}">
+                <label class="label-control" for="lastName">Lastname:</label>
+                <div class="input-wrapper">
+                    <input name="newUserLN" 
+                            type="text" 
+                            class="form-control" 
+                            id="lastName" 
+                            placeholder="Enter lastname" 
+                            ng-model="newUser.lastName" 
+                            ng-minlength="2" 
+                            ng-maxlength="15" 
+                            required="true" 
+                            ng-class="{'form-control-danger':URForm.newUserLN.$invalid && URForm.newUserLN.$dirty,'form-control-success':URForm.newUserLN.$valid} ">
+                    
+                    <div class="error-block" ng-show="URForm.newUserLN.$invalid && URForm.newUserLN.$dirty">
+                        <p ng-show="URForm.newUserLN.$error.minlength">
+                            Last name must be at least 2 character long.
+                        </p>
+                        <p ng-show="URForm.newUserLN.$error.maxlength">
+                            Lastname must not be more than 15 character long.
+                        </p>
+                        <p ng-show="URForm.newUserLN.$error.required">
+                            Please enter a value
+                        </p>
+                    </div>
+                    <!-- End of error-block --> 
+                </div>
+                <!-- End of input-wrapper -->
+            </div>
+            <!-- End of form-group -->
+            
+
+            <!-- Email -->
             <div class="form-group" ng-class="{'has-danger':URForm.newUserEmail.$invalid && URForm.newUserEmail.$dirty,'has-success':URForm.newUserEmail.$valid && !URForm.newUserEmail.$pristine}">
                 <label class="label-control" for="email">Email:</label>
                 <div class="input-wrapper">
@@ -82,10 +94,12 @@
                          ng-class="{'form-control-danger':URForm.newUserEmail.$invalid && URForm.newUserEmail.$dirty,'form-control-success':URForm.newUserEmail.$valid,usedEmail : emailError} ">
                   <span class='inputError invalid'>{{emailError}}</span>
                 </div>
-                
+                <!-- End of input-wrapper -->
             </div>
             <!-- End of form-group -->
 
+
+            <!-- Password -->
             <div class="form-group" ng-class="{'has-danger':URForm.newUserPwd.$invalid && URForm.newUserPwd.$dirty,'has-success':URForm.newUserPwd.$valid && !URForm.newUserPwd.$pristine}">
                 <label class="label-control" for="pwd">Password:</label>
                 <div class="input-wrapper"> 
@@ -99,10 +113,12 @@
                          required
                          ng-class="{'form-control-danger':URForm.newUserPwd.$invalid && URForm.newUserPwd.$dirty,'form-control-success':URForm.newUserPwd.$valid} ">
                 </div>
-                
+                <!-- End of input-wrapper -->
             </div>
+            <!-- End of form-group -->
 
 
+            <!-- Pssowrd confirmation -->
             <div class="form-group" ng-class="{'has-danger':URForm.newUserPwd1.$invalid && URForm.newUserPwd1.$dirty,'has-success':URForm.newUserPwd1.$valid && !URForm.newUserPwd1.$pristine}">
                 <label class="label-control" for="pwd1">Confirm password:</label>
                 <div class="input-wrapper"> 
@@ -120,21 +136,27 @@
                          ng-class="{'form-control-danger':URForm.newUserPwd1.$invalid && URForm.newUserPwd1.$dirty || pwdMatchError,'form-control-success':URForm.newUserPwd1.$valid} ">
                   <span class="inputError invalid">{{pwdMatchError}}</span>
                 </div>
-               
+               <!-- End of input-wrapper -->
             </div>
+            <!-- End of form-group -->
 
+
+            <!-- Privacy policy and TNC dcouments -->
             <div class="form-group"> 
                 <div class="input-wrapper-right">
-                <i class="fa fa-file"></i>
-                    <a href="#" data-toggle="modal" 
-                       data-target="#termsNconditionModal">Terms and conditions</a> 
+                  <i class="fa fa-file"></i>
+                  <a href="#" data-toggle="modal" 
+                      data-target="#termsNconditionModal">Terms and conditions</a> 
                     | 
-                    <a href="#" data-toggle="modal" 
-                       data-target="#privacyPolicyModal">Privacy policy</a>
+                  <a href="#" data-toggle="modal" 
+                      data-target="#privacyPolicyModal">Privacy policy</a>
 
-            </div>
-            <!-- Privacy Policy Modal -->
-            <div class="modal fade" id="privacyPolicyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                </div>
+                <!-- End of input-wrapper-right -->
+                
+
+                <!-- Privacy Policy Modal -->
+                <div class="modal fade" id="privacyPolicyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -151,10 +173,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
+                </div>
+                <!--End of Privacy policy Modal -->
             
-            <!-- Modal -->
-            <div class="modal fade" id="termsNconditionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <!--Terms and condition  Modal -->
+                <div class="modal fade" id="termsNconditionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -171,41 +194,50 @@
                         </div>
                     </div>
                 </div>
+                </div>
+                <!-- End of Terms and condition  Modal -->
             </div>
-            </div>
+            <!-- End of form-group -->
 
 
-
+            <!-- TNC check -->
             <div class="form-group"> 
               <div class="input-wrapper-right">
-                    <div class="form-check">
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox"> I read and accept terms and conditions.
-          </label>
-        </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox"> I read and accept terms and conditions.
+                    </label>
+                  </div>
+                  <!-- End of form-check -->
               </div>
+              <!-- End of input-wrapper-right -->
             </div>
+            <!-- End of form-group -->
 
+
+            <!-- Registration button -->
             <div class="form-group"> 
               <div class="input-wrapper-right">
                 <button class="btn-user-registration" ng-disabled="URForm.$invalid" ng-click="register(newUser)">Submit</button>
               </div>
             </div>
+            <!-- End of form-group -->
 
+
+            <!-- Login Redirection -->
             <div class="form-group"> 
-        <div class="input-wrapper-right">
-           <p> If you are already registered
-            <span><a href="/login" class="btn btn-secondary">Login</a></span></p>
-        </div>
-        <p class="error">
-            {{errorMessage}}
-        </p>
-    </div>
+              <div class="input-wrapper-right">
+                 <p> If you are already registered
+                  <span><a href="/login" class="btn btn-secondary">Login</a></span></p>
+              </div>
+              <p class="error">
+                  {{errorMessage}}
+              </p>
+            </div>
+            <!-- End of form-group -->
+
+
         </form>
-        <!--
-        <div ng-include src="'auth/register/userRegistrationForm.html'"></div>
-        -->
-        
     </div>
 </section>
 
