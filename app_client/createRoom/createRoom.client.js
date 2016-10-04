@@ -8,6 +8,26 @@ angular
         .controller("createRoomCtrl", createRoomCtrl);
 
 function createRoomCtrl($location, $scope, $http, $rootScope, authentication, $anchorScroll){
+    //$scope.availableBedroomsNumber = {bedroomCount : [1,2,3,4,5], room.totalBedRooms: 2};
+    //$scope.room.totalBedRooms = $scope.availableBedroomsNumber[1];
+    $scope.room = {
+        availableBROptions: [1,2,3,4,5],
+        totalBedRooms: 2,
+        availableBillsOption:["included", "excluded"],
+        bills: "included",
+        availableGenderOption: ["Couple", "Female", "Male", "No preferred gender"],
+        gender: "Couple",
+        availableFurnishingOption: ["Fully-furnished", "semi-furnished", "Not furnished"],
+        furnishing: "Fully-furnished",
+        availableParkingOption:["Locked garage", "Driveway", "Compound", "Street", "Not Available"],
+        parking: "Street",
+        availablePropertyOption: ["Apartment", "House"],
+        propertyType: "Apartment",
+        availableBathroomOption: [1,2,3],
+        totalBathrooms: 1
+    };
+    
+    
     $anchorScroll();
     $scope.beforeChange = function(){
         $scope.compressing = true;
@@ -58,6 +78,8 @@ function createRoomCtrl($location, $scope, $http, $rootScope, authentication, $a
             headers: {Authorization: 'Bearer '+ authentication.getToken()}
         }).then(function(response){
             $scope.urls = response.data;
+            //console.log("Amazon Urls: ");
+            //console.log($scope.urls);
         });
         $scope.imageName = fileName;
         //console.log($scope.imageName);
@@ -71,27 +93,29 @@ function createRoomCtrl($location, $scope, $http, $rootScope, authentication, $a
                 data: $scope.files[i],
                 headers: {'Content-Type': $scope.files[i].type}
             }).then(function(response){
-                console.log("Success");
-                console.log(response);
+                //console.log("Success");
+                //console.log(response);
             }, function(response){
-                console.log("Error Occured");
-                console.log(response);
+                //console.log("Error Occured");
+                //console.log(response);
             });
         };
     };
     
     $scope.register = function(rm){
         $scope.room.imgName = $scope.imageName;
-        console.log("IMage names are : ");
-        console.log($scope.room.imgName);
+        //console.log("IMage names are : ");
+        //console.log($scope.room.imgName);
+        console.log("Room Deaails to be posted");
+        console.log(rm);
         createRoom(rm);
         
     };
     
     createRoom = function(roomDetails){
-        console.log("Room available from");
-        console.log($scope.room.available_from);
-         //console.log(roomDetails);
+        //console.log("Room available from");
+        //console.log($scope.room.available_from);
+        
         $http({
             method: 'POST',
             url: "/api/rooms",

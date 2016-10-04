@@ -38,7 +38,8 @@
             <textarea name='guestMessage' type="text" class="form-control" 
                       ng-minlength ='10'
                       ng-maxlength =' 1000'
-                      ng-model="contactUs.message" required>        
+                      ng-model="contactUs.message"
+                      paceholder="Your message" required>        
             </textarea>
         </div>
         <div class='contactUsError' ng-show="contactUsForm.guestMessage.$invalid && contactUsForm.guestMessage.$dirty">

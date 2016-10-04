@@ -2,8 +2,8 @@
 <navigation></navigation>
 
 <section id="createRoom">
-    <h3 class="text-xs-center">Rent your room</h3>
-    <p>Please fill the following details to post your room ad</p>
+    <h3>Rent your room</h3>
+    <p>Please fill the following details to post your room advertisement.</p>
     <div class="createRoom-container">
         <form name='nrForm' class="form-horizontal" enctype="multipart/form-data" novalidate>
             <div class="form-group">
@@ -84,28 +84,9 @@
               </div>
             </div>
             
-            
-            <div class="form-group">
-                <label for="gender" class="col-sm-3 control-label">Preferred Gender</label>
-                <div class="col-sm-9">
-                    <label class="radio-inline">
-                        <input type="radio" id="inlineRadioOptions" value="couple" ng-model="room.gender"> Couple
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" id="inlineRadioOptions" value="female" ng-model="room.gender"> Female
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" id="inlineRadioOptions" value="male" ng-model="room.gender"> Male
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" id="inlineRadioOptions" value="no preferred gender" ng-model="room.gender"> No preferred gender
-                    </label>
-                </div>
-            </div>
-            
             <div class="form-group">
                 <label for="available" class="col-sm-3 control-label">Available From<span id="required">*</span></label>
-                <div class="col-sm-9">
+                <div class="col-sm-4">
                     <input name='availableFrom' type="date" class="form-control" id="available" placeholder="Available From" ng-model="room.available_from" required>
                 <div class="error" ng-show="nrForm.availableFrom.$invalid && nrForm.availableFrom.$dirty">
                     <span ng-show="nrForm.availableFrom.$error.required">
@@ -114,7 +95,6 @@
                 </div>
                 </div>
             </div>
-        
             
             <div class="form-group">
                 <label for="contact" class="col-sm-3 control-label">Contact No<span id="required">*</span></label>
@@ -133,6 +113,98 @@
                 </div>
                 </div>
             </div>
+            
+            <div class="form-group">
+                <label for="bills" class="col-sm-3 control-label">Utility bills</label>
+                <div class="col-sm-3">
+                    <select class="form-control" ng-model="room.bills"
+                            ng-options="option for option in room.availableBillsOption">
+                    </select>   
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="gender" class="col-sm-3 control-label">Preferred</label>
+                <div class="col-sm-3">
+                    <select class="form-control" ng-model="room.gender"
+                            ng-options="option for option in room.availableGenderOption">
+                    </select>   
+                </div>
+            </div>
+            <!--
+            <div class="form-group" ng-hide="room.gender='Couple'">
+                <label for="gender" class="col-sm-3 control-label">No of People</label>
+                <div class="col-sm-3">
+                    <select class="form-control" ng-model="room.gender"
+                            ng-options="option for option in room.availableGenderOption">
+                    </select>   
+                </div>
+            </div>
+            -->
+            <div class="form-group">
+                <label for="furnishingCondition" class="col-sm-3 control-label">Furnishing Condition</label>
+                <div class="col-sm-3">
+                    <select class="form-control" ng-model="room.furnishing"
+                            ng-options="option for option in room.availableFurnishingOption">
+                    </select>   
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="parking" class="col-sm-3 control-label">Parking</label>
+                <div class="col-sm-3">
+                    <select class="form-control" ng-model="room.parking"
+                            ng-options="option for option in room.availableParkingOption">
+                    </select>   
+                </div>
+            </div>
+            
+            
+            <div class="form-group">
+                <label for="propertyType" class="col-sm-3 control-label">Property Type</label>
+                <div class="col-sm-3">
+                    <select class="form-control" ng-model="room.propertyType"
+                            ng-options="option for option in room.availablePropertyOption">
+                    </select>   
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="totalBedrooms" class="col-sm-3 control-label">Total No. of bedrooms</label>
+                <div class="col-sm-3">
+                    <select class="form-control" ng-model="room.totalBedRooms"
+                            ng-options="option for option in room.availableBROptions">
+                    </select>   
+                </div>
+            </div>
+            
+             <div class="form-group">
+                <label for="totalBathrooms" class="col-sm-3 control-label">Total no. of bathrooms</label>
+                <div class="col-sm-3">
+                    <select class="form-control" ng-model="room.totalBathrooms"
+                            ng-options="option for option in room.availableBathroomOption">
+                    </select>   
+                </div>
+            </div>
+            <!--
+            <div class="form-group">
+                <label for="gender" class="col-sm-3 control-label">Preferred Gender</label>
+                <div class="col-sm-9">
+                    <label class="radio-inline">
+                        <input type="radio" id="inlineRadioOptions" value="couple" ng-model="room.gender"> Couple
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" id="inlineRadioOptions" value="female" ng-model="room.gender"> Female
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" id="inlineRadioOptions" value="male" ng-model="room.gender"> Male
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" id="inlineRadioOptions" value="no preferred gender" ng-model="room.gender"> No preferred gender
+                    </label>
+                </div>
+            </div>
+            -->
             
             <div class="form-group">
                 <label for="message" class="col-sm-3 control-label">Message</label>
@@ -157,8 +229,8 @@
             <!--for Images -->
             <div>
                 <div ng-show="compressing">
-                    Compressing
-                    <span><img src="images/wait.gif"></span>
+                    Please wait...
+                    <span class="fa fa-spinner"></span>
                 </div>
                 <div class="col-sm-9 offset-sm-3">
                     <ul id="uploadImages" ng-repeat="file in files track by $index">
@@ -166,7 +238,7 @@
                             <span id="imagesIndex">{{$index+1}}.</span>
                             <img id="uploadImageThumbnail" ngf-thumbnail="file"/>
                             <!--<span> <img id='removeImage' src='images/remove.png' ng-click="deleteFile($index)"></span>-->
-                            <button class="btn btn-sm btn-warning"> <ng-click="deleteFile($index)">Remove</button>
+                            <button class="btn btn-sm btn-warning" ng-click="deleteFile($index)">Remove</button>
                             <div class="offset-xs-2 offset-sm-1 offset-md-1">
                                 {{file.name}} {{file.$errorParam}}
                                 <!--Size: {{file.size / 1000 | number:2}} KB-->
@@ -190,7 +262,7 @@
                         ng-model="files"
                         ngf-max-files="4"
                         ngf-max-size="'12MB'"
-                        ngf-pattern="'.jpg,.jpeg'"
+                        ngf-pattern="'.jpg,.jpeg,.JPG'"
                         ngf-keep="true | 'distinct'"
                         ngf-fix-orientation="true"
                         ngf-capture="'camera'"

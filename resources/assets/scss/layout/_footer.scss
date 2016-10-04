@@ -34,6 +34,7 @@ footer{
                     @include make-col(8);
                     text-align: center;
                     margin:auto;
+                    margin-top: -20px;
                     @include make-col-push(2);   
                 }
             }

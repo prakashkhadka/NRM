@@ -4532,6 +4532,7 @@ footer {
       width: 66.66667%;
       text-align: center;
       margin: auto;
+      margin-top: -20px;
       left: 16.66667%; }
       footer .footer-main .footer-column:last-child::after {
         content: "";
@@ -5031,9 +5032,78 @@ footer {
       margin: 0px 10px; }
 
 #createRoom {
-  margin-top: 40px; }
+  margin-top: 100px;
+  margin-bottom: 50px; }
+  @media (max-width: 767px) {
+    #createRoom {
+      margin-top: 90px; }
+      #createRoom h3 {
+        font-size: 20pt; }
+      #createRoom p {
+        font-size: 12pt;
+        padding-left: 10px;
+        padding-right: 10px; } }
   #createRoom p {
     text-align: center; }
+  #createRoom #required {
+    color: red;
+    font-size: 8pt; }
+  #createRoom .suggestions-list {
+    z-index: 1000;
+    position: absolute;
+    list-style-type: none;
+    padding: 0;
+    overflow: auto; }
+  #createRoom .suggestions-list li {
+    margin-left: 0px;
+    color: #000000;
+    padding: 10px 10px;
+    line-height: 17px;
+    cursor: pointer;
+    background: #f9f9f9;
+    border-bottom: 1px solid #eeeeee;
+    width: 250px; }
+  #createRoom .suggestions-list li:hover {
+    background: #eed5f2; }
+  #createRoom .suggestions-list li:active,
+  #createRoom .suggestions-list li.active {
+    color: #FFFFFF;
+    background: #0099FF;
+    width: 250px; }
+  #createRoom .suggestions-list:focus {
+    outline: none; }
+  #createRoom .inputError {
+    color: red; }
+  #createRoom form .ng-invalid.ng-dirty {
+    background-color: lightpink; }
+  #createRoom form .ng-valid.ng-dirty {
+    background-color: lightgreen; }
+  #createRoom div.error {
+    color: red;
+    margin-left: 0px; }
+  #createRoom .usedEmail {
+    background-color: lightpink !important; }
+  #createRoom .matchError {
+    background-color: lightpink !important; }
+  #createRoom form .progress {
+    line-height: 15px; }
+  #createRoom #removeImage {
+    height: 15px; }
+  #createRoom label {
+    font-weight: bold; }
+  #createRoom #uploadImages li {
+    list-style: none;
+    margin-left: -40px; }
+  #createRoom #imagesIndex {
+    border: 1px solid green;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #cff9f8;
+    border-radius: 5px;
+    font-weight: bold; }
+  #createRoom #uploadImageThumbnail {
+    width: 80px; }
 
 .createRoom-container, #userRegister #userRegistrationFormContainer {
   background-color: #FFF;
@@ -5041,6 +5111,11 @@ footer {
   margin: 0% 10%;
   padding: 40px;
   box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.8); }
+  .createRoom-container select.round, #userRegister #userRegistrationFormContainer select.round {
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), radial-gradient(#ddd 70%, transparent 72%);
+    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - .5em) 0.5em;
+    background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
+    background-repeat: no-repeat; }
   @media (min-width: 768px) {
     .createRoom-container, #userRegister #userRegistrationFormContainer {
       width: 96%;
@@ -5052,90 +5127,11 @@ footer {
   @media (max-width: 767px) {
     .createRoom-container, #userRegister #userRegistrationFormContainer {
       width: 96%;
-      margin: 0% 2%; } }
-
-@media (max-width: 767px) {
-  #createRoom {
-    margin-top: -10px; } }
-
-#createRoom #required {
-  color: red;
-  font-size: 8pt; }
-
-#createRoom .suggestions-list {
-  z-index: 1000;
-  position: absolute;
-  list-style-type: none;
-  padding: 0;
-  overflow: auto; }
-
-#createRoom .suggestions-list li {
-  margin-left: 0px;
-  color: #000000;
-  padding: 10px 10px;
-  line-height: 17px;
-  cursor: pointer;
-  background: #f9f9f9;
-  border-bottom: 1px solid #eeeeee;
-  width: 250px; }
-
-#createRoom .suggestions-list li:hover {
-  background: #eed5f2; }
-
-#createRoom .suggestions-list li:active,
-#createRoom .suggestions-list li.active {
-  color: #FFFFFF;
-  background: #0099FF;
-  width: 250px; }
-
-#createRoom .suggestions-list:focus {
-  outline: none; }
-
-#createRoom .inputError {
-  color: red; }
-
-#createRoom form .ng-invalid.ng-dirty {
-  background-color: lightpink; }
-
-#createRoom form .ng-valid.ng-dirty {
-  background-color: lightgreen; }
-
-#createRoom div.error {
-  color: red;
-  margin-left: 0px; }
-
-#createRoom .usedEmail {
-  background-color: lightpink !important; }
-
-#createRoom .matchError {
-  background-color: lightpink !important; }
-
-#createRoom form .progress {
-  line-height: 15px; }
-
-#createRoom #removeImage {
-  height: 15px; }
-
-#createRoom label {
-  font-weight: bold; }
-
-#createRoom #uploadImages li {
-  list-style: none;
-  margin-left: -40px; }
-
-#createRoom #imagesIndex {
-  border: 1px solid green;
-  padding: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
-  background-color: #cff9f8;
-  border-radius: 5px;
-  font-weight: bold; }
-
-#createRoom #uploadImageThumbnail {
-  width: 80px; }
+      margin: 0% 2%;
+      padding: 10px; } }
 
 .carousel-wrapper {
+  margin-top: 120px;
   margin-left: -15px;
   margin-right: -15px;
   height: 30vh;
@@ -5147,9 +5143,6 @@ footer {
   @media (min-width: 992px) {
     .carousel-wrapper {
       height: 45vh; } }
-
-.carousel-indicator-wrapper {
-  position: relative; }
 
 #room-carousel {
   position: relative;
@@ -5201,18 +5194,50 @@ footer {
       float: left;
       width: 8.33333%; } }
 
+/** carousel-indicator */
+.carousel-indicator {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-typ: none;
+  margin: 0px 0px;
+  padding: 20px 0px; }
+  .carousel-indicator li {
+    list-style-type: none;
+    margin: 0px 20px; }
+  .carousel-indicator .carousel-thumbnail {
+    border: 3px #FFF solid;
+    height: 50px;
+    width: 80px; }
+  @media (min-width: 768px) {
+    .carousel-indicator {
+      padding: 50px 0px;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between; }
+      .carousel-indicator li {
+        list-style-type: none;
+        margin: 10px 0px; }
+      .carousel-indicator .carousel-thumbnail {
+        border: 3px #FFF solid;
+        height: 50px;
+        width: 80px; } }
+
 .carousel-control-top, .carousel-control-bottom {
-  position: absolute;
-  margin: 0;
-  text-align: center;
-  height: 100%;
   color: #FFF;
+  display: none;
   font-size: 32px;
+  height: 100%;
   line-height: 100px;
+  margin: 0;
   padding: 0;
-  display: none; }
+  position: absolute;
+  text-align: center; }
   .carousel-control-top:hover, .carousel-control-bottom:hover {
     color: #B83F2D; }
+  .carousel-control-top span, .carousel-control-bottom span {
+    color: #FFF; }
   @media (min-width: 768px) {
     .carousel-control-top, .carousel-control-bottom {
       display: block;
@@ -5236,34 +5261,34 @@ footer {
       right: 0;
       bottom: 10px; } }
 
-.carousel-indicator {
-  margin: 0px 0px;
-  padding: 20px 0px;
-  list-style-typ: none;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between; }
-  .carousel-indicator li {
-    list-style-type: none;
-    margin: 0px 10px; }
-  .carousel-indicator .carousel-thumbnail {
-    width: 50px;
-    height: 50px;
-    border: 3px #FFF solid; }
+/** room-details-wrapper **/
+.room-details-wrapper {
+  margin-left: -15px;
+  margin-right: -15px;
+  padding: 20px; }
+  .room-details-wrapper::after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.room-details {
+  @inlucde make-col-ready();
+  float: left;
+  width: 100%; }
   @media (min-width: 768px) {
-    .carousel-indicator {
-      padding: 50px 0px;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between; }
-      .carousel-indicator li {
-        list-style-type: none;
-        margin: 10px 0px; }
-      .carousel-indicator .carousel-thumbnail {
-        width: 80px;
-        height: 50px;
-        border: 3px #FFF solid; } }
+    .room-details {
+      float: left;
+      width: 83.33333%;
+      margin-left: 8.33333%; } }
+  @media (min-width: 992px) {
+    .room-details {
+      float: left;
+      width: 50%;
+      margin-left: 25%; } }
+  .room-details h5 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 18px; }
 
 /*
 To change this license header, choose License Headers in Project Properties.

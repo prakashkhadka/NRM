@@ -3,18 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/Prakash/Desktop/nrm/admin_panel/index.admin.html</file>
-            <file>file:/Users/Prakash/Desktop/nrm/admin_panel/directives/navigation/navigationView.html</file>
-            <file>file:/Users/Prakash/Desktop/nrm/admin_panel/home/home.html</file>
-            <file>file:/Users/Prakash/Desktop/nrm/admin_panel/auth/login/login.html</file>
-            <file>file:/Users/Prakash/Desktop/nrm/resources/assets/scss/base/_manifest.scss</file>
-            <file>file:/Users/Prakash/Desktop/nrm/resources/assets/scss/main.scss</file>
-            <file>file:/Users/Prakash/Desktop/nrm/admin_panel/auth/register/register.html</file>
-            <file>file:/Users/Prakash/Desktop/nrm/gulpfile.js</file>
-            <file>file:/Users/Prakash/Desktop/nrm/admin_panel/admin.app.js</file>
-            <file>file:/Users/Prakash/Desktop/nrm/resources/assets/scss/adminMain.scss</file>
-            <file>file:/Users/Prakash/Desktop/nrm/app_client/index.client.html</file>
-            <file>file:/Users/Prakash/Desktop/nrm/admin_panel/admin_stylesheets/adminApp.css</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/createRoom/createRoom.view.html</file>
+            <file>file:/Users/Prakash/Desktop/nrm/resources/assets/scss/pages/_createRoom.scss</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_api/controllers/roomSearch.js</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/createRoom/createRoom.client.js</file>
+            <file>file:/Users/Prakash/Desktop/nrm/models/rooms.js</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_api/controllers/room.js</file>
         </group>
     </open-files>
 </project-private>
