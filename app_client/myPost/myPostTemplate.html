@@ -6,16 +6,47 @@
 
 	<div class="page-wrapper">
 		<div class="page-container">
+		<p class="text-xs-center" ng-if="roomsByUser.length <1">Sorry, you don not have any post.</p>
 			<div class="my-ad-card" ng-repeat ="room in roomsByUser">
 				<div class="left-col">
 					<h5>{{room.unit}} / {{room.street_no}}, {{room.street}}, {{room.suburb}}</h5>
+					<p class="pull-left">Listed On: {{room.createdOn | date : format : timezone}}</p>
 
 				</div>
 				<div class="right-col">
 					<a href="/editRoom/{{room._id}}" class="btn btn-sm btn-warning" ng-show="isLoggedIn">Edit</a>
-					<button class="btn btn-sm btn-danger" ng-click="remove(room._id)" ng-show="isLoggedIn">Delete</button>
+					<button class="btn btn-sm btn-danger" ng-click="confirm(room._id)">Delete</button>
 				</div>
 			</div>
+
+
+			<!-- Confirmation Modal -->
+
+
+			<div class="modal fade" id="confirmation-modal">
+				<div class="modal-dialog" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+				    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				      <span aria-hidden="true">&times;</span>
+				    </button>
+				    <h4 class="modal-title">Modal title</h4>
+				  </div>
+				  <div class="modal-body">
+				    <p ng-hide="isDeleted">Are you sure,you want to delete the ad?</p>
+				    <div class="feedback-block" ng-if="isDeleted">
+						
+						<span class="feedback-success"><i class="fa fa-check-circle"></i></span>
+				    	<p>Successfully Deleted</p>
+				    </div>
+				  </div>
+				  <div class="modal-footer" ng-hide="isDeleted">
+				    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+				    <button type="button" class="btn btn-danger"  ng-click="remove(confirmedRoomId)">Save changes</button>
+				  </div>
+				</div><!-- End of modal-content -->
+				</div><!-- End of modal-dialog -->
+			</div><!-- End of modal -->
 		</div>
 		<!-- End of page-container -->
 	</div>

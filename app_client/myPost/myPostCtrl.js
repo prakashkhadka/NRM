@@ -7,8 +7,10 @@ angular
         .module("roomApp")
         .controller("myPostCtrl", myPostCtrl);
 
-function myPostCtrl($scope, $http, $location, authentication, $anchorScroll){
+function myPostCtrl($scope, $http, $location, authentication, $anchorScroll,$timeout){
     $anchorScroll();
+
+    $scope.isDeleted=false;
     //console.log("myPostCtrl is working");
     //To find current loggedin user uses authentication service in services/authentication.service.js file. It uses currentUser method
     
@@ -29,10 +31,30 @@ function myPostCtrl($scope, $http, $location, authentication, $anchorScroll){
         //console.log("Couldn't get room detail from server : " + data);
     });
     
+
+    //confirms room delete action -by rajesh
+
+      $scope.confirm=function(roomid){
+
+        $scope.confirmedRoomId=roomid;
+        $('#confirmation-modal').modal('show');
+
+
+
+      }
+
+
+
+
+
+
+    // end of room delete confirmation action method
+
     // following function deletes individual room and takes to feedback page
           // this function is associated with delete button on home page
             $scope.remove = function(roomid){
                 //console.log(roomid);
+                
                 $http({
                     method: "DELETE",
                     url: "/api/rooms/" + roomid,
@@ -40,11 +62,24 @@ function myPostCtrl($scope, $http, $location, authentication, $anchorScroll){
                 })
                .then(function success (response){
                    //console.log("Deleted room data is : " + response);
+
+                   $scope.isDeleted=true;
+                   $timeout(function(){
+$('#confirmation-modal').modal('hide');
+
+        },4000);
+        
                    
-                   $location.path("/deleteRoomFeedback");
+                  // $location.path("/deleteRoomFeedback");
                    //$location.path("/about");
                    
                 }, function failure(response){
+
+                  $scope.isDeleted=false;
+                   $timeout(function(){
+$('#confirmation-modal').modal('hide');
+
+        },4000);
            //$scope.errorMessage = response.data;
            //console.log(response);
                 });
