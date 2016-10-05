@@ -250,12 +250,25 @@
 
             @include make-col(8);
         }
+
+
     }
+
 } //end of email-owner
 
 
 
+.email-option{
+    overflow: auto;
+    .btn-close{
 
+        display:none;
+        height:90px;
+        width:90px;
+        font-size:55px;
+        float:right;  
+        }
+}
 
 
 

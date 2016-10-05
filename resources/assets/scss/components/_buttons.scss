@@ -179,3 +179,9 @@
     padding:0;
     
 }
+.btn-close{
+
+	@extend %button;
+	background-color:transparent;
+	border:none;
+}

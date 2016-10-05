@@ -18,7 +18,7 @@
     }
 }
 
-
+/*image upload progress*/
 .fa-spinner{
     
     -webkit-animation:spin 1s linear infinite;
@@ -26,99 +26,20 @@
     animation:spin 1s linear infinite;
 
 }
-
+/** @type {image upload spin **/
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 
+/** Adress auto fill */
+.suggestions-list{
 
+    list-style-type: none;
+    padding:0;
 
+    li{
 
-
-
-        //Create room validation Error
-#createRoom{
-    #required{
-        color: red;
-        font-size: 8pt;
+        text-align:left;
     }
-    .suggestions-list {
-        z-index: 1000;
-	position: absolute;
-	list-style-type: none;
-	padding: 0;
-	overflow: auto;
-    }
-    .suggestions-list li {
-        margin-left: 0px;
-	color: #000000;
-	padding: 10px 10px;
-	line-height:17px;
-	cursor: pointer;
-	background: #f9f9f9;
-	border-bottom: 1px solid #eeeeee;
-	width:250px;
-    }
-    .suggestions-list li:hover {
-            background: #eed5f2;
-    }
-    .suggestions-list li:active,
-    .suggestions-list li.active {
-            color: #FFFFFF;
-            background: #0099FF;
-            width:250px;
-    }
-    .suggestions-list:focus{
-            outline:none;
-    }
-    .inputError{
-            color:red;
-    }
-    form .ng-invalid.ng-dirty{ 
-        background-color: lightpink; 
-    }
-    form .ng-valid.ng-dirty { 
-        background-color: lightgreen; 
-    }
-    div.error {
-        color: red;
-        margin-left: 0px;
-    }
-    
-    .usedEmail{
-        background-color: lightpink !important;
-    }
-    .matchError{
-        background-color: lightpink !important;
-    }
-    form .progress {
-        line-height: 15px;
-    }
-
-    #removeImage{
-        height: 15px;
-    }
-    
-    #uploadImages{
-        li{
-            list-style: none;
-            margin-left: -40px;
-        }
-    }
-    #imagesIndex{
-        border: 1px solid green;
-        padding: 5px;
-        padding-left: 15px;
-        padding-right: 15px;
-        background-color: #cff9f8;
-        border-radius: 5px;
-        font-weight: bold;
-    }
-    #uploadImageThumbnail{
-        width: 80px;
-    }
-  
-        }
-        
-    // End create room validation Error
+}

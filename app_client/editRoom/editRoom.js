@@ -38,7 +38,7 @@ function editRoomCtrl($location, $scope, $http, $routeParams, authentication, $a
     };
        
     $scope.goHome = function(){
-        $location.path("/");
+        $location.path("/dashboard");
     };
 }
 

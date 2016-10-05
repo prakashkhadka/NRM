@@ -53,8 +53,10 @@
                 <p><strong>Available from :</strong> {{ORD.available_from | date :  "dd MMMM yyyy"}} </p>
                 <p><strong>Contact:</strong> {{ORD.contact_no}}</p>
                 <p>{{ORD.message}}</p>
-                <button class="btn-send-message btn-email-owner" data-toggle="collapse" data-target="#email-owner" aria-expanded="false" aria-controls="email-owner">Email Room Owner</button>
-                
+                <div class="email-option" email-owner>
+                <button class="btn-send-message btn-email-owner"  data-toggle="collapse" data-target="#email-owner" aria-expanded="false" aria-controls="email-owner">Email Room Owner</button>
+                <button class="btn-close" data-toggle="collapse" data-target="#email-owner">&times</button>
+                </div>
                 <!-- collapsible div -->
                 <div id="email-owner" class="collapse">
                     <div class="email-form-wrapper">
@@ -119,7 +121,6 @@
                             <div class="form-group">
                                 <div class="input-wrapper-right">
                                     <button class="btn-send-email">Send Email</button>
-                                    <button class="btn-cancel" data-toggle="collapse" data-target="#email-owner">Cancel</button>
                                 </div>
                                 <!-- End of input-wrapper-right -->
                             </div>

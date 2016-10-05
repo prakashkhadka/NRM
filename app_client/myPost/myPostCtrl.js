@@ -64,10 +64,14 @@ function myPostCtrl($scope, $http, $location, authentication, $anchorScroll,$tim
                    //console.log("Deleted room data is : " + response);
 
                    $scope.isDeleted=true;
-                   $timeout(function(){
-$('#confirmation-modal').modal('hide');
+                   $scope.feedbackMessage="Successfully deleted the room.";
+                   $('#confirmation-modal').modal('hide');
+                   $('#feedback-modal').modal('show');
+//                    $timeout(function(){
+// $('#confirmation-modal').modal('hide');
+// $('#feedback-modal').modal('show');
 
-        },4000);
+//         },4000);
         
                    
                   // $location.path("/deleteRoomFeedback");
@@ -76,10 +80,9 @@ $('#confirmation-modal').modal('hide');
                 }, function failure(response){
 
                   $scope.isDeleted=false;
-                   $timeout(function(){
-$('#confirmation-modal').modal('hide');
-
-        },4000);
+                  $scope.feedbackMessage="Sorry, somehing went wrong.Try again.";
+                   $('#confirmation-modal').modal('hide');
+                   $('#feedback-modal').modal('show');
            //$scope.errorMessage = response.data;
            //console.log(response);
                 });

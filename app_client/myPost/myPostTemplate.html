@@ -34,19 +34,18 @@
 				  </div>
 				  <div class="modal-body">
 				    <p ng-hide="isDeleted">Are you sure,you want to delete the ad?</p>
-				    <div class="feedback-block" ng-if="isDeleted">
-						
-						<span class="feedback-success"><i class="fa fa-check-circle"></i></span>
-				    	<p>Successfully Deleted</p>
-				    </div>
+				   
 				  </div>
 				  <div class="modal-footer" ng-hide="isDeleted">
 				    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-				    <button type="button" class="btn btn-danger"  ng-click="remove(confirmedRoomId)">Save changes</button>
+				    <button type="button" class="btn btn-danger"  ng-click="remove(confirmedRoomId)">Delete</button>
 				  </div>
 				</div><!-- End of modal-content -->
 				</div><!-- End of modal-dialog -->
 			</div><!-- End of modal -->
+
+			<!-- Feedback Modal -->
+			<feedback is-action-completed="{{isDeleted}}" feedback-message="{{feedbackMessage}}"></feedback>
 		</div>
 		<!-- End of page-container -->
 	</div>

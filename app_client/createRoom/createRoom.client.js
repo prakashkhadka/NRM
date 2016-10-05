@@ -99,8 +99,16 @@ function createRoomCtrl($location, $scope, $http, $rootScope, authentication, $a
             //arrayKey: '',
             headers: {Authorization: 'Bearer '+ authentication.getToken()}
         }).then(function(response){
-            $rootScope.reviewData = response.data;
-            $location.path("/createRoomFeedback");
+            $scope.isPosted=true;
+            $scope.feedbackMessage="Successfully listed your room";
+            $('#feedback-modal').modal('show');
+
+            $timeout(function(){
+                $('#feedback-modal').modal('hide');
+                 $location.path("/myPost");
+            },2000)
+             $location.path("/myPost");
+
         }, function(response){
             $scope.errorMessage = response.data;
         }, function(evt) {
@@ -113,7 +121,7 @@ function createRoomCtrl($location, $scope, $http, $rootScope, authentication, $a
     };
    
     $scope.goHome = function(){
-        $location.path("/");
+        $location.path("/dashboard");
     }; 
     
     /*
