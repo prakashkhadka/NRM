@@ -5305,106 +5305,6 @@ input {
       position: relative;
       margin: 0px 10px; }
 
-<<<<<<< HEAD
-#createRoom {
-  margin-top: 100px;
-  margin-bottom: 50px; }
-  @media (max-width: 767px) {
-    #createRoom {
-      margin-top: 90px; }
-      #createRoom h3 {
-        font-size: 20pt; }
-      #createRoom p {
-        font-size: 12pt;
-        padding-left: 10px;
-        padding-right: 10px; } }
-  #createRoom p {
-    text-align: center; }
-  #createRoom #required {
-    color: red;
-    font-size: 8pt; }
-  #createRoom .suggestions-list {
-    z-index: 1000;
-    position: absolute;
-    list-style-type: none;
-    padding: 0;
-    overflow: auto; }
-  #createRoom .suggestions-list li {
-    margin-left: 0px;
-    color: #000000;
-    padding: 10px 10px;
-    line-height: 17px;
-    cursor: pointer;
-    background: #f9f9f9;
-    border-bottom: 1px solid #eeeeee;
-    width: 250px; }
-  #createRoom .suggestions-list li:hover {
-    background: #eed5f2; }
-  #createRoom .suggestions-list li:active,
-  #createRoom .suggestions-list li.active {
-    color: #FFFFFF;
-    background: #0099FF;
-    width: 250px; }
-  #createRoom .suggestions-list:focus {
-    outline: none; }
-  #createRoom .inputError {
-    color: red; }
-  #createRoom form .ng-invalid.ng-dirty {
-    background-color: lightpink; }
-  #createRoom form .ng-valid.ng-dirty {
-    background-color: lightgreen; }
-  #createRoom div.error {
-    color: red;
-    margin-left: 0px; }
-  #createRoom .usedEmail {
-    background-color: lightpink !important; }
-  #createRoom .matchError {
-    background-color: lightpink !important; }
-  #createRoom form .progress {
-    line-height: 15px; }
-  #createRoom #removeImage {
-    height: 15px; }
-  #createRoom label {
-    font-weight: bold; }
-  #createRoom #uploadImages li {
-    list-style: none;
-    margin-left: -40px; }
-  #createRoom #imagesIndex {
-    border: 1px solid green;
-    padding: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-    background-color: #cff9f8;
-    border-radius: 5px;
-    font-weight: bold; }
-  #createRoom #uploadImageThumbnail {
-    width: 80px; }
-
-.createRoom-container, #userRegister #userRegistrationFormContainer {
-  background-color: #FFF;
-  width: 80%;
-  margin: 0% 10%;
-  padding: 40px;
-  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.8); }
-  .createRoom-container select.round, #userRegister #userRegistrationFormContainer select.round {
-    background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), radial-gradient(#ddd 70%, transparent 72%);
-    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - .5em) 0.5em;
-    background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
-    background-repeat: no-repeat; }
-  @media (min-width: 768px) {
-    .createRoom-container, #userRegister #userRegistrationFormContainer {
-      width: 96%;
-      margin: 0% 2%; } }
-  @media (min-width: 992px) {
-    .createRoom-container, #userRegister #userRegistrationFormContainer {
-      width: 60%;
-      margin: 0% 20%; } }
-  @media (max-width: 767px) {
-    .createRoom-container, #userRegister #userRegistrationFormContainer {
-      width: 96%;
-      margin: 0% 2%;
-      padding: 10px; } }
-=======
 .uploaded-image-thumbnail {
   height: 100px;
   width: 100px;
@@ -5443,10 +5343,8 @@ input {
   padding: 0; }
   .suggestions-list li {
     text-align: left; }
->>>>>>> effee20d9526c21163feff68a00f345abd772287
 
 .carousel-wrapper {
-  margin-top: 120px;
   margin-left: -15px;
   margin-right: -15px;
   height: 30vh;
@@ -5517,17 +5415,10 @@ input {
   justify-content: center;
   list-style-typ: none;
   margin: 0px 0px;
-<<<<<<< HEAD
-  padding: 20px 0px; }
-  .carousel-indicator li {
-    list-style-type: none;
-    margin: 0px 20px; }
-=======
   padding: 20px 10px; }
   .carousel-indicator li {
     list-style-type: none;
     margin: 0px 10px; }
->>>>>>> effee20d9526c21163feff68a00f345abd772287
   .carousel-indicator .carousel-thumbnail {
     border: 3px #FFF solid;
     height: 50px;
@@ -5556,17 +5447,10 @@ input {
   padding: 0;
   position: absolute;
   text-align: center; }
-<<<<<<< HEAD
-  .carousel-control-top:hover, .carousel-control-bottom:hover {
-    color: #B83F2D; }
-  .carousel-control-top span, .carousel-control-bottom span {
-    color: #FFF; }
-=======
   .carousel-control-top span, .carousel-control-bottom span {
     color: #FFF; }
     .carousel-control-top span:hover, .carousel-control-bottom span:hover {
       color: #B83F2D; }
->>>>>>> effee20d9526c21163feff68a00f345abd772287
   @media (min-width: 768px) {
     .carousel-control-top, .carousel-control-bottom {
       display: block;
@@ -5593,38 +5477,11 @@ input {
 /** room-details-wrapper **/
 .room-details-wrapper {
   margin-left: -15px;
-<<<<<<< HEAD
-  margin-right: -15px;
-  padding: 20px; }
-=======
   margin-right: -15px; }
->>>>>>> effee20d9526c21163feff68a00f345abd772287
   .room-details-wrapper::after {
     content: "";
     display: table;
     clear: both; }
-<<<<<<< HEAD
-
-.room-details {
-  @inlucde make-col-ready();
-  float: left;
-  width: 100%; }
-  @media (min-width: 768px) {
-    .room-details {
-      float: left;
-      width: 83.33333%;
-      margin-left: 8.33333%; } }
-  @media (min-width: 992px) {
-    .room-details {
-      float: left;
-      width: 50%;
-      margin-left: 25%; } }
-  .room-details h5 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-size: 18px; }
-=======
->>>>>>> effee20d9526c21163feff68a00f345abd772287
 
 .room-details {
   @inlucde make-col-ready();

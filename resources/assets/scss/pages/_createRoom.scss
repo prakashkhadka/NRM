@@ -1,69 +1,5 @@
 .uploaded-image-thumbnail{
 
-<<<<<<< HEAD
-#createRoom{
-    @include media-breakpoint-down(sm){
-        margin-top: 90px;
-        h3{
-            font-size: 20pt;
-        }
-        p{
-            font-size: 12pt;
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-    }
-    margin-top:100px;
-    margin-bottom: 50px;
-    p{
-        text-align:center;
-    }
-    #required{
-        color: red;
-        font-size: 8pt;
-    }
-    .suggestions-list {
-        z-index: 1000;
-	position: absolute;
-	list-style-type: none;
-	padding: 0;
-	overflow: auto;
-    }
-    .suggestions-list li {
-        margin-left: 0px;
-	color: #000000;
-	padding: 10px 10px;
-	line-height:17px;
-	cursor: pointer;
-	background: #f9f9f9;
-	border-bottom: 1px solid #eeeeee;
-	width:250px;
-    }
-    .suggestions-list li:hover {
-        background: #eed5f2;
-    }
-    .suggestions-list li:active,
-    .suggestions-list li.active {
-        color: #FFFFFF;
-        background: #0099FF;
-        width:250px;
-    }
-    .suggestions-list:focus{
-            outline:none;
-    }
-    .inputError{
-            color:red;
-    }
-    form .ng-invalid.ng-dirty{ 
-        background-color: lightpink; 
-    }
-    form .ng-valid.ng-dirty { 
-        background-color: lightgreen; 
-    }
-    div.error {
-        color: red;
-        margin-left: 0px;
-=======
     height:100px;
     width:100px;
     border:2px solid grey;
@@ -79,7 +15,6 @@
     li{
 
         list-style-type:none;
->>>>>>> effee20d9526c21163feff68a00f345abd772287
     }
 }
 
@@ -107,53 +42,4 @@
 
         text-align:left;
     }
-<<<<<<< HEAD
-  
-        }
-        
-    // End create room validation Error
-
-
-.createRoom-container{
-    background-color:#FFF;
-    width:80%;
-    margin:0% 10%;
-    padding:40px;
-    box-shadow:0px 10px 40px rgba(0,0,0,0.8);
-    
-    select.round {
-  background-image:
-    linear-gradient(45deg, transparent 50%, gray 50%),
-    linear-gradient(135deg, gray 50%, transparent 50%),
-    radial-gradient(#ddd 70%, transparent 72%);
-  background-position:
-    calc(100% - 20px) calc(1em + 2px),
-    calc(100% - 15px) calc(1em + 2px),
-    calc(100% - .5em) .5em;
-  background-size:
-    5px 5px,
-    5px 5px,
-    1.5em 1.5em;
-  background-repeat: no-repeat;
 }
-   
-    @include media-breakpoint-up(md){
-        width:96%;
-        margin:0% 2%;
-    }
-
-    @include media-breakpoint-up(lg){
-        width:60%;
-        margin:0% 20%;
-    }
-    
-     @include media-breakpoint-down(sm){
-        width:96%;
-        margin:0% 2%;
-        padding: 10px;
-    }
-}
-        
-=======
-}
->>>>>>> effee20d9526c21163feff68a00f345abd772287

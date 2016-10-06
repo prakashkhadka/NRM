@@ -1,5 +1,5 @@
 .carousel-wrapper{
-    margin-top: 120px;
+
     @include make-row();
     // border:1px red solid;
     height:30vh;
@@ -36,19 +36,9 @@
         @include make-col(5);
         @include make-col-offset(3);
     }
-<<<<<<< HEAD
-
-
-=======
-} //end of room-carousel
->>>>>>> effee20d9526c21163feff68a00f345abd772287
-
 } //end of room-carousel
 
-<<<<<<< HEAD
 
-=======
->>>>>>> effee20d9526c21163feff68a00f345abd772287
 .carousel-item{
 
     width:100%;
@@ -60,12 +50,7 @@
         height:100% !important;
     }
 }
-<<<<<<< HEAD
-// end f carrousel-item
-
-=======
 // end of carrousel-item
->>>>>>> effee20d9526c21163feff68a00f345abd772287
 
 
 //carousel indicator on left above ipad
@@ -109,32 +94,8 @@
         margin:0px 10px;
     }
 
-<<<<<<< HEAD
-
-/** carousel-indicator */
-.carousel-indicator{
-
-    align-items:center;
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    list-style-typ:none;
-    margin:0px 0px;
-    padding:20px 0px;
-
-    li{
-
-        list-style-type:none;
-        margin:0px 20px;
-    
-    }
-
     .carousel-thumbnail{
 
-=======
-    .carousel-thumbnail{
-
->>>>>>> effee20d9526c21163feff68a00f345abd772287
         border:3px #FFF solid;
         height:50px;
         width:80px;
@@ -148,26 +109,6 @@
         flex-direction:column;
         justify-content:space-between;
 
-<<<<<<< HEAD
-    li{
-
-        list-style-type:none;
-        margin:10px 0px;
-    
-    }
-
-    .carousel-thumbnail{
-
-        border:3px #FFF solid;
-        height:50px;
-        width:80px;
-    }
-}
-   
-}
-
-
-=======
         li{
 
             list-style-type:none;
@@ -183,7 +124,6 @@
         }
     }
 } //end of carousel-indicator
->>>>>>> effee20d9526c21163feff68a00f345abd772287
 
 
 //carousel-control top,bottom
@@ -210,11 +150,6 @@
 
     }
 
-    span{
-        
-        color:#FFF;
-    }
-
     @include media-breakpoint-up(md){
         
         display:block;
@@ -232,16 +167,10 @@
 
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> effee20d9526c21163feff68a00f345abd772287
 // caraousel-contrl-top
 .carousel-control-top{
 
     left:0;
-  
-
    @include media-breakpoint-up(md){
         
        top:10px;
@@ -279,36 +208,6 @@
     padding:20px 50px;
     // border:1px solid grey;
 
-<<<<<<< HEAD
-/** room-details-wrapper **/
-.room-details-wrapper{
-
-    @include make-row();
-    padding:20px;
-
-}
-
-.room-details{
-    @inlucde make-col-ready();
-    @include make-col(12);
-    // border:1px solid grey;
-
-
-
-    @include media-breakpoint-up(md){
-
-        @include make-col(10);
-        @include make-col-offset(1);
-    }
-
-    @include media-breakpoint-up(lg){
-
-        @include make-col(6);
-        @include make-col-offset(3);
-    }
-
-    h5{
-=======
 
 
     @include media-breakpoint-up(md){
@@ -336,18 +235,8 @@
     }
 
 }
->>>>>>> effee20d9526c21163feff68a00f345abd772287
-
-        font-family:$font-moteserrat;
-        font-weight:600;
-        font-size:18px;
-    }
-
-<<<<<<< HEAD
-}
 
 
-=======
 #email-owner{
     
     @include make-row();
@@ -381,19 +270,3 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> effee20d9526c21163feff68a00f345abd772287
