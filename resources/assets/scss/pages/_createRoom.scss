@@ -1,4 +1,6 @@
+.uploaded-image-thumbnail{
 
+<<<<<<< HEAD
 #createRoom{
     @include media-breakpoint-down(sm){
         margin-top: 90px;
@@ -61,42 +63,51 @@
     div.error {
         color: red;
         margin-left: 0px;
-    }
-    
-    .usedEmail{
-        background-color: lightpink !important;
-    }
-    .matchError{
-        background-color: lightpink !important;
-    }
-    form .progress {
-        line-height: 15px;
-    }
+=======
+    height:100px;
+    width:100px;
+    border:2px solid grey;
+    position:realtive;
+}
 
-    #removeImage{
-        height: 15px;
+
+.uploaded-images{
+
+    margin:0;
+    padding:0;
+
+    li{
+
+        list-style-type:none;
+>>>>>>> effee20d9526c21163feff68a00f345abd772287
     }
-    label{
-        font-weight: bold;
+}
+
+/*image upload progress*/
+.fa-spinner{
+    
+    -webkit-animation:spin 1s linear infinite;
+    -moz-animation:spin 1s linear infinite;
+    animation:spin 1s linear infinite;
+
+}
+/** @type {image upload spin **/
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+/** Adress auto fill */
+.suggestions-list{
+
+    list-style-type: none;
+    padding:0;
+
+    li{
+
+        text-align:left;
     }
-    #uploadImages{
-        li{
-            list-style: none;
-            margin-left: -40px;
-        }
-    }
-    #imagesIndex{
-        border: 1px solid green;
-        padding: 5px;
-        padding-left: 15px;
-        padding-right: 15px;
-        background-color: #cff9f8;
-        border-radius: 5px;
-        font-weight: bold;
-    }
-    #uploadImageThumbnail{
-        width: 80px;
-    }
+<<<<<<< HEAD
   
         }
         
@@ -143,3 +154,6 @@
     }
 }
         
+=======
+}
+>>>>>>> effee20d9526c21163feff68a00f345abd772287

@@ -1,0 +1,105 @@
+.menu-container{
+
+	@include make-row();
+	padding:0px 10px;
+}
+
+
+.menu-card{
+
+	width:50%;
+	float:left;
+	color:#FFF;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	padding:2%;
+
+	@include media-breakpoint-up(md){
+
+		padding:2% 5%;
+	}
+	
+	a{
+
+		text-decoration:none;
+		color:#FFF;
+
+
+		&:hover .menu i{
+
+			transform:rotate(30deg);
+		}
+	}
+}//end of menu-card
+
+
+.menu{
+
+	background-color: getColor('bluewood');
+	box-shadow:1;
+	height:100px;
+	width:100px;
+	display:flex;
+	border-radius:10px;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	transition:transform 0.1s ease-in;
+	
+	i{
+
+		font-size:24px;
+		transition: transform .3s ease;
+	}
+
+	h5{
+
+		font-size:16px;
+		margin:15px 0px;
+	}
+
+
+	@include media-breakpoint-up(md){
+
+		height:180px;
+		width:180px;
+
+		i{
+
+			font-size:44px;
+		}
+	}
+
+	&:hover{
+
+	transform:scale(1.1);
+	}
+}//end of menu
+
+
+
+
+.fa-file{
+
+	color:yellow;
+}
+
+
+.fa-gears{
+
+	color:tomato
+}
+
+
+.fa-money{
+
+	color:getColor('burnt-sienna-dark');
+}
+
+
+.fa-support{
+
+	color:getColor('emrald');
+}

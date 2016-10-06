@@ -2,45 +2,112 @@
 <navigation></navigation>
 
 <section id="createRoom">
+<<<<<<< HEAD
     <h3>Rent your room</h3>
     <p>Please fill the following details to post your room advertisement.</p>
     <div class="createRoom-container">
+=======
+    
+    <h3 >Rent your room</h3>
+    <p class="text-xs-center">Please fill the following details to post your room ad</p>
+
+
+    <div class="page-wrapper">
+        <div class="page-container">
+        
+>>>>>>> effee20d9526c21163feff68a00f345abd772287
         <form name='nrForm' class="form-horizontal" enctype="multipart/form-data" novalidate>
-            <div class="form-group">
-                <label for="unit" class="col-sm-3 control-label">Unit</label>
-                <div class="col-sm-9">
-                  <input name='unit' type="number" class="form-control" id="unit" placeholder="Unit" ng-maxlength='2' ng-model="room.unit">
-                <div class="error" ng-show="nrForm.unit.$invalid && nrForm.unit.$dirty">
-                    <span ng-show="nrForm.unit.$error.maxlength">
-                        Unit number must be below 99
-                    </span>
+            
+             <!-- Unit Number-->
+            <div class="form-group" ng-class="{'has-danger':nrForm.unit.$invalid && nrForm.streetNo.$dirty,'has-success':nrForm.unit.$valid && nrForm.unit.$dirty}">
+                <label for="unit" class="label-control">Unit</label>
+                <div class="input-wrapper-small">
+                    <input name='unit'  
+                          class="form-control" 
+                          id="unit" 
+                          ng-class="{'form-control-danger':nrForm.unit.$invalid && nrForm.unit.$dirty,'form-control-success':nrForm.unit.$valid}" 
+                          ng-minlength='1'
+                          ng-maxlength='2' 
+                          ng-model="room.unit"  
+                          placeholder="Unit" 
+                          type="number" 
+                          required >
+                    
+                    <!-- error-block -->
+                    <div class="error-block" ng-show="nrForm.unit.$invalid && nrForm.unit.$dirty">
+                        <p ng-show="nrForm.unit.$error.maxlength"> Unit number must be below 99</p>
+                    </div>
+                    <!-- End of error-block -->
                 </div>
-                </div>
+                <!-- End of input-wrapper -->
             </div>
+            <!-- End of form-group -->
+
            
-            <div class="form-group">
-                <label for="streetNo" class="col-sm-3 control-label">Street No</label>
-                <div class="col-sm-9">
-                    <input name='streetNo' type="number" class="form-control" id="streetNo" placeholder="Street No" ng-maxlength='3' ng-model="room.street_no">
-                <div class="error" ng-show="nrForm.streetNo.$invalid && nrForm.streetNo.$dirty">
-                    <span ng-show="nrForm.streetNo.$error.maxlength">
-                        Street number must be below 999
-                    </span>
+           <!-- Street Number -->
+            <div class="form-group" ng-class="{'has-danger':nrForm.streetNo.$invalid && nrForm.streetNo.$dirty,'has-success':nrForm.streetNo.$valid && nrForm.streetNo.$dirty}">
+                <label for="streetNo" class="label-control">Street No</label>
+                <div class="input-wrapper-small">
+                    <input name='streetNo' 
+                    type="number" 
+                    class="form-control" 
+                    id="streetNo" 
+                    placeholder="Street No"
+                    ng-minlength='1' 
+                    ng-maxlength='3' 
+                    ng-model="room.street_no"
+                    ng-class="{'form-control-danger':nrForm.streetNo.$invalid && nrForm.streetNo.$dirty,'form-control-success':nrForm.streetNo.$valid}"
+                    required>
+
+                <!-- error-block -->
+                <div class="error-block" ng-show="nrForm.streetNo.$invalid && nrForm.streetNo.$dirty">
+                    <p ng-show="nrForm.streetNo.$error.required">Street number is required.</p>
+                    <p ng-show="nrForm.streetNo.$error.maxlength">Street number must be below 999.</p>
                 </div>
+                <!-- End of error-block -->
                 </div>
+                <!-- End of input-wrapper -->
             </div>
+            <!-- End of form-group -->
             
-            <div class="form-group">
-              <label for="streetName" class="col-sm-3 control-label">Street Name</label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" id="streetName" placeholder="Street Name" ng-model="room.street_name">
+
+            <!-- Street Name -->
+            <div class="form-group" ng-class="{'has-danger':nrForm.streetName.$invalid && nrForm.streetName.$dirty,'has-success':nrForm.streetName.$valid}">
+              <label for="streetName" class="label-control">Street Name</label>
+              <div class="input-wrapper-medium">
+                <input type="text" 
+                class="form-control" 
+                name="streetName" 
+                id="streetName" 
+                placeholder="Street Name" 
+                ng-model="room.street_name" 
+                required 
+                ng-class="{'form-control-danger':nrForm.streetName.$invalid && nrForm.streetName.$dirty,'form-control-success':nrForm.streetName.$valid}">
+                
+                <!-- error-block -->
+                <div class="error-block" ng-show="nrForm.streetName.$invalid && nrForm.streetName.$dirty">
+                    <p ng-show="nrForm.streetName.$error.required">Street name is required.</p>
+                </div>
+                <!-- End of error-block -->
               </div>
+              <!-- End of input-wrapper -->
             </div>
+            <!-- End of form-group -->
             
-            <div class="form-group">
-              <label for="suburb" class="col-sm-3 control-label">Suburb<span id="required">*</span></label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" id="suurb" placeholder="Suburb" ng-model="room.suburb" ng-change="getValue()">
+
+            <!-- Suburb -->
+            <div class="form-group" ng-class="{'has-danger':nrForm.suburb.$invalid && nrForm.suburb.$dirty,'has-success':nrForm.suburb.$valid && nrForm.suburb.$dirty}">
+              <label for="suburb" class="label-control">Suburb<span id="required">*</span></label>
+              <div class="input-wrapper-medium">
+                <input type="text" 
+                class="form-control" 
+                id="suurb" 
+                placeholder="Suburb" 
+                ng-model="room.suburb" 
+                ng-change="getValue()" 
+                name="suburb" 
+                required 
+                ng-class="{'form-control-danger':nrForm.suburb.$invalid && nrForm.suburb.$dirty,'form-control-success':nrForm.suburb.$valid}">
                 <ul class="suggestions-list">
                     <li ng-repeat="su in returnedSub | filter: room.suburb:strict | limitTo:7" ng-class="{active : selectedIndex === $index}" 
                         ng-click="AssignValueAndHide(su)">{{su[0]}},   {{su[1]}}  {{su[2]}}</li>
@@ -48,73 +115,188 @@
               </div>
             </div>
             
-            <div class="form-group">
-              <label for="postcode" class="col-sm-3 control-label">Post Code<span id="required">*</span></label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" id="postcode" placeholder="Postcode" ng-model="room.postcode" required>
-              </div>
-            </div>
-            
-            <div class="form-group">
-              <label for="state" class="col-sm-3 control-label">State<span id="required">*</span></label>
-              <div class="col-sm-9">
-                <input type="text" class="form-control" id="state" placeholder="State" ng-model="room.state" required>
-              </div>
-            </div>
-            
-            <div class="form-group">
-                <label for="rent" class="col-sm-3 control-label">Weekly Rent $<span id="required">*</span></label>
-                <div class="col-sm-9">
-                    <input name='rent' type="number" class="form-control" id="rent" placeholder="Weekly Rent" ng-model="room.rent" ng-maxlength='4' required>
-                    <div class="error" ng-show="nrForm.rent.$invalid && nrForm.rent.$dirty">
-                        <span ng-show="nrForm.rent.$error.maxlength">
-                            It looks unusual weekly rent
-                        </span>
-                        <span ng-show="nrForm.rent.$error.required">
-                            Please enter weekly rent amount.
-                        </span>
-                    </div>
+
+            <!-- Post Code -->
+            <div class="form-group" 
+            ng-class="{'has-danger':nrForm.postCode.$invalid && nrForm.postCode.$dirty,'has-success':nrForm.postCode.$valid && nrForm.postCode.$dirty }">
+              <label for="postcode" class="label-control">Post Code<span id="required">*</span></label>
+              <div class="input-wrapper-small">
+                <input type="number" 
+                class="form-control" 
+                id="postCode" 
+                placeholder="Postcode" 
+                ng-model="room.postcode" 
+                name="postCode" 
+                ng-minlength='4'
+                ng-maxlength='4'
+                required 
+                ng-class="{'form-control-danger':nrForm.postCode.$invalid && nrForm.postCode.$dirty,'form-control-success':nrForm.postCode.$valid}">
+               
+                <!-- error-block -->
+                <div class="error-block" ng-show="nrForm.postCode.$invalid && nrForm.postCode.$dirty">
+                <p>Hel</p>
+                    <p ng-show="nrForm.PostCode.$error">Post code is required.</p>
+                     <p ng-show="nrForm.PostCode.$error.minlength || nrForm.PostCode.$error.maxlength">Post code must be 4 digits.</p>
                 </div>
+                <!-- End of error-block -->
+              </div>
+              <!-- End of input-wrapper -->
             </div>
+            <!-- End of form-group -->
             
-            <div class="form-group">
-              <label for="bond" class="col-sm-3 control-label">Bond</label>
-              <div class="col-sm-9">
-                <input type="number" class="form-control" id="rent" placeholder="Bond" ng-model="room.bond">
+
+            <!-- State -->
+            <div class="form-group" ng-class="{'has-danger':nrForm.state.$invalid && nrForm.state.$dirty,'has-success':nrForm.state.$valid && nrForm.postCode.$dirty}">
+              <label for="state" class="label-control">State<span id="required">*</span></label>
+              <div class="input-wrapper-medium">
+                <input type="text" 
+                class="form-control" 
+                id="state" 
+                placeholder="State" 
+                ng-model="room.state" 
+                required 
+                name="state" 
+                ng-class="{'form-control-danger':nrForm.state.$invalid && nrForm.state.$dirty,'form-control-success':nrForm.state.$valid}">
               </div>
             </div>
             
+
+            <!-- Rent -->
+            <div class="form-group" ng-class="{'has-danger':nrForm.rent.$invalid && nrForm.rent.$dirty,'has-success':nrForm.rent.$valid&& nrForm.rent.$dirty}">
+                <label for="rent" class="label-control">Weekly Rent $<span id="required">*</span></label>
+                    <div class="input-wrapper-small">
+                        <input name='rent' 
+                        type="number" 
+                        class="form-control" 
+                        name="rent" 
+                        id="rents" 
+                        placeholder="Weekly Rent" 
+                        ng-model="room.rent" 
+                        ng-maxlength='4' 
+                        required
+                        ng-class="{'form-control-danger':nrForm.rent.$invalid && nrForm.rent.$dirty,'form-control-success':nrForm.rent.$valid}">
+
+                        <!-- error-block -->
+                        <div class="error-block" ng-show="nrForm.rent.$invalid && nrForm.rent.$dirty" >
+                            <p ng-show="nrForm.rent.$error.maxlength">It looks unusual weekly rent</p>
+                            <p ng-show="nrForm.rent.$error.required">Please enter weekly rent amount.</p>
+                        </div>
+                    <!-- End of error-block -->
+                    </div>
+                    <!-- End of input-wrapper -->
+            </div>
+            <!-- End of form-group -->
+            
+
+            <!-- Bond -->
+            <div class="form-group" ng-class="{'has-danger':nrForm.bond.$invalid && nrForm.bond.$dirty,'has-success':nrForm.bond.$valid && nrForm.bond.$dirty}">
+              <label for="bond" class="label-control">Bond</label>
+                <div class="input-wrapper-small">
+                    <input type="number" 
+                    class="form-control" 
+                    id="bond" 
+                    name="bond"
+                    placeholder="Bond" 
+                    ng-model="room.bond"
+                    ng-minlength="3"
+                    ng-maxlength="4"
+                    ng-class="{'form-control-danger':nrForm.bond.$invalid && nrForm.bond.$dirty,'form-control-success':nrForm.bond.$valid && nrForm.bond.$dirty}"
+                    >
+
+                    <!-- error-block -->
+                    <div class="error-block" ng-show="nrForm.bond.$invalid && nrForm.bond.$dirty" >
+                        <p ng-show="nrForm.bond.$invalid">Please enter valid amount.</p>
+                    </div>
+                    <!-- End of error-block -->
+                </div>
+                <!-- End of input-wrapper -->
+            </div>
+            <!-- End of form-group -->
+            
+<<<<<<< HEAD
             <div class="form-group">
                 <label for="available" class="col-sm-3 control-label">Available From<span id="required">*</span></label>
                 <div class="col-sm-4">
                     <input name='availableFrom' type="date" class="form-control" id="available" placeholder="Available From" ng-model="room.available_from" required>
                 <div class="error" ng-show="nrForm.availableFrom.$invalid && nrForm.availableFrom.$dirty">
                     <span ng-show="nrForm.availableFrom.$error.required">
+=======
+            
+            <!-- Gneder -->
+            <div class="form-group">
+                <label for="gender" class="label-control">Preferred Gender</label>
+                <div class="input-wrapper">
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" value="couple" ng-model="room.gender">Couple
+                        </label>
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" value="female" ng-model="room.gender">Female
+                        </label>
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" value="male" ng-model="room.gender">Male
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" value="no preferred gender" ng-model="room.gender" checked>Any
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!-- End of form-group -->
+            
+
+            <!-- Available Date -->
+            <div class="form-group" ng-class="{'has-danger':nrForm.availableFrom.$invalid && nrForm.availableFrom.$dirty,'has-success':nrForm.availableFrom.$valid && nrForm.availableFrom.$dirty}">
+                <label for="available" class="label-control">Available From<span id="required">*</span></label>
+                <div class="input-wrapper-medium">
+                    <input name='availableFrom' 
+                    type="date" 
+                    class="form-control" 
+                    id="available" 
+                    placeholder="Available From" 
+                    ng-model="room.available_from" 
+                    required
+                    ng-class="{'form-control-danger':nrForm.availableFrom.$invalid && nrForm.availableFrom.$dirty,'form-control-success':nrForm.availableFrom.$valid}">
+                <div class="error-block" ng-show="nrForm.availableFrom.$invalid && nrForm.availableFrom.$dirty">
+                    <p ng-show="nrForm.availableFrom.$error.required">
+>>>>>>> effee20d9526c21163feff68a00f345abd772287
                         Please enter available date
-                    </span>
+                    </p>
                 </div>
                 </div>
             </div>
             
-            <div class="form-group">
-                <label for="contact" class="col-sm-3 control-label">Contact No<span id="required">*</span></label>
-                <div class="col-sm-9">
-                    <input name='contactNo' type="number" class="form-control" id="contact" placeholder="Contact No" ng-model="room.contact_no" ng-minlength='10' ng-maxlength='10' required>
-                <div class="error" ng-show="nrForm.contactNo.$invalid && nrForm.contactNo.$dirty">
-                    <span ng-show="nrForm.contactNo.$error.required">
+            <!-- Contact No -->
+            <div class="form-group" ng-class="{'has-danger':nrForm.contactNo.$invalid && nrForm.contactNo.$dirty,'has-success':nrForm.contactNo.$valid && nrForm.contactNo.$dirty}">
+                <label for="contact" class="label-control">Contact No<span id="required">*</span></label>
+                <div class="input-wrapper-medium">
+                    <input name='contactNo' 
+                    type="number"
+                    class="form-control" 
+                    id="contact" 
+                    placeholder="Contact No" 
+                    ng-model="room.contact_no" 
+                    ng-minlength='10' 
+                    ng-maxlength='10' 
+                    required 
+                    ng-class="{'form-control-danger':nrForm.contactNo.$invalid && nrForm.contactNo.$dirty,'form-control-success':nrForm.contactNo.$valid}">
+                <div class="error-block" ng-show="nrForm.contactNo.$invalid && nrForm.contactNo.$dirty">
+                 <p ng-show="nrForm.contactNo.$error.required">
                         Please enter Contact No (Telephone or Mobile no)
-                    </span>
-                    <span ng-show="nrForm.contactNo.$error.minlength">
+                   </p>
+                  <p ng-show="nrForm.contactNo.$error.minlength">
                         Contact number must be at least 10 digit long.
-                    </span>
-                    <span ng-show="nrForm.contactNo.$error.maxlength">
+                   </p>
+                  <p ng-show="nrForm.contactNo.$error.maxlength">
                         Contact number must not be more than 10 digit long.
-                    </span>
+                   </p>
                 </div>
                 </div>
             </div>
-            
+
+
+            <!-- Message -->
             <div class="form-group">
+<<<<<<< HEAD
                 <label for="bills" class="col-sm-3 control-label">Utility bills</label>
                 <div class="col-sm-3">
                     <select class="form-control" ng-model="room.bills"
@@ -209,6 +391,10 @@
             <div class="form-group">
                 <label for="message" class="col-sm-3 control-label">Message</label>
                 <div class="col-sm-9">
+=======
+                <label for="message" class="label-control">Message</label>
+                <div class="input-wrapper">
+>>>>>>> effee20d9526c21163feff68a00f345abd772287
                     <textarea name='message'
                               rows="5"
                               type="text" 
@@ -228,6 +414,7 @@
             
             <!--for Images -->
             <div>
+<<<<<<< HEAD
                 <div ng-show="compressing">
                     Please wait...
                     <span class="fa fa-spinner"></span>
@@ -240,22 +427,34 @@
                             <!--<span> <img id='removeImage' src='images/remove.png' ng-click="deleteFile($index)"></span>-->
                             <button class="btn btn-sm btn-warning" ng-click="deleteFile($index)">Remove</button>
                             <div class="offset-xs-2 offset-sm-1 offset-md-1">
+=======
+                <!-- Image info -->
+                <div class="input-wrapper-right image-upload-info" ng-show="files.length >0" >
+                    <ul class="uploaded-images" ng-repeat="file in files track by $index">
+                        <li>
+                            
+                            <img class="uploaded-image-thumbnail" ngf-thumbnail="file"/>
+                            <button class="remove-image" ng-click="deleteFile($index)">&times;</button>
+                            
+                            <p>
+>>>>>>> effee20d9526c21163feff68a00f345abd772287
                                 {{file.name}} {{file.$errorParam}}
                                 <!--Size: {{file.size / 1000 | number:2}} KB-->
-                            </div>  
+                            </p>  
                         </li>
                     </ul>
+
+                    <p ng-if="files.length >=1"> You have selected {{files.length}} Image<span ng-if="files.length >1">s</span>.</p>
                 </div>
-                <div class="offset-sm-3" ng-if="files.length > 1 ">
-                    You have selected {{files.length}} Images.
-                </div>
-                <div class="offset-sm-3" ng-if="files.length ===1">
-                    You have selected {{files.length}} Image.
-                </div>
+                <!-- End of image-upload-info -->
+            </div>
+
+
+
                 <div ng-hide="files.length>=4" class="form-group">
-                    <label for="imagesInput" class="col-sm-3 control-label">Upload images: </label>
-                <div class="col-sm-9">
-                    <button class="btn btn- btn-info"
+                    <label for="imagesInput" class="label-control">Room image: </label>
+                <div class="input-wrapper">
+                    <button class="btn-upload-image"
                         name="file"
                         ngf-select=""
                         ng-change="getAmazonUrl()"
@@ -270,16 +469,21 @@
                         ngf-resize-if="$width > 800 || $height > 800"
                         ngf-before-model-change="beforeChange($files)"
                         ngf-change ="afterChange($files)"
-                        ngf-multiple="true">
-                        Click here to select
+                        ngf-multiple="true"
+                        ng-disabled="compressing">
+
+                        <span ng-hide="compressing" class="fa fa-cloud-upload"></span>
+                        <span ng-show="compressing" class="fa fa-spinner" > </span>
+                        <span ng-hide="compressing">Upload image</span>
+                        <span ng-show="compressing">Uploading</span>
                     </button>
                 </div> 
                 </div>
                 
-            </div>
+            
             
             <div ng-show="nrForm.file.$invalid">
-                Something went wrong: please choose images again. </br>
+                <p>Something went wrong: please choose images again.</p>
                 <span ng-show="nrForm.file.$error.maxSize">
                     Image size too large. Maximum size : 12MB
                 </span>
@@ -292,12 +496,16 @@
             </div>
             
             <div class="form-group">
-              <div class="offset-sm-3 col-sm-9">
-                  <button ng-disabled='nrForm.$invalid' type="submit" ng-click="register(room); uploadImage()" class="btn btn-info">Submit</button>
-                  <button ng-click="goHome()" class="btn btn-default btn-danger">Cancel</button>
+              <div class="input-wrapper-right">
+                  <button ng-disabled='nrForm.$invalid' type="submit" ng-click="register(room); uploadImage()" class="btn-general">Submit</button>
+                  <button ng-click="goHome()" class="btn-cancel">Cancel</button>
               </div>
             </div>
             
         </form>
+
+        <!-- Feedback Modal -->
+            <feedback is-action-completed="{{isPosted}}" feedback-message="{{feedbackMessage}}"></feedback>
+        </div>
     </div>
 </section>

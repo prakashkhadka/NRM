@@ -28,6 +28,12 @@ function config($routeProvider, $locationProvider){
                 controller: "logoutCtrl"
                 
     })
+
+            .when("/dashboard",{
+                templateUrl: "dashboard/dashboard.html",
+                controller: "myPostCtrl"
+                
+    })
             .when("/myPost",{
                 templateUrl: "myPost/myPostTemplate.html",
                 controller: "myPostCtrl"

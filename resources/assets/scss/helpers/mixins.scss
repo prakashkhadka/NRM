@@ -11,6 +11,19 @@
 }
 
 
+@mixin setBorderRadius($width:1,$border-side:all){
+	
+	$border-radius:$width+px;
+
+	
+	@if $border-side==all{
+		
+		border-radius:$border-radius;
+
+	}
+
+}
+
 @mixin socialIcon($social-icons,$font){
 
 

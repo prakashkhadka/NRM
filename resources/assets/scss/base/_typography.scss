@@ -1,31 +1,36 @@
 
-// callout heading 
+/* Call out heading*/
 h1{
 	
 	font-family:$font-moteserrat;
 	font-weight:700;	
 }
+
+
+/* Page heading*/
 h3{
-    font-family: $font-moteserrat;
+
+    color:$text-color-heading !important;
     display:block;
-}
-
-//section heading
-h3{
-    font-family:$font-moteserrat;
-    font-weight:600;
-
+    font-family: $font-moteserrat;
+    font-weight:700 !important;;
     text-align:center;
     text-transform:uppercase;
 }
+
+/*Sub heading / Footer heading */
+
 h5{
     font-family:$font-moteserrat;
     font-weight:600;
 }
 
 
-//body text
+/* body text */
+
 p{
 	font-family:$font-news-cycle;
+    font-size:16px;
 		
 }
+ 

@@ -23,7 +23,7 @@ function loginCtrl($scope, $location, authentication, $anchorScroll){
         }
         authentication.login(user)
             .success(function(){
-                $location.path("/");          
+                $location.path("/dashboard");          
             })
             .error(function(data){
                 $scope.loginError = data.message;

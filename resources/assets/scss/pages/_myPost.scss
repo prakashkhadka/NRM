@@ -1,0 +1,83 @@
+.my-ad-card{
+
+	@include make-row();
+	padding:15px;
+	background-color:getColor('mercury');
+	min-height:80px;
+	margin:1% 0;
+	border-bottom:1px grey solid;
+
+
+
+	.left-col{
+		
+		@include make-col-ready();
+		@include make-col(12);
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:flex-start;
+
+		@include media-breakpoint-up(md){
+			@include make-col(8);
+
+		}
+		// background-color: green;
+
+	}
+
+	.right-col{
+		
+		@include make-col-ready();
+		@include make-col(12);
+		// background-color: #333;
+		display:flex;
+		flex-direction:row;
+		align-items:center;
+		justify-content:space-between;
+		// background-color: red;
+		
+		a{
+
+			display:inline-block;
+			
+		}
+
+		@include media-breakpoint-up(md){
+			@include make-col(4);
+			
+		}
+	}
+}
+
+
+.feedback-block{
+
+	width:100%;
+	height:auto;
+	text-align:center;
+
+	.feedback-success{
+
+		display:block;
+
+			i{
+
+				color:green;
+				font-size:58px;
+			}
+	}
+
+
+	.feedback-failed{
+
+		display:block;
+
+		i{
+
+				color:red;
+				font-size:58px;
+			}
+
+	}
+}

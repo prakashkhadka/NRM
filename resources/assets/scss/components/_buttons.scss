@@ -32,7 +32,7 @@
 	@extend %button;
 	@include button-variant(getColor('white'), getColor('emrald'),getColor('emrald'));
 	font-family:$font-moteserrat;
-	height:50px;
+	height:40px;
         
 }
 .btn-send-message[disabled]{
@@ -45,7 +45,6 @@
 .btn-user-registration{
 	@extend %button;
 	@include button-variant(getColor('white'), getColor('emrald'),getColor('emrald'));
-	font-family:$font-moteserrat;
 	height:40px;
         
 }
@@ -58,7 +57,6 @@
 	
 	@extend %button;
 	@include button-variant(getColor('white'), getColor('burnt-sienna'),getColor('burnt-sienna'));
-	font-family:$font-moteserrat;
 	height:50px;
 }
 
@@ -66,7 +64,6 @@
 
 	@extend %button;
 	@include button-variant(getColor('white'), getColor('emrald'),getColor('emrald'));
-	font-family:$font-moteserrat;
 	display:block;
 	margin:auto;
 	height:50px;
@@ -79,15 +76,15 @@
 .btn-login{
 @extend %button;
 	@include button-variant(getColor('white'), getColor('burnt-sienna-dark'),getColor('burnt-sienna-dark'));
-	font-family:$font-moteserrat;
-	height:50px;
+	height:40px;
+	width:100%;
+	@include setBorderRadius(15);
 }
 
 .btn-rent-call{
 
 @extend %button;
 	@include button-variant(getColor('white'), #76c4f6,#76c4f6);
-	font-family:$font-moteserrat;
 	display:block;
 	margin:auto;
 	height:50px;
@@ -100,18 +97,91 @@
 .btn-view-details{
 @extend %button;
 	@include button-variant(getColor('burnt-sienna-dark'), getColor('white'),getColor('burnt-sienna-dark'));
-	font-family:$font-moteserrat;
 	border-radius:0px;
-	height:50px;
+	height:40px;
 	margin-left:20px;
 	font-size:16px;
 	line-height:50px;
-	padding:0px;
-	width:180px;
+	padding:0px 10px;
 	transition:all 0.5s ease;
+
+	@include media-breakpoint-up(md){
+		width:180px;
+
+	}
 
 	&:hover{
 
 		@include button-variant(getColor('white'), getColor('burnt-sienna-dark'),getColor('white'));
 	}
+}
+
+.btn-email-owner{
+
+	display:block;
+}
+
+.btn-send-email,.btn-cancel{
+
+
+@extend %button;
+
+
+}
+
+.btn-send-email{
+	
+	float:left;
+	@include button-variant(getColor('white'), getColor('emrald'),getColor('emrald'));
+}
+
+.btn-cancel{
+	
+	@include button-variant(getColor('white'), getColor('danger'),getColor('danger'));
+	float:right;
+}
+
+.btn-general{
+
+@extend %button;
+	@include button-variant(getColor('white'), getColor('emrald'),getColor('emrald'));
+	
+	margin:10px 10px;
+
+	@include media-breakpoint-up(md){
+		width:auto;
+		margin:0px 10px;
+
+	}
+	
+
+	
+
+}
+.btn-upload-image{
+
+	@extend %button;
+	height:50px;
+	float:left;
+
+
+}
+.remove-image{
+	
+	@extend %button;
+	@include button-variant(getColor('white'), getColor('burnt-sienna-dark'),getColor('white'));
+    position:absolute;
+    height:20px;
+    width:20px;
+    border-radius:50%;
+    line-height:20px;
+    text-align:center;
+    padding:0;
+    
+}
+.btn-close{
+
+	@extend %button;
+	background-color:transparent;
+	border:none;
 }
