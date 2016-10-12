@@ -4,27 +4,22 @@
 <section id="login">
     <h3 class="text-xs-center">User Login</h3>
     <p class="text-xs-center">Please fill the following details to login</p>
-    
-
     <!-- login-container -->
     <div class="login-container">
         <form name='loginForm' id="login-form" role='form' novalidate>
-            
-
             <!-- Login error -->
             <div class="form-group"> 
                 <div class="input-wrapper-right">
-                    <div class="error-block">
-                        <p class="loginError">{{loginError}}</p>
+                    <div class="error-block loginError">
+                        {{loginError}}
                     </div>
                     <!-- ENd of error-block -->
                 </div>
                 <!-- End of input-wrapper-right -->
             </div>
             <!-- End of form-group -->
-
-
-            <div class="form-group" ng-class="{'has-danger' :loginForm.userEmail.$invalid && loginForm.userEmail.$dirty,'has-success':loginForm.userEmail.$valid && !loginForm.userEmail.$pristine}">
+            <div class="form-group" ng-class="{'has-danger' :loginForm.userEmail.$invalid && loginForm.userEmail.$dirty,
+                                                'has-success':loginForm.userEmail.$valid && !loginForm.userEmail.$pristine}">
                 <label class="label-control">Email:</label>
                 <div class="input-wrapper">
                     <input name="userEmail"
@@ -33,29 +28,27 @@
                             aria-describedby="emailHelp" 
                             placeholder="Enter Email" 
                             ng-model="user.email" 
-                            ng-class="{'form-control-danger' :loginForm.userEmail.$invalid && loginForm.userEmail.$dirty,'form-control-success':loginForm.userEmail.$valid && !loginForm.userEmail.$pristine}">
-        
-                <div class="error-block" ng-show="loginForm.userEmail.$invalid && loginForm.userEmail.$dirty">
-                    <p ng-show="loginForm.userEmail.$error" class="emailError">Incorrect email format</p>
-                    
+                            ng-class="{'form-control-danger' :loginForm.userEmail.$invalid && loginForm.userEmail.$dirty,
+                                        'form-control-success':loginForm.userEmail.$valid && !loginForm.userEmail.$pristine}">
+                    <div class="error-block" ng-show="loginForm.userEmail.$invalid && loginForm.userEmail.$dirty">
+                        <p ng-show="loginForm.userEmail.$error" class="emailError">Incorrect email format</p>
+
+                    </div>
+                    <!-- End of error-block -->
                 </div>
-                <!-- End of error-block -->
-            </div>
             <!-- End of input-wrapper -->
             </div>
             <!-- End of form-group -->
-
-
             <div class="form-group" ng-class="{'has-danger' :loginForm.userPassword.$invalid && loginForm.userPassword.$dirty}">
                 <label class="label-control">Password:</label>
                 <div class="input-wrapper">
                     <input type="password" 
-                            class="form-control"
-                             name="userPassword" 
-                             placeholder="Enter Password" 
-                             ng-model="user.password"
-                             ng-class="{'form-control-danger' :loginForm.userPassword.$invalid && loginForm.userPassword.$dirty}"
-                             required>
+                        class="form-control"
+                        name="userPassword" 
+                        placeholder="Enter Password" 
+                        ng-model="user.password"
+                        ng-class="{'form-control-danger' :loginForm.userPassword.$invalid && loginForm.userPassword.$dirty}"
+                        required>
                 </div>
                 <!-- End of input-wrapper -->
             </div>
@@ -69,7 +62,6 @@
                 <!-- End of input-wrapper-right -->
             </div>
             <!-- End of form-group -->
-
         </form>
     </div>
     <!-- End of login-cointainer -->
@@ -77,7 +69,7 @@
     <!-- Password Reset Section -->
     <div class="password-reset">
         <ul>
-            <li><a href="forgetPassword">Forgot Password</a></li>
+            <li><a href="/forgetPassword">Forgot Password</a></li>
             <li><a href="/register">Register</a></li>
         </ul>
     </div>

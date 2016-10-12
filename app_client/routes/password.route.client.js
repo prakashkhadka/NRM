@@ -21,24 +21,10 @@ function config($routeProvider, $locationProvider){
                 controller: "resetForgottonPwdCtrl"
                 
     })
-            .when("/fgtPwdResetFeedback",{
-                templateUrl: "auth/forgetPassword/pwdResetReqAcknowledgement/fgtFeedback.html",
-                controller: "fgtFeedbackCtrl"
-                
-    })
-            .when("/successFgtPwdResetFeedback",{
-                templateUrl: "auth/forgetPassword//successFgtPwdResetFeedback/successFgtPwdResetFeedbackTemplate.html",
-                controller: "successFgtPwdResetFeedbackCtrl"
-                
-    })
+           
             .when("/changePassword",{
                 templateUrl: "auth/changePassword/changePassword/changePasswordTemplate.html",
                 controller: "changePasswordCtrl"
                 
-    })
-            .when("/changePasswordFeedback",{
-                templateUrl: "auth/changePassword/changePasswordFeedback/changePasswordFeedbackTemplate.html",
-                controller: "changePasswordFeedbackCtrl"
-                
-    });
+    });       
 };

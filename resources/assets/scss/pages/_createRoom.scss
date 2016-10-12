@@ -1,14 +1,12 @@
 .uploaded-image-thumbnail{
-
     height:100px;
-    width:100px;
+    width:140px;
     border:2px solid grey;
     position:realtive;
 }
 
 
 .uploaded-images{
-
     margin:0;
     padding:0;
 
@@ -20,7 +18,6 @@
 
 /*image upload progress*/
 .fa-spinner{
-    
     -webkit-animation:spin 1s linear infinite;
     -moz-animation:spin 1s linear infinite;
     animation:spin 1s linear infinite;
@@ -34,12 +31,15 @@
 
 /** Adress auto fill */
 .suggestions-list{
-
     list-style-type: none;
-    padding:0;
-
+    padding-left: 0px;
     li{
-
         text-align:left;
+        //border: 1px solid black; 
+        padding: 2px;
+        padding-left:10px;
+    }
+    li:nth-child(even){
+        background-color: #e9e9e9;
     }
 }

@@ -1,213 +1,131 @@
 
 /** global form style */
 .form-group{
-
-			@include make-row();
-			margin:10px 0px;		
+    @include make-row();
+    margin:10px 0px;		
 }
-
 
 /** check-box */
 .form-check{
-	
-	text-align:left;
-	input{
-
-		height:auto;
-	}
+    text-align:left;
+    input{
+        height:auto;
+    }
 }
-
 
 /** input **/
 input{
-
-	height:40px;
-		
+    height:40px;		
 }
-
 
 /** label-control **/
 .label-control{
-
-	@include make-col-ready();
-
-
-	@include make-col(12);
-	text-align:left;
-	font-weight:bold;
-
-	@include media-breakpoint-up(md){
-
-		@include make-col(3);
-		line-height:40px;
-	}
+    @include make-col-ready();
+    @include make-col(12);
+    text-align:left;
+    font-weight:bold;
+    @include media-breakpoint-up(md){
+        @include make-col(3);
+        line-height:40px;
+    }
 }
-
 
 .input-wrapper{
-
-	@include make-col(12);
-
-	@include media-breakpoint-up(md){
-
-		@include make-col(9);		
-	}
+    @include make-col(12);
+    @include media-breakpoint-up(md){
+        @include make-col(9);		
+    }
 } //end of input-wrapper
 
-
 .input-wrapper-medium{
-
-	@include make-col(12);
-
-	@include media-breakpoint-up(md){
-
-		@include make-col(6);		
-	}
+    @include make-col(12);
+    @include media-breakpoint-up(md){
+        @include make-col(6);		
+    }
 }
-
 
 .input-wrapper-small{
-
-	@include make-col(12);
-
-	@include media-breakpoint-up(md){
-
-		@include make-col(3);		
-	}
+    @include make-col(12);
+    @include media-breakpoint-up(md){
+        @include make-col(3);		
+    }
 }
 .input-wrapper-right{
-
-	@include make-col(12);
-	text-align:left;
-	line-height:40px;
-
-	@include media-breakpoint-up(md){
-
-		@include make-col(9);
-		@include make-col-offset(3);
-	}
+    @include make-col(12);
+    text-align:left;
+    line-height:40px;
+    @include media-breakpoint-up(md){
+        @include make-col(9);
+        @include make-col-offset(3);
+    }
 }
-
 
 .image-upload-info{
-
-	border:1px grey dashed;
-	padding:20px;
-	margin-bottom:20px;
+    border:1px grey dashed;
+    padding:20px;
+    margin-bottom:20px;
 }
-
 
 /** form error */
 .error-block{
-
-	p{
-
-		color:getColor('danger');
-		text-align:left;
-	}
+    p{
+        color:getColor('danger');
+        text-align:left;
+    }
 }
-
 
 //footercontact form
 #footer-contact-form{
-
-	padding:0px 20px;
-
-	textarea{
-		
-
-		height:150px;
-
-	}
-	
-			.form-control{
-
-				@include make-col(12);
-				
-				//ipad only
-				@include media-breakpoint-only(md){
-
-					@include make-col(10);
-				}
-
-				//desktop and aboce
-				@include media-breakpoint-up(lg){
-
-					@include make-col(10);
-					
-				}
-			} //end of form-control
-	}//end footer form
-
-
-
-
-	#search-form{
-		
-		font-family:$font-moteserrat;
-
-		
-		input{
-			
-			@include make-col-ready();
-			@include make-col(9);
-			@include media-breakpoint-up(md){
-
-			@include make-col(7);
-			@include make-col-offset(1);
-			}
-			height:50px;
-		} //end input
-
-		.btn-search{
-			@include make-col-ready();
-			@include make-col(3);
-			@include media-breakpoint-up(md){
-			@include make-col(2);
-			@include make-col-offset(1);
-			}
-			
-		}
-		
-	}
-
-        
-        .test-search-box{
-            
-            
-            @include make-row();
-            height:auto;
-            @include setBackgroundColor(getColor('mercury'));
-            position:fixed;
-            top:120px;
-            z-index:999;
-            width:100%;
-            
+    padding:0px 20px;
+    textarea{
+        height:150px;
+    }
+    .form-control{
+        @include make-col(12);
+        //ipad only
+        @include media-breakpoint-only(md){
+                @include make-col(10);
         }
-        .test{
-            // background-color: red;
-            height:800px;
-            width:100%;
+        //desktop and aboce
+        @include media-breakpoint-up(lg){
+                @include make-col(10);
         }
+    } //end of form-control
+}//end footer form
 
 
 
+
+#search-form{
+    font-family:$font-moteserrat;
+    input{
+        @include make-col-ready();
+        @include make-col(9);
+        @include media-breakpoint-up(md){
+
+        @include make-col(7);
+        @include make-col-offset(1);
+        }
+        height:50px;
+    } //end input
+    .btn-search{
+        @include make-col-ready();
+        @include make-col(3);
+        @include media-breakpoint-up(md){
+            @include make-col(2);
+            @include make-col-offset(1);
+        }
+    }
+}
 #password-reset-form{
-text-align:center;
-width:100%;
-	
-
-	input{
-
-		@include make-col(10);
-		@include make-col-offset(1);
-
-		@include media-breakpoint-up(md){
-
-		@include make-col(6);
-		@include make-col-offset(1);
-	}
-	}
-
-	
+    text-align:center;
+    width:100%;
+        input{
+            @include make-col(10);
+            @include make-col-offset(1);
+            @include media-breakpoint-up(md){
+                @include make-col(6);
+                @include make-col-offset(1);
+            }
+        }
 }

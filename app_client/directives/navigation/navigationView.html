@@ -1,6 +1,5 @@
 <nav class="nrm-top-navbar">
     <a class="navbar-brand" href="/"><img class="logo" src="images/test.png"></a>
-
     <button class="top-toggler" 
             type="button" 
             data-toggle="collapse" 
@@ -14,39 +13,10 @@
     <div class="collapsable-menu" id="exCollapsingNavbar">
         <ul class="nav">
             <li><a href="/">Home</a></li>
-            <li ng-show="isLoggedIn"><a href="/dashboard">Dashboard</a></li>
-            <!-- <li ng-if="isLoggedIn"><a href="/createRoom">Rent Room</a></li> -->
+            <li ng-if="isLoggedIn"><a href="/dashboard">Dashboard</a></li>
             <li ng-hide="isLoggedIn"><a href="/login">Log in</a></li>
             <li ng-hide="isLoggedIn"><a class="btn-sign-up" href="/register">Sign up</a></li>
-            <!-- <li ng-if="isLoggedIn"><a href="/myPost">My Ads</a></li> -->
-            <!-- <li ng-if="isLoggedIn"><a href="/changePassword">Change Password</a></li> -->
             <li ng-if="isLoggedIn" ng-click="logout()"><a class="btn-sign-up" href="/#">Log Out</a></li>
         </ul>
     </div>
 </nav>
-
-
-<!--
-<nav class="nrm-top-navbar">
-    <a class="navbar-brand" href="/"><img class="logo" src="images/test.png"></a>
-    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
-    &#9776;
-  a</button>
-    <div class="collapsable-menu" id="exCollapsingNavbar">
-        <ul class="nav">
-            <li ><a href="/">Home</a></li>
-            <li ng-if="isLoggedIn"><a href="/createRoom">Rent Room</a></li>
-            <li ng-hide="isLoggedIn"><a href="/login">Log in</a></li>
-            <li ng-hide="isLoggedIn"><a class="btn-sign-up" href="/register">Sign up</a></li>
-            <li ng-if="isLoggedIn"><a href="/myPost">My Ads</a></li>
-            <li ng-if="isLoggedIn"><a href="/changePassword">Change Password</a></li>
-            <li ng-if="isLoggedIn" ng-click="logout()"><a class="btn-sign-up" href="/#">Log Out</a></li>
-        </ul>
-        
-    </div>
-</nav>
--->
-
-                
-        
-            

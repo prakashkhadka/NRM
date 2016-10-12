@@ -17,10 +17,8 @@
       replace:true,
       templateUrl:'directives/feedback/feedbackTemplate.html',
       scope:{
-
       	isActionCompleted: '@',
       	feedbackMessage:'@'
-      }
-      
+      }  
   };
 }

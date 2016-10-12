@@ -5,11 +5,11 @@
  */
 
 angular
-        .module("roomApp")
-        .controller("registerCtrl", registerCtrl);
+    .module("roomApp")
+    .controller("registerCtrl", registerCtrl);
 
 
-function registerCtrl($location, $scope, authentication, $http, $anchorScroll){
+function registerCtrl($location, $scope, authentication, $http, $anchorScroll, $timeout){
     $anchorScroll();
 /*
     Following function checks whether supplied email address is exists in the database or not
@@ -53,8 +53,16 @@ function registerCtrl($location, $scope, authentication, $http, $anchorScroll){
     $scope.register = function(user){
     //console.log(user);
     if(user.password === user.password1 && user.tandc === true){
-        authentication.register(user).success(function(data){
-            $location.path("/");
+        authentication.register(user)
+            .success(function(data){
+                $scope.isRegistered = true;
+                $scope.feedbackMessage = "Congratulation ! You are successfully registered.";
+                $('#feedback-modal').modal('show');
+                $timeout(function(){
+                    $('.modal-backdrop').remove();
+                    $location.path("/dashboard");
+                },2000);
+                    
         }, function(data){
             console.log("Registration Error is : " + data);
             $scope.errorMessage = data;

@@ -27,9 +27,10 @@ module.exports.changePassword = function(req, res){
             .exec(function(err, user){
                 //console.log("User found");  
                 if(!user){
-                    sendJSONresponse(res, 404, {message: "Sory you can not change password at this moment"});
+                    sendJSONresponse(res, 404, {message: "Sorry you can not change password at this moment"});
                 }
                 else if(user.validPassword(oldPassword)){
+                     //console.log("user.validPassword(oldPassword)");
                     //console.log("Password is validated");
                     user.setPassword(newPassword);
                     user.save(function(err){
@@ -45,6 +46,10 @@ module.exports.changePassword = function(req, res){
                     });
                     //console.log("Password Changed");
                 }
+                else{
+                    //If loggedIn user enters wrong old password. Message is generated in the client side.
+                    sendJSONresponse(res, 404, {});
+                };
             }); 
     }
     else{

@@ -1,15 +1,12 @@
 
 /* Call out heading*/
 h1{
-	
-	font-family:$font-moteserrat;
-	font-weight:700;	
+    font-family:$font-moteserrat;
+    font-weight:700;	
 }
-
 
 /* Page heading*/
 h3{
-
     color:$text-color-heading !important;
     display:block;
     font-family: $font-moteserrat;
@@ -19,18 +16,14 @@ h3{
 }
 
 /*Sub heading / Footer heading */
-
 h5{
     font-family:$font-moteserrat;
     font-weight:600;
 }
 
-
 /* body text */
-
 p{
-	font-family:$font-news-cycle;
-    font-size:16px;
-		
+    font-family:$font-news-cycle;
+    font-size:16px;		
 }
  

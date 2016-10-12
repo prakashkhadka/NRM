@@ -9,24 +9,24 @@ and open the template in the editor.
 */
 
 .hero{
-  @include make-row();
+    margin-top: -20px;
+    @include make-row();
     //height:50vh;
     background-image:url('../images/hero.jpg');
     background-size:     cover;                      
     background-repeat:   no-repeat;
     background-position: center center; 
-    
     @include media-breakpoint-up(xs){
-        height: 26vh;
-        padding:0px 10px;
+        height: 17vh;
+        padding:0px 0px;
         h1{
             display: none;
         }
     }
      @include media-breakpoint-up(md){
-        height: 25vh;
+        height: 20vh;
         h1{
-            padding-top: 90px;
+            padding-top: 30px;
             font-family:$font-moteserrat;
             text-shadow:4px 4px 4px black;
             color:getColor('white');
@@ -36,9 +36,9 @@ and open the template in the editor.
          }
     }
      @include media-breakpoint-up(lg){
-        height: 55vh;
+        height: 50vh;
         h1{
-            padding-top: 100px;
+            padding-top: 50px;
             font-size: 35pt;
         }
     }
@@ -49,13 +49,12 @@ and open the template in the editor.
     @include make-col(12);
     text-align:center;
     background: rgba(51, 51, 51, 0.4);
-    
     //For mobile
-    @include media-breakpoint-up(xs){		
-          @include make-col(11);
-          @include make-col-offset(.5);
-          margin-top: 80px;
-          max-height: 80px;
+    @include media-breakpoint-up(xs){
+        @include make-col(11.6);
+        @include make-col-offset(0.2);
+        margin-top: 20px;
+        max-height: 80px;
       }
 
     //For tablet and up
@@ -65,7 +64,7 @@ and open the template in the editor.
         border:1px gray solid;
         margin-top:0px;
         min-height:100px;
-        padding-top:25px;
+        padding-top:15px;
      }
      
      //For desktop
@@ -73,79 +72,8 @@ and open the template in the editor.
        @include make-col(6);
        @include make-col-offset(3);
        margin-top: 20px;
-       padding-top: 45px;
+       padding-top: 40px;
        min-height: 150px;
     }
 
-}
-// Hero image when search is performed -- by Prakash
-.hero-search{
-    @include make-row();
-    //height:50vh;
-    background-image:url('../images/hero.jpg');
-    background-size:     cover;                      
-    background-repeat:   no-repeat;
-    background-position: center center; 
-    
-    @include media-breakpoint-up(xs){
-        height: 23vh;
-        padding:0px 10px;
-        h1{
-            display: none;
-        }
-    }
-     @include media-breakpoint-up(md){
-        height: 15vh;
-        h1{
-            padding-top: 90px;
-            font-family:$font-moteserrat;
-            text-shadow:4px 4px 4px black;
-            color:getColor('white');
-            text-align:center;
-            display:block;
-            font-size: 20pt;
-         }
-    }
-     @include media-breakpoint-up(lg){
-        height: 22vh;
-        h1{
-            padding-top: 100px;
-            font-size: 35pt;
-        }
-    } 
-} //end of heroSearch
-
-
-
-// for small search box which appears when search is done -- by Prakash
-.search-box-small{
-    @include make-col-ready();
-    @include make-col(12);
-    text-align:center;
-    
-    
-  
-  //only tablet
-    @include media-breakpoint-up(xs){		
-        @include make-col(11);
-        @include make-col-offset(.5);
-        margin-top:80px;
-      }
-
-    //desktop and up
-     @include media-breakpoint-up(md){    
-        @include make-col(9);
-        @include make-col-offset(1.5);
-        max-height:60px;
-        padding-top: 10px;
-       
-    }
-    @include media-breakpoint-up(lg){
-        @include make-col(6);
-        @include make-col-offset(3);
-        min-height: 90px;
-        padding-top: 20px;
-        margin-top: 82px;
-        
-    }
 }

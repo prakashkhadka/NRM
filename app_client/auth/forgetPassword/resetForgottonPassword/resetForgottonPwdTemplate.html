@@ -1,18 +1,63 @@
-
-<h1>Reset Password</h1>
-{{user.email}}
-<form role="form">
-    
-    <div class="form-group">
-        <label for="pwd1">Password:</label>
-        <input type="password" class="form-control" id="pwd1" ng-model="newPassword.newPassword1">
+<navigation></navigation>
+<section>
+    <h3>Fortton Password Reset</h3>
+    <div class="page-wrapper">
+        <div class="page-container">
+            <form name="forgottonPasswordResetForm" novalidate>
+                <div class="form-group" ng-class="{'has-danger':forgottonPasswordResetForm.$invalid && forgottonPasswordResetForm.passwordReset.$dirty,
+                                        'has-success':forgottonPasswordResetForm.passwordReset.$valid && forgottonPasswordResetForm.passwordReset.$dirty}">
+                    <label class="label-control" for="passwordReset"> Password :</label>
+                    <div class="input-wrapper-medium">
+                        <input type="password"
+                               name="passwordReset"
+                               class="form-control" 
+                               required
+                               ng-minlength="6"
+                               ng-model="newPassword.newPassword1"
+                               ng-class="{'form-control-danger':forgottonPasswordResetForm.passwordReset.$invalid && forgottonPasswordResetForm.passwordReset.$dirty,
+                                     'form-control-success':forgottonPasswordResetForm.passwordReset.$valid}">
+                        <!-- error-block -->
+                        <div class="error-block forgetPassword-error-block" ng-show="forgottonPasswordResetForm.passwordReset.$invalid && forgottonPasswordResetForm.passwordReset.$dirty">
+                            <p ng-show="forgottonPasswordResetForm.passwordReset.$error.required">
+                                Please enter new password
+                            </p>
+                            <p ng-show="forgottonPasswordResetForm.passwordReset.$error.minlength">
+                                Password must be at least 6 character long.
+                            </p>
+                        </div>
+                        <!-- End of error-block -->
+                    </div>
+                </div>
+                <div class="form-group" ng-class="{'has-danger':forgottonPasswordResetForm.$invalid && forgottonPasswordResetForm.passwordReset1.$dirty,
+                                        'has-success':forgottonPasswordResetForm.passwordReset1.$valid && forgottonPasswordResetForm.passwordReset1.$dirty}">
+                    <label class="label-control" for="passwordReset1">Confirm password :</label>
+                    <div class="input-wrapper-medium">
+                        <input type="password"
+                               name="passwordReset1"
+                               class="form-control" 
+                               required
+                               ng-model="newPassword.newPassword2"
+                               ng-class="{'form-control-danger':forgottonPasswordResetForm.passwordReset1.$invalid && forgottonPasswordResetForm.passwordReset1.$dirty,
+                                     'form-control-success':forgottonPasswordResetForm.passwordReset.$valid}">
+                        <!-- error-block -->
+                        <div class="error-block forgetPassword-error-block" ng-show="passwordResetForm.passwordReset1.$invalid && passwordResetForm.passwordReset1.$dirty">
+                            <p ng-show="forgottonPasswordResetForm.passwordReset1.$error.required">
+                                Please enter new password
+                            </p>
+                            <p ng-show="forgottonPasswordResetForm.passwordReset1.$error.minlength">
+                                Password must be at least 6 character long.
+                            </p>
+                        </div>
+                        <!-- End of error-block -->
+                    </div>
+                </div>
+                <!-- Change button -->
+                <div class="form-group">
+                    <button ng-disabled="forgottonPasswordResetForm.$invalid" class="btn-general" ng-click="change(newPassword)">Submit</button>
+                </div>
+            </form>
+            <p>{{passwordError}}</p>
+            <feedback is-action-completed="{{isForgottonPasswordReset}}" feedback-message="{{feedbackMessage}}"></feedback>
+        </div>
     </div>
-    <div class="form-group">
-        <label for="pwd2">Confirm Password:</label>
-        <input type="password" class="form-control" id="pwd2" ng-model="newPassword.newPassword2">
-    </div>
-    <button class="btn btn-default" ng-click="change(newPassword)">Submit</button>
-</form>
-
-<h4>{{passwordError}}</h4>
-
+</section>

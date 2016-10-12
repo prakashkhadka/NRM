@@ -14,7 +14,7 @@ angular
     On the serverside mongoose method is used to find the token saved on the mongodb. If it finds the token
     on database, it goes further to change and save password.
  */
-function resetForgottonPwdCtrl($scope, $http, $location, $routeParams, authentication, $anchorScroll){
+function resetForgottonPwdCtrl($scope, $http, $location, $routeParams, authentication, $anchorScroll, $timeout){
     $anchorScroll();
     $scope.receivedToken = $routeParams.receivedToken;
     //console.log("RT : " + $scope.receivedToken);
@@ -38,7 +38,14 @@ function resetForgottonPwdCtrl($scope, $http, $location, $routeParams, authentic
         }).then(function success(response){
             //console.log("Received JWT is : " + response.data.token);
             authentication.saveToken(response.data.token);
-            $location.path('/successFgtPwdResetFeedback');
+            $scope.isForgottonPasswordReset = true;
+                $scope.feedbackMessage = "Congratulations ! Your password is changed.";
+                $('#feedback-modal').modal('show');
+                $timeout(function(){
+                    $('.modal-backdrop').remove();
+                    $location.path("/dashboard");
+                },2000);
+            //$location.path('/successFgtPwdResetFeedback');
         }, function failure(respose){
             $scope.message = "Could not reset your password";
         });

@@ -148,6 +148,9 @@ footer{
         .dev{
         // border:2px pink solid;
             text-align:right;
+            @include media-breakpoint-up(md){
+                padding-right: 20px;
+            }
         }
     } //end of media break point
 }

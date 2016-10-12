@@ -1,6 +1,6 @@
 <navigation></navigation>
 
-<div class="hero-search">
+<div class="searchBoxWhenResultIsReceived">
     <div class="search-box-small">
         <search-room></search-room>
     </div> 
@@ -17,7 +17,7 @@
                     <span class="sr-only">Previous</span>
                 </a>
             </li>
-            <li class="page-item" ng-click="getRooms(1)"><a class="page-link" href="#">1</a></li>
+            <li class="page-item" ng-click="getRooms(1)"><a class="page-link" ng-class="{active:currentPage}" href="#">1</a></li>
             <li class="page-item" ng-click="getRooms(2)"><a class="page-link" href="#">2</a></li>
             <li class="page-item" ng-click="getRooms(3)"><a class="page-link" href="#">3</a></li>
             <li class="page-item hidden-sm-down" ng-click="getRooms(4)"><a class="page-link" href="#">4</a></li>
@@ -31,26 +31,25 @@
         </ul>
     </nav>
     
-    <section>
-        
-        <!-- Recent Room Container -->
-        <div class="recent-rooms">
-            <!-- Recent Room Card -->
-            <div class="room" ng-repeat="room in rooms"> 
-                <img class="card-img-top" 
-                ng-src="{{room.images.length > 0 &&  'https://s3-ap-southeast-2.amazonaws.com/nrm/'+room.images[0] || 'images/room1.jpg'}}" alt="Card image cap">
-
-                <a href="/roomDetail/{{room._id}}" class="address">{{room.suburb}}, {{room.state}} {{room.postcode}}</a>
-                <span class="rent">${{room.rent}}</span>
-            </div>
-            <!-- End of Recent Room Card -->
-        </div>
-        <!-- Recent Room Container -->
-    </section>
-    
     <div ng-if="endOfPage">
         <h3>No more rooms</h3>
     </div>
+    
+    
+    <!-- Recent Room Container -->
+    <div class="recent-rooms">
+        <!-- Recent Room Card -->
+        <div class="room" ng-repeat="room in rooms"> 
+            <img class="card-img-top" 
+            ng-src="{{room.images.length > 0 &&  'https://s3-ap-southeast-2.amazonaws.com/nrm/'+room.images[0] || 'images/room1.jpg'}}" alt="Card image cap">
+
+            <a href="/roomDetail/{{room._id}}" class="address">{{room.suburb}}, {{room.state}} {{room.postcode}}</a>
+            <span class="rent">${{room.rent}}</span>
+        </div>
+        <!-- End of Recent Room Card -->
+    </div>
+    <!-- Recent Room Container -->
+   
     
     <nav aria-label="Page navigation" class="pagination-bar text-xs-center">
         <ul class="pagination">

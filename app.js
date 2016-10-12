@@ -25,7 +25,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 //app.use(cors({origin: 'null'}));
 
-
 // this loads public and app_client folder to the browser on every request to server
 app.use(express.static(path.join(__dirname, 'public')));
 

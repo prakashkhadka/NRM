@@ -4,11 +4,12 @@
     <form name='contactUsForm' id="contactUsForm" role='form' novalidate="">
         <div class="form-group">
             <input name='guestName' type="text" class="form-control" aria-describedby="emailHelp"
-                   ng-minlength ='2'
-                   ng-maxlength ='20'
-                   placeholder="Enter name" 
-                   ng-model="contactUs.name" required>
+                ng-minlength ='2'
+                ng-maxlength ='20'
+                placeholder="Enter name" 
+                ng-model="contactUs.name" required>
         </div>
+        
         <div class='contactUsError' ng-show="contactUsForm.guestName.$invalid && contactUsForm.guestName.$dirty">
             <span ng-show="contactUsForm.guestName.$error.minlength">
                 Your name must be at least 2 character long
@@ -21,9 +22,13 @@
             </span>
         </div>
         
-        
         <div class="form-group">
-            <input name='guestEmail' type="email" class="form-control" placeholder="Enter email" ng-model="contactUs.email" required>
+            <input name='guestEmail' 
+                   type="email" 
+                   class="form-control" 
+                   placeholder="Enter email" 
+                   ng-model="contactUs.email" 
+                   required>
         </div>
         <div class='contactUsError' ng-show="contactUsForm.guestEmail.$invalid && contactUsForm.guestEmail.$dirty">
             <span>
@@ -36,10 +41,11 @@
         
         <div class="form-group">
             <textarea name='guestMessage' type="text" class="form-control" 
-                      ng-minlength ='10'
-                      ng-maxlength =' 1000'
-                      ng-model="contactUs.message"
-                      paceholder="Your message" required>        
+                ng-minlength ='10'
+                ng-maxlength =' 1000'
+                ng-model="contactUs.message"
+                paceholder="Your message" 
+                required>        
             </textarea>
         </div>
         <div class='contactUsError' ng-show="contactUsForm.guestMessage.$invalid && contactUsForm.guestMessage.$dirty">
@@ -56,28 +62,26 @@
         
         <div class="form-group">
             <button id='sendMessage' class="btn-send-message form-control" 
-                    ng-click="sendMessage(contactUs)"
-                    data-toggle="modal" 
-                    data-target="#myModal"
-                    ng-disabled='contactUsForm.$invalid'>
+                ng-click="sendMessage(contactUs)"
+                data-toggle="modal" 
+                ng-disabled='contactUsForm.$invalid'>
                 Send Message
             </button>
         </div>
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+         <!-- Modal -->
+        <div class="modal fade" id="contactUSModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                <h3 class="modal-title" id="myModalLabel">Confirmation</h3>
               </div>
               <div class="modal-body">
-                ...
+                    <p>
+                        Your message is sent. We will be in touch with you as soon as possible.
+                    </p>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="closeContactUsModal()">Close</button>
               </div>
             </div>
           </div>

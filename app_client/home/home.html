@@ -7,34 +7,26 @@
     </div> 
 </div>
 
-
-
-
 <!-- Recent Rooms Section-->
 <section id="recentlyAddedRoomsSection">
-    
-        <h3>Recently Added Rooms</h3>
-        <!-- Recent Room Container -->
-        <div class="recent-rooms">
-            <!-- Recent Room Card -->
-            <div class="room" ng-repeat="room in rooms"> 
-                <img class="card-img-top" 
-                ng-src="{{room.images.length > 0 &&  'https://s3-ap-southeast-2.amazonaws.com/nrm/'+room.images[0] || 'images/room1.jpg'}}" alt="Card image cap">
+    <h3>Recently Added Rooms</h3>
+    <!-- Recent Room Container -->
+    <div class="recent-rooms">
+        <!-- Recent Room Card -->
+        <div class="room" ng-repeat="room in rooms"> 
+            <img class="card-img-top" 
+            ng-src="{{room.images.length > 0 &&  'https://s3-ap-southeast-2.amazonaws.com/nrm/'+room.images[0] || 'images/room1.jpg'}}" alt="Card image cap">
 
-                <a href="/roomDetail/{{room._id}}" class="address">{{room.suburb}}, {{room.state}} {{room.postcode}}</a>
-                <span class="rent">${{room.rent}}</span>
-                <div class="label"><span>New</span></div> <!-- Angled New Label -->
-            </div>
-            <!-- End of Recent Room Card -->
+            <a href="/roomDetail/{{room._id}}" class="address">{{room.suburb}}, {{room.state}} {{room.postcode}}</a>
+            <span class="rent">${{room.rent}}</span>
+            <div class="label"><span>New</span></div> <!-- Angled New Label -->
         </div>
-        <!-- Recent Room Container -->
-        
-   
-
-
-<div id="viewAllButton">
-    <a href="/roomPagination" class="btn-view-all">View all</a>
-</div>
+        <!-- End of Recent Room Card -->
+    </div>
+    <!-- Recent Room Container -->
+    <div id="viewAllButton">
+        <a href="/roomPagination" class="btn-view-all">View all</a>
+    </div>
 </section>
 <!-- End of Recent Rooms Section-->
 

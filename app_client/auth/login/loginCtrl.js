@@ -5,8 +5,8 @@
  */
 
 angular
-        .module("roomApp")
-        .controller("loginCtrl", loginCtrl);
+    .module("roomApp")
+    .controller("loginCtrl", loginCtrl);
 
 /*
     Following function takes user input as user object which has email and password property and use authentication
@@ -26,7 +26,8 @@ function loginCtrl($scope, $location, authentication, $anchorScroll){
                 $location.path("/dashboard");          
             })
             .error(function(data){
-                $scope.loginError = data.message;
+                $scope.loginError = "Incorrect email or password.";
+                //$scope.loginError = data.message;
                 //console.log("Error occured" + data.message);    
             });
     };

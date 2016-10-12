@@ -81,12 +81,18 @@ module.exports.createOneRoom = function(req, res){
         suburb : req.body.suburb,
         postcode : req.body.postcode,
         state: req.body.state,
-        street: req.body.street_name,
+        street_name: req.body.street_name,
         street_no : req.body.street_no,
         unit : req.body.unit,
         rent: req.body.rent,
         bond: req.body.bond,
         gender : req.body.gender,
+        totalBedRooms: req.body.totalBedRooms,
+        bills: req.body.bills,
+        furnishing: req.body.furnishing,
+        parking: req.body.parking,
+        propertyType: req.body.propertyType,
+        totalBathrooms:req.body.totalBathrooms,
         available_from : req.body.available_from,
         message : req.body.message,
         contact_no : req.body.contact_no,
@@ -136,13 +142,19 @@ module.exports.updateOneRoom = function(req, res){
             room.suburb = req.body.suburb;
             //console.log("Changed Suburb is : " + room.suburb);
             room.postcode = req.body.postcode;
-            room.street = req.body.street;
+            room.street_name = req.body.street_name;
             room.street_no = req.body.street_no;
             room.unit = req.body.unit;
             room.rent = req.body.rent;
             room.state = req.body.state;
             room.bond = req.body.bond;
             room.gender = req.body.gender;
+            room.bills= req.body.bills;
+            room.furnishing= req.body.furnishing;
+            room.parking= req.body.parking;
+            room.propertyType= req.body.propertyType;
+            room.totalBedRooms= req.body.totalBedRooms;
+            room.totalBathrooms= req.body.totalBathrooms;
             room.available_from = req.body.available_from;
             room.message = req.body.message;
             room.contact_no = req.body.contact_no;
@@ -169,6 +181,8 @@ module.exports.deleteOneRoom = function(req, res){
         Rm
             .findByIdAndRemove(rmid)
             .exec(function(err, deletedRoom){
+                console.log("Deleted room in server side is : ");
+                console.log(deletedRoom);
                 if(err){
                     //console.log("Can not Delete the room. The function findByIdAndRemove is not working : " + err);
                     sendJSONresponse(res, 404, err);

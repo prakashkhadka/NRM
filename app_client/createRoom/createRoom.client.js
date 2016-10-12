@@ -7,26 +7,39 @@ angular
         .module("roomApp")
         .controller("createRoomCtrl", createRoomCtrl);
 
-function createRoomCtrl($location, $scope, $http, $rootScope, authentication, $anchorScroll){
-    //$scope.availableBedroomsNumber = {bedroomCount : [1,2,3,4,5], room.totalBedRooms: 2};
-    //$scope.room.totalBedRooms = $scope.availableBedroomsNumber[1];
-    $scope.room = {
+function createRoomCtrl($location, $scope, $http, authentication, $anchorScroll, $timeout, authentication){
+    if(!authentication.isLoggedIn()){
+        $location.path("/login");
+    };
+    $scope.availableOptions = {
         availableBROptions: [1,2,3,4,5],
-        totalBedRooms: 2,
         availableBillsOption:["included", "excluded"],
-        bills: "included",
         availableGenderOption: ["Couple", "Female", "Male", "No preferred gender"],
-        gender: "Couple",
         availableFurnishingOption: ["Fully-furnished", "semi-furnished", "Not furnished"],
-        furnishing: "Fully-furnished",
         availableParkingOption:["Locked garage", "Driveway", "Compound", "Street", "Not Available"],
-        parking: "Street",
         availablePropertyOption: ["Apartment", "House"],
+        availableBathroomOption: [1,2,3]
+    };
+    
+    $scope.room = {
+        totalBedRooms: 2,
+        bills: "included",
+        gender: "Couple",
+        furnishing: "Fully-furnished",
+        parking: "Street",
         propertyType: "Apartment",
-        availableBathroomOption: [1,2,3],
         totalBathrooms: 1
     };
     
+   /*
+    $scope.room.totalBedRooms= 2;
+    $scope.room.bills= "included";
+    $scope.room.gender= "Couple";
+    $scope.room.furnishing= "Fully-furnished";
+    $scope.room.parking= "Street";
+    $scope.room.propertyType= "Apartment";
+    $scope.room.totalBathrooms= 1;
+    */
     
     $anchorScroll();
     $scope.beforeChange = function(){
@@ -124,15 +137,12 @@ function createRoomCtrl($location, $scope, $http, $rootScope, authentication, $a
             headers: {Authorization: 'Bearer '+ authentication.getToken()}
         }).then(function(response){
             $scope.isPosted=true;
-            $scope.feedbackMessage="Successfully listed your room";
+            $scope.feedbackMessage="Congratulations! You have successfully listed your room";
             $('#feedback-modal').modal('show');
-
             $timeout(function(){
-                $('#feedback-modal').modal('hide');
-                 $location.path("/myPost");
-            },2000)
-             $location.path("/myPost");
-
+                $('.modal-backdrop').remove();
+                $location.path("/myPost");
+            },2000);
         }, function(response){
             $scope.errorMessage = response.data;
         }, function(evt) {

@@ -1,3 +1,13 @@
+#recentlyAddedRoomsSection{
+    @include media-breakpoint-only(xs){
+        h3{
+            font-size: 17pt; 
+        }
+    }
+    @include media-breakpoint-up(lg){
+        padding-top: 30px;
+    }
+}
 #viewAllButton{
     margin-top: 15px;
     margin-bottom: 20px;
@@ -5,7 +15,10 @@
 
 // recent rooms
 .recent-rooms{
-    //border: 2px solid red;
+    @include media-breakpoint-up(lg){
+        margin-top: -13px;
+    }
+    
     @include make-row();
     margin:0px;
     //padding:1% 2%;
@@ -18,17 +31,14 @@
           box-shadow:5px 5px 10px  rgba(0,0,0,0.5);
           position:relative;
           border:1px solid grey;
-
           @include media-breakpoint-up(md){
             width:40%;
             margin:3% 5%;
           }
-
           @include media-breakpoint-up(lg){
             width:23.33%;
-             margin:8% 2.5%;
+            margin:8% 2.5%;
           }
-
           @include media-breakpoint-up(xl){ 
             width:20%;
             margin:2.5% 2.5%;

@@ -1,64 +1,58 @@
 
 .login-container{
-		
+    padding-top: 5px;
+    padding-bottom: 10px;
+    background-color:#FFF;
+    box-shadow:0px 10px 40px rgba(0,0,0,0.8);
+    @include media-breakpoint-up(xs){
+        width:96%;
+        margin:0% 2%;
+        .input-wrapper{
+            @include make-col(12);
+            padding-left: 20px;
+            padding-right: 20px;
+        } //end of input-wrapper
+    }
+    @include media-breakpoint-up(md){
+        width:60%;
+        margin:0% 20%;
+        .input-wrapper{
+            @include make-col(9);
+        } //end of input-wrapper
+    }
+    @include media-breakpoint-up(lg){
+        width:70%;
+        margin:0% 20%;
+    }
+    @include media-breakpoint-up(xl){
+        width:30%;
+        margin:0% 35%;
+    }
+}
 
-		background-color:#FFF;
-		width:80%;
-		margin:0% 10%;
-		padding:40px;
-		box-shadow:0px 10px 40px rgba(0,0,0,0.8);
-
-		@include media-breakpoint-up(md){
-
-			width:70%;
-			margin:0% 15%;
-
-		}
-
-		@include media-breakpoint-up(lg){
-
-			width:60%;
-			margin:0% 20%;
-		
-		}
-		@include media-breakpoint-up(xl){
-
-			width:30%;
-			margin:0% 35%;
-		}
-	}
-
-	.password-reset{
-		
-		@include make-row();
-		margin-top:50px;	
-		text-align:center;
-		ul{
-			padding:0;
-			margin:0;
-			list-style-type:none;
-			li{
-				
-				display:inline-block;
-
-				a{
-					text-decoration:none;
-					color:$text-color-heading;
-					font-weight:700;
-
-					&:hover{
-						
-						color:getColor('burnt-sienna-dark');
-
-					}
-				}
-			}
-
-			li:not(:last-child):after{
-
-				content:"|";
-				position:relative;
-				margin:0px 10px;
-			}
-		}
-	}
+.password-reset{
+        @include make-row();
+        margin-top:30px;	
+        text-align:center;
+        ul{
+            padding:0;
+            margin:0;
+            list-style-type:none;
+            li{
+                display:inline-block;
+                a{
+                    text-decoration:none;
+                    color:$text-color-heading;
+                    font-weight:700;
+                    &:hover{
+                        color:getColor('burnt-sienna-dark');
+                    }
+                }
+            }
+            li:not(:last-child):after{
+                content:"|";
+                position:relative;
+                margin:0px 10px;
+            }
+    }
+}

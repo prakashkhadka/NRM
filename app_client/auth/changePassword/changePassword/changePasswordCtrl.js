@@ -9,7 +9,10 @@ angular
         .module("roomApp")
         .controller("changePasswordCtrl", changePasswordCtrl);
 
-function changePasswordCtrl($scope, $location, $http, authentication, $anchorScroll){
+function changePasswordCtrl($scope, $location, $http, authentication, $anchorScroll, $timeout){
+    if(!authentication.isLoggedIn()){
+        $location.path("/login");
+    };
     $anchorScroll();
     $scope.changePassword = function(pwd){
         var isLoggedIn = authentication.isLoggedIn();
@@ -37,8 +40,15 @@ function changePasswordCtrl($scope, $location, $http, authentication, $anchorScr
                 headers: {Authorization: 'Bearer '+ authentication.getToken()}
             }).then(function(response){
                 //console.log("Success Function" + response.data);
-                $location.path('/changePasswordFeedback');
+                $scope.isPasswordChanged= true;
+                $scope.feedbackMessage = "Your password is successfully changed.";
+                $('#feedback-modal').modal('show');
+                $timeout(function(){
+                    $('.modal-backdrop').remove();
+                    $location.path('/dashboard');
+                },1500);
             }, function(response){
+                $scope.errorMessage = "Something went wrong. Please try again.";
                 //console.log("Failure response is: " + response.data);
             });
         }

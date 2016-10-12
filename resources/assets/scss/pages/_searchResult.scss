@@ -8,132 +8,207 @@
         }
     }
 }
-
-
-.search-box-wrapper{
-
+// Hero image when search is performed -- by Prakash
+.searchBoxWhenResultIsReceived{
+    margin-top: -20px;
     @include make-row();
-    padding:5px;
-}
+    //height:50vh;
+    background-image:url('../images/hero.jpg');
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center; 
+    @include media-breakpoint-up(xs){
+        height: 14vh;
+        padding:0px 0px;
+    }
+     @include media-breakpoint-up(md){
+        height: 10vh;
+    }
+     @include media-breakpoint-up(lg){
+        height: 12vh;
+    } 
+} //end of heroSearch
 
 
+
+// for small search box which appears when search is done -- by Prakash
 .search-box-small{
-
     @include make-col-ready();
     @include make-col(12);
-    padding:5px;
-    margin:0px;
+    text-align:center;
+  //only tablet
+    @include media-breakpoint-up(xs){		
+        @include make-col(11.6);
+        @include make-col-offset(0.2);
+        margin-top: 10px;
+      }
 
-    @include media-breakpoint-up(md){
-
+    //desktop and up
+     @include media-breakpoint-up(md){    
+        @include make-col(9);
+        @include make-col-offset(1.5);
+        max-height:60px;
+        padding-top: 13px;
+       
+    }
+    @include media-breakpoint-up(lg){
         @include make-col(6);
         @include make-col-offset(3);
+        min-height: 90px; 
     }
-
 }
-
+//For search result
 .search-result{
-    
-
-	@include make-row();
-	
+    @include make-row();
     .result-room{
-		
         @include make-col-ready();
         @include make-col(12);
-		margin:20px 0px;
-		background-color: #fff;
-		height:250px;
-		padding:0;
-		
-
-		@include media-breakpoint-up(lg){
-			
-			@include make-col(6);
-			@include make-col-offset(3);
-			
-                    }
-		} //end of room
-
-        .room-street-address{
-            
-            font-weight: normal;
-            font-size: 12pt;
+        margin:20px 0px;
+        background-color: #fff;
+        height:250px;
+        padding:0;
+        @include media-breakpoint-up(lg){
+            @include make-col(6);
+            @include make-col-offset(3);
+            }
+        @include media-breakpoint-down(sm){
+           height: 180px;
+        }
+    } //end of room
+    .room-street-address{ 
+        font-weight: normal;
+        font-size: 12pt;
     }
 } //end of search result
-
-
-.left-col{
-	
-    @include make-col-ready();
-	@include make-col(6);
-	position:relative;
-	padding:0px;
-	height:100%;
-        		 
-    address{
-
- 	  margin:20px;
- 	  font-size:18px;
- 	  font-weight:bold;
-    }
-
-} //end of left-col
-			
-.right-col{
-        
-    @include make-col-ready();
-    @include make-col(6);
-    padding:0px;
-    height:100%;
-    position:relative;
-    .room-image{
-
-        width:100%;
-        height:100%;
+@include media-breakpoint-up(md){
+    .left-col{
+        @include make-col-ready();
+        @include make-col(6);
+        position:relative;
+        padding-left:15px;
+        height:100%; 		 
+        address{
+            margin:20px;
+            font-size:18px;
+            font-weight:bold;
         }
-
-    .rent{
-
+    } //end of left-col
+	
+    .right-col{  
+        @include make-col-ready();
+        @include make-col(6);
+        padding:0px;
+        height:100%;
+        position:relative;
+        .room-image{
+            width:100%;
+            height:100%;
+        }
+        .rent{
             position:absolute;
             width:100%;
             display:block;
             bottom:0;
             background-color: rgba(31,130,125,0.9);
-            text-align:right;
+            text-align:left;
             height:50px;
             line-height:50px;
             color:#FFF;
             padding:0px 20px;
             font-weight:bold;
         }
-
-} //end of right-col
-
-
-.room-overview{
-        
-    margin:auto;
-    padding:0px;
-    height:50px;
-    bottom:0;
-    width:100%;
-    list-style-type:none;
-    background-color: rgba(0,0,0,0.9);
-    position:absolute;
-    
-    li{
-            
-        display:inline-block;
-        color:#FFF;
-        margin:0px 20px;
-        line-height:50px; 
-            span{
-                
-                margin-left:8px;
-                font-size:14px;
-            }
-
-                                              
+    } //end of right-col
+    .room-overview{  
+        margin:auto;
+        padding:0px;
+        height:50px;
+        bottom:0;
+        width:100%;
+        list-style-type:none;
+        background-color: rgba(0,0,0,0.9);
+        position:absolute;
+        li{     
+            display:inline-block;
+            color:#FFF;
+            margin:0px 20px;
+            line-height:50px; 
+                span{
+                    margin-left:8px;
+                    font-size:14px;
+                }                                     
         }
-} //end of room-overview
+    } //end of room-overview
+}
+@include media-breakpoint-down(sm){
+    address{
+        text-align: center;
+        .room-street-address{
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+    }
+    .left-col{
+        @include make-col-ready();
+        @include make-col(5);
+        position:relative;
+        padding:0px;
+        height:100%; 		 
+        address{
+            margin-left: 20px;
+            font-size:10pt;
+            font-weight:bold;
+            .room-street-address{
+                font-size: 10pt
+            }
+        }
+    } //end of left-col
+	
+    .right-col{  
+        @include make-col-ready();
+        @include make-col(7);
+        padding:0px;
+        height:100%;
+        position:relative;
+        .room-image{
+            width:100%;
+            height:100%;
+        }
+        .rent{
+            position:absolute;
+            width:100%;
+            display:block;
+            bottom:0;
+            background-color: rgba(31,130,125,0.9);
+            text-align:left;
+            height:50px;
+            line-height:50px;
+            color:#FFF;
+            padding:0px 20px;
+            font-weight:bold;
+        }
+    } //end of right-col
+    .room-overview{  
+        margin:auto;
+        padding:0px;
+        height:50px;
+        bottom:0;
+        width:100%;
+        list-style-type:none;
+        background-color: rgba(0,0,0,0.9);
+        position:absolute;
+        li{     
+            display:inline-block;
+            color:#FFF;
+            margin:0px 20px;
+            line-height:50px; 
+                span{
+                    margin-left:8px;
+                    font-size:14px;
+                }                                     
+        }
+    } //end of room-overview
+}
+		
+
+
+

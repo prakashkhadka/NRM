@@ -17,6 +17,10 @@ function forgetPasswordCtrl($scope, $http, $location, $anchorScroll){
             url: "/api/forgottonPassword",
             data: forget
         });
-           $location.path('/fgtPwdResetFeedback');
+           //$location.path('/fgtPwdResetFeedback');
+        };
+        $scope.forgetPasswordFeedbackCloseBtn = function(){
+            $('.modal-backdrop').remove();
+            $location.path("/home");
         };
 }

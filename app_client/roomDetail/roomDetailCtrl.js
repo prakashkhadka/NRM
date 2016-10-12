@@ -15,8 +15,7 @@ function roomDetailCtrl($routeParams, $scope, roomData, $anchorScroll){
         .success(function(data){
             $scope.oneRoomDetails = data;
             $scope.ORD = $scope.oneRoomDetails;
-           
-            //console.log($scope.ORD);
+            console.log($scope.ORD);
             //console.log("images length is : ");
             //console.log($scope.ORD.images);
             //console.log($scope.ORD.images.length);

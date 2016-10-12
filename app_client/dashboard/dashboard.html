@@ -1,65 +1,55 @@
 <navigation></navigation>
 
 <section id="dashboard">
-	<h3>Dashboard</h3>
+    <h3>Dashboard</h3>
+    <div class="page-wrapper">
+        <div class="page-container">
+            <p class="text-xs-center">Welcome <span class="welcomeUser">{{currentUser.name}}</span></p>
+                <div class="menu-container">
+                    <!-- My post -->
+                    <div class="menu-card">
+                        <a href="/myPost">
+                            <div class="menu">
+                                <i class="fa fa-file"></i>
+                                <h5>My Post</h5>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Rent Room -->
+                    <div class="menu-card">
+                        <a href="/createRoom">
+                            <div class="menu">
+                                <i class="fa fa-money"></i>
+                                <h5>Rent Room</h5>
+                            </div>
+                        </a>
+                    </div>
 
 
-	<div class="page-wrapper">
-		<div class="page-container">
-
-			<p class="text-xs-center">Welcome, user</p>
-
-
-			<div class="menu-container">
-				
-
-				<!-- My post -->
-				<div class="menu-card">
-					<a href="/myPost">
-						<div class="menu">
-							<i class="fa fa-file"></i>
-							<h5>My Post</h5>
-						</div>
-					</a>
-				</div>
-
-				
-				<!-- Rent Room -->
-				<div class="menu-card">
-					<a href="/createRoom">
-						<div class="menu">
-							<i class="fa fa-money"></i>
-							<h5>Rent Room</h5>
-						</div>
-					</a>
-				</div>
-				
-
-				<!-- Setting -->
-				<div class="menu-card">
-					<a href="/changePassword">
-						<div class="menu">
-							<i class="fa fa-gears"></i>
-							<h5>Setting</h5>
-						</div>
-					</a>
-				</div>
-
-
-				<!-- Support -->
-				<div class="menu-card">
-					<a href="/support">
-						<div class="menu">
-							<i class="fa fa-support"></i>
-							<h5>Support</h5>
-						</div>
-					</a>
-				</div>
-
-			</div>
-			<!-- End of menu-container -->
-		</div>
-		<!-- End of page-container -->
-	</div>
-	<!-- End of page-wrapper -->
+                    <!-- Setting -->
+                    <div class="menu-card">
+                        <a href="/changePassword">
+                            <div class="menu">
+                                <i class="fa fa-gears"></i>
+                                <h5>Setting</h5>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Support -->
+                    <div class="menu-card">
+                        <a href="/support">
+                            <div class="menu">
+                                <i class="fa fa-support"></i>
+                                <h5>Support</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- End of menu-container -->
+        </div>
+        <!-- End of page-container -->
+    </div>
+    <!-- End of page-wrapper -->
 </section>
