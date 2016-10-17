@@ -1,0 +1,92 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14/10/2016, 12:01:51 AM
+    Author     : Prakash
+*/
+
+/* Call out heading*/
+h1{
+    font-family:$font-moteserrat;
+    font-weight:700;	
+}
+
+/* Page heading*/
+h3{
+    color:$text-color-heading !important;
+    display:block;
+    font-family: $font-moteserrat;
+    font-weight:700 !important;;
+    text-align:center;
+    text-transform:uppercase;
+}
+
+/*Sub heading / Footer heading */
+h5{
+    font-family:$font-moteserrat;
+    font-weight:600;
+}
+
+/* body text */
+p{
+    font-family:$font-news-cycle;
+    font-size:16px;		
+}
+
+
+body{
+    background-color:#E9E9E9;
+    min-height:100vh;
+    padding:0px;
+
+}
+
+/** page section as container **/
+section{
+    min-height: 50vh;
+    padding:10px 0px; 
+}
+
+/** Partial view container  **/
+.main{
+    margin-top:$nrm-top-navbar-height;
+    padding:20px 0px;
+}
+.page-wrapper{
+    @include make-row();
+}
+.page-container{
+    @include make-col(12);
+    background-color: #fff;
+    padding:20px 25px;
+    text-align:center;
+    height:auto;
+    @include media-breakpoint-up(md){
+        @include make-col(8);
+        @include make-col-offset(2);
+    }
+    @include media-breakpoint-up(lg){
+        @include make-col(6);
+        @include make-col-offset(3);
+    }
+}
+
+@function getColor($key:'bluewood'){
+	
+	@return map-get($tsf-colors,$key);
+}
+
+
+//function to return type-scale
+@function typeScale($level) {
+  @return map-get($type-scale, $level);
+}
+
+%button{
+    @extend .btn;
+    border-radius:0;
+    font-family:$font-moteserrat;
+}

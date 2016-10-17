@@ -3,15 +3,20 @@ angular
         .controller("roomDetailCtrl", roomDetailCtrl);
 
 function roomDetailCtrl($routeParams, $scope, roomData){
-    $scope.roomid = $routeParams.roomid;
-    roomData.roomDetail($scope.roomid)
-            .success(function(data){
-                $scope.oneRoomDetails = data;
-                $scope.ORD = $scope.oneRoomDetails;
-            })
-            .error(function(e){
-                console.log(e);
-            });
-   
+    var roomid = $routeParams.roomid;
+    //console.log("Route paramas is: " + roomid);
+    roomData.roomDetail(roomid)
+        .then(function(response){
+            //console.log("Success");
+            //console.log(response.data);
+            var oneRoomDetails = response.data;
+            $scope.ORD = oneRoomDetails;
+    }, function(response){
+        //console.log("Error");
+    });
     
+    $scope.allowToPublic = function(roomId){
+        //console.log("Room id allowed : " + roomId);
+        roomData.allowToPublic(roomId);
+    };
 }

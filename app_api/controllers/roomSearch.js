@@ -29,9 +29,8 @@ module.exports.roomSearch = function(req, res){
     //Rm.find({$or: [{postcode: searchValue}, {suburb: searchValue},{suburb: searchValue}]})
     if(postcode){
         Rm.find({postcode: searchValue})
-
         .select('suburb postcode street_name street_no unit rent images gender state')
-
+        .where('allowedToPublic').equals('true')
         .exec(function(err, results){   // executes the function inside braces
             //console.log("Search result on the server : " + results);
             if(err){
@@ -50,9 +49,8 @@ module.exports.roomSearch = function(req, res){
     else if(suburb){
         console.log("Suburb found");
         Rm.find({suburb: searchValue})
-
         .select('suburb postcode street_name street_no unit rent images gender state')
-
+        .where('allowedToPublic').equals('true')
         .exec(function(err, results){   // executes the function inside braces
             var rooms = [];
             for(var i=0; i < results.length; i++){
@@ -67,9 +65,8 @@ module.exports.roomSearch = function(req, res){
     }
     else if(state){
         Rm.find({state: searchValue})
-
         .select('suburb postcode street_name street_no unit rent images gender state')
-
+        .where('allowedToPublic').equals('true')
         .exec(function(err, results){   // executes the function inside braces
             if(err){
                 return;

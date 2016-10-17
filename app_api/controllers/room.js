@@ -18,7 +18,8 @@ module.exports.roomList = function(req, res){
     Rm.find() // find everything on the room collections
         .sort('-createdOn')
         .limit(8)
-        .select('suburb postcode street street_no unit rent images state') // selects only here mentioned items on room collection
+        .where('allowedToPublic').equals('true')
+        .select("suburb postcode street street_no unit rent images state") // selects only here mentioned items on room collection
         .exec(function(err, results){   // executes the function inside braces
             var rooms = [];             // creates rooms array
             for(var i=0; i<results.length; i++){
@@ -36,6 +37,7 @@ module.exports.roomListPage = function(req, res){
         .limit(8)
         .skip(8 * skipValue)
         .select('suburb postcode street street_no unit rent images') // selects only here mentioned items on room collection
+        .where('allowedToPublic').equals('true')
         .exec(function(err, results){   // executes the function inside braces
             var rooms = [];             // creates rooms array
             for(var i=0; i<results.length; i++){
@@ -52,6 +54,7 @@ module.exports.roomReadOne = function(req, res){
   if (req.params && req.params.roomid) {        // checks if request parameter and room id on request parameter are available
     Rm
       .findById(req.params.roomid)              // search on room collection based on room id
+      .where('allowedToPublic').equals('true')
       .exec(function(err, room) {
         if (!room) {
           sendJSONresponse(res, 404, {          // if room id is not available sends the message
@@ -78,6 +81,7 @@ module.exports.createOneRoom = function(req, res){
     console.log(req.body);
     console.log(req.body.imgName);
     Rm.create({                                 // creates a new room on room collection
+        allowedToPublic: false,
         suburb : req.body.suburb,
         postcode : req.body.postcode,
         state: req.body.state,

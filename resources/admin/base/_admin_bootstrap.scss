@@ -1,0 +1,41 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26/09/2016, 3:28:53 PM
+    Author     : Prakash
+*/
+
+/**Core variables and mixins **/
+@import "../bootstrap/custom";
+@import "../bootstrap/variables";
+@import "../bootstrap/mixins";
+
+/** Reset and dependencies **/
+@import "../bootstrap/normalize";
+@import "../bootstrap/print";
+
+/** Core CSS **/
+
+@import "../bootstrap/reboot";
+@import "../bootstrap/type";
+@import "../bootstrap/images";
+@import "../bootstrap/code";
+@import "../bootstrap/tables";
+@import "../bootstrap/forms";
+@import "../bootstrap/buttons";
+@import "../bootstrap/navbar";
+@import "../bootstrap/nav";
+@import "../bootstrap/animation";
+@import "../bootstrap/forms";
+@import "../bootstrap/card";
+@import "../bootstrap/pagination";
+@import "../bootstrap/carousel";
+@import "../bootstrap/modal";
+@import "../bootstrap/close";
+@import "../bootstrap/grid";
+/** Utility classes **/
+@import "../bootstrap/utilities";
+/***Extra not sure necessary or not ****/

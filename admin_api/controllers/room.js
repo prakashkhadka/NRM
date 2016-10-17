@@ -9,7 +9,8 @@ var sendJsonResponse = function(res, status, content) {
 //roomList Controller of app_api routes index.js
 module.exports.roomList = function(req, res){
     Rm.find()
-            .select('suburb postcode street street_no unit rent')
+            .select('suburb postcode street_name street_no unit rent')
+            .where('allowedToPublic').equals('false')
             .exec(function(err, results){
         var rooms = [];
         for(var i=0; i<results.length; i++){
@@ -21,7 +22,7 @@ module.exports.roomList = function(req, res){
 };
 
 //Controller for getting all the information about a specific status from rooms/:roomid path from app_api/routes/index.js
-module.exports.roomReadOne = function(req, res){
+module.exports.readOneRoom = function(req, res){
     //console.log(req.params);
   if (req.params && req.params.roomid) {
     Rm
@@ -33,11 +34,9 @@ module.exports.roomReadOne = function(req, res){
           });
           return;
         } else if (err) {
-          
           sendJSONresponse(res, 404, err);
           return;
         }
-        
         sendJsonResponse(res, 200, room);
         
       });

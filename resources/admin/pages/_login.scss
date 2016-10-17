@@ -1,0 +1,53 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14/10/2016, 2:08:13 PM
+    Author     : Prakash
+*/
+
+.adminLoginFormContainer{
+    @include make-row();
+    @include media-breakpoint-up(xs){
+        font-weight: bold;
+        margin-top: 80px;
+        @include make-col(11);
+        @include make-col-offset(0.5);
+        border: 2px solid green;
+        border-radius: 10px;
+        padding: 10px;
+        .formRow{
+            margin-top: 20px;
+        }
+    }
+    @include media-breakpoint-up(md){
+        margin-top: 200px;
+        padding-left: 40px;
+        padding-right: 40px;
+        @include make-col(8);
+        @include make-col-offset(2);
+        .formRow{
+            @include make-row();
+        }
+            .labelControl{
+                @include make-col(4);
+                font-weight: bold;
+            }
+            .inputControl{
+                @include make-col(8);
+            }
+            .adminLoginSubmitBtn{
+                font-weight: bold;
+                @include make-col(8)
+                @include make-col-offset(4);
+            }
+    }
+    @include media-breakpoint-up(lg){
+        @include make-col(4)
+        @include make-col-offset(4);
+    }
+     
+}
+

@@ -44,51 +44,56 @@ module.exports.register = function(req, res){
 
 
 module.exports.adminLogin = function(req, res) {
+    //console.log(req.body);
+    //console.log("adminLogin Envoked");
+     //console.log("Admin login credential received : " + req.body.password, req.body.email);
+    if(!req.body.adminName || !req.body.password) {
+        sendJSONresponse(res, 400, {
+            "message": "All fields required"
+        });
+        return;
+    }
+
     passport.use(new LocalStrategy({
     usernameField: 'adminName'
-  },
-  function(username, password, done) {
-    Admin.findOne({ adminName: username }, function (err, admin) {
-        console.log("Found the admin" + admin);
-      if (err) { return done(err); }
-      if (!admin) {
-        return done(null, false, {
-          message: 'Incorrect username.'
-        });
-      }
-      if (!admin.validPassword(password)) {
-        return done(null, false, {
-          message: 'Incorrect password.'
-        });
-      }
-      return done(null, admin);
-    });
-  }
-));
-    //console.log("Admin login credential received : " + req.body.password, req.body.email);
-  if(!req.body.adminName || !req.body.password) {
-    sendJSONresponse(res, 400, {
-      "message": "All fields required"
-    });
-    return;
-  }
-
-  passport.authenticate('local', function(err, admin, info){
-      console.log("Admin value is : " + admin);
-    var token;
-    if (err) {
-      sendJSONresponse(res, 404, err);
-      return;
-    }
-
-    if(admin){
-      token = admin.generateJwt();
-      sendJSONresponse(res, 200, {
-        "token" : token
-      });
-    } else {
-      sendJSONresponse(res, 401, info);
-    }
-  })(req, res);
+    },
+    function(username, password, done){
+        Admin.findOne({ adminName: username }, function (err, admin) {
+          //console.log("Found the admin" + admin);
+            if (err){ 
+                return done(err); 
+            }
+            if (!admin) {
+                return done(null, false, {
+                    message: 'Incorrect username.'
+                });
+            }
+            if (!admin.validPassword(password)) {
+                return done(null, false, {
+                    message: 'Incorrect password.'
+                });
+            }
+            return done(null, admin);
+            });
+        }
+  ));
+   
+    passport.authenticate('local', function(err, admin, info){
+        //console.log("Admin value is : " + admin);
+        var token;
+        if (err) {
+            sendJSONresponse(res, 404, err);
+            return;
+        }
+        if(admin){
+            token = admin.generateJwt();
+            //console.log(token);
+            sendJSONresponse(res, 200, {
+                "token" : token
+            });
+        } else {
+            sendJSONresponse(res, 401, info);
+        }
+      })(req, res);
 
 };

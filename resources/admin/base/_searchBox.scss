@@ -1,0 +1,79 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28/09/2016, 2:57:25 PM
+    Author     : Rajesh Basnet
+*/
+
+.hero{
+    margin-top: -20px;
+    @include make-row();
+    //height:50vh;
+    background-image:url('../images/hero.jpg');
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center; 
+    @include media-breakpoint-up(xs){
+        height: 17vh;
+        padding:0px 0px;
+        h1{
+            display: none;
+        }
+    }
+     @include media-breakpoint-up(md){
+        height: 20vh;
+        h1{
+            padding-top: 30px;
+            font-family:$font-moteserrat;
+            text-shadow:4px 4px 4px black;
+            color:getColor('white');
+            text-align:center;
+            display:block;
+            font-size: 20pt;
+         }
+    }
+     @include media-breakpoint-up(lg){
+        height: 50vh;
+        h1{
+            padding-top: 50px;
+            font-size: 35pt;
+        }
+    }
+} //end of hero
+
+.search-box{
+    @include make-col-ready();
+    @include make-col(12);
+    text-align:center;
+    background: rgba(51, 51, 51, 0.4);
+    //For mobile
+    @include media-breakpoint-up(xs){
+        @include make-col(11.6);
+        @include make-col-offset(0.2);
+        margin-top: 20px;
+        max-height: 80px;
+      }
+
+    //For tablet and up
+     @include media-breakpoint-up(md){    
+        @include make-col(9);
+        @include make-col-offset(1.5);
+        border:1px gray solid;
+        margin-top:0px;
+        min-height:100px;
+        padding-top:15px;
+     }
+     
+     //For desktop
+    @include media-breakpoint-up(lg){
+       @include make-col(6);
+       @include make-col-offset(3);
+       margin-top: 20px;
+       padding-top: 40px;
+       min-height: 150px;
+    }
+
+}

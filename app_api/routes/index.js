@@ -21,6 +21,7 @@ var ctrlChangePassword = require('../controllers/changePassword.js');
 var ctrlRoomSearch = require('../controllers/roomSearch.js');
 var ctrlAmazonUrl = require('../controllers/amazonUrl.js');
 var ctrlContactUs = require('../controllers/contactUs.js');
+var ctrlEmailToOwner = require('../controllers/emailToOwner.js');
 
 router.post('/roomSearch', ctrlRoomSearch.roomSearch);
 
@@ -48,9 +49,13 @@ router.delete('/rooms/:roomid', auth, ctrlRoom.deleteOneRoom);
 router.post('/rooms', auth, ctrlRoom.createOneRoom);
 
 router.post('/contactUs', ctrlContactUs.contactUs);
+
+router.post('/sendEmailToOwner', ctrlEmailToOwner.emailOwner);
 /*
-router.post('/contactUs', function(req, res){
-    console.log("contactUs api called : " + req.body);
+router.post('/sendEmailToOwner', function(req, res){
+    console.log("Owner email request received");
+    console.log(req.body);
 });
 */
+
 module.exports = router;

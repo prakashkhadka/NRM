@@ -1,0 +1,11 @@
+
+%button{
+    @extend .btn;
+    border-radius:0;
+    font-family:$font-moteserrat;
+}
+
+.btn-sign-up{
+    @extend %button;
+    
+}

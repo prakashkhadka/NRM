@@ -1,16 +1,32 @@
 angular.module("adminApp", ['ngRoute']);
 
+angular.module("adminApp")
+        .config(config);
+
 function config($routeProvider, $locationProvider){
     $locationProvider.html5Mode(true);
     $routeProvider
             .when("/admin", {
                 templateUrl: "/admin/auth/login/login.html",
-                controller: "homeCtrl"
+                controller: "loginCtrl"
     })
+            .when("/admin/adminDashboard", {
+                templateUrl: "/admin/adminDashboard/adminDashboard.html",
+                controller: "adminDashboardCtrl"
+            })
+            
+            .when("/admin/waitingRooms", {
+                templateUrl: "/admin/waitingRooms/waitingRooms.html",
+                controller: "waitingRoomsCtrl"
+            })
     
             .when("/admin/roomDetail/:roomid",{
                 templateUrl: "/admin/roomDetail/roomDetails.html",
                 controller: "roomDetailCtrl"
+    })
+            .when("/admin/userMessage",{
+                templateUrl: "/admin/userMessage/userMessage.html",
+                controller: "userMessageCtrl"
     })
     
             .when("/admin/deleteRoomFeedback",{
@@ -45,6 +61,4 @@ function config($routeProvider, $locationProvider){
 };
 
 
-angular.module("adminApp")
-        .config(config);
         

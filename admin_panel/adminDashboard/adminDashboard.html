@@ -1,0 +1,55 @@
+<navigation></navigation>
+
+<section id="adminDashboard">
+    <h3>Dashboard</h3>
+    <div class="page-wrapper">
+        <div class="page-container">
+            <p class="text-xs-center">Welcome <span class="welcomeUser">{{currentAdmin.name}}</span></p>
+                <div class="menu-container">
+                    <!-- My post -->
+                    <div class="menu-card">
+                        <a href="/admin/waitingRooms">
+                            <div class="menu">
+                                <i class="fa fa-file"></i>
+                                <h5>Waiting rooms</h5>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Rent Room -->
+                    <div class="menu-card">
+                        <a href="/admin/userMessage">
+                            <div class="menu">
+                                <i class="fa fa-money"></i>
+                                <h5>Messages</h5>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <!-- Setting -->
+                    <div class="menu-card">
+                        <a href="/changePassword">
+                            <div class="menu">
+                                <i class="fa fa-gears"></i>
+                                <h5>Users</h5>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Support -->
+                    <div class="menu-card">
+                        <a href="/support">
+                            <div class="menu">
+                                <i class="fa fa-support"></i>
+                                <h5>Setting</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- End of menu-container -->
+        </div>
+        <!-- End of page-container -->
+    </div>
+    <!-- End of page-wrapper -->
+</section>

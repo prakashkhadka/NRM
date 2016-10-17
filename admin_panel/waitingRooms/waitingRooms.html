@@ -1,0 +1,27 @@
+<navigation></navigation>
+<section>
+    <h3>My room ads</h3>
+    <div class="page-wrapper">
+        <div class="page-container">
+        <p class="text-xs-center" ng-if="waitingRooms.length <1">
+            You don't not have any post.
+        </p>
+        <div class="my-ad-card" ng-repeat ="room in waitingRooms">
+            <div class="left-col">
+                <h6 class="pull-left">{{room.createdOn | date : "d MMMM y"}}</h6>
+                <p>
+                    <a href="/admin/roomDetail/{{room._id}}">{{room.unit}} / {{room.street_no}}, {{room.street_name}}, {{room.suburb}}</a>
+                </p>
+            </div>
+            <div class="right-col">
+                <a href="#" class="btn btn-sm btn-warning" ng-show="isLoggedIn">Edit</a>
+                <button class="btn btn-sm btn-danger">Delete</button>
+            </div>
+            
+        </div>
+        <!-- Confirmation Modal -->
+        </div>
+        <!-- End of page-container -->
+    </div>
+    <!-- End of page-wrapper -->
+</section>

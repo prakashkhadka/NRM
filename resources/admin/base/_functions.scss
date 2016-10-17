@@ -1,0 +1,14 @@
+
+
+//function to return color's hex value
+
+@function getColor($key:'bluewood'){
+	
+	@return map-get($tsf-colors,$key);
+}
+
+
+//function to return type-scale
+@function typeScale($level) {
+  @return map-get($type-scale, $level);
+}

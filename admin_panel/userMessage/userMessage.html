@@ -1,0 +1,27 @@
+<navigation></navigation>
+<section>
+    <h3>User Messages</h3>
+    <div class="page-wrapper">
+        <div class="page-container">
+        <p class="text-xs-center" ng-if="receivedMessage.length <1">
+            You don't not have any message.
+        </p>
+        <div class="my-ad-card" ng-repeat ="message in receivedMessage">
+            <div class="left-col">
+                <h6 class="pull-left">{{message.createdOn | date : "d MMMM y h:mm:ss a"}}</h6>
+                   <p>Name: {{message.guestName}}</p>
+                   <p>Email: {{message.email}}</p>
+                   <p>Message: {{message.message}}</p>
+            </div>
+            <div class="right-col">
+                <a href="#" class="btn btn-sm btn-warning">Reply</a>
+                <button class="btn btn-sm btn-danger">Mark as read</button>
+            </div>
+            
+        </div>
+        <!-- Confirmation Modal -->
+        </div>
+        <!-- End of page-container -->
+    </div>
+    <!-- End of page-wrapper -->
+</section>

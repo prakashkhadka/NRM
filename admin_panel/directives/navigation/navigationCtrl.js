@@ -5,17 +5,17 @@
     .controller('navigationCtrl', navigationCtrl);
 
   
-  function navigationCtrl($scope, $location, authentication) {
+  function navigationCtrl($scope, $location, adminAuthentication) {
     //console.log("navigationCtrl is envoked");
 
     $scope.currentPath = $location.path();
 
-    $scope.isLoggedIn = authentication.isLoggedIn();
+    $scope.isLoggedIn = adminAuthentication.isLoggedIn();
 
-    $scope.currentUser = authentication.currentUser();
+    $scope.currentAdmin = adminAuthentication.currentAdmin();
 
     $scope.logout = function() {
-      authentication.logout();
+      adminAuthentication.adminLogout();
       $scope.isLoggedIn = false;
       $location.path('/admin');
       

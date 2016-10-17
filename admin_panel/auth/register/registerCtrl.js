@@ -3,10 +3,10 @@ angular
         .controller("registerCtrl", registerCtrl);
 
 function registerCtrl($location, $scope, authentication){
-        $scope.register = function(user){
+        $scope.adminRegister = function(user){
         //console.log(user);
         if(user.password === user.password1 && user.tandc === true){
-            authentication.register(user).success(function(){
+            authentication.adminRegister(user).success(function(){
                 $location.path("/admin");
             });
             

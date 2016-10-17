@@ -5,11 +5,21 @@
  */
 
 var mongoose = require('mongoose');
+
+var emailToOwnerSchema = new mongoose.Schema({
+    emailSenderName: "String",
+    emailSenderPhone : "Number",
+    emailSenderEmail: "String",
+    emailSenderMessage: "String"
+});
+/*
 var roomImageNameSchema = new mongoose.Schema({
     imageName: {type: "String"}
 });
+*/
 // Defines room schema and its field
 var roomSchema = new mongoose.Schema({
+    allowedToPublic: {type: "Boolean"},
     suburb: {type:"String", required: true},
     postcode:{type:"Number", required: true},
     state:{type:"String", required: true},
@@ -32,7 +42,8 @@ var roomSchema = new mongoose.Schema({
     contact_no:{type:"Number", required: true},
     email: {type:"String", required: true},
     createdOn: {type: Date, default: new Date(), expires: 60*60*24*30},
-    images: [String]
+    images: [String],
+    emailToOwner: [emailToOwnerSchema]
 });
 // Instantiate Room Model from roomSchema
 // After this Room is used to represent roomSchema

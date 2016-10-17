@@ -13,4 +13,4 @@ angular.module("roomApp")
 
 function indexController($anchorScroll){
     $anchorScroll();
-}
+};
