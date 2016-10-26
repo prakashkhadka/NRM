@@ -1,10 +1,14 @@
+(function(){
 angular
         .module("adminApp")
-        .controller("homeCtrl", homeCtrl);
+        .controller("homeCtrl", ['$location', '$scope', '$http', 'adminAuthentication', homeCtrl]);
 
-function homeCtrl($location, $scope, $http, authentication){
+//homeCtrl.$inject = ['$location', '$scope', '$http', 'authentication'];
+function homeCtrl($location, $scope, $http, adminAuthentication){
     //console.log("Home Controller is loaded");
-    
+    if(!adminAuthentication.isLoggedIn()){
+        $location.path('/admin');
+    };
     $http({
           method: 'GET',
           url: '/api/rooms'
@@ -23,7 +27,7 @@ function homeCtrl($location, $scope, $http, authentication){
                 $http({
                     method: "DELETE",
                     url: "/adminApi/rooms/" + roomid,
-                    headers: {Authorization: 'Bearer '+ authentication.getToken()}
+                    headers: {Authorization: 'Bearer '+ adminAuthentication.getToken()}
                 })
                .then(function success (response){
                    console.log("Deleted room data is : " + response);
@@ -38,3 +42,4 @@ function homeCtrl($location, $scope, $http, authentication){
           };
          
 }
+})();

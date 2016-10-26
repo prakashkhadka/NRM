@@ -1,3 +1,4 @@
+(function(){
 var mongoose = require('mongoose');
 var Rm = mongoose.model('Room');
 
@@ -83,9 +84,9 @@ module.exports.createOneRoom = function(req, res){
 // this request comes from editRoom Controller ofapp_client/editRoom/editRoom.js
 
 module.exports.updateOneRoom = function(req, res){
-    console.log("Requested room id to be edited on api : " + req.params.roomid);
+    //console.log("Requested room id to be edited on api : " + req.params.roomid);
     if(!req.params.roomid){
-        console.log("Room id is not found");
+        //console.log("Room id is not found");
         sendJsonResponse(res, 404, {"message" : "Requested roomid is not found, roomid is required"});
         return;
     }
@@ -118,7 +119,7 @@ module.exports.updateOneRoom = function(req, res){
             //console.log("The room object to be saved is : " + room);
             room.save(function(err, room){
                 if(err){
-                    console.log("Error reported");
+                    //console.log("Error reported");
                 sendJsonResponse(res, 404, err);
             }
             else{
@@ -169,19 +170,19 @@ module.exports.deleteOneRoom = function(req, res){
 };
 
 module.exports.getMyRoom = function(req, res){
-    console.log("Email id to search is received : " + req.params.userEmail);
+    //console.log("Email id to search is received : " + req.params.userEmail);
     Rm
             .find({email: req.params.userEmail})
             .exec(function(err, rooms){
                 if(err){
-                    console.log("Couldn't find rooms : " + err);
+                    //console.log("Couldn't find rooms : " + err);
                 }
                 else{
-                    console.log("Found rooms by email are : " + rooms);
+                    //console.log("Found rooms by email are : " + rooms);
                     sendJsonResponse(res, 200, rooms);
                 }
     });
 };
-
+})();
 
 

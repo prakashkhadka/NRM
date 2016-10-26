@@ -3,14 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/Prakash/Desktop/nrm/resources/admin/base/_admin_bootstrap.scss</file>
-            <file>file:/Users/Prakash/Desktop/nrm/resources/assets/scss/components/_buttons.scss</file>
-            <file>file:/Users/Prakash/Desktop/nrm/resources/assets/scss/helpers/_placeholders.scss</file>
-            <file>file:/Users/Prakash/Desktop/nrm/resources/admin/base/_buttons.scss</file>
-            <file>file:/Users/Prakash/Desktop/nrm/gulpfile.js</file>
-            <file>file:/Users/Prakash/Desktop/nrm/resources/admin/pages/_login.scss</file>
-            <file>file:/Users/Prakash/Desktop/nrm/resources/admin/base/_variables.scss</file>
-            <file>file:/Users/Prakash/Desktop/nrm/resources/admin/base/_manifest.scss</file>
+            <file>file:/Users/Prakash/Desktop/nrm/resources/assets/scss/pages/_home.scss</file>
+            <file>file:/Users/Prakash/Desktop/nrm/resources/assets/scss/helpers/_variables.scss</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/index.client.html</file>
+            <file>file:/Users/Prakash/Desktop/nrm/test.js</file>
+            <file>file:/Users/Prakash/Desktop/nrm/resources/assets/scss/layout/_navigation.scss</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/home/home.html</file>
+            <file>file:/Users/Prakash/Desktop/nrm/app_client/directives/navigation/navigationView.html</file>
         </group>
     </open-files>
 </project-private>

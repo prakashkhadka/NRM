@@ -1,8 +1,13 @@
+(function(){
 angular
         .module("adminApp")
-        .controller("roomDetailCtrl", roomDetailCtrl);
+        .controller("roomDetailCtrl", ['$routeParams', '$scope', 'roomData', '$location', 'adminAuthentication', roomDetailCtrl]);
 
-function roomDetailCtrl($routeParams, $scope, roomData){
+//roomDetailCtrl.$inject = ['$routeParams', '$scope', 'roomData'];
+function roomDetailCtrl($routeParams, $scope, roomData, $location, adminAuthentication){
+    if(!adminAuthentication.isLoggedIn()){
+        $location.path('/admin');
+    };
     var roomid = $routeParams.roomid;
     //console.log("Route paramas is: " + roomid);
     roomData.roomDetail(roomid)
@@ -18,5 +23,7 @@ function roomDetailCtrl($routeParams, $scope, roomData){
     $scope.allowToPublic = function(roomId){
         //console.log("Room id allowed : " + roomId);
         roomData.allowToPublic(roomId);
+        $location.path('/admin/waitingRooms');
     };
 }
+})();

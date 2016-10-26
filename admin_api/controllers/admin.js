@@ -1,3 +1,4 @@
+(function(){
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var mongoose = require('mongoose');
@@ -11,10 +12,10 @@ var sendJSONresponse = function(res, status, content) {
 
 module.exports.register = function(req, res){
     //console.log(req.body.firstName);
-    console.log(req.body);
+    //console.log(req.body);
     if(!req.body.adminName || !req.body.firstName || !req.body.lastName || !req.body.email || !req.body.password){
         sendJSONresponse(res, 400, {message : "All field required !"});
-        console.log("All fields required");
+        //console.log("All fields required");
         return;
     }
    
@@ -34,7 +35,7 @@ module.exports.register = function(req, res){
             }
             else{
                 token = admin.generateJwt();
-                console.log(token);
+                //console.log(token);
                 sendJSONresponse(res, 200, {"token": token});
             }
         }); 
@@ -97,3 +98,4 @@ module.exports.adminLogin = function(req, res) {
       })(req, res);
 
 };
+})();

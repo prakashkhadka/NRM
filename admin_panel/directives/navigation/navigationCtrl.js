@@ -1,10 +1,10 @@
-
+(function(){
 
   angular
     .module('adminApp')
-    .controller('navigationCtrl', navigationCtrl);
+    .controller('navigationCtrl', ['$scope', '$location', 'adminAuthentication', navigationCtrl]);
 
-  
+  //navigationCtrl.$inject = ['$scope', '$location', 'adminAuthentication'];
   function navigationCtrl($scope, $location, adminAuthentication) {
     //console.log("navigationCtrl is envoked");
 
@@ -22,3 +22,4 @@
     };
 
   }
+})();

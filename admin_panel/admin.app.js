@@ -1,8 +1,10 @@
+(function(){
 angular.module("adminApp", ['ngRoute']);
 
 angular.module("adminApp")
-        .config(config);
+        .config(['$routeProvider', '$locationProvider', config]);
 
+//config.$inject = ['$routeProvider', '$locationProvider'];
 function config($routeProvider, $locationProvider){
     $locationProvider.html5Mode(true);
     $routeProvider
@@ -55,10 +57,12 @@ function config($routeProvider, $locationProvider){
                 controller: "logoutCtrl"
                 
     })
+            .when("/admin/removedRooms", {
+                templateUrl: "/admin/removedRooms/removedRooms.html",
+                controller: "removedRoomsCtrl"
+            })
            
-            .otherwise({redirectTo: "/admin"});
+            .otherwise({redirectTo: "/admin/adminDashboard"});
     
 };
-
-
-        
+})();     

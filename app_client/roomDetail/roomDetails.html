@@ -67,10 +67,8 @@
                 <p>{{ORD.message}}</p>
             </div>
 
-            <div class="email-option" email-owner>
-                <button class="btn-send-message btn-email-owner"  
-                        data-toggle="collapse" data-target="#email-owner" 
-                        aria-expanded="false" aria-controls="email-owner">
+            <div class="email-option">
+                <button class="btn-send-message btn-email-owner" data-toggle="collapse" data-target="#email-owner" aria-expanded="false" aria-controls="email-owner">
                     Email Room Owner
                 </button>
                 <button class="btn-close" data-toggle="collapse" data-target="#email-owner">&times</button>
@@ -199,8 +197,8 @@
                             <!-- End of input-wrapper-right -->
                         </div>
                         <!-- End of form-group -->
-
                     </form>
+                    <feedback is-action-completed="{{isSent}}" feedback-message="{{feedbackMessage}}"></feedback>
                 </div>
                 <!-- End of email-form-wrapper -->
             </div>

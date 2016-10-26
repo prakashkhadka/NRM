@@ -1,10 +1,13 @@
+(function(){
 angular
-        .module("adminApp")
-        .service("roomData", roomData);
+    .module("adminApp")
+    .service("roomData", ['$http', 'adminAuthentication', roomData]);
 
-function roomData($http){
+//roomData.$inject = ['$http'];
+function roomData($http, adminAuthentication){
     var getRooms = function(){
-        return $http.get('/adminApi/rooms');
+        return $http.get('/adminApi/rooms', {
+            headers: {Authorization: 'Bearer '+ adminAuthentication.getToken()}});
         /*
         $http({
             url: '/adminApi/rooms',
@@ -13,19 +16,26 @@ function roomData($http){
         */
     };
     
+    var getRemovedRooms = function(){
+        return $http.get('/adminApi/removedRooms', {
+            headers: {Authorization: 'Bearer '+ adminAuthentication.getToken()}});
+    };
+    
     var roomDetail = function(roomid){
-        return $http.get("/adminApi/room/" + roomid);
+        return $http.get("/adminApi/room/" + roomid, {
+            headers: {Authorization: 'Bearer '+ adminAuthentication.getToken()}});
     };
     
     var allowToPublic = function(roomId){
-        return $http.get("/adminApi/allowToPublic/" + roomId);
+        return $http.get("/adminApi/allowToPublic/" + roomId, {
+            headers: {Authorization: 'Bearer '+ adminAuthentication.getToken()}});
     };
    
-    
-    
     return {
         getRooms : getRooms,
+        getRemovedRooms : getRemovedRooms,
         roomDetail : roomDetail,
         allowToPublic : allowToPublic 
     };
 }
+})();

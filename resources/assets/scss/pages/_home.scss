@@ -172,3 +172,15 @@
         display:none;
       }
 }
+.signUpRequest{
+    //@include make-row();
+    @include make-col(12);
+    color: white;
+    font-size: 18pt;
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Montserrat', sans-serif;
+    @include media-breakpoint-down(sm){
+        display: none;
+    }
+}

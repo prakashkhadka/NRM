@@ -3,74 +3,72 @@
  * contact me on ocnprakash@gmail.com
  * copyright: sproutTech Australia
  */
+(function(){
+    angular
+        .module("roomApp")
+        //.controller("registerCtrl", registerCtrl);
+        .controller("registerCtrl", ['$location', '$scope', 'authentication', '$http', '$anchorScroll', '$timeout', registerCtrl]);
+    //registerCtrl.$inject = ['$location', '$scope', 'authentication', '$http', '$anchorScroll', '$timeout'];
+    function registerCtrl($location, $scope, authentication, $http, $anchorScroll, $timeout){
+        $anchorScroll();
+    /*
+        Following function checks whether supplied email address is exists in the database or not
+     */
+        $scope.validateEmail = function(user){
+            //console.log("To be validated email is : " + user.email);
+            $http({
+                method: 'POST',
+                url: '/api/validateEmail',
+                data: user
+            }).then(function success(response){
+                //console.log(response.data);
+                $scope.emailError = response.data;
 
-angular
-    .module("roomApp")
-    .controller("registerCtrl", registerCtrl);
+            }, function failure(response){
+                //console.log(response.data);
+            });
+        };
 
+        $scope.hideError = function(){
+            $scope.emailError = undefined;
+        };
 
-function registerCtrl($location, $scope, authentication, $http, $anchorScroll, $timeout){
-    $anchorScroll();
-/*
-    Following function checks whether supplied email address is exists in the database or not
- */
-    $scope.validateEmail = function(user){
-        //console.log("To be validated email is : " + user.email);
-        $http({
-            method: 'POST',
-            url: '/api/validateEmail',
-            data: user
-        }).then(function success(response){
-            //console.log(response.data);
-            $scope.emailError = response.data;
-            
-        }, function failure(response){
-            //console.log(response.data);
-        });
-    };
-    
-    $scope.hideError = function(){
-        $scope.emailError = undefined;
-    };
-    
-    $scope.checkTwoPwd = function(){
-        console.log("checkTwoPwd function envoked");
-        //console.log("First Password is: " + $scope.newUser.password);
-        //console.log("Second Password is: " + $scope.newUser.password1);
-        if($scope.newUser.password !== $scope.newUser.password1){
-            $scope.pwdMatchError = "Password does not match";
+        $scope.checkTwoPwd = function(){
+            //console.log("checkTwoPwd function envoked");
+            //console.log("First Password is: " + $scope.newUser.password);
+            //console.log("Second Password is: " + $scope.newUser.password1);
+            if($scope.newUser.password !== $scope.newUser.password1){
+                $scope.pwdMatchError = "Password does not match";
+            }
+        };
+        $scope.removePwdMatchError = function(){
+            $scope.pwdMatchError = undefined;
+        };
+
+        /*
+        Following function takes the user register input as user object and sends to server for registration
+        using authentiation service. If successful it receives room-token for authentication which is saved on browser's
+        temporary memory
+     */
+        $scope.register = function(user){
+        //console.log(user);
+        if(user.password === user.password1 && user.tandc === true){
+            authentication.register(user)
+                .success(function(data){
+                    $scope.isRegistered = true;
+                    $scope.feedbackMessage = "Congratulation ! You are successfully registered.";
+                    $('#feedback-modal').modal('show');
+                    $timeout(function(){
+                        $('.modal-backdrop').remove();
+                        $location.path("/dashboard");
+                    },2000);
+
+            }, function(data){
+                //console.log("Registration Error is : " + data);
+                $scope.errorMessage = data;
+            }); 
         }
     };
-    $scope.removePwdMatchError = function(){
-        $scope.pwdMatchError = undefined;
-    };
-    
-    /*
-    Following function takes the user register input as user object and sends to server for registration
-    using authentiation service. If successful it receives room-token for authentication which is saved on browser's
-    temporary memory
- */
-    $scope.register = function(user){
-    //console.log(user);
-    if(user.password === user.password1 && user.tandc === true){
-        authentication.register(user)
-            .success(function(data){
-                $scope.isRegistered = true;
-                $scope.feedbackMessage = "Congratulation ! You are successfully registered.";
-                $('#feedback-modal').modal('show');
-                $timeout(function(){
-                    $('.modal-backdrop').remove();
-                    $location.path("/dashboard");
-                },2000);
-                    
-        }, function(data){
-            console.log("Registration Error is : " + data);
-            $scope.errorMessage = data;
-        }); 
-    }
-};
-    //$scope.returnPage = $location.search().page || '/'; not used in the way I have used it
-}
-        
-        
-        
+        //$scope.returnPage = $location.search().page || '/'; not used in the way I have used it
+    }  
+})();     

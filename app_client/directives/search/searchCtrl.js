@@ -5,7 +5,10 @@
  */
 
 angular.module( "roomApp")
-    .controller("searchCtrl", searchCtrl);
+    //.controller("searchCtrl", searchCtrl);
+    .controller("searchCtrl", ['$scope', '$http', '$location', '$rootScope', searchCtrl]);
+    
+    //searchCtrl.$inject = ['$scope', '$http', '$location', '$rootScope'];
     function searchCtrl($scope, $http, $location, $rootScope){
         $scope.addressSearch =  function(adrs){
             //console.log("Search value is : " + adrs.searchValue);

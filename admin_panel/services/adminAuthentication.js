@@ -1,8 +1,9 @@
-
+(function(){
 angular
     .module('adminApp')
-    .service('adminAuthentication', adminAuthentication);
+    .service('adminAuthentication', ['$http', '$window', adminAuthentication]);
 
+//adminAuthentication.$inject = ['$http', '$window'];
 function adminAuthentication ($http, $window) {
     var saveToken = function (token) {
         $window.localStorage['admin-token'] = token;
@@ -78,5 +79,5 @@ function adminAuthentication ($http, $window) {
     adminLogout : adminLogout
   };
 }
-
+})();
 

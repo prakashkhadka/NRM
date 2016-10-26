@@ -1,6 +1,6 @@
 
 <nav class="nrm-top-navbar">
-    <a class="navbar-brand" href="/"><img class="logo" src="admin/images/test.png"></a>
+    <a class="navbar-brand" href="/admin/adminDashboard"><img class="logo" src="admin/images/test.png"></a>
     <button class="top-toggler" 
             type="button" 
             data-toggle="collapse" 
@@ -13,8 +13,8 @@
     
     <div class="collapsable-menu" id="exCollapsingNavbar">
         <ul class="nav">
-            <li><a href="/admin/dashboard">Home</a></li>
-            <li ng-if="isLoggedIn"><a href="/admin/dashboard">Dashboard</a></li>
+            <li><a href="/admin/adminDashboard">Home</a></li>
+            <li ng-if="isLoggedIn"><a href="/admin/adminDashboard">Dashboard</a></li>
             <li ng-if="isLoggedIn" ng-click="logout()"><a class="btn btn-lg btn-outline-danger" href="/#">Log Out</a></li>
         </ul>
     </div>

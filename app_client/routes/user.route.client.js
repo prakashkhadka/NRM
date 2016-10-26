@@ -5,39 +5,34 @@
  */
 
 // Client side routes
-angular.module("roomApp")
-        .config(config);
+(function(){
+    angular.module("roomApp")
+            //.config(userConfig);
+            .config(['$routeProvider', '$locationProvider', userConfig]);
 
-function config($routeProvider, $locationProvider){
-    $locationProvider.html5Mode(true);
-    $routeProvider
-           
+    //userConfig.$inject = ['$routeProvider', '$locationProvider'];
+    function userConfig($routeProvider, $locationProvider){
+        $locationProvider.html5Mode(true);
+        $routeProvider
             .when("/login",{
                 templateUrl: "auth/login/login.html",
-                controller: "loginCtrl"
-                        //controller: 'navCtrl'
-                
-    })
+                controller: "loginCtrl"       
+            })
             .when("/register",{
                 templateUrl: "auth/register/register.html",
-                controller: "registerCtrl"
-                
-    })
+                controller: "registerCtrl"      
+            })
             .when("/logout",{
                 templateUrl: "auth/logout/logout.html",
-                controller: "logoutCtrl"
-                
-    })
-
+                controller: "logoutCtrl"         
+            })
             .when("/dashboard",{
                 templateUrl: "dashboard/dashboard.html",
-                controller: "myPostCtrl"
-                
-    })
+                controller: "myPostCtrl"      
+            })
             .when("/myPost",{
                 templateUrl: "myPost/myPostTemplate.html",
-                controller: "myPostCtrl"
-                
-    });
-    
-};
+                controller: "myPostCtrl"         
+            });  
+    };
+})();

@@ -3918,14 +3918,14 @@ and open the template in the editor.
   transition: height 0.15s ease-in-out; }
   @media (max-width: 767px) {
     .nrm-top-navbar {
-      background-color: #021125; } }
+      background-color: #021125;
+      min-height: 75px; } }
   .nrm-top-navbar .logo {
     height: 54px;
     width: 90px; }
     @media (max-width: 767px) {
       .nrm-top-navbar .logo {
-        -webkit-filter: brightness(0) invert(1);
-        filter: brightness(0) invert(1); } }
+        display: none; } }
   .nrm-top-navbar .nav {
     float: right;
     line-height: 37px; }
@@ -3971,6 +3971,30 @@ and open the template in the editor.
       text-align: center; }
       .nrm-top-navbar .collapsable-menu .nav {
         float: none; } }
+  .nrm-top-navbar .siteHeading {
+    position: absolute;
+    font-family: "Montserrat", sans-serif; }
+    .nrm-top-navbar .siteHeading a {
+      color: blue;
+      text-decoration: none; }
+    .nrm-top-navbar .siteHeading a:hover {
+      text-decoration: none;
+      color: inherit; }
+    @media (min-width: 768px) {
+      .nrm-top-navbar .siteHeading {
+        color: blue;
+        padding-top: 17px;
+        margin-left: 110px;
+        font-size: 30px; } }
+    @media (max-width: 767px) {
+      .nrm-top-navbar .siteHeading {
+        font-size: 15pt;
+        font-weight: bold;
+        padding-top: 15px; }
+        .nrm-top-navbar .siteHeading a {
+          color: white; }
+        .nrm-top-navbar .siteHeading a:hover {
+          color: white; } }
 
 footer {
   margin-left: auto;
@@ -4530,6 +4554,18 @@ input {
           clear: both; } }
   @media (max-width: 767px) {
     #why {
+      display: none; } }
+
+.signUpRequest {
+  float: left;
+  width: 100%;
+  color: white;
+  font-size: 18pt;
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Montserrat', sans-serif; }
+  @media (max-width: 767px) {
+    .signUpRequest {
       display: none; } }
 
 .login-container {

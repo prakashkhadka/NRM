@@ -113,13 +113,12 @@
                          placeholder="Enter password (Min 5 char)"  
                          ng-model="newUser.password" 
                          ng-minlength="5"
-                         ng-maxlength="8" 
                          required
                          ng-class="{'form-control-danger':URForm.newUserPwd.$invalid && URForm.newUserPwd.$dirty,
                                     'form-control-success':URForm.newUserPwd.$valid} ">
                   <div class="error-block" ng-show="URForm.newUserPwd.$invalid && URForm.newUserPwd.$dirty">
                     <p>{{emailError}}</p>
-                    <p ng-show="URForm.newUserPwd.$invalid">Please enter a password between 5 - 8 characters long.</p>
+                    <p ng-show="URForm.newUserPwd.$invalid">Please enter a password.</p>
                   </div>
                 </div>
                 <!-- End of input-wrapper -->

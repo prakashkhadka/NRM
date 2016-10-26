@@ -13,7 +13,7 @@
             </div>
             <div class="right-col">
                 <a href="/editRoom/{{room._id}}" class="btn btn-sm btn-warning" ng-show="isLoggedIn">Edit</a>
-                <button class="btn btn-sm btn-danger" ng-click="confirm(room._id)">Delete</button>
+                <button class="btn btn-sm btn-danger" ng-click="confirm(room._id)">Remove</button>
             </div>
             <div class="modal fade" id="confirmation-modal">
                 <div class="modal-dialog" role="document">
@@ -22,14 +22,14 @@
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                            <h4 class="modal-title">Delete room ad</h4>
+                            <h4 class="modal-title">Remove room ad</h4>
                         </div>
                         <div class="modal-body">
-                            <p ng-hide="isDeleted">Are you sure,you want to delete the ad?</p>
+                            <p ng-hide="isDeleted">Are you sure,you want to remove this ad?</p>
                         </div>
                         <div class="modal-footer" ng-hide="isDeleted">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-danger"  ng-click="remove(confirmedRoomId)">Delete</button>
+                            <button type="button" class="btn btn-danger"  ng-click="remove(confirmedRoomId)">Remove</button>
                         </div>
                     </div><!-- End of modal-content -->
                 </div><!-- End of modal-dialog -->

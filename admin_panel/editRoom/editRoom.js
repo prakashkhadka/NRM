@@ -1,9 +1,13 @@
-
+(function(){
 angular
         .module("adminApp")
-        .controller("editRoomCtrl", editRoomCtrl);
+        .controller("editRoomCtrl", ['$location', '$scope', '$http', '$routeParams', 'adminAuthentication', editRoomCtrl]);
 
-function editRoomCtrl($location, $scope, $http, $routeParams, authentication){
+//editRoomCtrl.$inject = ['$location', '$scope', '$http', '$routeParams', 'adminAuthentication'];
+function editRoomCtrl($location, $scope, $http, $routeParams, adminAuthentication){
+        if(!adminAuthentication.isLoggedIn()){
+            $location.path('/admin');
+        };
         var roomid = $routeParams.roomid;
         //console.log("Room id to be edited is : " +roomid);
         
@@ -26,7 +30,7 @@ function editRoomCtrl($location, $scope, $http, $routeParams, authentication){
         console.log("Room to be updated is : " + room.suburb);
         
        $http.put("/adminApi/rooms/" + room._id, room, {
-           headers: {Authorization: 'Bearer '+ authentication.getToken()}
+           headers: {Authorization: 'Bearer '+ adminAuthentication.getToken()}
        })
             .then(function(response){
                 //console.log("Saved object is : " + response.data);
@@ -46,3 +50,4 @@ function editRoomCtrl($location, $scope, $http, $routeParams, authentication){
 
 }
 
+})();

@@ -3,16 +3,16 @@
  * contact me on ocnprakash@gmail.com
  * copyright: sproutTech Australia
  */
-
-  angular
+(function(){
+angular
     .module('roomApp')
     .directive('navigation', navigation);
 
-  function navigation () {
+function navigation () {
     return {
-      restrict: 'EA',
-      templateUrl: "directives/navigation/navigationView.html",
-      controller: 'navigationCtrl'
+        restrict: 'EA',
+        templateUrl: "directives/navigation/navigationView.html",
+        controller: 'navigationCtrl'
     };
-  }
-
+}
+})();

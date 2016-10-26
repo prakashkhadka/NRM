@@ -1,14 +1,17 @@
-angular
+(function(){
+    angular
         .module("adminApp")
-        .service("userMessage", userMessage);
+        .service("userMessage", ['$http', 'adminAuthentication', userMessage]);
+    
+    //userMessage.$inject = ['$http'];
+    function userMessage($http, adminAuthentication){
+        var getMessage = function(){
+            return $http.get('/adminApi/getMessage', {
+            headers: {Authorization: 'Bearer '+ adminAuthentication.getToken()}});
+        };
 
-function userMessage($http){
-    var getMessage = function(){
-        return $http.get('/adminApi/getMessage');
-    };
-    
-    
-    return {
-        getMessage : getMessage
-    };
-}
+        return {
+            getMessage : getMessage
+        };
+    }
+})();

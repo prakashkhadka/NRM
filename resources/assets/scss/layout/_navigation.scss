@@ -8,6 +8,7 @@
     //breakpoint for small devices
     @include media-breakpoint-down(sm){
         background-color:getColor('bluewood-dark');
+        min-height: 75px;
     }
     // top logo
     .logo{
@@ -15,8 +16,9 @@
         width:90px;
         //make logo white in collapsed menu
         @include media-breakpoint-down(sm){
-            -webkit-filter: brightness(0) invert(1);
-            filter: brightness(0) invert(1);
+            display: none;
+            //-webkit-filter: brightness(0) invert(1);
+            //filter: brightness(0) invert(1);
         }
     } // end of logo
 
@@ -98,4 +100,36 @@
             }
         }
     } // end of .collapsable-menu
+
+    .siteHeading{
+        position: absolute;
+        font-family: $font-moteserrat;
+        a{
+            color:blue;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: none;
+            color: inherit;
+        }
+        @include media-breakpoint-up(md){
+            color: blue;
+            padding-top: 17px;
+            margin-left: 110px;
+            font-size: 30px;
+            //font-weight: bold;
+        }
+        @include media-breakpoint-down(sm){
+            a{
+                color: white;
+            }
+            a:hover{
+                color: white;
+            }
+            font-size: 15pt;
+            font-weight: bold;
+            padding-top: 15px;
+        }
+    }
+    
 } //end of .nrm-top-navbar
