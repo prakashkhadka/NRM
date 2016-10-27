@@ -4,4 +4,22 @@
 
 		color:#333;
 	}
+
+	.modal-title{
+
+		color:getColor('bluewood-dark');
+	}
+	.modal-content{
+
+		text-align:justify;
+		line-height:24px;
+		padding:20px;
+
+		ul li{
+
+			margin-top:10px;
+			list-style-type: none;
+			font-family:$font-news-cycle;
+		}
+	}
 }

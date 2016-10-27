@@ -4,7 +4,7 @@
 @font-face {
   font-family: 'Metrize-Icons';
   src: url("../fonts/Metrize-Icons/Metrize-Icons.eot");
-  src: url("../fonts/Metrize-Icons/Metrize-Icons.eot?#iefix") format("embedded-opentype"), url("../fonts/Metrize-Icons/Metrize-Icons.woff") format("woff"), url("../fonts/Metrize-Icons/Metrize-Icons.otf") format("opentype") url("../fonts/Metrize-Icons/Metrize-Icons.ttf") format("truetype"), url("../fonts/Metrize-Icons/Metrize-Icons.svg#Metrize-Icons") format("svg");
+  src: url("../fonts/Metrize-Icons/Metrize-Icons.eot?#iefix") format("embedded-opentype"), url("../fonts/Metrize-Icons/Metrize-Icons.woff") format("woff"), url("../fonts/Metrize-Icons/Metrize-Icons.otf") format("opentype"), url("../fonts/Metrize-Icons/Metrize-Icons.ttf") format("truetype"), url("../fonts/Metrize-Icons/Metrize-Icons.svg#Metrize-Icons") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -4910,6 +4910,18 @@ input {
 
 #user-registration .fa-file {
   color: #333; }
+
+#user-registration .modal-title {
+  color: #021125; }
+
+#user-registration .modal-content {
+  text-align: justify;
+  line-height: 24px;
+  padding: 20px; }
+  #user-registration .modal-content ul li {
+    margin-top: 10px;
+    list-style-type: none;
+    font-family: "News Cycle", sans-serif; }
 
 #search-result p {
   text-align: center; }
