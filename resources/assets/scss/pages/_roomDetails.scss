@@ -156,8 +156,10 @@
 }
 .room-details{
     position:relative; 
+
     p{
-        font-family: arial;
+        font-family:$font-news-cycle;
+        font-weight:500;
     }
     @include make-col(12);
     background-color: #fff;

@@ -4840,7 +4840,8 @@ input {
   padding: 20px 20px;
   line-height: .8; }
   .room-details p {
-    font-family: arial; }
+    font-family: "News Cycle", sans-serif;
+    font-weight: 500; }
   @media (min-width: 768px) {
     .room-details {
       float: left;
@@ -5061,11 +5062,16 @@ input {
     margin: auto;
     padding: 0px;
     height: 50px;
-    bottom: 0;
+    display: block;
     width: 100%;
     list-style-type: none;
     background-color: rgba(0, 0, 0, 0.9);
-    position: absolute; }
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+    .room-overview ul {
+      margin: 0;
+      padding: 0; }
     .room-overview li {
       display: inline-block;
       color: #FFF;

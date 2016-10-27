@@ -29,7 +29,7 @@
         //Rm.find({$or: [{postcode: searchValue}, {suburb: searchValue},{suburb: searchValue}]})
         if(postcode){
             Rm.find({postcode: searchValue})
-            .select('suburb postcode street_name street_no unit rent images gender state')
+            .select('suburb postcode street_name street_no unit rent images gender state available_from')
             .where('allowedToPublic').equals('true')
             .where('removed').equals('false')
             .exec(function(err, results){   // executes the function inside braces
@@ -50,7 +50,7 @@
         else if(suburb){
             //console.log("Suburb found");
             Rm.find({suburb: searchValue})
-            .select('suburb postcode street_name street_no unit rent images gender state')
+            .select('suburb postcode street_name street_no unit rent images gender state available_from')
             .where('allowedToPublic').equals('true')
             .where('removed').equals('false')
             .exec(function(err, results){   // executes the function inside braces
@@ -67,7 +67,7 @@
         }
         else if(state){
             Rm.find({state: searchValue})
-            .select('suburb postcode street_name street_no unit rent images gender state')
+            .select('suburb postcode street_name street_no unit rent images gender state available_from')
             .where('allowedToPublic').equals('true')
             .where('removed').equals('false')
             .exec(function(err, results){   // executes the function inside braces
