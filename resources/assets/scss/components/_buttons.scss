@@ -53,8 +53,8 @@
 	@include button-variant(getColor('white'), getColor('burnt-sienna-dark'),getColor('burnt-sienna-dark'));
 	height:40px;
 	width:90%;
-        margin-left: 5%;
-	@include setBorderRadius(15);
+     margin-left: 5%;
+	
 }
 
 .btn-rent-call{
