@@ -4,7 +4,7 @@
 @font-face {
   font-family: 'Metrize-Icons';
   src: url("../fonts/Metrize-Icons/Metrize-Icons.eot");
-  src: url("../fonts/Metrize-Icons/Metrize-Icons.eot?#iefix") format("embedded-opentype"), url("../fonts/Metrize-Icons/Metrize-Icons.woff") format("woff"), url("../fonts/Metrize-Icons/Metrize-Icons.ttf") format("truetype"), url("../fonts/Metrize-Icons/Metrize-Icons.svg#Metrize-Icons") format("svg");
+  src: url("../fonts/Metrize-Icons/Metrize-Icons.eot?#iefix") format("embedded-opentype"), url("../fonts/Metrize-Icons/Metrize-Icons.woff") format("woff"), url("../fonts/Metrize-Icons/Metrize-Icons.otf") format("opentype") url("../fonts/Metrize-Icons/Metrize-Icons.ttf") format("truetype"), url("../fonts/Metrize-Icons/Metrize-Icons.svg#Metrize-Icons") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -4907,6 +4907,9 @@ input {
     font-size: 35px;
     float: left;
     color: red; }
+
+#user-registration .fa-file {
+  color: #333; }
 
 #search-result p {
   text-align: center; }
