@@ -1,6 +1,7 @@
 <navigation></navigation>
 <!-- Room details section -->
 <section>  
+    
     <h3>details</h3>
     <!-- carousel-wrapper -->
     <div class="carousel-wrapper" ng-if="ORD.images.length > 0">
@@ -47,6 +48,13 @@
             <p>{{ORD.unit}} / {{ORD.street_no}}, {{ORD.street_name}}</p>
             <p><strong>{{ORD.suburb}}, {{ORD.state}} {{ORD.postcode}}</strong></p>
             <p><strong>Posted on : </strong>{{ORD.createdOn | date : "d MMMM y"}}</p>
+            
+            <div class="share-pugin">
+                <span class='st_sharethis_large' displayText='ShareThis'></span>
+                <span class='st_facebook_large' displayText='Facebook'></span>
+                <span class='st_googleplus_large' displayText='Google +'></span>
+                <span class='st_email_large' displayText='Email'></span>
+            </div>    
             <div class="roomDetailsTwoDivs">
                 <div class="roomDetailsLeft">
                     <p ng-if="ORD.bond"><strong>Bond :</strong> ${{ORD.bond}}</p>

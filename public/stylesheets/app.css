@@ -4908,6 +4908,10 @@ input {
     float: left;
     color: red; }
 
+.share-plugin {
+  display: block;
+  padding: 20px; }
+
 #user-registration .fa-file {
   color: #333; }
 
