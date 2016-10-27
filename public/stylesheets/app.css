@@ -4833,6 +4833,7 @@ input {
     clear: both; }
 
 .room-details {
+  position: relative;
   float: left;
   width: 100%;
   background-color: #fff;
@@ -4910,7 +4911,12 @@ input {
 
 .share-plugin {
   display: block;
-  padding: 20px; }
+  padding: 20px 5px; }
+  @media (min-width: 768px) {
+    .share-plugin {
+      position: absolute;
+      right: 10px;
+      top: 0; } }
 
 #user-registration .fa-file {
   color: #333; }

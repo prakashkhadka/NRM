@@ -151,9 +151,11 @@
 
 /** room-details-wrapper **/
 .room-details-wrapper{
-    @include make-row(); 
+    @include make-row();
+
 }
 .room-details{
+    position:relative; 
     p{
         font-family: arial;
     }
@@ -234,5 +236,12 @@
 .share-plugin{
 
     display:block;
-    padding:20px;
+    padding:20px 5px;
+
+    @include media-breakpoint-up(md){
+
+        position:absolute;
+        right:10px;
+        top:0;
+    }
 }
