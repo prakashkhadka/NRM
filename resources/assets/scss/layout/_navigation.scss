@@ -104,20 +104,22 @@
     .siteHeading{
         position: absolute;
         font-family: $font-moteserrat;
+
         a{
-            color:blue;
+            
             text-decoration: none;
+            color:getColor('bluewood-dark');
         }
         a:hover{
             text-decoration: none;
             color: inherit;
         }
         @include media-breakpoint-up(md){
-            color: blue;
+            
             padding-top: 17px;
             margin-left: 110px;
             font-size: 30px;
-            //font-weight: bold;
+            
         }
         @include media-breakpoint-down(sm){
             a{
