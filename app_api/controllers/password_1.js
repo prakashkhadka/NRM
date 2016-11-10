@@ -42,8 +42,8 @@ module.exports.forgottonPasswordReset = function(req, res){
                 var transporter = nodemailer.createTransport({
                     service: 'SendGrid',
                     auth: {
-                        user: 'nepaliroommate',
-                        pass: 'northsydney2060'
+                        user: 'user',
+                        pass: 'password'
                     }
                 }, {
                     // default values for sendMail method
